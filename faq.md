@@ -23,17 +23,12 @@ Yes. Usual compatibility concerns still apply, like if several mods change the s
 Text mods can only modify objects once; when run. PythonSDK mods can modify dynamically generated objects and run arbitrary game functions whenever they please.
 
 ## Why do I not see Mods menu after installation?
-- Ensure you have all the required files; your `Binaries/Win32` folder should have:
-    * `ddraw.dll`, 
-    * `pythonXX.dll`, 
-    * `pythonXX.zip`,
-    * A folder named `Mods` **exactly as capitalized**. 
-    The `Mods` subfolder should contain an `__init__.py` and the various mods folders (most importantly `ModMenu`) which should each also have an `__init__.py`.
-- To be certain, download [latest](https://github.com/bl-sdk/PythonSDK/releases) again and extract and overwrite the files. 
-- Ensure you have [Microsoft Visual C++ Redistributable](https://aka.ms/vs/16/release/vc_redist.x86.exe) installed.
-- Console output or the contents of `python-sdk.log` in your `Binaries/Win32` folder may contain clues as to what went wrong.
+- Ensure you have this [Microsoft Visual C++ Redistributable](https://aka.ms/vs/16/release/vc_redist.x86.exe) installed.
+- Make sure you extracted all the files to the correct locations. You want to merge the Binaries folder from the SDK zip with that of your game, you don't want a <game>\PythonSDK\Binaries. Also make sure you haven’t renamed anything either, even the capitalization is importation.
+- Make sure you haven’t overwritten/deleted the contents of your mods folder. There should be a Mods\__init__.py, and the various mods folders (most importantly ModMenu) should each also have a __init__.py in them. If you overwrote files, reinstall to get the originals back.
+- Console output or the contents of `python-sdk.log` in your `Binaries/Win32` folder may contain clues as to what went wrong when asking for further support.
 
-[Video Demonstration](https://www.youtube.com/watch?v=nvTYjFjQ-HI).
+[Video Demonstration](https://youtu.be/hsnqPZIc_L8).
 
 If you are on Linux: PythonSDK does not yet work natively on Linux, but it seems to work well under SteamPlay/Proton and Wine. See [The README section on Linux](https://github.com/bl-sdk/PythonSDK#linux-steamplayproton-and-wine).
 
@@ -41,6 +36,9 @@ If you are on Linux: PythonSDK does not yet work natively on Linux, but it seems
 If you are running a mod or modpack that modifies skills (such as Skill Randomizer, Exodus), it will crash if you try to make a new character with those mods enabled. First make the new character, then enable those mods.
 
 If that is not your situation, try to narrow down the mod that causes the issue by disabling all other mods and restarting to see if it still happens, and when you find the culprit: contact the mod author, if it's a large modpack they may have a discord server you can ask on, or create an issue on their mod's repository if there is one.
+
+## Why do certain mods disable when I restart the game, when others stay enabled?
+Auto enabling is something the mod author needs to turn on themselves. There might be a reason they've chosen to explicitly disable it. Alternatively, if the mod's last update was a while ago, it's possible auto enabling wasn't implemented yet, and you could ask the author to enable it.
 
 <hr/>
 

@@ -19,22 +19,27 @@ Currently it supports:
 ## SDK Installation
 
 If you're a video guide type person, [apple1417](https://github.com/apple1417) made a video guide:
-![yt](https://www.youtube.com/embed/nvTYjFjQ-HI)
+![yt](https://youtu.be/hsnqPZIc_L8)
 
 But if you're more of a text guide style person:
 
 1. Download the [latest release](https://github.com/bl-sdk/PythonSDK/releases/latest) on Github.
 ![PythonSDK Download Page](/assets/images/posts/installation1.png)
-2. Open `PythonSDK.zip`. It should contain 4 items:
+2. Open `PythonSDK.zip`. It should contain a single `Binaries` folder:
 ![PythonSDK.zip Contents](/assets/images/posts/installation2.png)
-3. Locate your game's files. In Steam, this can be done by right-clicking on the game in your library, selecting "Properties," then in the "Local Files" section, clicking "Browse":
-![Steam Contextual Menu](/assets/images/posts/installation3.png) ![Steam Local Files Properties](/assets/images/posts/installation4.png)
-4. In the game's files, navigate to the `Binaries`, then the `Win32` folder. This folder should contain the `.exe` for your game (i.e. `Borderlands2.exe`, `BorderlandsPreSequel.exe`, or `TinyTina.exe`).
-5. Copy the 4 items from `PythonSDK.zip` **exactly as they** are to the `Win32` folder. Note that `pythonXX.zip` should *not* be un-zipped:
+1. Locate your game's files.
+  
+   In Steam, this can be done by right-clicking on the game in your library, selecting "Properties," then in the "Local Files" section, clicking "Browse":    
+   ![Steam Contextual Menu](/assets/images/posts/installation3.png) ![Steam Local Files Properties](/assets/images/posts/installation4.png)
+
+   The default locations are:    
+   Steam: `C:\Program Files (x86)\Steam\steamapps\common\<game>`    
+   Epic: `C:\Program Files\Epic Games\<game>`    
+2. Copy the `Binaries` folder from `PythonSDK.zip` **exactly as it is** over your game folder, so it merges with the one there.
 ![Win32 Folder Contents](/assets/images/posts/installation5.png)
-6. If you had previously installed an older version of the SDK, delete any old files that weren't overwritten by the ones in the latest `PythonSDK.zip`.
-7. You are done, and may launch the game (if it is running, relaunch it now). You should see a "Mods" menu in the main menu!
-8. If the SDK fails to run with the files correctly in place as described above, you may need to [download and install Microsoft Visual C++ Redistributable](https://aka.ms/vs/16/release/vc_redist.x86.exe).
+5. If you had previously installed an older version of the SDK, delete any old files that weren't overwritten by the ones in the latest `PythonSDK.zip`. The release notes will tell you which ones.
+6. You are done, and may launch the game (if it is running, relaunch it now). You should see a "Mods" menu in the main menu!
+7. If the SDK fails to run with the files correctly in place as described above, you may need to [download and install Microsoft Visual C++ Redistributable](https://aka.ms/vs/16/release/vc_redist.x86.exe).
 
 ## Mod Installation
 Installing mods is even simpler than installing the SDK itself.
@@ -43,14 +48,15 @@ In order to install SDK mods, all you need to do is:
 
 1. Download the mod itself, usually this will be a zip file.
 ![Mod Download Link](/assets/images/posts/mod-install1.png)
-2. Then you can extract the mod folder itself to `Win32/Mods` (See: [Step 5](/#sdk-installation))
-![Extracted Mod Folder](/assets/images/posts/mod-install2.png)
-3. In the root of this new mod folder, there should be an `__init__.py` file.
-  - Depending on the mod, there might be other files in the mod folder, but `__init__.py` is required.
-![`__init__.py`](/assets/images/posts/mod-install3.png)
-4. Certain mods may have requirements, you can see them by looking at the `Requirements` header.
-  - You follow the same steps as you did with installing the main mod as any of the requirements.
-5. More advanced mods could have some extra steps needed to install them, you should always read through the `Description` section of the mod page to make sure that you've installed the mod properly!
+2. With the "General" mod selected, press `O` to open the Mods folder.    
+   ![Open Mods Folder Key](/assets/images/posts/mod-install1.5.png)
+3. Then you can extract the folder from the mod zip file into this Mods folder.    
+   ![Extracted Mod Folder](/assets/images/posts/mod-install2.png)
+   In the root of this new mod folder, there should be an `__init__.py` file. Depending on the mod, there might be other files too, in the mod folder, but the `__init__.py` should always be there.
+   ![`__init__.py`](/assets/images/posts/mod-install3.png)
+4. Restart your game, and the mod will get loaded.
+5. Certain mods may have requirements, you can see them by looking at the `Requirements` header. Follow the exact same steps to install these.
+6. More advanced mods could have some extra steps needed to install them, you should always read through the `Description` section of the mod page to make sure that you've installed the mod properly!
 
 ## Development
 
@@ -71,10 +77,11 @@ you should atleast understand / be proficient in object orientated programming o
 
 One of the more helpful things with writing SDK mods is looking at the game's decompiled UnrealScript code, allowing you to understand what functions do what actions:
 1. Download Gildor's [Unreal Package Decompressor](https://www.gildor.org/downloads) and [UE Explorer](https://eliotvu.com/portfolio/view/21/ue-explorer).
-2. Open up `WillowGame/CookedPCConsole` and then run the decompressor on the UPKs there. You'll really only need to decompile `WillowGame`, `Engine`, and `GearboxFramework`.
-3. Once you've decompiled the UPKs, look at them in UE Explorer, switch to object view, and then scroll/search around for whatever class.
-  - You can also export the decompiled scripts to your disk if you want to use a different text/code editor.
-![Tools -> Exporting -> Export Scripts](/assets/images/posts/mod-dev1.png)
+2. Open up `WillowGame/CookedPCConsole` and then run the decompressor on the relevant UPKs there. `WillowGame` and `Engine` are the most useful, and you may occasionally find `GameFramework` and `GearboxFramework` handy, pretty much everything else can be ignored.
+3. Once you've decompressed the UPKs, look at them in UE Explorer, switch to object view, and then scroll/search around for whatever class.
+   
+   You can also export the decompiled scripts to your disk if you want to use a different text/code editor.    
+   ![Tools -> Exporting -> Export Scripts](/assets/images/posts/mod-dev1.png)
 
 ### Adding to the Database
 In order to add your mods to this database, you need to create a JSON file and host it somewhere, following the format like:
