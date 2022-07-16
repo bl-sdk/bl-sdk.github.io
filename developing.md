@@ -1,49 +1,116 @@
 ---
 layout: main
-title: FAQ
-permalink: /faq/
 ---
-
-If you have a question that is not answered here, you can search on [Discord](https://discord.gg/VJXtHvh), and if you do not find it, ask there.
 
 **Page Contents**
 * TOC
 {:toc}
 
-<hr/>
+# Developing Mods
 
-# User FAQ
-## How to start using PythonSDK mods?
-Follow the steps described on the [main page](/).
+Using the Unreal Engine console, you can use a few extra console commands added in by the PythonSDK:
+- `py <PYTHON STATEMENT>`, using this will run arbitrary python code.
+- `pyexec <PYTHON FILE>`, execute an arbitrary python file.
 
-## Can I use PythonSDK mods with text mods?
-Yes. Usual compatibility concerns still apply, like if several mods change the same variables they will interfere with each other. This is the case regardless of whether the mods are PythonSDK mods or text mods.
+The PythonSDK itself passes a ton of functions over to the Python interface.
+All of these are included in the `unrealsdk` module which you can import from a python script.
 
-## What is the difference between PythonSDK mods and text mods?
-Text mods can only modify objects once; when run. PythonSDK mods can modify dynamically generated objects and run arbitrary game functions whenever they please.
+## Writing SDK Mods
+The best set of advice is to look at other mods (see this DB for mods :P)
+The SDK's mod "API" (in Python) comes with a ton of doc strings which you should read through in order to get an understanding of how to write a mod.
 
-## Why do I not see Mods menu after installation?
-- Ensure you have this [Microsoft Visual C++ Redistributable](https://aka.ms/vs/16/release/vc_redist.x86.exe) installed.
-- Make sure you extracted all the files to the correct locations. You want to merge the Binaries folder from the SDK zip with that of your game, you don't want a <game>\PythonSDK\Binaries. Also make sure you haven’t renamed anything either, even the capitalization is importation.
-- Make sure you haven’t overwritten/deleted the contents of your mods folder. There should be a Mods\__init__.py, and the various mods folders (most importantly ModMenu) should each also have a __init__.py in them. If you overwrote files, reinstall to get the originals back.
-- Console output or the contents of `python-sdk.log` in your `Binaries/Win32` folder may contain clues as to what went wrong when asking for further support.
+If you've got questions, you can always ask in the [Developer Discord](https://discord.gg/VJXtHvh).
+There's plenty of tutorials online helping you to get proficient in Python (or coding in general),
+you should atleast understand / be proficient in object orientated programming or atleast be willing to learn these things.
 
-[Video Demonstration](https://youtu.be/hsnqPZIc_L8).
+## Viewing UnrealScript code
+One of the more helpful things with writing SDK mods is looking at the game's decompiled UnrealScript code, allowing you to understand what functions do what actions:
+1. Download Gildor's [Unreal Package Decompressor](https://www.gildor.org/downloads) and [UE Explorer](https://eliotvu.com/portfolio/view/21/ue-explorer).
+2. Open up `WillowGame/CookedPCConsole` and then run the decompressor on the relevant UPKs there. `WillowGame` and `Engine` are the most useful, and you may occasionally find `GameFramework` and `GearboxFramework` handy, pretty much everything else can be ignored.
+3. Once you've decompressed the UPKs, look at them in UE Explorer, switch to object view, and then scroll/search around for whatever class.
+   
+   You can also export the decompiled scripts to your disk if you want to use a different text/code editor.    
+   ![Tools -> Exporting -> Export Scripts](/assets/images/posts/mod-dev1.png)
 
-If you are on Linux: PythonSDK does not yet work natively on Linux, but it seems to work well under SteamPlay/Proton and Wine. See [The README section on Linux](https://github.com/bl-sdk/PythonSDK#linux-steamplayproton-and-wine).
+## Adding to the Database
+In order to add your mods to this database, you need to create a JSON file and host it somewhere, following the format like:
+```json
+{
+  "mods": [
+    {
+      "name": "[Mod Name]",
+      "authors": "[Mod Author]",
+      "description": "[Description, can include HTML/Markdown]",
+      "tagline": "[Optional: A short description of the mod, if not available will pull from `description`]",
+      "types": ["[Mod Types]"],
+      "supports": ["[Supported Games ie `[\"BL2\", \"TPS\", \"AoDK\"]`]"],
+      "issues": "[Optional] A link to your issues report page",
+      "source": "[Optional] Link to the source code",
+      "latest": "[LATEST VERSION]",
+      "versions": {
+        "[Latest Version]": "[Version Link]",
+        "[Old Version]": "[Old Version Link]"
+      },
+      "[Optional] requirements": {
+        "[Requirement]": "(>=, ==, <=)[VERSION]"
+      },
+      "license": "[Optional] See: https://github.com/bl-sdk/bl-sdk.github.io/blob/main/scripts/GenerateModDocs.py#L12 for available options",
+      "date": "[Optional] An ISO8601 formatted date time string"
+    }
+  ],
+  "[Optional] defaults": {
+    "authors": "[Mod Author]",
+    "source": "[Mod Source]",
+    "supports":  ["[Supported Games ie `[\"BL2\", \"TPS\"]`]"],
+    "license": "See: https://github.com/bl-sdk/bl-sdk.github.io/blob/main/scripts/GenerateModDocs.py#L12 for available options",
+    "types": ["[Mod Types]"],
+  }
+}
+```
+If you want to add more mods to be displayed in the database, add to the `mods` array following the same format.
+If you're tired of constantly typing in your mods `"authors": "MY NAME"`, you can add/create the `defaults` object and define your author name, etc there instead and remove it from the mod objects.
+Mod object properties take priority over the defaults so if you have `"authors": "test1234"` in a mod object but your default is `"authors": "this is my name"`, the mod's author will be `test1234`.
 
-## Why does my game crash/freeze?
-If you are running a mod or modpack that modifies skills (such as Skill Randomizer, Exodus), it will crash if you try to make a new character with those mods enabled. First make the new character, then enable those mods.
+If you're wanting to link to a different mod on the database without making it a requirement or something, you'll want to remove all non-alphanumeric characters.
+For example: `mod-name: "Sanity Saver"` gets saved as `SanitySaver.md` so when linking to it from another page, you'll want to do `[Sanity Saver](/mods/SanitySaver)`
 
-If that is not your situation, try to narrow down the mod that causes the issue by disabling all other mods and restarting to see if it still happens, and when you find the culprit: contact the mod author, if it's a large modpack they may have a discord server you can ask on, or create an issue on their mod's repository if there is one.
+You can also implement other licenses that aren't supported by declaring it as a list: 
+`"license": ["User Friendly Name", "Full URL Link"]`
 
-## Why do certain mods disable when I restart the game, when others stay enabled?
-Auto enabling is something the mod author needs to turn on themselves. There might be a reason they've chosen to explicitly disable it. Alternatively, if the mod's last update was a while ago, it's possible auto enabling wasn't implemented yet, and you could ask the author to enable it.
+Then you can make a [Pull Request](https://github.com/bl-sdk/bl-sdk.github.io/pulls) and edit `https://github.com/bl-sdk/bl-sdk.github.io/blob/master/scripts/RepoInfo.json` to include the **direct** link to your hosted JSON file.
 
-<hr/>
+## Missing Requirements Notifications
+If a user doesn't install all the requirements your mod needs, it probably can't load. Rather than just having your mod fail to load with no proper indication, this database provides a page you can open to explain what's missing.
+
+[https://bl-sdk.github.io/requirements/](/requirements)
+
+As you can see, this page doesn't work out of the box, you need to use query parameters to fill in some information.
+
+| Field         | Usage                                                                                        |
+|:--------------|:---------------------------------------------------------------------------------------------|
+| `m`/`mod`     | Holds the name of your mod.                                                                  |
+| `u`/`update`  | If it exists, changes the page to talk about outdated requirements rather than missing ones. |
+| `a`/`all`     | If it exists, also pulls in all requirements defined in your mod info file.                  |
+| Anything Else | The name of a requirement mod to list, optionally holding the required version.              |
+
+Only the first instance of the predefined fields are used, so if you really need to define a requirement called `update` you can simply add it as a parameter twice.
+
+Once you have your url, to open the page you can use the `webbrowser` module.
+```py
+try:
+  from Mods import AsyncUtil
+except ImportError as ex:
+  import webbrowser
+  webbrowser.open("https://bl-sdk.github.io/requirements/?mod=Alt%20Use%20Vendors&AsyncUtil")
+  raise ex
+```
+You can add more complex logic to build up the url based on exactly which mods are installed and what their versions are.
+If you want to pass in the version (i.e. `Mod >= 3.1`), you do it like so: `UserFeedback=>=3.1` or `UserFeedback===3.1`.
+The requirements page will pull the latest version of the requirements.
+
+<hr>
 
 # Developer FAQ
-
 
 ## How do I create a new mod?
 1. Create a new folder in the Mods folder
