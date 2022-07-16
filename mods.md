@@ -1,5 +1,5 @@
 ---
-layout: mods
+layout: main
 modTypes: ['Utility', 'Gameplay', 'Content', 'Library'] # Defines all of the mods that we want to be shown in terms of categories
 ---
 

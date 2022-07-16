@@ -3,58 +3,59 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
+
     {% seo %}
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous" ></script>
     <script src="{{ '/assets/js/respond.js' | relative_url }}"></script>
     <script src="{{ '/assets/js/yt-embed.js' | relative_url }}"></script>
-    
+
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     <!--[if lt IE 8]>
     <link rel="stylesheet" href="{{ '/assets/css/ie.css' | relative_url }}">
     <![endif]-->
-    
+
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    
+
     <link rel="icon" type="image/png" href="/favicon.png" />
   </head>
-  
+
   <body>
     <div id="container">
       <div id="header">
         <nav>
           <li class="left title"><a class="none title" href="/">{{ site.title | default: site.github.repository_name }}</a></li>
-          
+
           <li class="right fork"><a class="none" href="/about">About</a></li>
-          <li class="right fork none"><a class="none" href="/faq">FAQ</a></li>
+          <li class="right fork none"><a class="none" href="/developing">Developing Mods</a></li>
+          <li class="right fork none"><a class="none" href="https://discord.gg/bXeqV8Ef9R">Support Discord</a></li>
           <li class="right fork none"><a class="none" href="/mods">View Mods</a></li>
-          
+
           {% if site.show_downloads %}
             <li class="downloads"><a href="{{ site.github.zip_url }}">ZIP</a></li>
             <li class="downloads"><a href="{{ site.github.tar_url }}">TAR</a></li>
             <li class="title">DOWNLOADS</li>
           {% endif %}
-          
+
         </nav>
       </div>
-      
+
       <div class="container">
         <section>
           {{ content }}
         </section>
       </div>
     </div>
-    
+
     <footer id="footer">
       <hr>
-      <span class="credits left">Project maintained by the <a href="{{ site.github.owner_url }}">PythonSDK</a> team // Contact us on <a href="https://discord.gg/VJXtHvh">Discord</a></span>
+      <span class="credits left">Project maintained by the <a href="{{ site.github.owner_url }}">PythonSDK</a> team</span>
       <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/mattgraham">mattgraham</a></span>
     </footer>
   </body>
-  
+
   <script>
   !function(){"use strict";var t,e,n=[];["h2","h3","h4","h5","h6"].forEach(function(e){t=document.getElementsByTagName(e),Array.prototype.push.apply(n,t)});for(var a=0;a<n.length;a++){var r=n[a];null!=r.getAttribute("id")&&((e=document.createElement("a")).className="deepLink none",e.textContent=" 🔗",e.href="#"+r.getAttribute("id"),r.appendChild(e))}}();
   </script>
