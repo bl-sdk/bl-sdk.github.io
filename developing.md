@@ -331,7 +331,7 @@ and remove them with `unrealsdk.RemoveHook(funcName: str, hookName: str)`.
 It is preferrable to use `RunHook` over `RegisterHook`, since the former ensures the hook is not registered twice.
 
 ## How to know what game objects to modify?
-* Look through decompiled UPKs, as explained in the [Writing SDK Mods]({{ site.baseurl }}{% link index.md %}#writing-sdk-mods) section.
+* Look through decompiled UPKs, as explained in the [Writing SDK Mods](#writing-sdk-mods) section.
 * Look through objects in BLCMM Object Explorer, and other tools described in the [BLCMods Wiki](https://github.com/BLCM/BLCMods/wiki). There is a guide [here](https://github.com/BLCM/BLCMods/wiki/Tutorial%3A-Getting-Started-Making-Mods#setting-up-blcmm) on how to get object data for Object Explorer, and basic usage.
 * Look at the source of existing [PythonSDK Mods]({{ site.baseurl }}{% link mods.md %}).
 * Even source of text mods can help, as they can tell you what objects you can modify.
@@ -339,6 +339,6 @@ It is preferrable to use `RunHook` over `RegisterHook`, since the former ensures
 You can discuss what you're trying to do on the [Discord](https://discord.gg/VJXtHvh), and people will probably chime in to help you out!
 
 ## How to publish my mod?
-Upload your mod(s) to a public repository, then to add it to this site follow the steps on [Adding to the Database]({{ site.baseurl }}{% link index.md %}#adding-to-the-database) in the main page.
+Upload your mod(s) to a public repository, then to add it to this site follow the steps on [Adding to the Database](#adding-to-the-database) in the main page.
 
 Note that you should not commit `settings.json` file nor `__pycache__`, as they are automatically generated.
