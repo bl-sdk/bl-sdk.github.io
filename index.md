@@ -23,7 +23,7 @@ If you're a video guide type person, [apple1417](https://github.com/apple1417) m
 
 But if you're more of a text guide style person:
 
-1. Download the [latest release](https://github.com/bl-sdk/PythonSDK/releases/latest) on Github.
+1. Download the [latest release](https://github.com/bl-sdk/bl2-mod-manager/releases/latest) on Github.
 ![PythonSDK Download Page](/assets/images/posts/installation1.png)
 2. Open `PythonSDK.zip`. It should contain a single `Binaries` folder:
 ![PythonSDK.zip Contents](/assets/images/posts/installation2.png)
