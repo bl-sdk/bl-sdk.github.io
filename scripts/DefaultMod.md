@@ -1,5 +1,5 @@
 ---
-layout: mod
+layout: main
 
 authors: "" # Authors of the mod
 title: "" # Title of the mod
