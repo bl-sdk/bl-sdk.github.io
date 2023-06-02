@@ -42,10 +42,21 @@ But if you're more of a text guide style person:
 7. If the SDK fails to run with the files correctly in place as described above, you may need to [download and install Microsoft Visual C++ Redistributable](https://aka.ms/vs/16/release/vc_redist.x86.exe).
 
 ## Installing on Linux
-PythonSDK does not yet work natively on Linux, but it seems to work well under SteamPlay/Proton and Wine. To load properly, though, Wine needs to be told to allow `ddraw.dll` overrides. Simply set the game's launch options (via `Properties -> General`) to:
+PythonSDK does not yet work natively on Linux, but it seems to work well under SteamPlay/Proton and Wine. To load properly, though, Wine needs to be told to allow `ddraw.dll` overrides. If you are running the game through Steam set the game's launch options (via `Properties -> General`) to:
 
 ```
 WINEDLLOVERRIDES="ddraw=n,b" %command%
+```
+
+If you are running the game through Heroic Games Launcher (Epic Games) you need to edit the `Environment Variables` for the game. Set the `Variable Name` to:
+
+```
+WINEDLLOVERRIDES
+```
+And set `Value` to:
+
+```
+"ddraw=n,b"
 ```
 
 Additionally, the latest SDK releases want the main executable name to be `Borderlands2.exe` (or one of the other games as relevant), so doing a symlink/copy for `Launcher.exe` won't work. If you want or need to bypass the launcher you can add `-NoLauncher` to the launch options after `%command%`:
