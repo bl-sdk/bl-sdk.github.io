@@ -1,0 +1,100 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Mod Update
+
+# Controls when the action will run. 
+on:
+  # Run every hour, on the hour 
+  schedule:
+    - cron: "0 * * * *" 
+
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+
+  # This workflow contains a single job called "build"
+  build:
+    name: Page Generation
+
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    env:
+      RUBYOPT: "-E utf-8"
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      # If this is running under a pull request, it will also pull in those changes
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      # Setup Python
+      - name: Python installation
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+          
+      # Update pip if the cache isn't updated / it's not cached
+      - name: Install dependencies
+        if: steps.cache-pip.outputs.cache-hit != 'true'
+        working-directory: ./scripts
+        run: pip install -r "requirements.txt"
+        
+      # Mod documentation is generated "softly" when the task has been scheduled
+      # If mod documentation is faulty, it'll silently fail and not update the page of the given mod
+
+      # Run generation script
+      - name: Generate hard mod documentation
+        if: ${{ github.event_name == 'pull_request' }}
+        working-directory: ./scripts
+        run: python "./GenerateModDocs.py" --hard
+
+      - name: Generate soft mod documentation
+        if: ${{ github.event_name != 'pull_request' }}
+        working-directory: ./scripts
+        run: python "./GenerateModDocs.py"
+
+      # Now we're going to install ruby and other dependencies in order to do test builds of the site
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.7.2
+          bundler-cache: true # Runs 'bundle install' and caches installed gems automatically
+      
+      # Build the site, include trace just for more info 
+      - name: Build Site
+        run: bundle exec jekyll build --profile --trace
+      
+      # Run html-proofer on the built site, will handle dead links, etc
+      # It's best  to only run this on PR because otherwise it will stop all future builds
+      - name: Proofread HTML -- Hard
+        if: ${{ github.event_name == 'pull_request' }}
+        run: |
+          bundle exec htmlproofer --log-level :debug ./_site
+      
+      - name: Proofread HTML -- Soft
+        if: ${{ github.event_name != 'pull_request' }}
+        run: |
+          bundle exec htmlproofer --log-level :debug ./_site
+        continue-on-error: true
+
+      - name: Deploy website to gh-pages branch
+        if: ${{ github.event_name != 'pull_request' }}
+        uses: peaceiris/actions-gh-pages@v3.7.3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./
+          enable_jekyll: true
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
