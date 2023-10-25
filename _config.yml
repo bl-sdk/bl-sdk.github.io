@@ -1,0 +1,48 @@
+title: BL3/WL SDK Mod Database
+description: >-
+  A list of sdk mods for Borderlands 3 and Wonderlands.
+
+baseurl: /oak-mod-db
+github_username: bl-sdk
+repository: bl-sdk/oak-mod-db
+
+collections:
+  mods:
+    output: true
+    sort-by: title
+    permalink: /:collection/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: mod
+    values:
+      layout: default
+
+markdown: kramdown
+theme: just-the-docs
+color_scheme: dark
+
+just_the_docs:
+  collections:
+    mods:
+      name: Mods
+
+favicon_ico: /assets/images/favicon.png
+
+nav_external_links:
+  - title: Modding Support Discord
+    url: https://discord.gg/bXeqV8Ef9R
+  - title: Latest Release
+    url: https://github.com/bl-sdk/oak-mod-manager/releases/latest
+
+plugins:
+  - jekyll-commonmark-ghpages
+  - jekyll-default-layout
+  - jekyll-github-metadata
+  - jekyll-include-cache
+  - jekyll-optional-front-matter
+  - jekyll-relative-links
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-titles-from-headings
