@@ -33,6 +33,7 @@ group :jekyll_plugins do
   gem 'jekyll-titles-from-headings', '~> 0.5.3'
 
   gem 'jekyll-regex-replace', '~> 1.1'
+  gem "perfect_toml", "~> 0.9.0"
 end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem

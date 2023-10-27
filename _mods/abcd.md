@@ -8,3 +8,5 @@ latest_download: https://github.com/apple1417/oak-sdk-mods/releases/download/nig
 ---
 
 an optional detailed description?
+
+{{ page.pyproject }}
