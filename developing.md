@@ -43,7 +43,9 @@ Description                 | The page contents | `project.description`
 While this site is statically generated, every time a mod page is loaded it fetches the pyproject
 and updates the page with any changes, the values fetched when the site is generated are only used
 as defaults (note that front matter overrides still take priority). This means you generally don't
-need to touch the db again, changes will be picked up automatically. The main exception to this is
-the searchbar: the data it uses is only updated on side generation. If you make significant changes
-to your pyproject, which you want the searchbar to pick up, it may be worth kicking off another 
-build.
+need to touch the db again, changes will be picked up automatically.
+
+There are two main exceptions to this: the title, and the search data. While the title will get
+updated on the mod page itself, the sidebar won't get updated, and the data powering the searchbar
+is never updated live. If you make significant changes to your pyproject, it may be worth kicking
+off another build to update the static versions of these.

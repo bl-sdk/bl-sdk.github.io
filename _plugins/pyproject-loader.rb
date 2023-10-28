@@ -48,6 +48,8 @@ Jekyll::Hooks.register :site, :post_read do |site|
         if File.read(mod.path) =~ Jekyll::Document::YAML_FRONT_MATTER_REGEXP then
             front_matter = SafeYAML.load($1)
             if front_matter.key?("title") then
+                # Also mark a flag so we can pass this to the js later
+                mod.data["_title_from_frontmatter"] = true
                 next
             end
         else
