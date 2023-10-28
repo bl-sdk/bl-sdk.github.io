@@ -2,8 +2,98 @@
 layout: default
 ---
 <h1>{{ page.title }}</h1>
-By {{ page.author }}
-<br>
-<a href="{{ page.latest_download }}">Download</a>
+<dl class="mod-desc">
+    <dt>By</dt>
+    {%- assign pyproject_authors = page.pyproject.project.authors
+                                    | map: "name"
+                                    | array_to_sentence_string -%}
+    <dd>{{ page.author | default: pyproject_authors | escape }}</dd>
 
-{{ content }}
+    <dt>Latest</dt>
+    {%- assign version = page.version
+                        | default: page.pyproject.tool.sdkmod.version
+                        | default: page.pyproject.project.version
+                        | default: "Unknown" -%}
+    <dd><code class="language-plaintext highlighter-rouge">{{ version | escape }}</code></dd>
+
+    <dt>Supports</dt>
+    {%- assign ALLOWED_GAMES = "BL3,WL" | split: "," -%}
+    {%- assign unsanitized_games = page.supported_games
+                                    | default: page.pyproject.tool.sdkmod.supported_games
+                                    | default: ALLOWED_GAMES -%}
+    {%- assign games = "" | split: "" -%}
+    {%- for game in unsanitized_games -%}
+        {% assign upper_game = game | upcase %}
+        {%- if ALLOWED_GAMES contains upper_game -%}
+            {%- assign games = games | push: upper_game -%}
+        {%- endif -%}
+    {%- endfor -%}
+    <dd>{{ games | array_to_sentence_string | default: "Unknown" }}</dd>
+
+    <dt>License</dt>
+    {%- if page.license -%}
+        {%- assign license_name = page.license.name -%}
+        {%- assign license_url = page.license.url -%}
+    {%- elsif page.pyproject.tool.sdkmod.license -%}
+        {%- assign license_name = page.pyproject.tool.sdkmod.license.name -%}
+        {%- assign license_url = page.pyproject.tool.sdkmod.license.url -%}
+    {%- elsif page.pyproject.project.license.text -%}
+        {%- assign license_name = page.pyproject.project.license.text -%}
+        {%- assign license_url = nil -%}
+    {%- else -%}
+        {%- assign license_name = "Unknown" -%}
+        {%- assign license_url = nil -%}
+    {%- endif -%}
+    <dd>
+        {%- if license_url -%}
+            <a href="{{ license_url | url_escape }}">
+        {%- endif -%}
+        {{ license_name | escape }}
+        {%- if license_url -%}
+            </a>
+        {%- endif -%}
+    </dd>
+
+    {%- assign dependencies = page.dependencies | default: page.pyproject.project.dependencies -%}
+    {%- if dependencies.size > 0 -%}
+        <dt>Requires</dt>
+        {%- for item in dependencies -%}
+            {%- assign name = item | regex_match: "^\s*([A-Z0-9][A-Z0-9._-]*[A-Z0-9]|[A-Z0-9])" -%}
+            {%- unless name -%}
+                {%- continue -%}
+            {%- endunless -%}
+
+            {%- assign required_mod = nil -%}
+            {%- for mod in site.mods -%}
+                {%- if mod.pyproject.project.name == name -%}
+                    {%- assign required_mod = mod -%}
+                    {%- break -%}
+                {%- endif -%}
+            {%- endfor -%}
+
+            <dd class="requirement">
+            {%- if required_mod -%}
+                <a href="{{ required_mod.url | relative_url }}">{{ required_mod.title }}</a>
+            {%- else -%}
+                <span>{{ name | escape }}</span>
+            {%- endif -%}
+            <div><code class="language-plaintext highlighter-rouge">{{ item | escape }}</code></div>
+        {%- endfor -%}
+
+    {%- endif -%}
+</dl>
+{%- assign urls = page.urls | default: page.pyproject.project.urls -%}
+{%- if urls.size > 0 -%}
+    <div class="url-box">
+    {%- for item in urls -%}
+        <a href="{{ item[1] |  url_escape }}">{{ item[0] | escape }}</a>
+    {%- endfor -%}
+    </div>
+{%- endif -%}
+
+{%- assign download = page.download | default: page.pyproject.tool.sdkmod.download -%}
+{%- if download -%}
+    <a href="{{ download | url_escape }}" class="btn btn-primary fs-5">Download</a><br><br>
+{%- endif -%}
+
+{{ content | strip | default: page.pyproject.project.description }}

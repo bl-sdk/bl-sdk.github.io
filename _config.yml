@@ -15,9 +15,9 @@ collections:
 defaults:
   - scope:
       path: ""
-      type: mod
+      type: mods
     values:
-      layout: default
+      layout: mod
 
 markdown: kramdown
 theme: just-the-docs
@@ -46,7 +46,6 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-titles-from-headings
-  - jekyll-regex-replace
 
 optional_front_matter:
   remove_originals: true

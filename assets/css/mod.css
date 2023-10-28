@@ -1,0 +1,45 @@
+/* Make the description list header shorter */
+dl.mod-desc {
+    grid-template-columns: 5em 1fr
+}
+
+/* Make requirements show the full original text on header */
+dd.requirement > div {
+    display: inline-block;
+}
+dd.requirement > div > code {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: -0.2em 0 -0.2em 0.4em;
+    padding-left: 0.5em;
+    opacity: 0;
+    width: 0%;
+    transition: 0.1s ease-out 0.1s;
+}
+dd.requirement:hover > div > code {
+    opacity: 1;
+    width: 100%;
+}
+
+/* Aproximately replicate the table styling, but using flexbox */
+div.url-box {
+    display: flex;
+    flex-wrap: wrap;
+    width: fit-content;
+    padding: 1px;
+    margin-bottom: 0.8em;
+    border-radius: 4px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+div.url-box > a {
+    margin: 1px;
+    padding: 0.5em 0.75em;
+    border-left: 1px solid #44434d;
+    border-bottom: 1px solid #44434d;
+    background-color: #302d36;
+    text-align: center;
+}
+div.url-box > a:first-child {
+    border-left: none;
+}
