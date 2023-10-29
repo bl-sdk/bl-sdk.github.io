@@ -21,7 +21,7 @@ gem "just-the-docs", "~> 0.6.2"
 # If you have any plugins, put them here!
 group :jekyll_plugins do
   # We can't use github pages directly since it forces safe mode, so I went through the list and
-  # these seem to be it's useful depenencies
+  # these seem to be it's useful dependencies
   gem 'jekyll-commonmark-ghpages', '~> 0.4.0'
   gem 'jekyll-default-layout', '~> 0.1.5'
   gem 'jekyll-github-metadata', '~> 2.16'

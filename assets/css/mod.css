@@ -22,10 +22,10 @@ dd.requirement:hover > div > code {
     width: 100%;
 }
 dt.requirement {
-    margin-bottom: -0.2em; /* to align with the margin from each requirment */
+    margin-bottom: -0.2em; /* to align with the margin from each requirement */
 }
 
-/* Aproximately replicate the table styling, but using flexbox */
+/* Approximately replicate the table styling, but using flexbox */
 div.url-box {
     display: flex;
     flex-wrap: wrap;

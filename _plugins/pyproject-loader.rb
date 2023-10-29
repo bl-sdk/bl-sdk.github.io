@@ -7,7 +7,7 @@ extend Liquid::StandardFilters
 
 # We want to replace the title of each mod page with that loaded from the pyproject
 # To make sure we do this early enough, we need to use a site hook
-# Trying to do a hook on `:mods, :pre_render` would be more efficent, but leads to some bits of the
+# Trying to do a hook on `:mods, :pre_render` would be more efficient, but leads to some bits of the
 # site using the old title
 
 Jekyll::Hooks.register :site, :post_read do |site|

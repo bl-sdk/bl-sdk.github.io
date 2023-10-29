@@ -51,8 +51,8 @@ There are a few exceptions to this, which are not automatically updated:
 - `project.name`, which is used for matching dependencies to their mod page.
 - The data powering the searchbar.
 - The fields which are always displayed will not be set to unknown if you completely delete their
-  section in your pyproject, the old data is prefered. Requirements and Misc URLs are already hidden
-  when not in use, so the updates *will* delete them.
+  section in your pyproject, the old data is preferred. Requirements and Misc URLs are already
+  hidden when not in use, so the updates *will* delete them.
 
 If you make significant changes to your pyproject, it may be worth kicking off another build to
 update the static versions of these. Do note that this data is updated anytime the site is
