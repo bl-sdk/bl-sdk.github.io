@@ -2,6 +2,7 @@ title: BL3/WL SDK Mod Database
 description: >-
   A list of sdk mods for Borderlands 3 and Wonderlands.
 
+url: https://bl-sdk.github.io
 baseurl: /oak-mod-db
 github_username: bl-sdk
 repository: bl-sdk/oak-mod-db
