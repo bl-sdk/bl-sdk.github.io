@@ -1,3 +1,5 @@
+---
+---
 import { parse as parse_toml } from "https://cdn.jsdelivr.net/npm/smol-toml@1.1.3/+esm"
 
 function arr_to_sentence(arr) {
@@ -19,6 +21,10 @@ function make_link(name, url) {
     return link;
 }
 
+function strip_decode_html(input) {
+   return new DOMParser().parseFromString(input, 'text/html').body.textContent || "";
+}
+
 async function load_from_pyproject(url, fields) {
     const response = await fetch(url);
     if (!response.ok) {
@@ -37,7 +43,9 @@ async function load_from_pyproject(url, fields) {
 
     if (fields?.authors) {
         const authors = (pyproject?.project?.authors || []).map(x => x.name);
-        document.querySelector("#authors").innerText = arr_to_sentence(authors);
+        if (authors) {
+            document.querySelector("#authors").innerText = arr_to_sentence(authors);
+        }
     }
 
     if (fields?.version) {
@@ -67,6 +75,127 @@ async function load_from_pyproject(url, fields) {
             if (project_license) {
                 license_element.innerText = project_license;
             }
+        }
+    }
+
+    if (fields?.dependencies) {
+        const DEPENDENCY_DATA = {
+            {%- assign first = true -%}
+            {%- for mod in site.mods -%}
+            {%- if mod.pyproject.project.name -%}
+                {%- unless first -%},{%- endunless -%}
+                {%- assign first = false -%}
+
+                {{- mod.pyproject.project.name | jsonify -}}:{
+{{-""-}}            title: {{- mod.title | decode | jsonify -}},
+{{-""-}}            url: {{- mod.url | relative_url | jsonify -}}
+                }
+            {%- endif -%}
+            {%- endfor -%}
+        };
+
+        const dependencies = pyproject?.project?.dependencies;
+        if (dependencies) {
+            let insert_point = document.querySelector("dt.requirement");
+            if (insert_point) {
+                // Delete existing data entries
+                document.querySelectorAll("dd.requirement").forEach(x => x.remove());
+            } else {
+                // Create a new header
+                insert_point = document.createElement("dt");
+                insert_point.classList.add("requirement");
+                insert_point.innerText = "Requires";
+                document.querySelector("#license").after(insert_point);
+            }
+
+            dependencies.forEach(dependency => {
+                const name = dependency.match(/^\s*([A-Z0-9][A-Z0-9._-]*[A-Z0-9]|[A-Z0-9])/i)[0];
+
+                const entry = document.createElement("dd");
+                entry.classList.add("requirement");
+
+                if (name in DEPENDENCY_DATA) {
+                    const info = DEPENDENCY_DATA[name];
+                    // Titles will be html encoded, decode them
+                    const title = strip_decode_html(info.title);
+                    const url = info.url;
+                    entry.appendChild(make_link(title, url));
+                } else {
+                    const span = document.createElement("span");
+                    span.innerText = name;
+                    entry.appendChild(span);
+                }
+
+                const div = document.createElement("div");
+                const code = document.createElement("code");
+                code.classList.add("language-plaintext", "highlighter-rouge");
+                code.innerText = dependency;
+
+                div.appendChild(code);
+                entry.appendChild(div);
+
+                insert_point.after(entry);
+                insert_point = entry;
+            });
+        // If `pyproject.project` exists, but `pyproject.project.dependencies` does not/is empty
+        } else if (pyproject?.project) {
+            // Remove all dependency fields
+            document.querySelectorAll(".requirement").forEach(x => x.remove());
+        }
+    }
+
+    if (fields?.urls) {
+        let url_box = document.querySelector(".url-box");
+
+        const urls = pyproject?.project?.urls;
+        if (urls) {
+            if (!url_box) {
+                url_box = document.createElement("div");
+                url_box.classList.add("url-box");
+                document.querySelector(".mod-desc").after(url_box);
+            }
+
+            for (const [name, url] of Object.entries(urls)) {
+                url_box.appendChild(make_link(name, url));
+            }
+
+        // If `pyproject.project` exists, but `pyproject.project.urls` does not/is empty
+        } else if (pyproject?.project) {
+            url_box?.remove();
+        }
+    }
+
+    if (fields?.download) {
+        const download_url = pyproject?.tool?.sdkmod?.download;
+        if (download_url) {
+            let download_a = document.querySelector("#download");
+            if (!download_a) {
+                const insert_point = (document.querySelector(".url-box")
+                                    || document.querySelector(".mod-desc"));
+
+                insert_point.after(document.createElement("br"));
+
+                download_a = document.createElement("a");
+                download_a.id = "download";
+                download_a.classList.add("btn", "btn-primary", "fs-5");
+                download_a.innerText = "Download";
+                insert_point.after(download_a);
+            }
+            download_a.href = download_url;
+        }
+    }
+
+    if (fields?.description) {
+        const description = pyproject?.project?.description;
+        if (description) {
+            const description_div = document.querySelector("#description");
+            const paragraph = document.createElement("p");
+
+            // Strip html from the description to not show any tags meant for the mod
+            paragraph.innerText = strip_decode_html(description);
+
+            description_div.innerHTML = "";
+            description_div.appendChild(paragraph);
         }
     }
 }

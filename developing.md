@@ -28,7 +28,7 @@ License<sup>3</sup>         | `license`         | `tool.sdkmod.license`, `projec
 Requirements                | `dependencies`    | `project.dependencies`
 Misc URLs<sup>5</sup>       | `urls`            | `project.urls`
 Download Link               | `download`        | `tool.sdkmod.download`
-Description                 | The page contents | `project.description`
+Description                 | The page contents | `project.description`<sup>6</sup>
 
 <sup>1</sup> Multiple authors are concatenated in the order given.    
 <sup>2</sup> An array of strings, with valid values of `BL3` and `WL` (case insensitive). If not
@@ -36,7 +36,8 @@ Description                 | The page contents | `project.description`
 <sup>3</sup> A table with keys `name` and `url`. Prefer linking to a summary site, rather than
              direct to your `LICENSE`.    
 <sup>4</sup> Used as the name, with no url.    
-<sup>5</sup> A dict where keys are the names and values are the urls.
+<sup>5</sup> A dict where keys are the names and values are the urls.    
+<sup>6</sup> HTML tags are stripped, rather than just being escaped.    
 {: .fs-2 }
 
 ### Updating Info
@@ -45,7 +46,14 @@ and updates the page with any changes, the values fetched when the site is gener
 as defaults (note that front matter overrides still take priority). This means you generally don't
 need to touch the db again, changes will be picked up automatically.
 
-There are two main exceptions to this: the title, and the search data. While the title will get
-updated on the mod page itself, the sidebar won't get updated, and the data powering the searchbar
-is never updated live. If you make significant changes to your pyproject, it may be worth kicking
-off another build to update the static versions of these.
+There are a few exceptions to this, which are not automatically updated:
+- The title used in the sidebar and tab title (the header on the mod page does get updated).
+- `project.name`, which is used for matching dependencies to their mod page.
+- The data powering the searchbar.
+- The fields which are always displayed will not be set to unknown if you completely delete their
+  section in your pyproject, the old data is prefered. Requirements and Misc URLs are already hidden
+  when not in use, so the updates *will* delete them.
+
+If you make significant changes to your pyproject, it may be worth kicking off another build to
+update the static versions of these. Do note that this data is updated anytime the site is
+generated, someone else adding an unrealated mod will update yours.

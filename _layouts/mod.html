@@ -56,7 +56,7 @@ layout: default
 
     {%- assign dependencies = page.dependencies | default: page.pyproject.project.dependencies -%}
     {%- if dependencies.size > 0 -%}
-        <dt>Requires</dt>
+        <dt class="requirement">Requires</dt>
         {%- for item in dependencies -%}
             {%- assign name = item | regex_match: "^\s*([A-Z0-9][A-Z0-9._-]*[A-Z0-9]|[A-Z0-9])" -%}
             {%- unless name -%}
@@ -93,10 +93,19 @@ layout: default
 
 {%- assign download = page.download | default: page.pyproject.tool.sdkmod.download -%}
 {%- if download -%}
-    <a href="{{ download | url_escape }}" class="btn btn-primary fs-5">Download</a><br><br>
+    <a id="download" href="{{ download | url_escape }}" class="btn btn-primary fs-5">Download</a><br>
 {%- endif -%}
 
-{{ content | strip | default: page.pyproject.project.description }}
+<div id="description">
+{%- assign stripped_content = content | strip | default: "" -%}
+{%- if stripped_content != "" -%}
+    {%- assign using_description_override = true -%}
+    {{ content }}
+{%- else -%}
+    {%- assign using_description_override = false -%}
+    <p>{{ page.pyproject.project.description | strip_html }}</p>
+{%- endif -%}
+</div>
 
 <script type="module">
     import { load_from_pyproject } from "{{ "/assets/js/pyproject-loader.js" | relative_url }}";
@@ -115,6 +124,18 @@ layout: default
 {%- endunless -%}
 {%- unless page.license -%}
         license: true,
+{%- endunless -%}
+{%- unless page.dependencies -%}
+        dependencies: true,
+{%- endunless -%}
+{%- unless page.urls -%}
+        urls: true,
+{%- endunless -%}
+{%- unless page.download -%}
+        download: true,
+{%- endunless -%}
+{%- unless using_description_override -%}
+        description: true,
 {%- endunless -%}
     });
 </script>
