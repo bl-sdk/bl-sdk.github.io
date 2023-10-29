@@ -145,14 +145,14 @@ async function load_from_pyproject(url, fields) {
     }
 
     if (fields?.urls) {
-        let url_box = document.querySelector(".url-box");
+        let url_box = document.querySelector("div.url-box");
 
         const urls = pyproject?.project?.urls;
         if (urls) {
             if (!url_box) {
                 url_box = document.createElement("div");
                 url_box.classList.add("url-box");
-                document.querySelector(".mod-desc").after(url_box);
+                document.querySelector("dl.mod-desc").after(url_box);
             }
 
             for (const [name, url] of Object.entries(urls)) {
@@ -170,8 +170,8 @@ async function load_from_pyproject(url, fields) {
         if (download_url) {
             let download_a = document.querySelector("#download");
             if (!download_a) {
-                const insert_point = (document.querySelector(".url-box")
-                                    || document.querySelector(".mod-desc"));
+                const insert_point = (document.querySelector("div.url-box")
+                                    || document.querySelector("dl.mod-desc"));
 
                 insert_point.after(document.createElement("br"));
 
@@ -198,6 +198,9 @@ async function load_from_pyproject(url, fields) {
             description_div.appendChild(paragraph);
         }
     }
+
+    // Finished updating, hide the notification
+    document.querySelector("span.update-notification").remove();
 }
 
 export { load_from_pyproject }

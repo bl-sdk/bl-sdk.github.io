@@ -46,3 +46,13 @@ div.url-box > a {
 div.url-box > a:first-child {
     border-left: none;
 }
+
+/* Draw the update notification above the title */
+span.update-notification {
+    position: absolute;
+    transform: translateY(-100%);
+    opacity: 0.8;
+}
+span.update-notification > img {
+    max-height: 0.8em;
+}
