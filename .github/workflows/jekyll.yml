@@ -56,7 +56,7 @@ jobs:
           base_path="${{ steps.pages.outputs.base_path }}"
           base_url="${{ steps.pages.outputs.base_url }}"
 
-          bundle exec htmlproofer _site --swap-urls "^$base_path/:/,^${base_url/:/\:}/:/"
+          bundle exec htmlproofer _site --swap-urls "^$base_path/:/,^${base_url/:/\\:}/:/"
 
       - name: Upload artifact
         # Automatically uploads an artifact from the './_site' directory by default
