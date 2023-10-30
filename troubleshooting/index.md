@@ -2,5 +2,5 @@
 nav_order: 2
 ---
 
-# FAQ
+# Troubleshooting
 Coming soon
