@@ -38,8 +38,8 @@ nav_order: 1
 
      ![The BL3 mods menu](assets/images/installation/03-bl3-menu.png)
 
-   - In WL, hit tilde (`` `/~ ``) to open console, and you should see a message saying the console
-     mod menu has been loaded. Type `mods` and press enter to start configuring your mods.
+   - In WL, hit tilde (`` `/~ ``) twice to open console, and you should see a message saying the
+     console mod menu has been loaded. Type `mods` and press enter to start configuring your mods.
 
      ![The console-based WL mods menu](assets/images/installation/04-wl-menu.png)
 
