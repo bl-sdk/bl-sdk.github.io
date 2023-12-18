@@ -1,5 +1,41 @@
 # Developing SDK Mods
-Coming soon
+Work in progress
+
+## Setting up your Workspace
+The first thing to do when getting started is setting up your workspace so you can see all the raw
+python source files (and so your IDE can parse them). Mods are generally released as a single
+`.sdkmod` file, since this helps prevent a lot of mistakes casual users might make while installing,
+but this is unsuitable for development. `.sdkmod` files are all just renamed zips, open them in any
+archive program and extract the inner folders into your `sdk_mods` dir - go from
+`sdk_mods/my_mod.sdkmod/my_mod/*` to just `sdk_mods/my_mod/*`. Note that if you have both an
+extracted folder and a `.sdkmod`, the folder takes priority.
+
+The next thing to setup is the stub files for the sdk's embedded modules - your IDE obviously won't
+be able to find any source files. Point your IDE at the the `.stubs` folder:
+- In vscode, add to the `python.analysis.extraPaths` option.
+
+After finishing setting up, try take a quick read through the base sdk mod files and the stubs. They
+are all filled with all sorts of type hints and docstrings, which should help explain a lot about
+how the SDK works.
+
+## Debugging
+Print debugging's fun and all, but for proper dev work you need to get a real debugger set up. The
+SDK comes with some integration with [debugpy](https://github.com/microsoft/debugpy).
+
+1. Downloading the latest version of debugpy, and extract it into the `sdk_mods` folder such that
+   it's importable. The initalization script will attempt to import it and start a listener
+   automatically.
+
+2. Define the enviroment variable `PYUNREALSDK_DEBUGPY`. This is easiest done by appending to the
+   `unrealsdk.env` file in the plugins folder. You will still be able to attach without doing this,
+   however breakpoints won't work across threads, only explict `breakpoint()` calls.
+
+3. Launch the game, then you can attach to a remote debugging session on `localhost:5678`:
+   - In vscode, use the `Python: Remote Attach` template.
+
+If you need to debug something during startup, add a `debugpy.wait_for_client()` call. Note that the
+SDK initalization runs in it's own thread, the game will still start normally, this only blocks the
+SDK.
 
 ## Adding to the Mod DB
 The DB primarily sources info from your mod's `pyproject.toml`. With a well configured pyproject,
