@@ -9,7 +9,7 @@ Yup, they're all fully compatible - though as always, *specific mods* may have i
 together.
 
 ## How do I use this with the plugin loader for OpenHotfixLoader/BL3HM/other dll mods?
-For convienience, the SDK zip comes with a plugin loader pre-packaged, the sdk itself is a plugin
+For convenience, the SDK zip comes with a plugin loader pre-packaged, the sdk itself is a plugin
 just like everything else. You can just throw these other mods into the `Plugins` folder, and
 everything should keep working as before.
 

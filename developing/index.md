@@ -23,18 +23,18 @@ Print debugging's fun and all, but for proper dev work you need to get a real de
 SDK comes with some integration with [debugpy](https://github.com/microsoft/debugpy).
 
 1. Downloading the latest version of debugpy, and extract it into the `sdk_mods` folder such that
-   it's importable. The initalization script will attempt to import it and start a listener
+   it's importable. The initialization script will attempt to import it and start a listener
    automatically.
 
-2. Define the enviroment variable `PYUNREALSDK_DEBUGPY`. This is easiest done by appending to the
+2. Define the environment variable `PYUNREALSDK_DEBUGPY`. This is easiest done by appending to the
    `unrealsdk.env` file in the plugins folder. You will still be able to attach without doing this,
-   however breakpoints won't work across threads, only explict `breakpoint()` calls.
+   however breakpoints won't work across threads, only explicit `breakpoint()` calls.
 
 3. Launch the game, then you can attach to a remote debugging session on `localhost:5678`:
    - In vscode, use the `Python: Remote Attach` template.
 
 If you need to debug something during startup, add a `debugpy.wait_for_client()` call. Note that the
-SDK initalization runs in it's own thread, the game will still start normally, this only blocks the
+SDK initialization runs in it's own thread, the game will still start normally, this only blocks the
 SDK.
 
 ## Adding to the Mod DB
