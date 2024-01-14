@@ -2,40 +2,63 @@
 Work in progress
 
 ## Setting up your Workspace
-The first thing to do when getting started is setting up your workspace so you can see all the raw
-python source files (and so your IDE can parse them). Mods are generally released as a single
-`.sdkmod` file, since this helps prevent a lot of mistakes casual users might make while installing,
-but this is unsuitable for development. `.sdkmod` files are all just renamed zips, open them in any
-archive program and extract the inner folders into your `sdk_mods` dir - go from
-`sdk_mods/my_mod.sdkmod/my_mod/*` to just `sdk_mods/my_mod/*`. Note that if you have both an
-extracted folder and a `.sdkmod`, the folder takes priority.
+1. Create a new folder to develop your mods within. The mod manager supports loading from multiple
+   mods folders, so you can keep the mods you're developing separate.
 
-The next thing to setup is the stub files for the sdk's embedded modules - your IDE obviously won't
-be able to find any source files. Point your IDE at the the `.stubs` folder:
-- In vscode, add to the `python.analysis.extraPaths` option.
+2. Open up `OakGame\Binaries\Win64\Plugins\unrealsdk.env`, and add the following lines:
+   - ```ini
+     OAK_MOD_MANAGER_EXTRA_FOLDERS=["C:\\path\\to\\new\\mod\\folder"]
+     ```
+     This is a json list of paths to extra mod folders, you can append more - though note it must
+     stay on a single line.
+   
+   - ```ini
+     UNREALSDK_LOG_LEVEL=DWRN
+     ```
+     This sets the default log level to developer warning. This will print some extra log messages
+     to console, which are relevant for developers, but which we don't want normal users to worry
+     over.
+   
+   - ```ini
+     PYUNREALSDK_DEBUGPY=1
+     ```
+     This enables [debugpy](https://github.com/microsoft/debugpy) support, which will let you
+     properly attach a debugger.
+   
+   Note that the mod manager download contains this file, so when updating you need to be careful
+   not to overwrite it/to restore it afterwards.
+
+3. Download the latest version of debugpy, and extract to one of your mods folders such that it's
+   importable. The mod manager initialization script will automatically import it and start a
+   listener.
+
+4. Extract the default `.sdkmod`s, so you can see all the raw python source files (and so your IDE
+   can parse them).
+   
+   Mods are generally released as a single `.sdkmod` file, since this helps prevent a lot of
+   mistakes casual users might make while installing, but this is unsuitable for development.
+   
+   `.sdkmod` files are all just renamed zips, open them in any archive program and extract the inner
+   folders back into the mods folder - go from `sdk_mods/my_mod.sdkmod/my_mod/*` to just
+   `sdk_mods/my_mod/*`.
+   
+   Note that if you have both an extracted folder and a `.sdkmod` with the same name, the folder
+   takes priority.
+
+5. Point your IDE at the other mods folders, so it can follow imports. This should be the base
+   `sdk_mods` folder, and the `sdk_mods/.stubs` folder for the native modules.
+
+   - In vscode, add to the `python.analysis.extraPaths` option.
+
+6. Configure your debugger for remote debugging, attaching to `localhost:5678`.
+
+   - In vscode, use the `Python: Remote Attach` template.
+
+   After doing this, launch the game and make sure you can attach.
 
 After finishing setting up, try take a quick read through the base sdk mod files and the stubs. They
 are all filled with all sorts of type hints and docstrings, which should help explain a lot about
 how the SDK works.
-
-## Debugging
-Print debugging's fun and all, but for proper dev work you need to get a real debugger set up. The
-SDK comes with some integration with [debugpy](https://github.com/microsoft/debugpy).
-
-1. Downloading the latest version of debugpy, and extract it into the `sdk_mods` folder such that
-   it's importable. The initialization script will attempt to import it and start a listener
-   automatically.
-
-2. Define the environment variable `PYUNREALSDK_DEBUGPY`. This is easiest done by appending to the
-   `unrealsdk.env` file in the plugins folder. You will still be able to attach without doing this,
-   however breakpoints won't work across threads, only explicit `breakpoint()` calls.
-
-3. Launch the game, then you can attach to a remote debugging session on `localhost:5678`:
-   - In vscode, use the `Python: Remote Attach` template.
-
-If you need to debug something during startup, add a `debugpy.wait_for_client()` call. Note that the
-SDK initialization runs in it's own thread, the game will still start normally, this only blocks the
-SDK.
 
 ## Adding to the Mod DB
 The DB primarily sources info from your mod's `pyproject.toml`. With a well configured pyproject,
