@@ -32,18 +32,23 @@ nav_order: 1
 
    If you're asked to overwrite existing files, accept.
 
-4. The SDK should be installed now. To verify:
+4. \[PROTON ONLY\] When playing on Linux via Proton, you need to add the following launch arg:
+   ```
+   WINEDLLOVERRIDES="xinput1_3=n,b" %command%
+   ```
+
+5. The SDK should be installed now. To verify:
    - In BL3, you should see a new `MODS` option on the main menu. You can click this to start
      configuring your mods.
 
      ![The BL3 mods menu](assets/images/installation/03-bl3-menu.png)
 
-   - In WL, hit tilde (`` `/~ ``) to open console, and you should see a message saying the console
-     mod menu has been loaded. Type `mods` and press enter to start configuring your mods.
+   - In WL, hit tilde (`` `/~ ``) twice to open console, and you should see a message saying the
+     console mod menu has been loaded. Type `mods` and press enter to start configuring your mods.
 
      ![The console-based WL mods menu](assets/images/installation/04-wl-menu.png)
 
-5. To install SDK mods, navigate back to the `sdk_mods` folder you extracted during step 3. SDK mods
+6. To install SDK mods, navigate back to the `sdk_mods` folder you extracted during step 3. SDK mods
    come in two forms:
    - `.sdkmod` files can be dropped directly into this folder.
 
@@ -59,4 +64,4 @@ nav_order: 1
 
      ![Comparing normal vs nested mod folders](assets/images/installation/07-nested.png)
 
-6. After installing SDK mods, you need to restart the game for them to get loaded.
+7. After installing SDK mods, you need to restart the game for them to get loaded.
