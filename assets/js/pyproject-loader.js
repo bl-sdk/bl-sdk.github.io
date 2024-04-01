@@ -149,17 +149,24 @@ async function load_from_pyproject(url, fields) {
 
         const urls = pyproject?.project?.urls;
         if (urls) {
-            if (!url_box) {
-                url_box = document.createElement("div");
-                url_box.classList.add("url-box");
-                document.querySelector("dl.mod-desc").after(url_box);
+            const new_children = Object.entries(urls).map(([name, url]) => make_link(name, url));
+
+            if (new_children.length > 0){
+                if (!url_box) {
+                    url_box = document.createElement("div");
+                    url_box.classList.add("url-box");
+                    document.querySelector("dl.mod-desc").after(url_box);
+                }
+
+                url_box.replaceChildren(...new_children);
+
+            // If `pyproject.project.urls` exists, but is empty
+            } else {
+                url_box?.remove();
             }
 
-            for (const [name, url] of Object.entries(urls)) {
-                url_box.appendChild(make_link(name, url));
-            }
 
-        // If `pyproject.project` exists, but `pyproject.project.urls` does not/is empty
+        // If `pyproject.project` exists, but `pyproject.project.urls` does not
         } else if (pyproject?.project) {
             url_box?.remove();
         }
