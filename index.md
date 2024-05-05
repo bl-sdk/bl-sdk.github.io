@@ -34,7 +34,7 @@ nav_order: 1
 
 4. \[PROTON ONLY\] When playing on Linux via Proton, you need to add the following launch arg:
    ```
-   WINEDLLOVERRIDES="xinput1_3=n,b" %command%
+   WINEDLLOVERRIDES="dsound=n,b" %command%
    ```
 
 5. The SDK should be installed now. To verify:
