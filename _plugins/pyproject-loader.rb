@@ -41,7 +41,7 @@ Jekyll::Hooks.register :site, :post_read do |site|
         mod.data["pyproject"] = pyproject
 
         # Replace the title with that from the pyproject
-        # Would prefer to handle this entirely from a layout, but unfortuantly jekyl-seo-tag checks
+        # Would prefer to handle this entirely from a layout, but unfortunately jekyl-seo-tag checks
         # page.title specifically, which we can't overwrite from one
 
         # Check if the front matter already contains a title, if so abort and just use that one
