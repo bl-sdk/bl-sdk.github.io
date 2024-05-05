@@ -206,6 +206,11 @@ async function load_from_pyproject(url, fields) {
         }
     }
 
+    // Allow mod pages to have custom updaters, which we'll wait on before removing the notification
+    if (document.extra_custom_updater_promises) {
+        await Promise.all(document.extra_custom_updater_promises);
+    }
+
     // Finished updating, hide the notification
     document.querySelector("span.update-notification").remove();
 }
