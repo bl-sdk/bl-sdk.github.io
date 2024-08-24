@@ -37,7 +37,7 @@ These categories are manually set by the mod's developer, a mod which is still l
 simply never have been tested.
 
 ## My game is crashing when...
-### I open one of the entrys in the BL3 Mod Menu
+### I open one of the entries in the BL3 Mod Menu
 Update the sdk, this was fixed in version 1.3. The BL3 update on 2024-08-08 caused older versions of
 the BL3 Mod Menu to crash when creating a slider or keybind option.
 
