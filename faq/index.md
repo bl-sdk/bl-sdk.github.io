@@ -25,6 +25,11 @@ UNREALSDK_CONSOLE_KEY=F1
 ```
 Note that this file is bundled with the SDK, so updating will overwrite it.
 
+## My game is crashing when...
+### I open one of the entrys in the BL3 Mod Menu
+Update the sdk, this was fixed in version 1.3. The BL3 update on 2024-08-08 caused older versions of
+the BL3 Mod Menu to crash when creating a slider or keybind option.
+
 ## How do I use this with the plugin loader for OpenHotfixLoader/BL3HM/other dll mods?
 For convenience, the SDK zip comes with a plugin loader pre-packaged, the sdk itself is a plugin
 just like everything else. You can just throw these other mods into the `Plugins` folder, and
@@ -65,4 +70,4 @@ dlls a few times to try avoid them:
 
   This has shipped since SDK version 1.2.
 
-  No known issues \o/ 
+  No known issues \o/

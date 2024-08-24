@@ -7,7 +7,7 @@ Work in progress
 
 2. Open up `OakGame\Binaries\Win64\Plugins\unrealsdk.env`, and add the following lines:
    - ```ini
-     OAK_MOD_MANAGER_EXTRA_FOLDERS=["C:\\path\\to\\new\\mod\\folder"]
+     MOD_MANAGER_EXTRA_FOLDERS=["C:\\path\\to\\new\\mod\\folder"]
      ```
      This is a json list of paths to extra mod folders, you can append more - though note it must
      stay on a single line.
@@ -24,6 +24,9 @@ Work in progress
      ```
      This enables [debugpy](https://github.com/microsoft/debugpy) support, which will let you
      properly attach a debugger.
+   
+   You may also want to modify `PYUNREALSDK_PYEXEC_ROOT` to point at your mod folder. This will let
+   you run `C:\path\to\new\mod\folder\test.py` using simply `pyexec test.py`.
    
    Note that the mod manager download contains this file, so when updating you need to be careful
    not to overwrite it/to restore it afterwards.
@@ -59,6 +62,34 @@ Work in progress
 After finishing setting up, try take a quick read through the base sdk mod files and the stubs. They
 are all filled with all sorts of type hints and docstrings, which should help explain a lot about
 how the SDK works.
+
+## Experimenting Using the Console
+When you start experimenting with a concept, it's easier to work in console than it is to write a
+full mod. The SDK registers two custom console commands:
+
+`py` lets you run small snippets of python. By default, it executes one line at a time, stripping
+any leading whitespace.
+```py
+py from mods_base import get_pc
+py pc = get_pc()
+py print(pc)
+```
+
+You can also use heredoc-like syntax to execute multiline queries. This happens if the first two
+non-whitespace characters are `<<` (which is invalid python syntax for a single line).
+```py
+py << EOF
+is_hostile = get_pc().GetTeamComponent().IsHostile
+for pawn in unrealsdk.find_all("OakCharacter", exact=False):
+    if not is_hostile(pawn):
+        print(pawn)
+EOF
+```
+
+`pyexec` is useful for more complex scripts - it executes an entire file, relative to the location
+set in `PYUNREALSDK_PYEXEC_ROOT` previously. Note that this is *not* running a python script in the
+traditional sense, it's instead more similar to something like `eval(open(file).read())`. The
+interpreter is not restarted, and there's no way to accept arguments into `sys.argv`.
 
 ## Adding to the Mod DB
 The DB primarily sources info from your mod's `pyproject.toml`. With a well configured pyproject,
