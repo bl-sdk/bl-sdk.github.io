@@ -64,6 +64,19 @@ async function load_from_pyproject(url, fields) {
         }
     }
 
+    if (fields?.coop) {
+        const coop_support = pyproject?.tool?.sdkmod?.coop_support;
+        if (coop_support) {
+            const COOP_SUPPORT_TO_FRIENDLY_NAME = {
+                "incompatible": "Incompatible",
+                "requiresallplayers": "Requires All Players",
+                "clientside": "Client Side",
+            };
+            const friendly = COOP_SUPPORT_TO_FRIENDLY_NAME[coop_support.toLowerCase()] || "Unknown";
+            document.querySelector("#coop").innerText = friendly;
+        }
+    }
+
     if (fields?.license) {
         const license_element = document.querySelector("#license");
 

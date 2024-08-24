@@ -25,6 +25,17 @@ UNREALSDK_CONSOLE_KEY=F1
 ```
 Note that this file is bundled with the SDK, so updating will overwrite it.
 
+## What do the different "Coop" fields on the mod pages mean?
+
+| Category             | Meaning                                                                                                                             |
+|:---------------------|:------------------------------------------------------------------------------------------------------------------------------------|
+| Incompatible         | The mod is fundamentally incompatible with coop, it can only be played solo.                                                        |
+| Requires All Players | The mod needs all players to have it installed in order to work best. There may still be aspects which don't work as well off host. |
+| Client Side          | The mod is entirely client side, and can be used in coop regardless of what other players are running.                              |
+
+These categories are manually set by the mod's developer, a mod which is still left on unknown may
+simply never have been tested.
+
 ## My game is crashing when...
 ### I open one of the entrys in the BL3 Mod Menu
 Update the sdk, this was fixed in version 1.3. The BL3 update on 2024-08-08 caused older versions of

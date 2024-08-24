@@ -33,6 +33,21 @@ layout: default
     {%- endfor -%}
     <dd id="games">{{ games | array_to_sentence_string | default: "Unknown" }}</dd>
 
+    <dt>Coop</dt>
+    {%- assign coop_support = page.coop_support
+                                | default: page.pyproject.tool.sdkmod.coop_support
+                                | downcase -%}
+    {%- case coop_support -%}
+    {%- when "incompatible" -%}
+        <dd id="coop">Incompatible</dd>
+    {%- when "requiresallplayers" -%}
+        <dd id="coop">Requires All Players</dd>
+    {%- when "clientside" -%}
+        <dd id="coop">Client Side</dd>
+    {%- else -%}
+        <dd id="coop">Unknown</dd>
+    {%- endcase -%}
+
     <dt>License</dt>
     {%- if page.license -%}
         {%- assign license_name = page.license.name -%}
@@ -124,6 +139,9 @@ layout: default
 {%- endunless -%}
 {%- unless page.supported_games -%}
         games: true,
+{%- endunless -%}
+{%- unless page.coop_support -%}
+        coop: true,
 {%- endunless -%}
 {%- unless page.license -%}
         license: true,

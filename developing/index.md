@@ -114,20 +114,23 @@ Title                       | `title`           | `tool.sdkmod.name`, `project.n
 Author(s)                   | `author`          | `project.authors[n].name`<sup>1</sup>
 Latest Version              | `version`         | `tool.sdkmod.version`, `project.version`
 Supported Games<sup>2</sup> | `supported_games` | `tool.sdkmod.supported_games`
-License<sup>3</sup>         | `license`         | `tool.sdkmod.license`, `project.license.text`<sup>4</sup>
+Coop Support                | `coop_support`    | `tool.sdkmod.coop_support`
+License<sup>4</sup>         | `license`         | `tool.sdkmod.license`, `project.license.text`<sup>5</sup>
 Requirements                | `dependencies`    | `project.dependencies`
-Misc URLs<sup>5</sup>       | `urls`            | `project.urls`
+Misc URLs<sup>6</sup>       | `urls`            | `project.urls`
 Download Link               | `download`        | `tool.sdkmod.download`
-Description                 | The page contents | `project.description`<sup>6</sup>
+Description                 | The page contents | `project.description`<sup>7</sup>
 
 <sup>1</sup> Multiple authors are concatenated in the order given.    
 <sup>2</sup> An array of strings, with valid values of `BL3` and `WL` (case insensitive). If not
              given, defaults to all games.    
-<sup>3</sup> A table with keys `name` and `url`. Prefer linking to a summary site, rather than
+<sup>3</sup> One of `Unknown`, `Incompatible`, `RequiresAllPlayers`, or `ClientSide`. Defaults to
+             unknown.    
+<sup>4</sup> A table with keys `name` and `url`. Prefer linking to a summary site, rather than
              direct to your `LICENSE`.    
-<sup>4</sup> Used as the name, with no url.    
-<sup>5</sup> A dict where keys are the names and values are the urls.    
-<sup>6</sup> HTML tags are stripped, rather than just being escaped.    
+<sup>5</sup> Used as the name, with no url.    
+<sup>6</sup> A dict where keys are the names and values are the urls.    
+<sup>7</sup> HTML tags are stripped, rather than just being escaped.    
 {: .fs-2 }
 
 ### Updating Info
