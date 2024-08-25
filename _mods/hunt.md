@@ -48,3 +48,30 @@ sure of the exact map, or if you just want to have some fun scrolling.
     poster="{{ "/assets/mods/hunt/04-everything.jpeg" | relative_url }}"
     src="{{ "/assets/mods/hunt/04-everything.webm" | relative_url }}"
 ></video>
+
+## Coop Support
+
+<video width="100%"
+    muted autoplay loop playsinline
+    disablepictureinpicture disableremoteplayback
+    poster="{{ "/assets/mods/hunt/05-coop.jpeg" | relative_url }}"
+    src="{{ "/assets/mods/hunt/05-coop.webm" | relative_url }}"
+></video>
+
+As long as all players are running it, the tracker also fully supports coop. This is done by
+transmitting some information using the item's loot beam, hence the blinking. Coop support can be
+disabled if you find the blinking distracting.
+
+There a few slight caveats to playing in coop:
+
+- In Coopetition mode, each player must individually look at the item to redeem it for themselves,
+  one player can't just unlock it for everyone.
+
+- If any player picks the item up, it no longer counts as a valid drop for the others. Make sure
+  everyone's redeemed it before doing so.
+
+- If players split up, sometimes clients won't get notified of a drop if they're too far away from
+  it. If they then travel back to it, they'll be unable to redeem it.
+
+If you have a particularly bad connection (primarily concerning packet loss), you may also need to up
+the blink duration in settings to consistently transmit information to clients.
