@@ -1,9 +1,11 @@
 ---
 layout: default
 ---
+{%- unless page.legacy -%}
 <span class="update-notification fs-2">
     Fetching latest data <img src="{{ "/assets/images/oval.svg" | relative_url }}" alt="loading..."/>
 </span>
+{%- endunless -%}
 <h1 id="title">{{ page.title }}</h1>
 <dl class="mod-desc">
     <dt>By</dt>
@@ -20,7 +22,7 @@ layout: default
     <dd><code id="version" class="language-plaintext highlighter-rouge">{{ version | escape }}</code></dd>
 
     <dt>Supports</dt>
-    {%- assign ALLOWED_GAMES = "BL3,WL" | split: "," -%}
+    {%- assign ALLOWED_GAMES = "BL2,TPS,AODK" | split: "," -%}
     {%- assign unsanitized_games = page.supported_games
                                     | default: page.pyproject.tool.sdkmod.supported_games
                                     | default: ALLOWED_GAMES -%}
@@ -28,10 +30,15 @@ layout: default
     {%- for game in unsanitized_games -%}
         {% assign upper_game = game | upcase %}
         {%- if ALLOWED_GAMES contains upper_game -%}
-            {%- assign games = games | push: upper_game -%}
+            {%- unless games contains upper_game -%}
+                {%- assign games = games | push: upper_game -%}
+            {%- endunless -%}
         {%- endif -%}
     {%- endfor -%}
-    <dd id="games">{{ games | array_to_sentence_string | default: "Unknown" }}</dd>
+    <dd id="games">{{ games
+                        | array_to_sentence_string
+                        | replace: "AODK", "AoDK"
+                        | default: "Unknown" }}</dd>
 
     <dt>Coop</dt>
     {%- assign coop_support = page.coop_support
@@ -125,6 +132,12 @@ layout: default
 {%- endif -%}
 </div>
 
+{%- if page.legacy != "" -%}
+<p class="warning">
+    This is a legacy mod, which will be run in compatibility mode. It may behave slightly odd, and
+    it may stop working at some point in the future.
+</p>
+{%- else -%}
 <script type="module">
     import { load_from_pyproject } from "{{ "/assets/js/pyproject-loader.js" | relative_url }}";
     load_from_pyproject("{{ page.pyproject_url }}", {
@@ -160,3 +173,4 @@ layout: default
 {%- endunless -%}
     });
 </script>
+{%- endif -%}

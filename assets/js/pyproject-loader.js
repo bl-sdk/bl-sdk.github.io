@@ -56,11 +56,12 @@ async function load_from_pyproject(url, fields) {
     }
 
     if (fields?.games) {
-        const ALLOWED_GAMES = ["BL3", "WL"];
+        const ALLOWED_GAMES = {"BL2": "BL2", "TPS": "TPS", "AODK": "AoDK"};
         const game_list = pyproject?.tool?.sdkmod?.supported_games || ALLOWED_GAMES;
-        const games = arr_to_sentence(game_list.filter(x => ALLOWED_GAMES.includes(x)));
-        if (games) {
-            document.querySelector("#games").innerText = games;
+        const filtered_games = [...new Set(game_list.filter(x => x.toUpperCase() in ALLOWED_GAMES)
+                                                    .map(x => ALLOWED_GAMES[x.toUpperCase()]))];
+        if (filtered_games) {
+            document.querySelector("#games").innerText = arr_to_sentence(filtered_games);
         }
     }
 

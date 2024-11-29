@@ -37,16 +37,10 @@ nav_order: 1
    WINEDLLOVERRIDES="dsound=n,b" %command%
    ```
 
-5. The SDK should be installed now. To verify:
-   - In BL3, you should see a new `MODS` option on the main menu. You can click this to start
-     configuring your mods.
+5. The SDK should be installed now. You should see a new `MODS` option on the main menu. You can
+   click this to start configuring your mods.
 
-     ![The BL3 mods menu](/assets/images/installation/03-bl3-menu.png)
-
-   - In WL, hit tilde (`` `/~ ``) twice to open console, and you should see a message saying the
-     console mod menu has been loaded. Type `mods` and press enter to start configuring your mods.
-
-     ![The console-based WL mods menu](/assets/images/installation/04-wl-menu.png)
+   ![The mods menu](/assets/images/installation/03-mod-menu.png)
 
 6. To install SDK mods, navigate back to the `sdk_mods` folder you extracted during step 3. SDK mods
    come in two forms:

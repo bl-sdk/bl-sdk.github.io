@@ -126,8 +126,8 @@ Download Link               | `download`        | `tool.sdkmod.download`
 Description                 | The page contents | `project.description`<sup>7</sup>
 
 <sup>1</sup> Multiple authors are concatenated in the order given.    
-<sup>2</sup> An array of strings, with valid values of `BL3` and `WL` (case insensitive). If not
-             given, defaults to all games.    
+<sup>2</sup> An array of strings, with valid values of `BL2`, `TPS` and `AoDK` (case insensitive).
+             If not given, defaults to all games.    
 <sup>3</sup> One of `Unknown`, `Incompatible`, `RequiresAllPlayers`, or `ClientSide`. Defaults to
              unknown.    
 <sup>4</sup> A table with keys `name` and `url`. Prefer linking to a summary site, rather than

@@ -12,6 +12,10 @@ extend Liquid::StandardFilters
 
 Jekyll::Hooks.register :site, :post_read do |site|
     site.collections["mods"].docs.each{|mod|
+        if mod.data.key?("legacy") then
+            next
+        end
+
         if !mod.data.key?("pyproject_url") then
             Jekyll.logger.error("#{mod.path}: no pyproject url")
             next

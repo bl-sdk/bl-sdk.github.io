@@ -1,11 +1,11 @@
-title: BL3/WL SDK Mod Database
+title: BL2/TPS SDK Mod Database
 description: >-
-  A list of sdk mods for Borderlands 3 and Wonderlands.
+  A list of sdk mods for Borderlands 2, The Pre-Sequel, and the Attack on Dragon Keep standalone.
 
 url: https://bl-sdk.github.io
-baseurl: /oak-mod-db
+baseurl: /willow2-mod-db
 github_username: bl-sdk
-repository: bl-sdk/oak-mod-db
+repository: bl-sdk/willow2-mod-db
 
 collections:
   mods:
@@ -28,6 +28,10 @@ just_the_docs:
   collections:
     mods:
       name: Mods
+callouts:
+  warning:
+    title: Warning
+    color: red
 
 favicon_ico: /assets/images/favicon.png
 
@@ -35,7 +39,7 @@ nav_external_links:
   - title: Modding Support Discord
     url: https://discord.gg/bXeqV8Ef9R
   - title: Latest Release
-    url: https://github.com/bl-sdk/oak-mod-manager/releases/latest
+    url: https://github.com/bl-sdk/willow2-mod-manager/releases/latest
 
 plugins:
   - jekyll-commonmark-ghpages

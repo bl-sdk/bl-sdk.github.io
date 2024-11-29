@@ -61,7 +61,7 @@ jobs:
           bundle exec htmlproofer _site --swap-urls "^$base_path/:/,^${base_url/:/\\:}/:/"
 
       - name: Upload artifact
-        if: github.ref == 'refs/heads/master' && github.repository == 'bl-sdk/oak-mod-db'
+        if: github.ref == 'refs/heads/master' && github.repository == 'bl-sdk/willow2-mod-db'
         # Automatically uploads an artifact from the './_site' directory by default
         uses: actions/upload-pages-artifact@v3
 
@@ -81,7 +81,7 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/master' && github.repository == 'bl-sdk/oak-mod-db'
+    if: github.ref == 'refs/heads/master' && github.repository == 'bl-sdk/willow2-mod-db'
 
     needs:
     - build
