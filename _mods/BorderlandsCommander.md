@@ -5,9 +5,7 @@ dependencies:
 - UserFeedback>=1.5
 download: https://github.com/mopioid/Borderlands-Commander/releases/tag/2.5
 legacy: true
-license:
-  name: Unknown
-  url: ''
+license: {}
 supported_games:
 - BL2
 - TPS

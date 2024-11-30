@@ -4,9 +4,7 @@ coop_support: Unknown
 dependencies: []
 download: https://github.com/Decept1x/Borderlands-Custom-Scoped-Sensitivity/releases/tag/1.0
 legacy: true
-license:
-  name: Unknown
-  url: ''
+license: {}
 supported_games:
 - BL2
 - TPS

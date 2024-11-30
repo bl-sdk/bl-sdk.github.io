@@ -4,9 +4,7 @@ coop_support: Unknown
 dependencies: []
 download: https://github.com/Decept1x/Borderlands-Cleaning-Up-Pandora/releases/tag/1.1
 legacy: true
-license:
-  name: Unknown
-  url: ''
+license: {}
 supported_games:
 - BL2
 - TPS

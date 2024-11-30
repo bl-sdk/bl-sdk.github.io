@@ -40,7 +40,7 @@ nav_order: 1
 5. The SDK should be installed now. You should see a new `MODS` option on the main menu. You can
    click this to start configuring your mods.
 
-   ![The mods menu](/assets/images/installation/03-mod-menu.png)
+   ![The mods menu](https://bl-sdk.github.io/assets/images/posts/mod-install1.5.png)
 
 6. To install SDK mods, navigate back to the `sdk_mods` folder you extracted during step 3. SDK mods
    come in two forms:

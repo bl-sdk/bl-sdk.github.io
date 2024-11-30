@@ -4,9 +4,7 @@ coop_support: Unknown
 dependencies: []
 download: https://github.com/Cae-l/bl-sdk-mods/raw/master/SkinRandomizer/SkinRandomizer.zip
 legacy: true
-license:
-  name: Unknown
-  url: ''
+license: {}
 supported_games:
 - BL2
 title: Skin Randomizer

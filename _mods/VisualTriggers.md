@@ -4,9 +4,7 @@ coop_support: Unknown
 dependencies: []
 download: https://github.com/GameChanger97/Bl2-Mods/blob/main/VisualTriggers/VisualTriggers.zip?raw=true
 legacy: true
-license:
-  name: Unknown
-  url: ''
+license: {}
 supported_games:
 - BL2
 title: Visual Triggers

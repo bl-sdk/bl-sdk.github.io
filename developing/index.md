@@ -39,7 +39,7 @@ Work in progress
 
    - `mod_manager.extra_folders`
 
-     This is a list of extra mod folders, which lets you keep your development folder seperate from
+     This is a list of extra mod folders, which lets you keep your development folder separate from
      other mods.
 
 3. Download the latest version of debugpy, and extract to one of your mods folders such that it's

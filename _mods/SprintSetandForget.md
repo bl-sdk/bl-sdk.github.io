@@ -4,9 +4,7 @@ coop_support: Unknown
 dependencies: []
 download: https://gitlab.com/Ceiyne/borderlands-mods/-/raw/main/Sprint%20Set-and-Forget/Sprint_Set-and-Forget.zip?inline=false
 legacy: true
-license:
-  name: Unknown
-  url: ''
+license: {}
 supported_games:
 - BL2
 - TPS

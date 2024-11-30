@@ -20,5 +20,5 @@ This mod is useless by itself, it should be used alongside the hexedit to increa
 
 Fixes the level cap of most items so that they continue spawning past level 100.
 
-Note that past level 127, items cannot be serialized corrently, and will revert to a lower level on SQ. Use [Sanity Saver](/mods/SanitySaver) to fix this.    
+Note that past level 127, items cannot be serialized corrently, and will revert to a lower level on SQ. Use [Sanity Saver]({{- "/mods/sanitysaver" | relative_url -}}) to fix this.    
 Also note that there may still be various other issues with an increased level cap, this only fixes that most items stop spawning.

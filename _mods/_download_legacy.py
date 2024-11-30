@@ -8,7 +8,9 @@ import yaml
 
 MOD_FOLDER = Path(__file__).parent
 LEGACY_MODS_JSON_URL = "https://bl-sdk.github.io/mods.json"
+
 YT_TAG_REGEX = re.compile(r"!\[yt\]\((.+?)\)", flags=re.I)
+LOCAL_MOD_LINK_REGEX = re.compile(r"\[(.+?)\]\(/mods/(.+?)\)")
 
 
 def arr_to_sentence(arr: list[str], joiner: str = "and") -> str:
@@ -23,8 +25,13 @@ def arr_to_sentence(arr: list[str], joiner: str = "and") -> str:
             return ", ".join(arr[:-1]) + f", {joiner} " + arr[-1]
 
 
-def replace_yt_tags(data: str) -> str:
-    return YT_TAG_REGEX.sub(lambda match: f"\n\n{{% youtube {match.group(1)} %}}", data)
+def fixup_description(data: str) -> str:
+    data = YT_TAG_REGEX.sub(lambda m: f"\n\n{{% youtube {m.group(1)} %}}", data)
+    data = LOCAL_MOD_LINK_REGEX.sub(
+        lambda m: f'[{m.group(1)}]({{{{- "/mods/{m.group(2).lower()}" | relative_url -}}}})',
+        data,
+    )
+    return data
 
 
 def convert_mod_data(mod: dict[str, Any]) -> None:
@@ -41,7 +48,7 @@ def convert_mod_data(mod: dict[str, Any]) -> None:
                 "url": mod["license"][1],
             }
             if len(mod["license"]) > 0
-            else {"name": "Unknown", "url": ""}
+            else {}
         ),
         "dependencies": [
             name + version for name, version in mod["requirements"].items()
@@ -60,7 +67,7 @@ def convert_mod_data(mod: dict[str, Any]) -> None:
         "---\n"
         + yaml.dump(converted_data)
         + "---\n"
-        + replace_yt_tags(mod["description"])
+        + fixup_description(mod["description"])
     )
 
 

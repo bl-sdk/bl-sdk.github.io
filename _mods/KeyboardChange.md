@@ -4,9 +4,7 @@ coop_support: Unknown
 dependencies: []
 download: https://gitlab.com/Ceiyne/borderlands-mods/-/raw/main/Keyboard%20Change/KBChange.zip?inline=false
 legacy: true
-license:
-  name: Unknown
-  url: ''
+license: {}
 supported_games:
 - BL2
 - TPS

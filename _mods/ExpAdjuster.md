@@ -4,9 +4,7 @@ coop_support: Unknown
 dependencies: []
 download: https://github.com/plu5/p-borderlands/releases/latest
 legacy: true
-license:
-  name: Unknown
-  url: ''
+license: {}
 supported_games:
 - BL2
 title: Exp Adjuster

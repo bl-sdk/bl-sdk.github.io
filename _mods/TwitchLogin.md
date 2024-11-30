@@ -4,9 +4,7 @@ coop_support: Unknown
 dependencies: []
 download: https://github.com/mopioid/Borderlands-Twitch-Login/releases/tag/1.0
 legacy: true
-license:
-  name: Unknown
-  url: ''
+license: {}
 supported_games:
 - BL2
 - TPS

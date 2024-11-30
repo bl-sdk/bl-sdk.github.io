@@ -4,9 +4,7 @@ coop_support: Unknown
 dependencies: []
 download: https://github.com/bl-sdk/former-default-mods/raw/master/SkillRandomizer/SkillRandomizer.zip
 legacy: true
-license:
-  name: Unknown
-  url: ''
+license: {}
 supported_games:
 - BL2
 title: Cross Class Skill Randomizer

@@ -4,9 +4,7 @@ coop_support: Unknown
 dependencies: []
 download: https://github.com/mopioid/Borderlands-Loot-Randomizer/releases/tag/1.5.2
 legacy: true
-license:
-  name: Unknown
-  url: ''
+license: {}
 supported_games:
 - BL2
 - TPS
