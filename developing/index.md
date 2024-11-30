@@ -1,7 +1,3 @@
----
-has_children: true
----
-
 # Developing SDK Mods
 Work in progress
 
