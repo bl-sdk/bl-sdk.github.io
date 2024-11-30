@@ -22,7 +22,7 @@ defaults:
 
 markdown: kramdown
 theme: just-the-docs
-color_scheme: dark
+color_scheme: willow2
 
 just_the_docs:
   collections:

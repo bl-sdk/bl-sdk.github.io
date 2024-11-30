@@ -1,0 +1,9 @@
+@import "./custom/custom";
+
+// By default callouts use a transparent background, replace it with a solid one so that the cross
+// hatching doesn't peek through
+{%- for callout in site.callouts %}
+p.{{ callout[0] }}, blockquote.{{ callout[0] }} {
+    background: mix(${{ callout[1].color }}-{{ callout_background_hue }}, $body-background-color, 15%);
+}
+{%- endfor -%}

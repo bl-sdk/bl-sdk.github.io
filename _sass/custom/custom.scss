@@ -1,0 +1,32 @@
+// Crosshatch background
+body, .side-bar {
+    background-image:
+        linear-gradient(
+            45deg,
+            transparent 49%,
+            rgba(255,255,255,0.05) 49%,
+            rgba(255,255,255,0.05) 51%,
+            transparent 51%,
+        ),
+        linear-gradient(
+            -45deg,
+            transparent 49%,
+            rgba(255,255,255,0.05) 49%,
+            rgba(255,255,255,0.05) 51%,
+            transparent 51%,
+        );
+    background-size: 8px 8px;
+}
+
+// Add some borders to make things a little clearer ontop of the crosshatching
+.search {
+    border-right: $border $border-color;
+}
+
+.nav-list .nav-list-link.active {
+    border-width: 1px;
+    border-style: solid;
+    border-image: linear-gradient(90deg, transparent 0%, $border-color 80%, transparent 100%) 1;
+    border-left: none;
+    border-right: none;
+}

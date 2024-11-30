@@ -1,0 +1,6 @@
+@import "./color_schemes/dark";
+
+$body-background-color: darken($grey-dk-300, 3%);
+$sidebar-color: darken($grey-dk-300, 3%);
+$link-color: $yellow-300;
+$btn-primary-color: $yellow-300;
