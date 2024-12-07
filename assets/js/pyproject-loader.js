@@ -57,7 +57,7 @@ async function load_from_pyproject(url, fields) {
 
     if (fields?.games) {
         const ALLOWED_GAMES = {"BL2": "BL2", "TPS": "TPS", "AODK": "AoDK"};
-        const game_list = pyproject?.tool?.sdkmod?.supported_games || ALLOWED_GAMES;
+        const game_list = pyproject?.tool?.sdkmod?.supported_games || Object.keys(ALLOWED_GAMES);
         const filtered_games = [...new Set(game_list.filter(x => x.toUpperCase() in ALLOWED_GAMES)
                                                     .map(x => ALLOWED_GAMES[x.toUpperCase()]))];
         if (filtered_games) {
@@ -213,7 +213,8 @@ async function load_from_pyproject(url, fields) {
             const paragraph = document.createElement("p");
 
             // Strip html from the description to not show any tags meant for the mod
-            paragraph.innerText = strip_decode_html(description);
+            // Set innerHTML so that newlines get converted like from the markdown (i.e. they don't)
+            paragraph.innerHTML = strip_decode_html(description);
 
             description_div.innerHTML = "";
             description_div.appendChild(paragraph);

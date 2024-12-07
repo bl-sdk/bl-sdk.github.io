@@ -128,11 +128,11 @@ layout: default
     {{ content }}
 {%- else -%}
     {%- assign using_description_override = false -%}
-    <p>{{ page.pyproject.project.description | strip_html }}</p>
+    <p markdown="0">{{ page.pyproject.project.description | strip_html }}</p>
 {%- endif -%}
 </div>
 
-{%- if page.legacy != "" -%}
+{%- if page.legacy -%}
 <p class="warning">
     This is a legacy mod, which will be run in compatibility mode. It may behave slightly odd, and
     it may stop working at some point in the future.
