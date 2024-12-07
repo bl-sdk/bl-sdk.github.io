@@ -2,7 +2,7 @@
 author: apple1417
 coop_support: Unknown
 dependencies: []
-download: https://github.com/apple1417/bl-sdk-mods/raw/master/OHKO/OHKO.zip
+download: https://github.com/apple1417/willow2-sdk-mods/raw/master/.legacy/OHKO.zip
 legacy: true
 license:
   name: GNU GPLv3
@@ -13,7 +13,7 @@ supported_games:
 - AoDK
 title: One-Hit KO
 urls:
-  Source Code: https://github.com/apple1417/bl-sdk-mods/
+  Source Code: https://github.com/apple1417/willow2-sdk-mods/
 version: '1.0'
 ---
 Makes you die in one hit.

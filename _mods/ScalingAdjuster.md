@@ -2,7 +2,7 @@
 author: apple1417
 coop_support: Unknown
 dependencies: []
-download: https://github.com/apple1417/bl-sdk-mods/raw/master/ScalingAdjuster/ScalingAdjuster.zip
+download: https://github.com/apple1417/willow2-sdk-mods/raw/master/.legacy/ScalingAdjuster.zip
 legacy: true
 license:
   name: GNU GPLv3
@@ -13,7 +13,7 @@ supported_games:
 - AoDK
 title: Scaling Adjuster
 urls:
-  Source Code: https://github.com/apple1417/bl-sdk-mods/
+  Source Code: https://github.com/apple1417/willow2-sdk-mods/
 version: '1.7'
 ---
 Adds an option to change the game's base scaling value. Note that you may have to save quit for values to update.

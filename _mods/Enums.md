@@ -2,7 +2,7 @@
 author: apple1417
 coop_support: Unknown
 dependencies: []
-download: https://github.com/apple1417/bl-sdk-mods/raw/master/Enums/Enums.zip
+download: https://github.com/apple1417/willow2-sdk-mods/raw/master/.legacy/Enums.zip
 legacy: true
 license:
   name: GNU GPLv3
@@ -13,7 +13,7 @@ supported_games:
 - AoDK
 title: Enums
 urls:
-  Source Code: https://github.com/apple1417/bl-sdk-mods/
+  Source Code: https://github.com/apple1417/willow2-sdk-mods/
 version: '1.1'
 ---
 Imports all Unrealscript enums into Python.

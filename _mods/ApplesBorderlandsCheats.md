@@ -3,7 +3,7 @@ author: apple1417
 coop_support: Unknown
 dependencies:
 - UserFeedback>=1.3
-download: https://github.com/apple1417/bl-sdk-mods/raw/master/ApplesBorderlandsCheats/ApplesBorderlandsCheats.zip
+download: https://github.com/apple1417/willow2-sdk-mods/raw/master/.legacy/ApplesBorderlandsCheats.zip
 legacy: true
 license:
   name: GNU GPLv3
@@ -14,7 +14,7 @@ supported_games:
 - AoDK
 title: Apple's Borderlands Cheats
 urls:
-  Source Code: https://github.com/apple1417/bl-sdk-mods/
+  Source Code: https://github.com/apple1417/willow2-sdk-mods/
 version: '1.12'
 ---
 Adds keybinds performing various cheaty things.

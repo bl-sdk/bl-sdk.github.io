@@ -2,7 +2,7 @@
 author: apple1417
 coop_support: Unknown
 dependencies: []
-download: https://github.com/apple1417/bl-sdk-mods/raw/master/TrueDamageLogger/TrueDamageLogger.zip
+download: https://github.com/apple1417/willow2-sdk-mods/raw/master/.legacy/TrueDamageLogger.zip
 legacy: true
 license:
   name: GNU GPLv3
@@ -13,7 +13,7 @@ supported_games:
 - AoDK
 title: True Damage Logger
 urls:
-  Source Code: https://github.com/apple1417/bl-sdk-mods/
+  Source Code: https://github.com/apple1417/willow2-sdk-mods/
 version: '1.3'
 ---
 Prints the actual amount of damage you deal to console, bypassing visual damage cap.

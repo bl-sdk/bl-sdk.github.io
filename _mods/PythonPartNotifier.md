@@ -2,7 +2,7 @@
 author: apple1417
 coop_support: Unknown
 dependencies: []
-download: https://github.com/apple1417/bl-sdk-mods/raw/master/PythonPartNotifier/PythonPartNotifier.zip
+download: https://github.com/apple1417/willow2-sdk-mods/raw/master/.legacy/PythonPartNotifier.zip
 legacy: true
 license:
   name: GNU GPLv3
@@ -13,7 +13,7 @@ supported_games:
 - AoDK
 title: Python Part Notifier
 urls:
-  Source Code: https://github.com/apple1417/bl-sdk-mods/
+  Source Code: https://github.com/apple1417/willow2-sdk-mods/
 version: '1.9'
 ---
 Shows the parts making up all of your items and weapons on their cards. Yes this even includes Grenades, COMs, and Relics/Oz Kits. Has full mod support, so if a mod adds extra parts to a weapon or changes a part's mesh it will properly update. Unique part support is limited, they may just show the same as the base part with the same mesh.

@@ -2,7 +2,7 @@
 author: apple1417
 coop_support: Unknown
 dependencies: []
-download: https://github.com/apple1417/bl-sdk-mods/raw/master/TextModLoader/TextModLoader.zip
+download: https://github.com/apple1417/willow2-sdk-mods/raw/master/.legacy/TextModLoader.zip
 legacy: true
 license:
   name: GNU GPLv3
@@ -13,7 +13,7 @@ supported_games:
 - AoDK
 title: Text Mod Loader
 urls:
-  Source Code: https://github.com/apple1417/bl-sdk-mods/
+  Source Code: https://github.com/apple1417/willow2-sdk-mods/
 version: '1.4'
 ---
 Displays Text Mods from binaries in the SDK mods menu.

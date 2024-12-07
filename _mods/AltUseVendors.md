@@ -3,7 +3,7 @@ author: apple1417
 coop_support: Unknown
 dependencies:
 - Enums>=1.0
-download: https://github.com/apple1417/bl-sdk-mods/raw/master/AltUseVendors/AltUseVendors.zip
+download: https://github.com/apple1417/willow2-sdk-mods/raw/master/.legacy/AltUseVendors.zip
 legacy: true
 license:
   name: GNU GPLv3
@@ -14,7 +14,7 @@ supported_games:
 - AoDK
 title: Alt Use Vendors
 urls:
-  Source Code: https://github.com/apple1417/bl-sdk-mods/
+  Source Code: https://github.com/apple1417/willow2-sdk-mods/
 version: '2.2'
 ---
 Adds alt use binds to vendors to let you quickly refill health and ammo and sell trash, like in BL3/Wonderlands.

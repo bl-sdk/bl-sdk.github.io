@@ -2,7 +2,7 @@
 author: apple1417
 coop_support: Unknown
 dependencies: []
-download: https://github.com/apple1417/bl-sdk-mods/raw/master/EnemyLevelRandomizer/EnemyLevelRandomizer.zip
+download: https://github.com/apple1417/willow2-sdk-mods/raw/master/.legacy/EnemyLevelRandomizer.zip
 legacy: true
 license:
   name: GNU GPLv3
@@ -13,7 +13,7 @@ supported_games:
 - AoDK
 title: Enemy Level Randomizer
 urls:
-  Source Code: https://github.com/apple1417/bl-sdk-mods/
+  Source Code: https://github.com/apple1417/willow2-sdk-mods/
 version: '1.4'
 ---
 As the name might suggest, randomizes enemy levels. Probably a bad idea.
