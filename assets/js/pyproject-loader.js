@@ -56,7 +56,11 @@ async function load_from_pyproject(url, fields) {
     }
 
     if (fields?.games) {
-        const ALLOWED_GAMES = {"BL2": "BL2", "TPS": "TPS", "AODK": "AoDK"};
+        const ALLOWED_GAMES = {
+            "willow2": {"BL2": "BL2", "TPS": "TPS", "AODK": "AoDK"},
+            "oak": {"BL3": "BL3", "WL": "WL"},
+        }[window.location.pathname.match(/^\/(willow2|oak)-mod-db/)[1]];
+
         const game_list = pyproject?.tool?.sdkmod?.supported_games || Object.keys(ALLOWED_GAMES);
         const filtered_games = [...new Set(game_list.filter(x => x.toUpperCase() in ALLOWED_GAMES)
                                                     .map(x => ALLOWED_GAMES[x.toUpperCase()]))];

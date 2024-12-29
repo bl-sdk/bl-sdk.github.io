@@ -22,7 +22,15 @@ layout: default
     <dd><code id="version" class="language-plaintext highlighter-rouge">{{ version | escape }}</code></dd>
 
     <dt>Supports</dt>
-    {%- assign ALLOWED_GAMES = "BL2,TPS,AODK" | split: "," -%}
+    {%- case page.collection -%}
+    {%- when "willow2_mods" -%}
+        {%- assign ALLOWED_GAMES = "BL2,TPS,AODK" | split: "," -%}
+    {%- when "oak_mods" -%}
+        {%- assign ALLOWED_GAMES = "BL3,WL" | split: "," -%}
+    {%- else -%}
+        {%- assign ALLOWED_GAMES = "" | split: "," | push: page.collection -%}
+    {%- endcase -%}
+
     {%- assign unsanitized_games = page.supported_games
                                     | default: page.pyproject.tool.sdkmod.supported_games
                                     | default: ALLOWED_GAMES -%}
