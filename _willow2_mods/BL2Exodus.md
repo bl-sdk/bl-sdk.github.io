@@ -7,6 +7,8 @@ legacy: true
 license:
   name: MIT
   url: https://choosealicense.com/licenses/mit
+redirect_from:
+- /mods/BL2Exodus/
 supported_games:
 - BL2
 title: BL2 Exodus

@@ -8,6 +8,8 @@ legacy: true
 license:
   name: MIT
   url: https://choosealicense.com/licenses/mit
+redirect_from:
+- /mods/BadassBounties/
 supported_games:
 - BL2
 title: Badass Bounties

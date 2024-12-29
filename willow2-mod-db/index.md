@@ -1,5 +1,12 @@
 ---
 nav_order: 1
+redirect_from:
+  - /about/
+  - /mods/
+  - /types/Content/
+  - /types/Gameplay/
+  - /types/Library/
+  - /types/Utility/
 ---
 
 # Installation Instructions

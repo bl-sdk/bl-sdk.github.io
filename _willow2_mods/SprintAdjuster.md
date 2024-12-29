@@ -5,6 +5,8 @@ dependencies: []
 download: https://github.com/plu5/p-borderlands/releases/latest
 legacy: true
 license: {}
+redirect_from:
+- /mods/SprintAdjuster/
 supported_games:
 - BL2
 title: Sprint Adjuster

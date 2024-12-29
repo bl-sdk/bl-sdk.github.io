@@ -62,6 +62,7 @@ def convert_mod_data(mod: dict[str, Any]) -> None:
             if v
         },
         "download": mod["versions"][mod["latest"]],
+        "redirect_from": [mod["url"] + "/"],
     }
     return (
         "---\n"

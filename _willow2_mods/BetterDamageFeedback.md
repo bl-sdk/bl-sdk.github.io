@@ -9,6 +9,8 @@ legacy: true
 license:
   name: GNU GPLv3
   url: https://choosealicense.com/licenses/gpl-3.0
+redirect_from:
+- /mods/BetterDamageFeedback/
 supported_games:
 - BL2
 - TPS

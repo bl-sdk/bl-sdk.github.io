@@ -5,6 +5,8 @@ dependencies: []
 download: https://github.com/Decept1x/Borderlands-Cleaning-Up-Pandora/releases/tag/1.1
 legacy: true
 license: {}
+redirect_from:
+- /mods/CleaningUpPandora/
 supported_games:
 - BL2
 - TPS

@@ -10,6 +10,8 @@ legacy: true
 license:
   name: MIT
   url: https://choosealicense.com/licenses/mit
+redirect_from:
+- /mods/Sliding/
 supported_games:
 - BL2
 - TPS

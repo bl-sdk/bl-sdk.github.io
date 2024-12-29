@@ -7,6 +7,8 @@ legacy: true
 license:
   name: Creative Commons Attribution Share Alike 4.0 International
   url: https://choosealicense.com/licenses/cc-by-sa-4.0
+redirect_from:
+- /mods/TimeofDayChanger/
 supported_games:
 - BL2
 title: Time of Day Changer

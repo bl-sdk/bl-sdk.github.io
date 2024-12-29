@@ -5,6 +5,8 @@ dependencies: []
 download: https://github.com/Decept1x/Borderlands-Custom-Scoped-Sensitivity/releases/tag/1.0
 legacy: true
 license: {}
+redirect_from:
+- /mods/CustomScopedSensitivity/
 supported_games:
 - BL2
 - TPS

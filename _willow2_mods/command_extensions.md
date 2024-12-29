@@ -1,5 +1,7 @@
 ---
 pyproject_url: https://raw.githubusercontent.com/apple1417/willow2-sdk-mods/master/command_extensions/pyproject.toml
+redirect_from:
+- /mods/CommandExtensions/
 ---
 # Command Extensions
 Adds a few new console commands, and provides functionality for other mods to do the same. All these

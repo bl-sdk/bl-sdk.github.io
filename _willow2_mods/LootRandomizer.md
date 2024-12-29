@@ -5,6 +5,8 @@ dependencies: []
 download: https://github.com/mopioid/Borderlands-Loot-Randomizer/releases/tag/1.5.2
 legacy: true
 license: {}
+redirect_from:
+- /mods/LootRandomizer/
 supported_games:
 - BL2
 - TPS

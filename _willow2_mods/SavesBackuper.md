@@ -6,6 +6,8 @@ dependencies:
 download: https://github.com/plu5/p-borderlands/releases/latest
 legacy: true
 license: {}
+redirect_from:
+- /mods/SavesBackuper/
 supported_games:
 - BL2
 title: Saves Backuper

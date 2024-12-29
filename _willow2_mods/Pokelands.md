@@ -7,6 +7,8 @@ legacy: true
 license:
   name: MIT
   url: https://choosealicense.com/licenses/mit
+redirect_from:
+- /mods/Pokelands/
 supported_games:
 - BL2
 title: Pokelands

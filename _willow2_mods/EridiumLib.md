@@ -7,6 +7,8 @@ legacy: true
 license:
   name: GNU Lesser General Public License v2.1
   url: https://github.com/DAmNRelentless/bl2-eridiumlib/blob/main/LICENSE
+redirect_from:
+- /mods/EridiumLib/
 supported_games:
 - BL2
 - TPS

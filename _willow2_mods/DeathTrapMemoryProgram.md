@@ -8,6 +8,8 @@ legacy: true
 license:
   name: MIT
   url: https://choosealicense.com/licenses/mit
+redirect_from:
+- /mods/DeathTrapMemoryProgram/
 supported_games:
 - BL2
 title: Death Trap Memory Program

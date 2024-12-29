@@ -5,6 +5,8 @@ dependencies: []
 download: https://gitlab.com/Ceiyne/borderlands-mods/-/raw/main/Keyboard%20Change/KBChange.zip?inline=false
 legacy: true
 license: {}
+redirect_from:
+- /mods/KeyboardChange/
 supported_games:
 - BL2
 - TPS

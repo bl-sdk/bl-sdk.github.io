@@ -7,6 +7,8 @@ legacy: true
 license:
   name: MIT
   url: https://choosealicense.com/licenses/mit
+redirect_from:
+- /mods/ScaledTVHM/
 supported_games:
 - AoDK
 title: ScaledTVHM

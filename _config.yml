@@ -50,6 +50,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-titles-from-headings
+  - jekyll-redirect-from
 
 optional_front_matter:
   remove_originals: true

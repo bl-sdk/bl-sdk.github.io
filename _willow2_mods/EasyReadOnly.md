@@ -5,6 +5,8 @@ dependencies: []
 download: https://github.com/bl-sdk/former-default-mods/raw/master/ReadOnly/ReadOnly.zip
 legacy: true
 license: {}
+redirect_from:
+- /mods/EasyReadOnly/
 supported_games:
 - BL2
 - TPS

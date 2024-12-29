@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 import argparse
+import json
 import shutil
 import subprocess
 import xml.etree.ElementTree as ET
@@ -62,6 +63,7 @@ def merge() -> None:
     replace_default_css()
     merge_sitemaps()
     merge_search_data()
+    move_redirects()
 
     for config in EXTRA_CONFIGS:
         shutil.move(
@@ -124,6 +126,25 @@ def merge_search_data() -> None:
             ),
         ),
     )
+
+
+def move_redirects() -> None:
+    """Moves any redirects from the extra site configs back into the base folder."""
+    for config in EXTRA_CONFIGS:
+        redirects_json = SITE_DIR / config / "redirects.json"
+        if not redirects_json.exists():
+            continue
+        with redirects_json.open() as file:
+            data: dict[str, str] = json.load(file)
+            for redirect_path in data:
+                filename = (
+                    redirect_path[1:] + ("index" if redirect_path[-1] == "/" else "") + ".html"
+                )
+                dest = SITE_DIR / BASE_CONFIG / filename
+                dest.parent.mkdir(parents=True, exist_ok=True)
+                shutil.move(SITE_DIR / config / filename, dest)
+
+    (SITE_DIR / BASE_CONFIG / "redirects.json").unlink(missing_ok=True)
 
 
 if __name__ == "__main__":

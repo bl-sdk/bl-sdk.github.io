@@ -32,6 +32,7 @@ group :jekyll_plugins do
   gem 'jekyll-sitemap', '~> 1.4'
   gem 'jekyll-titles-from-headings', '~> 0.5.3'
 
+  gem "jekyll-redirect-from", "~> 0.16.0"
   gem "perfect_toml", "~> 0.9.0"
 end
 

@@ -5,6 +5,8 @@ dependencies: []
 download: https://github.com/mopioid/Borderlands-Live-Feed/releases/tag/1.2
 legacy: true
 license: {}
+redirect_from:
+- /mods/LiveFeed/
 supported_games:
 - BL2
 title: Live Feed

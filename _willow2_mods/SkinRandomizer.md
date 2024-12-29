@@ -5,6 +5,8 @@ dependencies: []
 download: https://github.com/Cae-l/bl-sdk-mods/raw/master/SkinRandomizer/SkinRandomizer.zip
 legacy: true
 license: {}
+redirect_from:
+- /mods/SkinRandomizer/
 supported_games:
 - BL2
 title: Skin Randomizer

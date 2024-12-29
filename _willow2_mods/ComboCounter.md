@@ -5,6 +5,8 @@ dependencies: []
 download: https://github.com/Sartick/bl-sdk-mods/blob/main/ComboCounter/ComboCounter.zip
 legacy: true
 license: {}
+redirect_from:
+- /mods/ComboCounter/
 supported_games:
 - BL2
 - TPS

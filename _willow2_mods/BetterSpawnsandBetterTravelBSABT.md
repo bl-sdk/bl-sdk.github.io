@@ -7,6 +7,8 @@ legacy: true
 license:
   name: MIT
   url: https://choosealicense.com/licenses/mit
+redirect_from:
+- /mods/BetterSpawnsandBetterTravelBSABT/
 supported_games:
 - BL2
 - TPS

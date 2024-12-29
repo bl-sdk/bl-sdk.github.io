@@ -9,6 +9,8 @@ legacy: true
 license:
   name: MIT
   url: https://choosealicense.com/licenses/mit
+redirect_from:
+- /mods/PickupAsTrash/
 supported_games:
 - BL2
 - TPS
