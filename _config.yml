@@ -1,4 +1,4 @@
-title: Borderlands Python SDK
+title: Borderlands SDK Developer Docs
 
 url: https://bl-sdk.github.io
 github_username: bl-sdk
@@ -28,7 +28,7 @@ defaults:
       type: oak_mods
     values:
       layout: mod
-    scope:
+  - scope:
       path: ""
     values:
       has_toc: false

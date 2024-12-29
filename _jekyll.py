@@ -50,7 +50,10 @@ def build_or_serve(
 
 def merge() -> None:
     """Builds and merges all site configurations."""
-    SITE_DIR.unlink(missing_ok=True)
+    if SITE_DIR.exists():
+        shutil.rmtree(SITE_DIR)
+    if MERGED_SITE_DIR.exists():
+        shutil.rmtree(MERGED_SITE_DIR)
     SITE_DIR.mkdir(exist_ok=True)
 
     for config in (BASE_CONFIG, *EXTRA_CONFIGS):
