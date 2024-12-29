@@ -49,19 +49,24 @@ layout: default
                         | default: "Unknown" }}</dd>
 
     <dt>Coop</dt>
+    <dd id="coop" class="coop">
     {%- assign coop_support = page.coop_support
                                 | default: page.pyproject.tool.sdkmod.coop_support
                                 | downcase -%}
     {%- case coop_support -%}
     {%- when "incompatible" -%}
-        <dd id="coop">Incompatible</dd>
+        <span>Incompatible</span>
+        <div><div>The mod is fundamentally incompatible with coop, it can only be played solo.</div></div>
     {%- when "requiresallplayers" -%}
-        <dd id="coop">Requires All Players</dd>
+        <span>Requires All Players</span>
+        <div><div>The mod needs all players to have it installed in order to work best. There may still be aspects which don't work as well off host.</div></div>
     {%- when "clientside" -%}
-        <dd id="coop">Client Side</dd>
+        <span>Client Side</span>
+        <div><div>The mod is entirely client side, and can be used in coop regardless of what other players are running.</div></div>
     {%- else -%}
-        <dd id="coop">Unknown</dd>
+        <span>Unknown</span>
     {%- endcase -%}
+    </dd>
 
     <dt>License</dt>
     {%- if page.license -%}

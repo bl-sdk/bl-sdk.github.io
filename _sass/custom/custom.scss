@@ -15,6 +15,35 @@ dl.mod-desc {
     // Make the description list header shorter
     grid-template-columns: 5em 1fr;
 
+    // Make coop support expand into a description on hover
+    dd.coop {
+        >div {
+            display: inline-block;
+            position: absolute;
+            font-size: 0.8em;
+            padding-left: 1em;
+            opacity: 0.2;
+            width: 0%;
+            overflow: clip;
+            transition:
+                width 0.1s ease-out 0.1s,
+                opacity 0.2s linear 0s;
+
+            >div {
+                width: 20em;
+                padding: 0.2em 0.4em;
+                background-color: $code-background-color;
+                border: $border $border-color;
+                border-radius: $border-radius;
+            }
+        }
+
+        &:hover>div {
+            opacity: 1;
+            width: 100%;
+        }
+    }
+
     // Make requirements show the full original text on hover
     dd.requirement {
         >div {

@@ -25,17 +25,6 @@ Alternatively, you can manually rebind the key. Open the file
 `<my documents>/My games/Borderlands 2/WillowGame/Config/WillowInput.ini` in notepad. Search for
 `ConsoleKey=`, and replace the key as appropriate.
 
-## What do the different "Coop" fields on the mod pages mean?
-
-| Category             | Meaning                                                                                                                             |
-|:---------------------|:------------------------------------------------------------------------------------------------------------------------------------|
-| Incompatible         | The mod is fundamentally incompatible with coop, it can only be played solo.                                                        |
-| Requires All Players | The mod needs all players to have it installed in order to work best. There may still be aspects which don't work as well off host. |
-| Client Side          | The mod is entirely client side, and can be used in coop regardless of what other players are running.                              |
-
-These categories are manually set by the mod's developer, a mod which is still left on unknown may
-simply never have been tested.
-
 ## What does it mean if a mod's a legacy mod?
 SDK version 3.0 went through a major rewrite, which significantly changed the best way to write
 mods. Legacy mods are simply all mods created before this version. Since these were written with

@@ -72,13 +72,13 @@ async function load_from_pyproject(url, fields) {
     if (fields?.coop) {
         const coop_support = pyproject?.tool?.sdkmod?.coop_support;
         if (coop_support) {
-            const COOP_SUPPORT_TO_FRIENDLY_NAME = {
-                "incompatible": "Incompatible",
-                "requiresallplayers": "Requires All Players",
-                "clientside": "Client Side",
+            const COOP_SUPPORT_TO_INNERHTML = {
+                "incompatible": `<span>Incompatible</span><div><div>The mod is fundamentally incompatible with coop, it can only be played solo.</div></div>`,
+                "requiresallplayers": `<span>Requires All Players</span><div><div>The mod needs all players to have it installed in order to work best. There may still be aspects which don't work as well off host.</div></div>`,
+                "clientside": `<span>Client Side</span><div><div>The mod is entirely client side, and can be used in coop regardless of what other players are running.</div></div>`,
             };
-            const friendly = COOP_SUPPORT_TO_FRIENDLY_NAME[coop_support.toLowerCase()] || "Unknown";
-            document.querySelector("#coop").innerText = friendly;
+            const innerHTML = COOP_SUPPORT_TO_INNERHTML[coop_support.toLowerCase()] || "<span>Unknown</span>";
+            document.querySelector("#coop").innerHTML = innerHTML;
         }
     }
 
