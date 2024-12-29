@@ -1,6 +1,0 @@
-<link rel="stylesheet" href="{{ "/assets/css/yt-embed.css" | relative_url }}">
-
-{%- assign collection_match = page.collection | default: "" | regex_match: "_mods$" -%}
-{%- if collection_match -%}
-    <link rel="stylesheet" href="{{ "/assets/css/mod.css" | relative_url }}">
-{%- endif -%}

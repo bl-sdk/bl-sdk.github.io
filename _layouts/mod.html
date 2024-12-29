@@ -2,7 +2,7 @@
 layout: default
 ---
 {%- unless page.legacy -%}
-<span class="update-notification fs-2">
+<span class="mod-update-notification fs-2">
     Fetching latest data <img src="{{ "/assets/images/oval.svg" | relative_url }}" alt="loading..."/>
 </span>
 {%- endunless -%}
@@ -109,7 +109,7 @@ layout: default
 </dl>
 {%- assign urls = page.urls | default: page.pyproject.project.urls -%}
 {%- if urls.size > 0 -%}
-    <div class="url-box">
+    <div class="mod-url-box">
     {%- for item in urls -%}
         <a href="{{ item[1] |  url_escape }}">{{ item[0] | escape }}</a>
     {%- endfor -%}

@@ -159,7 +159,7 @@ async function load_from_pyproject(url, fields) {
     }
 
     if (fields?.urls) {
-        let url_box = document.querySelector("div.url-box");
+        let url_box = document.querySelector("div.mod-url-box");
 
         const urls = pyproject?.project?.urls;
         if (urls) {
@@ -168,7 +168,7 @@ async function load_from_pyproject(url, fields) {
             if (new_children.length > 0){
                 if (!url_box) {
                     url_box = document.createElement("div");
-                    url_box.classList.add("url-box");
+                    url_box.classList.add("mod-url-box");
                     document.querySelector("dl.mod-desc").after(url_box);
                 }
 
@@ -191,7 +191,7 @@ async function load_from_pyproject(url, fields) {
         if (download_url) {
             let download_a = document.querySelector("#download");
             if (!download_a) {
-                const insert_point = (document.querySelector("div.url-box")
+                const insert_point = (document.querySelector("div.mod-url-box")
                                     || document.querySelector("dl.mod-desc"));
 
                 insert_point.after(document.createElement("br"));
@@ -227,7 +227,7 @@ async function load_from_pyproject(url, fields) {
     }
 
     // Finished updating, hide the notification
-    document.querySelector("span.update-notification").remove();
+    document.querySelector("span.mod-update-notification").remove();
 }
 
 export { load_from_pyproject }
