@@ -1,5 +1,3 @@
----
----
 import { parse as parse_toml } from "https://cdn.jsdelivr.net/npm/smol-toml@1.1.3/+esm"
 
 function arr_to_sentence(arr) {
@@ -26,6 +24,13 @@ function strip_decode_html(input) {
 }
 
 async function load_from_pyproject(url, fields) {
+    const config = window.location.pathname.match(/^\/(willow2|oak)-mod-db/)[1];
+
+    // Kick off fetching mod info early if we need it
+    const mod_info_promise = fields?.dependencies
+                                    ? fetch(`/assets/js/mod-info-${config}.json`).then(x => x.json())
+                                    : null;
+
     const response = await fetch(url);
     if (!response.ok) {
         throw `failed to fetch pyproject: ${response.statusText} (from ${url})`
@@ -59,7 +64,7 @@ async function load_from_pyproject(url, fields) {
         const ALLOWED_GAMES = {
             "willow2": {"BL2": "BL2", "TPS": "TPS", "AODK": "AoDK"},
             "oak": {"BL3": "BL3", "WL": "WL"},
-        }[window.location.pathname.match(/^\/(willow2|oak)-mod-db/)[1]];
+        }[config];
 
         const game_list = pyproject?.tool?.sdkmod?.supported_games || Object.keys(ALLOWED_GAMES);
         const filtered_games = [...new Set(game_list.filter(x => x.toUpperCase() in ALLOWED_GAMES)
@@ -97,21 +102,6 @@ async function load_from_pyproject(url, fields) {
     }
 
     if (fields?.dependencies) {
-        const DEPENDENCY_DATA = {
-            {%- assign first = true -%}
-            {%- for mod in site.mods -%}
-            {%- if mod.pyproject.project.name -%}
-                {%- unless first -%},{%- endunless -%}
-                {%- assign first = false -%}
-
-                {{- mod.pyproject.project.name | jsonify -}}:{
-{{-""-}}            title: {{- mod.title | decode | jsonify -}},
-{{-""-}}            url: {{- mod.url | relative_url | jsonify -}}
-                }
-            {%- endif -%}
-            {%- endfor -%}
-        };
-
         const dependencies = pyproject?.project?.dependencies;
         if (dependencies) {
             let insert_point = document.querySelector("dt.requirement");
@@ -126,14 +116,16 @@ async function load_from_pyproject(url, fields) {
                 document.querySelector("#license").after(insert_point);
             }
 
+            const MOD_INFO = await mod_info_promise;
+
             dependencies.forEach(dependency => {
                 const name = dependency.match(/^\s*([A-Z0-9][A-Z0-9._-]*[A-Z0-9]|[A-Z0-9])/i)[0];
 
                 const entry = document.createElement("dd");
                 entry.classList.add("requirement");
 
-                if (name in DEPENDENCY_DATA) {
-                    const info = DEPENDENCY_DATA[name];
+                if (name in MOD_INFO) {
+                    const info = MOD_INFO[name];
                     // Titles will be html encoded, decode them
                     const title = strip_decode_html(info.title);
                     const url = info.url;

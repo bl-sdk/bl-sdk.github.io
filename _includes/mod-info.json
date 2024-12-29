@@ -1,0 +1,31 @@
+{%- comment -%}
+Generates a json file mapping mod names to their titles and urls.
+
+e.g. {"abcd": {"title": "Apple's Borderlands Cheats Dos", "url": "/oak-mod-db/mods/abcd/"}
+
+Args:
+    collection: Which collection to generate mod info for.
+{%- endcomment -%}
+
+{
+    {%- assign first = true -%}
+    {%- for mod in site[include.collection] -%}
+        {%- if mod.legacy -%}
+            {%- assign name = mod.title -%}
+        {%- else -%}
+            {%- assign name = mod.pyproject.project.name -%}
+        {%- endif -%}
+
+        {%- if name -%}
+            {%- unless first -%}
+                ,
+            {%- endunless -%}
+            {%- assign first = false -%}
+
+            {{- name | jsonify -}}:{
+{{-""-}}        "title": {{- mod.title | decode | jsonify -}},
+{{-""-}}        "url": {{- mod.url | relative_url | jsonify -}}
+            }
+        {%- endif -%}
+    {%- endfor -%}
+}

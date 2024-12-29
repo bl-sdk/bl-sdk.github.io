@@ -1,0 +1,3 @@
+---
+---
+{%- include mod-info.json collection="willow2_mods" -%}

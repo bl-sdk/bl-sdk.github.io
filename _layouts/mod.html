@@ -96,14 +96,20 @@ layout: default
     {%- if dependencies.size > 0 -%}
         <dt class="requirement">Requires</dt>
         {%- for item in dependencies -%}
-            {%- assign name = item | regex_match: "^\s*([A-Z0-9][A-Z0-9._-]*[A-Z0-9]|[A-Z0-9])" -%}
-            {%- unless name -%}
+            {%- assign dep_name = item | regex_match: "^\s*([A-Z0-9][A-Z0-9._-]*[A-Z0-9]|[A-Z0-9])" -%}
+            {%- unless dep_name -%}
                 {%- continue -%}
             {%- endunless -%}
 
             {%- assign required_mod = nil -%}
-            {%- for mod in site.mods -%}
-                {%- if mod.pyproject.project.name == name -%}
+            {%- for mod in site[page.collection] -%}
+                {%- if mod.legacy -%}
+                    {%- assign iter_mod_name = mod.title -%}
+                {%- else -%}
+                    {%- assign iter_mod_name = mod.pyproject.project.name -%}
+                {%- endif -%}
+
+                {%- if dep_name == iter_mod_name -%}
                     {%- assign required_mod = mod -%}
                     {%- break -%}
                 {%- endif -%}
@@ -113,7 +119,7 @@ layout: default
             {%- if required_mod -%}
                 <a href="{{ required_mod.url | relative_url }}">{{ required_mod.title }}</a>
             {%- else -%}
-                <span>{{ name | escape }}</span>
+                <span>{{ dep_name | escape }}</span>
             {%- endif -%}
             <div><code class="language-plaintext highlighter-rouge">{{ item | escape }}</code></div>
         {%- endfor -%}
