@@ -18,12 +18,14 @@ together.
 Tilde isn't quite a standardised key, so on some keyboard layouts a different character sends the
 same signal to the game. [You can check this site for a reference](https://kbdlayout.info/features/virtualkeys/VK_OEM_3).
 
-To rebind the console key, open `<game>\OakGame\Binaries\Win64\Plugins\unrealsdk.env` in notepad.
-Add a new line, substituting the key as appropriate:
+To rebind the console key, create a new file
+`<game>\OakGame\Binaries\Win64\Plugins\unrealsdk.user.toml`, and open it in notepad. Add the
+following content, substituting the key as appropriate:
+
+```toml
+[unrealsdk]
+console_key = "F1"
 ```
-UNREALSDK_CONSOLE_KEY=F1
-```
-Note that this file is bundled with the SDK, so updating will overwrite it.
 
 ## What do the different "Coop" fields on the mod pages mean?
 
