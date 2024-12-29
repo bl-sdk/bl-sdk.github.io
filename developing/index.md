@@ -9,7 +9,8 @@ Work in progress
 1. Create a new folder to develop your mods within. The mod manager supports loading from multiple
    mods folders, so you can keep the mods you're developing separate.
 
-2. Create a new file `Binaries\Win32\Plugins\unrealsdk.user.toml`, and add the following content:
+2. Create a new file `unrealsdk.user.toml` in the game's `Plugins` folder, and add the following
+   content:
 
    ```toml
    [unrealsdk]
@@ -102,15 +103,20 @@ EOF
 ```
 
 `pyexec` is useful for more complex scripts - it executes an entire file, relative to the location
-set in `PYUNREALSDK_PYEXEC_ROOT` previously. Note that this is *not* running a python script in the
+set in `pyunrealsdk.pyexec_root` previously. Note that this is *not* running a python script in the
 traditional sense, it's instead more similar to something like `eval(open(file).read())`. The
 interpreter is not restarted, and there's no way to accept arguments into `sys.argv`.
 
 ## Adding to the Mod DB
 The DB primarily sources info from your mod's `pyproject.toml`. With a well configured pyproject,
-all you need to do is point the DB at it, and everything will be extracted automatically. To do
-this, add a file for your mod to the `_mods/` dir of this repo, and add the front matter variable
-`pyproject_url`, pointing at an auto updating link.
+all you need to do is point the DB at it, and everything will be extracted automatically.
+
+To add your mod, you'll need to add a markdown file to either the `_oak_mods` or `_willow2_mods`
+folders in [this site's repo](https://github.com/bl-sdk/bl-sdk.github.io).
+
+### Simplest Configuration
+The simplest possibile file is the following. Make sure the url points at an auto-updating link,
+instead of a specific commit.
 
 ```md
 ---
@@ -118,10 +124,38 @@ pyproject_url: https://raw.githubusercontent.com/apple1417/oak-sdk-mods/master/a
 ---
 ```
 
-You can overwrite your mod's description simply by adding some extra content to the page. You can
-use this to embed images or videos, which wouldn't be suitable for the in-game mod description.
+### More Detailed Customization
+Now the simplest config copies everything straight from the `pyproject.toml`. You may want to
+customize it further - e.g. you may want a more detailed description, adding images and/or videos.
 
-You can overwrite some of the other info on the page by setting various front matter variables.
+You can overwrite your mod's description simply by adding extra markdown to the end of the page.
+
+```md
+---
+pyproject_url: https://raw.githubusercontent.com/apple1417/oak-sdk-mods/master/abcd/pyproject.toml
+---
+
+# My cool mod
+Look at this image:
+![alt text](/assets/mods/oak/abcd/some_image.png)
+```
+
+Jekyll uses [kramdown](https://kramdown.gettalong.org/syntax.html), which may support some extra
+syntax than what you're used to.
+
+In addition to those, there are two bits of the templating system you should probably know about:
+
+- When linking to something that's part of the site, whether an image or another page, prefer using
+  {% raw %}`{{ "/path/to/file.txt" | relative_url }}`{% endraw %}. This ensures the link will get
+  updated correctly if hosted under another url.
+
+- If you want to embed a youtube video, prefer using
+  {% raw %}`{% youtube https://www.youtube.com/watch?v=dQw4w9WgXcQ %}`{% endraw %}.
+
+Now the above lets you customize the description, but there's still all the other info above it.
+You can overwrite these by setting front matter variables. If you're not familiar with Jekyll, the
+"front matter" is a block of YAML configuration inbetween triple dashes at the top - you used it
+previously to set the `pyproject_url`.
 
 Field                       | Front matter      | `pyproject.toml`
 ----------------------------|-------------------|-------------
