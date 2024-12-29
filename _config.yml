@@ -1,45 +1,44 @@
-title: BL2/TPS SDK Mod Database
-description: >-
-  A list of sdk mods for Borderlands 2, The Pre-Sequel, and the Attack on Dragon Keep standalone.
+title: Borderlands Python SDK
 
 url: https://bl-sdk.github.io
-baseurl: /willow2-mod-db
 github_username: bl-sdk
 repository: bl-sdk/willow2-mod-db
 
+markdown: kramdown
+theme: just-the-docs
+
+color_scheme: dev
+
 collections:
-  mods:
-    output: true
+  willow2_mods:
     sort-by: title
-    permalink: /:collection/:name/
+    permalink: /willow2-mod-db/mods/:name/
+  oak_mods:
+    sort-by: title
+    permalink: /oak-mod-db/mods/:name/
 
 defaults:
   - scope:
       path: ""
-      type: mods
+      type: willow2_mods
     values:
       layout: mod
+  - scope:
+      path: ""
+      type: oak_mods
+    values:
+      layout: mod
+    scope:
+      path: ""
+    values:
+      has_toc: false
 
-markdown: kramdown
-theme: just-the-docs
-color_scheme: willow2
-
-just_the_docs:
-  collections:
-    mods:
-      name: Mods
 callouts:
   warning:
     title: Warning
     color: red
 
 favicon_ico: /assets/images/favicon.png
-
-nav_external_links:
-  - title: Modding Support Discord
-    url: https://discord.gg/bXeqV8Ef9R
-  - title: Latest Release
-    url: https://github.com/bl-sdk/willow2-mod-manager/releases/latest
 
 plugins:
   - jekyll-commonmark-ghpages
@@ -54,3 +53,25 @@ plugins:
 
 optional_front_matter:
   remove_originals: true
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+  - oak-mod-db
+  - willow2-mod-db
+
+nav_external_links:
+  - title: BL2/TPS/AoDK Mods
+    url: willow2-mod-db/
+  - title: BL3/WL Mods
+    url: oak-mods-db/
+  - title: Modding Support Discord
+    url: https://discord.gg/bXeqV8Ef9R
+  - title: SDK Developer Discord
+    url: https://discord.gg/VJXtHvh

@@ -4,7 +4,7 @@ module Regex
     end
 
     def regex_match(str, pattern, idx = 0, options = "im")
-        return str.match(Regexp.new(pattern, options))[idx]
+        return str.match(Regexp.new(pattern, options))&.[](idx)
     end
 end
 

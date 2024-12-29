@@ -1,0 +1,42 @@
+@import "./color_schemes/dark";
+
+$body-background-color: #1e1e2e;
+$body-background-highlight: #181825;
+$body-text-color: #cdd6f4;
+
+$sidebar-color: $body-background-color;
+$feedback-color: darken($body-background-color, 3%);
+
+$link-color: $purple-100;
+$btn-primary-color: $purple-200;
+
+// Overlapping squares pattern from https://css-pattern.com/
+body, .side-bar {
+    --s: 16px;
+    --c1: #{$body-background-highlight};
+    --c2: transparent;
+
+    --c:#0000 75%,var(--c1) 0;
+    --g1:conic-gradient(at calc(200%/3) 5%,var(--c));
+    --g2:conic-gradient(at 5% calc(200%/3),var(--c));
+    background:
+        var(--g1), var(--g2),
+        var(--g1) var(--s) var(--s),
+        var(--g2) var(--s) var(--s),
+        var(--g1) calc(2*var(--s)) calc(2*var(--s)),
+        var(--g2) calc(2*var(--s)) calc(2*var(--s)) var(--c2);
+    background-size: calc(3*var(--s)) calc(3*var(--s));
+}
+
+// Add some borders to make things a little clearer ontop of the crosshatching
+.search {
+    border-right: $border $border-color;
+}
+
+.nav-list .nav-list-link.active {
+    border-width: 1px;
+    border-style: solid;
+    border-image: linear-gradient(90deg, transparent 0%, $border-color 80%, transparent 100%) 1;
+    border-left: none;
+    border-right: none;
+}

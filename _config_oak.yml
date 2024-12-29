@@ -1,0 +1,31 @@
+description: >-
+  SDK mods for Borderlands 3 and Wonderlands.
+
+color_scheme: oak
+
+collections:
+  oak_mods:
+    output: true
+
+just_the_docs:
+  collections:
+    oak_mods:
+      name: Mods
+
+nav_external_links:
+  - title: Modding Support Discord
+    url: https://discord.gg/bXeqV8Ef9R
+  - title: Latest Release
+    url: https://github.com/bl-sdk/oak-mod-manager/releases/latest
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+  - developing
+  - willow2-mod-db

@@ -1,3 +1,7 @@
+---
+nav_order: 1
+---
+
 # Developing SDK Mods
 Work in progress
 
