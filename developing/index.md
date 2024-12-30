@@ -3,7 +3,14 @@ nav_order: 1
 ---
 
 # Developing SDK Mods
+{:.no_toc}
+
 Work in progress
+
+### Table of Contents
+{:.no_toc}
+- toc
+{:toc}
 
 ## Setting up your Workspace
 1. Create a new folder to develop your mods within. The mod manager supports loading from multiple
@@ -199,3 +206,55 @@ There are a few exceptions to this, which are not automatically updated:
 If you make significant changes to your pyproject, it may be worth kicking off another build to
 update the static versions of these. Do note that this data is updated anytime the site is
 generated, someone else adding an unrealated mod will update yours.
+
+## Handling Missing Requirements
+It's recommended to put dependency version checks right at the top of your main `__init__.py`, to
+make sure your mod only loads if everything is present, and to give users more helpful error
+messages.
+
+One simple way of doing this is using asserts and `__import__`:
+```py
+if True:  # avoids E402
+    assert __import__("mods_base").__version_info__ >= (1, 4), "Please update the SDK"
+    assert __import__("pyunrealsdk").__version_info__ >= (1, 3, 0), "Please update the SDK"
+    assert __import__("unrealsdk").__version_info__ >= (1, 3, 0), "Please update the SDK"
+    assert __import__("ui_utils").__version_info__ >= (1, 0), "Please update the SDK"
+
+    from mods_base import Game
+
+    assert Game.get_current() == Game.BL3, "The Hunt Tracker only works in BL3"
+```
+
+It's easiest to set your required versions to be >= the version you're currently developing with,
+rather than searching through history to find the oldest possible compatible one.
+
+Now asserts make for nice and simple code, but not all users check console before going out and
+complaining. As an alternative, you can open a page in their browser instead - this site provides
+two for that purpose.
+
+- [{{ "willow2-mod-db/requirements?mod=my_mod" | absolute_url }}]({{ "willow2-mod-db/requirements?mod=my_mod" | absolute_url }})
+- [{{ "oak-mod-db/requirements?mod=my_mod" | absolute_url }}]({{ "oak-mod-db/requirements?mod=my_mod" | absolute_url }})
+
+```py
+try:
+    assert __import__("mods_base").__version_info__ >= (1, 5), "Please update the SDK"
+except (AssertionError, ImportError) as ex:
+    import webbrowser
+    webbrowser.open("{{ "willow2-mod-db/requirements?mod=my_mod" | absolute_url }}")
+    raise ex
+```
+
+The `?mod=` query parameter should be set to your mod's `project.name`.
+
+As mentioned above, anything in `project.dependencies` is shown as a requirement on the mod page. If
+you want to require a particular version of the sdk, you can add a dependency on `oak_mod_manager`
+or `willow2_mod_manager` (as appropriate).
+
+```toml
+[project]
+dependencies = [
+  'oak_mod_manager >= 1.2',
+]
+```
+Since requiring the sdk is somewhat implicit, it remains to be seen if the possible future package
+manager will need this.

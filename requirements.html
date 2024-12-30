@@ -1,0 +1,21 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Redirecting&hellip;</title>
+    <link rel="canonical" href="{{ "willow2-mod-db/requirements" | relative_url }}">
+    <meta name="robots" content="noindex">
+    <script>
+        const newUrl = "{{ "willow2-mod-db/requirements" | relative_url }}" + window.location.search;
+        window.addEventListener("load", () => {
+            document.getElementsByTagName("a")[0].href = newUrl;
+        });
+        window.location.replace(newUrl);
+    </script>
+</head>
+<body>
+    <h1>Redirecting&hellip;</h1>
+    <a href="{{ "willow2-mod-db/requirements" | relative_url }}">Click here if you are not redirected.</a>
+</body>

@@ -1,0 +1,56 @@
+---
+layout: plain
+title: Missing Requirements
+nav_exclude: true
+---
+
+<style type="text/css" media="screen">
+  .container {
+    margin: 10px auto;
+    max-width: 600px;
+    text-align: center;
+  }
+  h1 {
+    margin: 30px 0;
+    font-size: 4em;
+    line-height: 1;
+    letter-spacing: -1px;
+  }
+</style>
+
+<script>
+  function strip_decode_html(input) {
+    return new DOMParser().parseFromString(input, 'text/html').body.textContent || "";
+  }
+
+  const config = window.location.pathname.match(/^\/(willow2|oak)-mod-db/)[1];
+  const mod_info_promise = fetch(`/assets/js/mod-info-${config}.json`).then(x => x.json());
+
+  window.addEventListener("load", async () => {
+    const params = new URLSearchParams(window.location.search);
+    const mod_name = params.get("mod") ?? params.get("m");
+    if (mod_name) {
+      const mod_link = document.querySelector("#mod");
+      mod_link.textContent = mod_name;
+
+      const MOD_INFO = await mod_info_promise;
+      if (mod_name in MOD_INFO) {
+        const info = MOD_INFO[mod_name];
+        mod_link.textContent = strip_decode_html(info.title);
+        mod_link.href = info.url;
+      }
+    }
+  });
+</script>
+
+<div class="container">
+  <h1>Missing Requirements</h1>
+
+  <p>
+    <a id="mod" href="{{ "404.html" | relative_url }}">Unknown Mod Name</a> has missing or outdated requirements.
+    You must update them in order for it to load.
+  </p>
+
+  {%- assign parent_url = page.url | split: "/" | pop | join: "/" -%}
+  <p><a href="{{ parent_url | relative_url }}">Back to Mod List</a></p>
+</div>
