@@ -28,5 +28,7 @@ exclude:
   - vendor/gems/
   - vendor/ruby/
 
+  - Readme.md
+
   - developing
   - oak-mod-db

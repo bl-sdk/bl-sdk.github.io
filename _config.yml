@@ -64,6 +64,8 @@ exclude:
   - vendor/gems/
   - vendor/ruby/
 
+  - Readme.md
+
   - oak-mod-db
   - willow2-mod-db
 
