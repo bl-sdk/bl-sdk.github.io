@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 import argparse
 import json
+import platform
 import shutil
 import subprocess
 import xml.etree.ElementTree as ET
@@ -46,6 +47,9 @@ def build_or_serve(
             *args,
         ],
         check=True,
+        # On Windows bundle is actually bundle.bat, but thanks to PATHEXT you can call it as just
+        # "bundle". Need to treat it as a shell command to get the same behaviour.
+        shell=platform.system() == "Windows",
     )
 
 
@@ -80,10 +84,11 @@ def replace_default_css() -> None:
     for config in (BASE_CONFIG, *EXTRA_CONFIGS):
         for path in (SITE_DIR / config).glob("**/*.html"):
             path.write_text(
-                path.read_text().replace(
+                path.read_text(encoding="utf8").replace(
                     "/assets/css/just-the-docs-default.css",
                     f"/assets/css/just-the-docs-{config}.css",
                 ),
+                encoding="utf8",
             )
 
     for stylesheet in EXTRA_STYLESHEETS_TO_DELETE:
@@ -117,7 +122,7 @@ def merge_search_data() -> None:
 
     main_js = SITE_DIR / BASE_CONFIG / "assets" / "js" / "just-the-docs.js"
     main_js.write_text(
-        main_js.read_text().replace(
+        main_js.read_text(encoding="utf8").replace(
             "'/assets/js/search-data.json'",
             (
                 "`/assets/js/search-data-${"
@@ -125,6 +130,7 @@ def merge_search_data() -> None:
                 "}.json`"
             ),
         ),
+        encoding="utf8",
     )
 
 
