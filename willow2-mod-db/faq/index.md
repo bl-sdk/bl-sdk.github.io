@@ -40,7 +40,7 @@ This is usually caused by accidentally extracting to a nested folder. If you ope
 extracted, `sdk_mods/<Mod Name>`, and just see another folder `sdk_mods/<Mod Name>/<Mod Name>`,
 you've run into this.
 
-![Comparing normal vs nested mod folders](/assets/images/willow2-installation/06-nested.png)
+![Comparing normal vs nested mod folders](/assets/images/willow2-installation/07-nested.png)
 
 To fix this, simply copy the inner folder and move it up a level. To avoid running into it in
 future, always drag the folder directly out of the zip file.
