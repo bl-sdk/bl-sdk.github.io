@@ -46,7 +46,7 @@ To fix this, simply copy the inner folder and move it up a level. To avoid runni
 future, always drag the folder directly out of the zip file.
 
 ## Why do some SDK mods disable when I restart the game, when others stay enabled?
-In legacy mods, the mod author had to explictly turn on auto-enabling. It may simply never have been
+In legacy mods, the mod author had to explicitly turn on auto-enabling. It may simply never have been
 updated to turn it on.
 
 In modern mods, auto-enabling is on by default, so if a mod doesn't auto-enable, the author must

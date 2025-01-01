@@ -1,4 +1,5 @@
 [files]
 extend-exclude = [
-    "_mods/"
+    "_oak_mods/",
+    "_willow2_mods/",
 ]

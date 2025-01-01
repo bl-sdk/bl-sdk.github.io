@@ -13,6 +13,10 @@ on:
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+    inputs:
+      skip-htmlproofer:
+        description: 'Skips running htmlproofer'
+        type: boolean
 
   pull_request:
 
@@ -36,6 +40,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+
       - name: Setup Ruby
         uses: ruby/setup-ruby@8575951200e472d5f2d95c625da0c7bec8217c42 # v1.161.0
         with:
@@ -48,22 +57,22 @@ jobs:
         uses: actions/configure-pages@v5
 
       - name: Build with Jekyll
-        # Outputs to the './_site' directory by default
-        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+        run: ./_jekyll.py merge
         env:
           JEKYLL_ENV: production
 
-      - name: Run HTMLProofer
-        run: |
-          base_path="${{ steps.pages.outputs.base_path }}"
-          base_url="${{ steps.pages.outputs.base_url }}"
-
-          bundle exec htmlproofer _site --swap-urls "^$base_path/:/,^${base_url/:/\\:}/:/" --ignore-files "/_site\\/mods/"
-
       - name: Upload artifact
-        if: github.ref == 'refs/heads/master' && github.repository == 'bl-sdk/willow2-mod-db'
-        # Automatically uploads an artifact from the './_site' directory by default
+        if: github.ref == 'refs/heads/master' && github.repository == 'bl-sdk/bl-sdk.github.io'
         uses: actions/upload-pages-artifact@v3
+        with:
+          path: _merged_site/
+
+      - name: Run HTMLProofer
+        if: ${{ !inputs.skip-htmlproofer }}
+        run: >
+          bundle exec htmlproofer _merged_site
+          --ignore-files "/_merged_site\\/(oak|willow2)-mod-db\\/mods/"
+          --swap-urls "https\://bl-sdk.github.io/:/"
 
   spelling:
     runs-on: ubuntu-latest
@@ -81,7 +90,7 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/master' && github.repository == 'bl-sdk/willow2-mod-db'
+    if: github.ref == 'refs/heads/master' && github.repository == 'bl-sdk/bl-sdk.github.io'
 
     needs:
     - build

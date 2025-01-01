@@ -1,8 +1,6 @@
 title: Borderlands SDK Developer Docs
 
 url: https://bl-sdk.github.io
-github_username: bl-sdk
-repository: bl-sdk/willow2-mod-db
 
 markdown: kramdown
 theme: just-the-docs
@@ -43,7 +41,6 @@ favicon_ico: /assets/images/favicon.png
 plugins:
   - jekyll-commonmark-ghpages
   - jekyll-default-layout
-  - jekyll-github-metadata
   - jekyll-include-cache
   - jekyll-optional-front-matter
   - jekyll-relative-links
@@ -73,7 +70,7 @@ nav_external_links:
   - title: BL2/TPS/AoDK Mods
     url: willow2-mod-db/
   - title: BL3/WL Mods
-    url: oak-mods-db/
+    url: oak-mod-db/
   - title: Modding Support Discord
     url: https://discord.gg/bXeqV8Ef9R
   - title: SDK Developer Discord

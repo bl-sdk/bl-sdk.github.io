@@ -24,7 +24,6 @@ group :jekyll_plugins do
   # these seem to be it's useful dependencies
   gem 'jekyll-commonmark-ghpages', '~> 0.4.0'
   gem 'jekyll-default-layout', '~> 0.1.5'
-  gem 'jekyll-github-metadata', '~> 2.16'
   gem 'jekyll-include-cache', '~> 0.2.1'
   gem 'jekyll-optional-front-matter', '~> 0.3.2'
   gem 'jekyll-relative-links', '~> 0.7.0'

@@ -6,7 +6,7 @@ bundle exec jekyll serve
 ```
 
 However, as you'll notice this only builds the dev docs. The final site actually consists of three
-seperate jekyll projects, with one set of interwoven source files, the developer docs being the
+separate jekyll projects, with one set of interwoven source files, the developer docs being the
 default. You can build the others by appending an extra config file:
 
 ```sh

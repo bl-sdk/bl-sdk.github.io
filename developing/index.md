@@ -122,7 +122,7 @@ To add your mod, you'll need to add a markdown file to either the `_oak_mods` or
 folders in [this site's repo](https://github.com/bl-sdk/bl-sdk.github.io).
 
 ### Simplest Configuration
-The simplest possibile file is the following. Make sure the url points at an auto-updating link,
+The simplest possible file is the following. Make sure the url points at an auto-updating link,
 instead of a specific commit.
 
 ```md
