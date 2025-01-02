@@ -27,8 +27,8 @@ following content, substituting the key as appropriate:
 console_key = "F1"
 ```
 
-## My game is crashing when...
-### I open one of the entries in the BL3 Mod Menu
+## My game is crashing...
+### When I open one of the entries in the BL3 Mod Menu
 Update the sdk, this was fixed in version 1.3. The BL3 update on 2024-08-08 caused older versions of
 the BL3 Mod Menu to crash when creating a slider or keybind option.
 

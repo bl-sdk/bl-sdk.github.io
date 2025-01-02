@@ -25,6 +25,10 @@ Alternatively, you can manually rebind the key. Open the file
 `<my documents>/My games/Borderlands 2/WillowGame/Config/WillowInput.ini` in notepad. Search for
 `ConsoleKey=`, and replace the key as appropriate.
 
+## My game is crashing...
+### Immediately on starting / After hitting play in the launcher.
+Try install the latest [Microsoft Visual C++ Redistrubutable](https://aka.ms/vs/17/release/vc_redist.x86.exe).
+
 ## What does it mean if a mod's a legacy mod?
 SDK version 3.0 went through a major rewrite, which significantly changed the best way to write
 mods. Legacy mods are simply all mods created before this version. Since these were written with
