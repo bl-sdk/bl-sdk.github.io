@@ -21,7 +21,7 @@ redirect_from:
 
    ![Github download page](/assets/images/willow2-installation/00-download.png)
 
-   Make sure to download the right release for your game, and not either of the source code links.
+   Make sure not to download one of the the source code links.
 
 2. Locate your game files.
 
