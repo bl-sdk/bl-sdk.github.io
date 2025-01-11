@@ -21,10 +21,13 @@ nav_exclude: true
     max-width: 200px;
   }
 
+  hr {
+    max-width: 80%;
+    margin: revert;
+  }
+
   #dev {
     color: white;
-    border-top: 1px solid white;
-    padding: 0.5em 7.5em;
     font-size: 1.3em;
   }
 </style>
@@ -47,6 +50,7 @@ nav_exclude: true
       <img alt="Wonderlands" src="{{ "assets/images/logos/wl.png" }}"/>
     </a>
   </div>
+  <hr>
   <p>
     <a id="dev" href="{{ "developing" | relative_url }}">Developer Docs</a>
   </p>
