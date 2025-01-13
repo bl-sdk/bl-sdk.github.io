@@ -10,6 +10,27 @@ nav_order: 2
 - toc
 {:toc}
 
+## Can I use this on Steam Deck/Linux/Mac
+Yes, through a compatibility layer. The SDK only works on a Windows executable, but you can just run
+that version on Linux/Mac instead. Since there's no official Linux release for either game, and no
+official Mac release for WL, you're likely already doing this already.
+
+**Steam Deck/Linux**
+
+In Steam, set the game's launch options to:
+
+```
+WINEDLLOVERRIDES="dsound=n,b" %command%
+```
+
+Once you get in game, open console by pressing tilde twice, and double check there's no proton
+errors detected. Once that's set up you can continue following all other instructions.
+
+**Mac**
+
+While we believe it's possible, we don't properly understand the process for running the Windows
+executable on a Mac. If you do, let us know, and we can fill this section in properly.
+
 ## Can I use this alongside hotfix or pak mods?
 Yup, they're all fully compatible - though as always, *specific mods* may have issues when used
 together.
