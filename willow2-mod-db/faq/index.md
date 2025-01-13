@@ -10,6 +10,31 @@ nav_order: 2
 - toc
 {:toc}
 
+## Can I use this on Steam Deck/Linux/Mac
+Yes, through a compatibility layer. The SDK only works on a Windows executable, but you can just run
+that version on Linux/Mac instead.
+
+The official Linux/Mac releases are rather outdated, they don't include all the latest updates, and
+you can't even coop with Windows players due to the version mismatch, so it's generally recommended
+to do this anyway.
+
+**Steam Deck/Linux**
+
+In Steam, force a specific proton version under the game's *Properties* 🡒 *Compatibility* tab. Then
+on the *General* tab, set the launch options to:
+
+```
+WINEDLLOVERRIDES="ddraw=n,b" %command%
+```
+
+Once you get in game, open console by pressing tilde, and double check there's no proton errors
+detected. Once that's set up you can continue following all other instructions.
+
+**Mac**
+
+While we believe it's possible, we don't properly understand the process for running the Windows
+executable on a Mac. If you do, let us know, and we can fill this section in properly.
+
 ## Can I use this alongside text/blcm mods?
 Yup, they're fully compatible - though as always, *specific mods* may have issues when used
 together.
