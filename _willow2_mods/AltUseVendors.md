@@ -17,6 +17,6 @@ supported_games:
 title: Alt Use Vendors
 urls:
   Source Code: https://github.com/apple1417/willow2-sdk-mods/
-version: '2.2'
+version: '2.3'
 ---
 Adds alt use binds to vendors to let you quickly refill health and ammo and sell trash, like in BL3/Wonderlands.
