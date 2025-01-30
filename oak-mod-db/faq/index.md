@@ -24,7 +24,13 @@ WINEDLLOVERRIDES="dsound=n,b" %command%
 ```
 
 Once you get in game, open console by pressing tilde twice, and double check there's no proton
-errors detected. Once that's set up you can continue following all other instructions.
+errors detected. You may have to switch proton builds a few times, the exact builds that work seems
+to vary between people for reasons we haven't worked out. Generally though, recent builds of
+[Proton GE](https://github.com/GloriousEggroll/proton-ge-custom) seem to have better results - and
+you may find it easier to install them via [ProtonUp-Qt](https://github.com/DavidoTek/ProtonUp-Qt).
+
+Once you manage to load in without any proton errors, you're all set up, you can continue following
+all other instructions.
 
 **Mac**
 
@@ -47,6 +53,9 @@ following content, substituting the key as appropriate:
 [unrealsdk]
 console_key = "F1"
 ```
+
+## How do I unbind a Keybind?
+Set it to the same thing it was already bound to.
 
 ## My game is crashing...
 ### When I open one of the entries in the BL3 Mod Menu
