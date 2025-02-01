@@ -45,6 +45,35 @@ executable on a Mac. If you do, let us know, and we can fill this section in pro
 Yup, they're fully compatible - though as always, *specific mods* may have issues when used
 together.
 
+## I installed the SDK but I still don't see the mod menu.
+Firstly, double check you installed it in the right place. Make sure you've got the right game
+install folder, and make sure you didn't accidentally extract it inside one of the game's folders.
+You should have a folder `<game>/sdk_mods`, filled with a bunch of files from the download.
+
+If you've double checked everything and it still doesn't show up, try install the latest
+[Microsoft Visual C++ Redistrubutable](https://aka.ms/vs/17/release/vc_redist.x86.exe).
+
+## My game is crashing immediately on starting / after hitting play in the launcher.
+Try install the latest [Microsoft Visual C++ Redistrubutable](https://aka.ms/vs/17/release/vc_redist.x86.exe).
+
+## I tried installing a `.sdkmod`, but it's not appearing in the mod menu
+Check console for any errors. Most often, you're missing one of the mod's requirements. The
+requirements should always be listed on the mod page. To fix this, just install/update the
+requirements.
+
+## I tried extracting a mod zip, but it's not appearing in the mod menu
+As above, firstly, check console for any errors.
+
+If there are no error messages, but it's still not appearing, that's usually caused by accidentally
+extracting to a nested folder. If you open the folder you extracted, `sdk_mods/<Mod Name>`, and just
+see another folder `sdk_mods/<Mod Name>/<Mod Name>`, you've run into this.
+
+![Comparing normal vs nested mod folders](/assets/images/willow2-installation/07-nested.png)
+
+To fix this, simply copy the inner folder and move it up a level. To avoid running into it in
+future, always drag the folder directly out of the zip file.
+
+
 ## Tilde isn't opening the console / I want to use a different console key
 Tilde isn't quite a standardised key, so on some keyboard layouts a different character sends the
 same signal to the game. [You can check this site for a reference](https://kbdlayout.info/features/virtualkeys/VK_OEM_3).
@@ -59,9 +88,6 @@ Alternatively, you can manually rebind the key. Open the file
 ## How do I unbind a Keybind?
 Set it to the same thing it was already bound to.
 
-## My game is crashing...
-### Immediately on starting / After hitting play in the launcher.
-Try install the latest [Microsoft Visual C++ Redistrubutable](https://aka.ms/vs/17/release/vc_redist.x86.exe).
 
 ## What does it mean if a mod's a legacy mod?
 SDK version 3.0 went through a major rewrite, which significantly changed the best way to write
@@ -72,20 +98,6 @@ you could only enable mods while on the main menu, so some legacy mods might hav
 while in game.
 
 The legacy mod compatibility layer will be removed at some point in the future.
-
-## I tried extracting a mod zip, but it's not appearing in the mod menu
-Firstly, check console for any errors. Most often, you're missing one of the mod's requirements. The
-requirements should always be listed on the mod page. To fix this, just install/update the
-requirements.
-
-If there are no error messages, but it's still not appearing, that's usually caused by accidentally
-extracting to a nested folder. If you open the folder you extracted, `sdk_mods/<Mod Name>`, and just
-see another folder `sdk_mods/<Mod Name>/<Mod Name>`, you've run into this.
-
-![Comparing normal vs nested mod folders](/assets/images/willow2-installation/07-nested.png)
-
-To fix this, simply copy the inner folder and move it up a level. To avoid running into it in
-future, always drag the folder directly out of the zip file.
 
 ## Why do some SDK mods disable when I restart the game, when others stay enabled?
 In legacy mods, the mod author had to explicitly turn on auto-enabling. It may simply never have been
