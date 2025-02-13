@@ -57,9 +57,13 @@ If you've double checked everything and it still doesn't show up, try install th
 Try install the latest [Microsoft Visual C++ Redistrubutable](https://aka.ms/vs/17/release/vc_redist.x86.exe).
 
 ## I tried installing a `.sdkmod`, but it's not appearing in the mod menu
-Check console for any errors. Most often, you're missing one of the mod's requirements. The
-requirements should always be listed on the mod page. To fix this, just install/update the
-requirements.
+Firstly, make sure you have the latest version of the sdk. `.sdkmod` files are only supported on
+version 3.0 onwards - if you don't have an `sdk_mods` folder you're definitely using an outdated
+version.
+
+If you're already running the latest sdk, check console for any errors. Most often, you're missing
+one of the mod's requirements. The requirements should always be listed on the mod page. To fix
+this, just install/update the requirements.
 
 ## I tried extracting a mod zip, but it's not appearing in the mod menu
 As above, firstly, check console for any errors.
