@@ -1,6 +1,6 @@
 ---
 author: mopioid
-coop_support: true
+coop_support: RequiresAllPlayers
 dependencies: []
 download: https://github.com/mopioid/Borderlands-Loot-Randomizer/releases
 legacy: true
