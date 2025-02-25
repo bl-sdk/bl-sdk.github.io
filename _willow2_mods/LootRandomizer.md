@@ -1,8 +1,8 @@
 ---
 author: mopioid
-coop_support: Unknown
+coop_support: RequiresAllPlayers
 dependencies: []
-download: https://github.com/mopioid/Borderlands-Loot-Randomizer/releases/tag/1.5.2
+download: https://github.com/mopioid/Borderlands-Loot-Randomizer/releases
 legacy: true
 license: {}
 redirect_from:
@@ -14,7 +14,7 @@ title: Loot Randomizer
 urls:
   Issues: https://github.com/mopioid/Borderlands-Loot-Randomizer/issues
   Source Code: https://github.com/mopioid/Borderlands-Loot-Randomizer/tree/main
-version: 1.5.2
+version: 1.5.5
 ---
 Loot Randomizer is a mod for Borderlands 2 and The Pre-Sequel that provides repeated new playthrough experiences, by means of shuffling every item in the game into new drop locations.
 
