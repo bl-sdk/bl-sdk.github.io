@@ -47,8 +47,11 @@ nav_exclude: true
   <h1>Missing Requirements</h1>
 
   <p>
-    <a id="mod" href="{{ "404.html" | relative_url }}">Unknown Mod Name</a> has missing or outdated requirements.
-    You must update them in order for it to load.
+    <a id="mod" href="{{ "404.html" | relative_url }}">Unknown Mod Name</a> has missing or outdated
+    requirements.
+    <br><br>
+    It requires these other mods to be able to load - visit the mod page and make sure you have the
+    latest versions of each.
   </p>
 
   {%- assign parent_url = page.url | split: "/" | pop | join: "/" -%}
