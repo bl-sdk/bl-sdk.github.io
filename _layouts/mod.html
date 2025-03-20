@@ -63,6 +63,9 @@ layout: default
     {%- when "clientside" -%}
         <span>Client Side</span>
         <div><div>The mod is entirely client side, and can be used in coop regardless of what other players are running.</div></div>
+    {%- when "hostonly" -%}
+        <span>Host Only</span>
+        <div><div>The mod runs primarily on the host, and can be used without clients having it installed. There may still be aspects which work better if everyone's running it.</div></div>
     {%- else -%}
         <span>Unknown</span>
     {%- endcase -%}

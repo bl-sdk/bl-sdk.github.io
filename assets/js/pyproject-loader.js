@@ -81,6 +81,7 @@ async function load_from_pyproject(url, fields) {
                 "incompatible": `<span>Incompatible</span><div><div>The mod is fundamentally incompatible with coop, it can only be played solo.</div></div>`,
                 "requiresallplayers": `<span>Requires All Players</span><div><div>The mod needs all players to have it installed in order to work best. There may still be aspects which don't work as well off host.</div></div>`,
                 "clientside": `<span>Client Side</span><div><div>The mod is entirely client side, and can be used in coop regardless of what other players are running.</div></div>`,
+                "hostonly": `<span>Host Only</span><div><div>The mod runs primarily on the host, and can be used without clients having it installed. There may still be aspects which work better if everyone's running it.</div></div>`,
             };
             const innerHTML = COOP_SUPPORT_TO_INNERHTML[coop_support.toLowerCase()] || "<span>Unknown</span>";
             document.querySelector("#coop").innerHTML = innerHTML;
