@@ -38,6 +38,20 @@ nav_exclude: true
         const info = MOD_INFO[mod_name];
         mod_link.textContent = strip_decode_html(info.title);
         mod_link.href = info.url;
+
+        const dependencies = info?.dependencies?.map((dep) => {
+          const url = MOD_INFO?.[dep]?.url;
+          const link = document.createElement(url == undefined ? "span" : "a");
+          if (url != undefined) {
+            link.href = url;
+          }
+          link.innerText = strip_decode_html(MOD_INFO?.[dep]?.title ?? dep);
+
+          const li = document.createElement("li");
+          li.replaceChildren(link);
+          return li;
+        }) ?? [];
+        document.querySelector("#list").replaceChildren(...dependencies);
       }
     }
   });
@@ -49,9 +63,10 @@ nav_exclude: true
   <p>
     <a id="mod" href="{{ "404.html" | relative_url }}">Unknown Mod Name</a> has missing or outdated
     requirements.
-    <br><br>
-    It requires these other mods to be able to load - visit the mod page and make sure you have the
-    latest versions of each.
+
+    <ul id="list"></ul>
+
+    These other mods are required for it to load - make sure you have the latest versions of each.
   </p>
 
   {%- assign parent_url = page.url | split: "/" | pop | join: "/" -%}

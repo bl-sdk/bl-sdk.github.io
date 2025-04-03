@@ -8,7 +8,7 @@ Args:
 {%- endcomment -%}
 
 {
-    {%- assign first = true -%}
+    {%- assign first_mod = true -%}
     {%- for mod in site[include.collection] -%}
         {%- if mod.legacy -%}
             {%- assign name = mod.title -%}
@@ -17,14 +17,55 @@ Args:
         {%- endif -%}
 
         {%- if name -%}
-            {%- unless first -%}
+            {%- unless first_mod -%}
                 ,
             {%- endunless -%}
-            {%- assign first = false -%}
+            {%- assign first_mod = false -%}
 
             {{- name | jsonify -}}:{
 {{-""-}}        "title": {{- mod.title | decode | jsonify -}},
 {{-""-}}        "url": {{- mod.url | relative_url | jsonify -}}
+
+            {%- assign dependencies = mod.dependencies | default: mod.pyproject.project.dependencies -%}
+            {%- if dependencies.size > 0 -%}
+{{-""-}}        ,"dependencies":[
+
+                {%- assign first_dep = true -%}
+                {%- for item in dependencies -%}
+                    {%- unless first_dep -%}
+                        ,
+                    {%- endunless -%}
+                    {%- assign first_dep = false -%}
+
+                    {%- if mod.legacy -%}
+                        {%- assign dep_name = item | regex_match: "^\s*([A-Z0-9][A-Z0-9 ._-]*[A-Z0-9]|[A-Z0-9])" -%}
+                    {%- else -%}
+                        {%- assign dep_name = item | regex_match: "^\s*([A-Z0-9][A-Z0-9._-]*[A-Z0-9]|[A-Z0-9])" -%}
+                    {%- endif -%}
+
+                    {%- unless dep_name -%}
+                        {%- continue -%}
+                    {%- endunless -%}
+
+                    {%- assign required_mod_name = dep_name -%}
+                    {%- for inner_mod in site[include.collection] -%}
+                        {%- if inner_mod.legacy -%}
+                            {%- assign iter_mod_name = inner_mod.title -%}
+                        {%- else -%}
+                            {%- assign iter_mod_name = inner_mod.pyproject.project.name -%}
+                        {%- endif -%}
+
+                        {%- if dep_name == iter_mod_name -%}
+                            {%- assign required_mod_name = iter_mod_name -%}
+                            {%- break -%}
+                        {%- endif -%}
+                    {%- endfor -%}
+
+{{-""-}}            {{- required_mod_name | jsonify -}}
+                {%- endfor -%}
+{{-""-}}        ]
+            {%- endif -%}
+
             }
         {%- endif -%}
     {%- endfor -%}
