@@ -4,7 +4,6 @@ coop_support: Unknown
 dependencies: []
 download: https://github.com/GameChanger97/Bl2-Mods/blob/main/VisualTriggers/VisualTriggers.zip?raw=true
 legacy: true
-license: {}
 redirect_from:
 - /mods/VisualTriggers/
 supported_games:

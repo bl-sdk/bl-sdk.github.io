@@ -4,7 +4,6 @@ coop_support: Unknown
 dependencies: []
 download: https://github.com/Sampletext282/bl2-mods/blob/main/KeepAnarchy/KeepAnarchy.zip?raw=true
 legacy: true
-license: {}
 redirect_from:
 - /mods/KeepAnarchy/
 supported_games:

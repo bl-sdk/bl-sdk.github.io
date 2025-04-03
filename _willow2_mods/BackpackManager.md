@@ -4,7 +4,6 @@ coop_support: Unknown
 dependencies: []
 download: https://github.com/bl-sdk/former-default-mods/raw/master/BackpackManager/BackpackManager.zip
 legacy: true
-license: {}
 redirect_from:
 - /mods/BackpackManager/
 supported_games:

@@ -4,7 +4,6 @@ coop_support: Unknown
 dependencies: []
 download: https://github.com/bl-sdk/former-default-mods/raw/master/Quickload/Quickload.zip
 legacy: true
-license: {}
 redirect_from:
 - /mods/MapReloader/
 supported_games:

@@ -4,7 +4,6 @@ coop_support: Unknown
 dependencies: []
 download: https://github.com/mopioid/Borderlands-Reign-Of-Giants/releases/tag/1.2
 legacy: true
-license: {}
 redirect_from:
 - /mods/ReignOfGiants/
 supported_games:

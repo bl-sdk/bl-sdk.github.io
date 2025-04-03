@@ -5,7 +5,6 @@ dependencies:
 - UserFeedback>=1.5
 download: https://github.com/mopioid/Borderlands-Commander/releases/tag/2.5
 legacy: true
-license: {}
 redirect_from:
 - /mods/BorderlandsCommander/
 supported_games:

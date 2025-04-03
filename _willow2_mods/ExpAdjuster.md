@@ -4,7 +4,6 @@ coop_support: Unknown
 dependencies: []
 download: https://github.com/plu5/p-borderlands/releases/latest
 legacy: true
-license: {}
 redirect_from:
 - /mods/ExpAdjuster/
 supported_games:

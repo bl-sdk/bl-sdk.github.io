@@ -4,7 +4,6 @@ coop_support: RequiresAllPlayers
 dependencies: []
 download: https://github.com/mopioid/Borderlands-Loot-Randomizer/releases
 legacy: true
-license: {}
 redirect_from:
 - /mods/LootRandomizer/
 supported_games:
