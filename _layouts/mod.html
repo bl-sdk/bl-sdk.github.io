@@ -99,7 +99,12 @@ layout: default
     {%- if dependencies.size > 0 -%}
         <dt class="requirement">Requires</dt>
         {%- for item in dependencies -%}
-            {%- assign dep_name = item | regex_match: "^\s*([A-Z0-9][A-Z0-9._-]*[A-Z0-9]|[A-Z0-9])" -%}
+            {%- if page.legacy -%}
+                {%- assign dep_name = item | regex_match: "^\s*([A-Z0-9][A-Z0-9 ._-]*[A-Z0-9]|[A-Z0-9])" -%}
+            {%- else -%}
+                {%- assign dep_name = item | regex_match: "^\s*([A-Z0-9][A-Z0-9._-]*[A-Z0-9]|[A-Z0-9])" -%}
+            {%- endif -%}
+
             {%- unless dep_name -%}
                 {%- continue -%}
             {%- endunless -%}
