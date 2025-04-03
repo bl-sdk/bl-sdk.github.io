@@ -37,6 +37,8 @@ nav_order: 1
    WINEDLLOVERRIDES="dsound=n,b" %command%
    ```
 
+   [See the faq for more]({{ "/oak-mod-db/faq/#can-i-use-this-on-steam-decklinuxmac" | relative_url }}).
+
 5. The SDK should be installed now. To verify:
    - In BL3, you should see a new `MODS` option on the main menu. You can click this to start
      configuring your mods.

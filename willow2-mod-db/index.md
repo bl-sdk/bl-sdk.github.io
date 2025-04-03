@@ -44,6 +44,8 @@ redirect_from:
    WINEDLLOVERRIDES="ddraw=n,b" %command%
    ```
 
+   [See the faq for more]({{ "/willow2-mod-db/faq/#can-i-use-this-on-steam-decklinuxmac" | relative_url }}).
+
 5. The SDK should be installed now. You should see a new `MODS` option on the main menu. You can
    click this to start configuring your mods.
 

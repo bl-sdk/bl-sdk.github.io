@@ -51,10 +51,12 @@ install folder, and make sure you didn't accidentally extract it inside one of t
 You should have a folder `<game>/sdk_mods`, filled with a bunch of files from the download.
 
 If you've double checked everything and it still doesn't show up, try install the latest
-[Microsoft Visual C++ Redistrubutable](https://aka.ms/vs/17/release/vc_redist.x86.exe).
+[Microsoft Visual C++ Redistrubutable](https://aka.ms/vs/17/release/vc_redist.x86.exe). If you're
+running under Proton, you can do this by installing `vcrun2022` using
+[protontricks](https://github.com/Matoking/protontricks).
 
 ## My game is crashing immediately on starting / after hitting play in the launcher.
-Try install the latest [Microsoft Visual C++ Redistrubutable](https://aka.ms/vs/17/release/vc_redist.x86.exe).
+As above, try install the latest [Microsoft Visual C++ Redistrubutable](https://aka.ms/vs/17/release/vc_redist.x86.exe).
 
 ## I tried installing a `.sdkmod`, but it's not appearing in the mod menu
 Firstly, make sure you have the latest version of the sdk. `.sdkmod` files are only supported on
