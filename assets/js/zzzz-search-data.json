@@ -15,15 +15,26 @@ permalink: /assets/js/search-data.json
     {%- endif -%}
   {%- endfor -%}
 {%- endif -%}
-{%- assign liquid_regex = "{" | append: "{.+?}" | append: "}|{" | append: "%.+?%" | append: "}" -%}
 {%- for pages in pages_array -%}
   {%- for page in pages -%}
     {%- if page.title and page.search_exclude != true -%}
       {%- assign page_content = page.content -%}
-      {%- if page.collection == "mods" -%}
-        {%- assign page_content = page_content | strip | default: page.pyproject.project.description -%}
+      {%- if page.collection contains "_mods" -%}
+        {%- assign page_content = page_content | strip -%}
+        {%- if page_content == "" -%}
+          {%- assign page_content = page.pyproject.project.description | markdownify -%}
+        {%- endif -%}
+
+        {%- assign pyproject_authors = page.pyproject.project.authors
+                                      | map: "name"
+                                      | array_to_sentence_string -%}
+        {%- assign mod_authors = page.author
+                                  | default: pyproject_authors
+                                  | escape
+                                  | prepend: "By: "
+                                  | append: " . " -%}
+        {%- assign page_content = page_content | prepend: mod_authors -%}
       {%- endif -%}
-      {%- assign page_content = page_content | markdownify | regex_replace: liquid_regex, '' -%}
       {%- assign heading_level = site.search.heading_level | default: 2 -%}
       {%- for j in (2..heading_level) -%}
         {%- assign tag = '<h' | append: j -%}
@@ -51,29 +62,27 @@ permalink: /assets/js/search-data.json
           {%- endif -%}
         {%- endif -%}
   {%- unless i == 0 -%},{%- endunless -%}
-  "{{ i }}": {
-    "doc": {{ page.title | jsonify }},
-    "title": {{ title | jsonify }},
-    "content": {{ content | replace: '</h', ' . </h' | replace: '<hr', ' . <hr' | replace: '</p', ' . </p' | replace: '<ul', ' . <ul' | replace: '</ul', ' . </ul' | replace: '<ol', ' . <ol' | replace: '</ol', ' . </ol' | replace: '</tr', ' . </tr' | replace: '<li', ' | <li' | replace: '</li', ' | </li' | replace: '</td', ' | </td' | replace: '<td', ' | <td' | replace: '</th', ' | </th' | replace: '<th', ' | <th' | strip_html | remove: 'Table of contents' | normalize_whitespace | replace: '. . .', '.' | replace: '. .', '.' | replace: '| |', '|' | append: ' ' | jsonify }},
-    "url": "{{ url | relative_url }}",
-    {% include lunr/custom-data.json page=page %}
-    "relUrl": "{{ url }}"
-  }
+{{-""-}}  "{{ i }}":{
+{{-""-}}    "doc":{{ page.title | jsonify }},
+{{-""-}}    "title":{{ title | jsonify }},
+{{-""-}}    "content":{{ content | replace: '</h', ' . </h' | replace: '<hr', ' . <hr' | replace: '</p', ' . </p' | replace: '<ul', ' . <ul' | replace: '</ul', ' . </ul' | replace: '<ol', ' . <ol' | replace: '</ol', ' . </ol' | replace: '</tr', ' . </tr' | replace: '<li', ' | <li' | replace: '</li', ' | </li' | replace: '</td', ' | </td' | replace: '<td', ' | <td' | replace: '</th', ' | </th' | replace: '<th', ' | <th' | strip_html | remove: 'Table of contents' | normalize_whitespace | replace: '. . .', '.' | replace: '. .', '.' | replace: '| |', '|' | append: ' ' | jsonify }},
+{{-""-}}    "url":"{{ url | relative_url }}",
+{{-""-}}    "relUrl":"{{ url }}"
+{{-""-}}  }
         {%- assign i = i | plus: 1 -%}
       {%- endfor -%}
       {%- unless title_found -%}
   {%- unless i == 0 -%},{%- endunless -%}
-  "{{ i }}": {
-    "doc": {{ page.title | jsonify }},
-    "title": {{ page.title | jsonify }},
-    "content": {{ parts[0] | replace: '</h', ' . </h' | replace: '<hr', ' . <hr' | replace: '</p', ' . </p' | replace: '<ul', ' . <ul' | replace: '</ul', ' . </ul' | replace: '<ol', ' . <ol' | replace: '</ol', ' . </ol' | replace: '</tr', ' . </tr' | replace: '<li', ' | <li' | replace: '</li', ' | </li' | replace: '</td', ' | </td' | replace: '<td', ' | <td' | replace: '</th', ' | </th' | replace: '<th', ' | <th' | strip_html | remove: 'Table of contents' | normalize_whitespace | replace: '. . .', '.' | replace: '. .', '.' | replace: '| |', '|' | append: ' ' | jsonify }},
-    "url": "{{ page.url | relative_url }}",
-    {% include lunr/custom-data.json page=page %}
-    "relUrl": "{{ page.url }}"
-  }
+{{-""-}}  "{{ i }}":{
+{{-""-}}    "doc":{{ page.title | jsonify }},
+{{-""-}}    "title":{{ page.title | jsonify }},
+{{-""-}}    "content":{{ parts[0] | replace: '</h', ' . </h' | replace: '<hr', ' . <hr' | replace: '</p', ' . </p' | replace: '<ul', ' . <ul' | replace: '</ul', ' . </ul' | replace: '<ol', ' . <ol' | replace: '</ol', ' . </ol' | replace: '</tr', ' . </tr' | replace: '<li', ' | <li' | replace: '</li', ' | </li' | replace: '</td', ' | </td' | replace: '<td', ' | <td' | replace: '</th', ' | </th' | replace: '<th', ' | <th' | strip_html | remove: 'Table of contents' | normalize_whitespace | replace: '. . .', '.' | replace: '. .', '.' | replace: '| |', '|' | append: ' ' | jsonify }},
+{{-""-}}    "url":"{{ page.url | relative_url }}",
+{{-""-}}    "relUrl":"{{ page.url }}"
+{{-""-}}  }
         {%- assign i = i | plus: 1 -%}
       {%- endunless -%}
     {%- endif -%}
   {%- endfor -%}
-{%- endfor %}
+{%- endfor -%}
 }
