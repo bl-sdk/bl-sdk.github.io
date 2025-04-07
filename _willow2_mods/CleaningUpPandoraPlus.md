@@ -8,6 +8,7 @@ redirect_from:
 - /mods/CleaningUpPandoraPlus/
 supported_games:
 - BL2
+- TPS
 title: Cleaning Up Pandora+
 urls:
   Source Code: https://github.com/infernumx/bl-sdk-mods/tree/main/cleaning_up_pandora_plus
