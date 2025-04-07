@@ -10,6 +10,9 @@ nav_order: 2
 - toc
 {:toc}
 
+## Can I use this on Steam/Epic/Gamepass
+Yes to Steam and Epic. Gamepass is not currently supported.
+
 ## Can I use this on Steam Deck/Linux/Mac
 Yes, through a compatibility layer. The SDK only works on a Windows executable, but you can just run
 that version on Linux/Mac instead. Since there's no official Linux release for either game, and no

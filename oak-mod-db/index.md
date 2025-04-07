@@ -25,6 +25,8 @@ nav_order: 1
    In Steam, you can also find this via RMB -> Manage -> Browse Local Files.
    ![Steam browse local files option](/assets/images/oak-installation/01-steam-local.png)
 
+   The Gamepass version is not currently supported.
+
 3. Open up the zip you downloaded, and extract it's contents directly into the game folder, such
    that they merge.
 
