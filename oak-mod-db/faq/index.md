@@ -2,7 +2,7 @@
 nav_order: 2
 ---
 
-# Frequently Asked Questions
+# FAQ / Troubleshooting
 {:.no_toc}
 
 ### Table of Contents
@@ -10,10 +10,10 @@ nav_order: 2
 - toc
 {:toc}
 
-## Can I use this on Steam/Epic/Gamepass
+## Can I use this on Steam/Epic/Gamepass?
 Yes to Steam and Epic. Gamepass is not currently supported.
 
-## Can I use this on Steam Deck/Linux/Mac
+## Can I use this on Steam Deck/Linux/Mac?
 Yes, through a compatibility layer. The SDK only works on a Windows executable, but you can just run
 that version on Linux/Mac instead. Since there's no official Linux release for either game, and no
 official Mac release for WL, you're likely already doing this already.
