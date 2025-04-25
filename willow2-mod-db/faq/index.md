@@ -48,18 +48,20 @@ executable on a Mac. If you do, let us know, and we can fill this section in pro
 Yup, they're fully compatible - though as always, *specific mods* may have issues when used
 together.
 
+## My game is crashing immediately on starting / after hitting play in the launcher.
+Try install the latest
+[Microsoft Visual C++ Redistrubutable](https://aka.ms/vs/17/release/vc_redist.x86.exe).
+
+If you're running under Proton, you can do this by installing `vcrun2022` using
+[protontricks](https://github.com/Matoking/protontricks).
+
 ## I installed the SDK but I still don't see the mod menu.
 Firstly, double check you installed it in the right place. Make sure you've got the right game
 install folder, and make sure you didn't accidentally extract it inside one of the game's folders.
 You should have a folder `<game>/sdk_mods`, filled with a bunch of files from the download.
 
 If you've double checked everything and it still doesn't show up, try install the latest
-[Microsoft Visual C++ Redistrubutable](https://aka.ms/vs/17/release/vc_redist.x86.exe). If you're
-running under Proton, you can do this by installing `vcrun2022` using
-[protontricks](https://github.com/Matoking/protontricks).
-
-## My game is crashing immediately on starting / after hitting play in the launcher.
-As above, try install the latest [Microsoft Visual C++ Redistrubutable](https://aka.ms/vs/17/release/vc_redist.x86.exe).
+[Microsoft Visual C++ Redistrubutable](https://aka.ms/vs/17/release/vc_redist.x86.exe) as above.
 
 ## I tried installing a `.sdkmod`, but it's not appearing in the mod menu
 Firstly, make sure you have the latest version of the sdk. `.sdkmod` files are only supported on
