@@ -70,9 +70,10 @@ def merge() -> None:
     move_redirects()
 
     for config in EXTRA_CONFIGS:
-        shutil.move(
+        shutil.copytree(
             SITE_DIR / config / f"{config}-mod-db",
             SITE_DIR / BASE_CONFIG / f"{config}-mod-db",
+            dirs_exist_ok=True,
         )
 
     shutil.move(SITE_DIR / BASE_CONFIG, MERGED_SITE_DIR)
