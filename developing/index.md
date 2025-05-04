@@ -176,6 +176,7 @@ Requirements                | `dependencies`    | `project.dependencies`
 Misc URLs<sup>6</sup>       | `urls`            | `project.urls`
 Download Link               | `download`        | `tool.sdkmod.download`
 Description                 | The page contents | `project.description`<sup>7</sup>
+Redirects<sup>8</sup>       | `redirect_from`   | Not supported
 
 <sup>1</sup> Multiple authors are concatenated in the order given.    
 <sup>2</sup> An array of strings, with valid values of `BL2`, `TPS` and `AoDK` (case insensitive).
@@ -187,6 +188,9 @@ Description                 | The page contents | `project.description`<sup>7</s
 <sup>5</sup> Used as the name, with no url.    
 <sup>6</sup> A dict where keys are the names and values are the urls.    
 <sup>7</sup> HTML tags are stripped, rather than just being escaped.    
+<sup>8</sup> An array of relative urls to redirect to this page - i.e. if you moved your mod, it's
+             old urls. See also
+             [`jekyll-redirect-from`](https://github.com/jekyll/jekyll-redirect-from#usage).    
 {: .fs-2 }
 
 ### Updating Info
