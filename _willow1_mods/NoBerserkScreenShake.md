@@ -1,3 +1,3 @@
 ---
-pyproject_url: https://github.com/RedxYeti/Yeti-BL1-SDK-Mods/raw/refs/heads/main/NoBerserkScreenShake/pyproject.toml
+pyproject_url: https://raw.githubusercontent.com/RedxYeti/Yeti-BL1-SDK-Mods/refs/heads/main/NoBerserkScreenShake/pyproject.toml
 ---
