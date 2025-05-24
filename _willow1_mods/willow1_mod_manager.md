@@ -1,5 +1,5 @@
 ---
-# pyproject_url: https://raw.githubusercontent.com/bl-sdk/willow1-mod-manager/master/manager_pyproject.toml
+pyproject_url: https://raw.githubusercontent.com/bl-sdk/willow1-mod-manager/master/manager_pyproject.toml
 version: Unknown
 nav_exclude: true
 ---
