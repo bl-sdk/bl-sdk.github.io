@@ -6,6 +6,8 @@ color_scheme: willow1
 
 collections:
   willow1_mods:
+    sort-by: title
+    permalink: /willow1-mod-db/mods/:name/
     output: true
 
 just_the_docs:

@@ -7,17 +7,6 @@ theme: just-the-docs
 
 color_scheme: dev
 
-collections:
-  willow1_mods:
-    sort-by: title
-    permalink: /willow1-mod-db/mods/:name/
-  willow2_mods:
-    sort-by: title
-    permalink: /willow2-mod-db/mods/:name/
-  oak_mods:
-    sort-by: title
-    permalink: /oak-mod-db/mods/:name/
-
 defaults:
   - scope:
       path: ""
