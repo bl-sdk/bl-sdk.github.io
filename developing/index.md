@@ -118,8 +118,8 @@ interpreter is not restarted, and there's no way to accept arguments into `sys.a
 The DB primarily sources info from your mod's `pyproject.toml`. With a well configured pyproject,
 all you need to do is point the DB at it, and everything will be extracted automatically.
 
-To add your mod, you'll need to add a markdown file to either the `_oak_mods` or `_willow2_mods`
-folders in [this site's repo](https://github.com/bl-sdk/bl-sdk.github.io).
+To add your mod, you'll need to add a markdown file to one of the `_oak_mods`, `_willow1_mods`, or
+`_willow2_mods` folders in [this site's repo](https://github.com/bl-sdk/bl-sdk.github.io).
 
 ### Simplest Configuration
 The simplest possible file is the following. Make sure the url points at an auto-updating link,
@@ -242,8 +242,9 @@ Now asserts make for nice and simple code, but not all users check console befor
 complaining. As an alternative, you can open a page in their browser instead - this site provides
 two for that purpose.
 
-- [{{ "willow2-mod-db/requirements?mod=my_mod" | absolute_url }}]({{ "willow2-mod-db/requirements?mod=my_mod" | absolute_url }})
 - [{{ "oak-mod-db/requirements?mod=my_mod" | absolute_url }}]({{ "oak-mod-db/requirements?mod=my_mod" | absolute_url }})
+- [{{ "willow1-mod-db/requirements?mod=my_mod" | absolute_url }}]({{ "willow1-mod-db/requirements?mod=my_mod" | absolute_url }})
+- [{{ "willow2-mod-db/requirements?mod=my_mod" | absolute_url }}]({{ "willow2-mod-db/requirements?mod=my_mod" | absolute_url }})
 
 ```py
 try:
@@ -257,8 +258,8 @@ except (AssertionError, ImportError) as ex:
 The `?mod=` query parameter should be set to your mod's `project.name`.
 
 As mentioned above, anything in `project.dependencies` is shown as a requirement on the mod page. If
-you want to require a particular version of the sdk, you can add a dependency on `oak_mod_manager`
-or `willow2_mod_manager` (as appropriate).
+you want to require a particular version of the sdk, you can add a dependency on `oak_mod_manager`,
+`willow1_mod_manager`, or `willow2_mod_manager` (as appropriate).
 
 ```toml
 [project]

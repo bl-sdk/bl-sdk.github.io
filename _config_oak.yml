@@ -31,4 +31,5 @@ exclude:
   - Readme.md
 
   - developing
+  - willow1-mod-db
   - willow2-mod-db

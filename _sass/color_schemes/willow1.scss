@@ -1,0 +1,31 @@
+@import "./color_schemes/dark";
+
+$body-background-color: #24180c;
+$sidebar-color: #24180c;
+$link-color: $red-200;
+$btn-primary-color: $red-300;
+
+// Hexagonal circle packing
+body, .side-bar {
+  background-image:
+    radial-gradient(circle at 25% 25%, rgba(0,0,0,0.25) 5px, transparent 0),
+    radial-gradient(circle at 50% 75%, rgba(0,0,0,0.25) 5px, transparent 0),
+    radial-gradient(circle at 75% 25%, rgba(0,0,0,0.25) 5px, transparent 0),
+    radial-gradient(circle at 0% 75%, rgba(0,0,0,0.25) 5px, transparent 0),
+    radial-gradient(circle at 100% 75%, rgba(0,0,0,0.25) 5px, transparent 0);
+  // The size difference here makes it into regular hexagons
+  background-size: 36px 32px;
+}
+
+// Add some borders to make things a little clearer ontop of the accents
+.search {
+    border-right: $border $border-color;
+}
+
+.nav-list .nav-list-link.active {
+    border-width: 1px;
+    border-style: solid;
+    border-image: linear-gradient(90deg, transparent 0%, $border-color 80%, transparent 100%) 1;
+    border-left: none;
+    border-right: none;
+}

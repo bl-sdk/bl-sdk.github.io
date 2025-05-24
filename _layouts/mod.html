@@ -23,6 +23,8 @@ layout: default
 
     <dt>Supports</dt>
     {%- case page.collection -%}
+    {%- when "willow1_mods" -%}
+        {%- assign ALLOWED_GAMES = "BL1" | split: "," -%}
     {%- when "willow2_mods" -%}
         {%- assign ALLOWED_GAMES = "BL2,TPS,AODK" | split: "," -%}
     {%- when "oak_mods" -%}

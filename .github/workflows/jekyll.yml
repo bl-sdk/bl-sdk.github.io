@@ -71,7 +71,7 @@ jobs:
         if: ${{ !inputs.skip-htmlproofer }}
         run: >
           bundle exec htmlproofer _merged_site
-          --ignore-files "/_merged_site\\/(oak|willow2)-mod-db\\/mods/"
+          --ignore-files "/_merged_site\\/(oak|willow1|willow2)-mod-db\\/mods/"
           --swap-urls "https\://bl-sdk.github.io/:/"
 
   spelling:

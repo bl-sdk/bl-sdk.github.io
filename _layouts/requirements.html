@@ -23,7 +23,7 @@ nav_exclude: true
     return new DOMParser().parseFromString(input, 'text/html').body.textContent || "";
   }
 
-  const config = window.location.pathname.match(/^\/(willow2|oak)-mod-db/)[1];
+  const config = window.location.pathname.match(/^\/(willow1|willow2|oak)-mod-db/)[1];
   const mod_info_promise = fetch(`/assets/js/mod-info-${config}.json`).then(x => x.json());
 
   window.addEventListener("load", async () => {
