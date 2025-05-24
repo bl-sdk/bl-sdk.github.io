@@ -1,1 +1,23 @@
 @import "./color_schemes/dark";
+
+// Originally based on the Brick pattern from https://css-pattern.com/
+body, .side-bar {
+  background-size: 40px 40px;
+  background-position: 0 0, 20px 20px;
+  background-image:
+    conic-gradient(at 93% 43%, rgba(100, 100, 128, 0.1) 75%, rgba(0, 0, 0, 0.1) 0),
+    conic-gradient(at 93% 43%, rgba(100, 100, 128, 0.1) 75%, rgba(0, 0, 0, 0.1) 0);
+}
+
+// Add some borders to make things a little clearer ontop of the accents
+.search {
+    border-right: $border $border-color;
+}
+
+.nav-list .nav-list-link.active {
+    border-width: 1px;
+    border-style: solid;
+    border-image: linear-gradient(90deg, transparent 0%, $border-color 80%, transparent 100%) 1;
+    border-left: none;
+    border-right: none;
+}
