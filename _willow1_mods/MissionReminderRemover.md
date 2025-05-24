@@ -1,3 +1,3 @@
 ---
-pyproject_url: https://raw.githubusercontent.com/RedxYeti/Yeti-BL1-SDK-Mods/refs/heads/main/ItemLights/pyproject.toml
+pyproject_url: https://raw.githubusercontent.com/RedxYeti/Yeti-BL1-SDK-Mods/refs/heads/main/MissionReminderRemover/pyproject.toml
 ---
