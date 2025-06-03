@@ -6,6 +6,8 @@ color_scheme: oak
 
 collections:
   oak_mods:
+    sort-by: title
+    permalink: /oak-mod-db/mods/:name/
     output: true
 
 just_the_docs:
@@ -31,4 +33,5 @@ exclude:
   - Readme.md
 
   - developing
+  - willow1-mod-db
   - willow2-mod-db

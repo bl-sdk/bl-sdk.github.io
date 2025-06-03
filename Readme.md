@@ -10,11 +10,12 @@ separate jekyll projects, with one set of interwoven source files, the developer
 default. You can build the others by appending an extra config file:
 
 ```sh
+bundle exec jekyll serve --config _config.yml,_config_willow1.yml
 bundle exec jekyll serve --config _config.yml,_config_willow2.yml
 bundle exec jekyll serve --config _config.yml,_config_oak.yml
 ```
 
-Alternatively, `_jekyll.py` provides simpler aliases for this, `_jekyll.py build willow`.
+Alternatively, `_jekyll.py` provides simpler aliases for this, `_jekyll.py build willow2`.
 
 To build and merge the three sites, run `_jekyll.py merge`. This creates a new `_merged_site` dir.
 

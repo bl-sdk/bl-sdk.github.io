@@ -7,15 +7,12 @@ theme: just-the-docs
 
 color_scheme: dev
 
-collections:
-  willow2_mods:
-    sort-by: title
-    permalink: /willow2-mod-db/mods/:name/
-  oak_mods:
-    sort-by: title
-    permalink: /oak-mod-db/mods/:name/
-
 defaults:
+  - scope:
+      path: ""
+      type: willow1_mods
+    values:
+      layout: mod
   - scope:
       path: ""
       type: willow2_mods
@@ -64,9 +61,12 @@ exclude:
   - Readme.md
 
   - oak-mod-db
+  - willow1-mod-db
   - willow2-mod-db
 
 nav_external_links:
+  # - title: BL1 Mods
+  #   url: willow1-mod-db/
   - title: BL2/TPS/AoDK Mods
     url: willow2-mod-db/
   - title: BL3/WL Mods

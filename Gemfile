@@ -55,3 +55,5 @@ gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
 
 gem "webrick", :require => false
 gem "html-proofer", :require => false
+gem "logger", :require => false
+gem "csv", :require => false

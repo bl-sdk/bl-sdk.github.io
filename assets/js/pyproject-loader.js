@@ -24,7 +24,7 @@ function strip_decode_html(input) {
 }
 
 async function load_from_pyproject(url, fields) {
-    const config = window.location.pathname.match(/^\/(willow2|oak)-mod-db/)[1];
+    const config = window.location.pathname.match(/^\/(willow1|willow2|oak)-mod-db/)[1];
 
     // Kick off fetching mod info early if we need it
     const mod_info_promise = fields?.dependencies
@@ -62,6 +62,7 @@ async function load_from_pyproject(url, fields) {
 
     if (fields?.games) {
         const ALLOWED_GAMES = {
+            "willow1": {"BL1": "BL1"},
             "willow2": {"BL2": "BL2", "TPS": "TPS", "AODK": "AoDK"},
             "oak": {"BL3": "BL3", "WL": "WL"},
         }[config];
