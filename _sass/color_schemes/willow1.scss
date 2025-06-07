@@ -1,20 +1,20 @@
 @import "./color_schemes/dark";
 
-$body-background-color: #24180c;
-$sidebar-color: #24180c;
+$body-background-color: #2f2319;
+$sidebar-color: #2f2319;
 $link-color: $red-200;
 $btn-primary-color: $red-300;
 
 // Hexagonal circle packing
 body, .side-bar {
   background-image:
-    radial-gradient(circle at 25% 25%, rgba(0,0,0,0.25) 5px, transparent 0),
-    radial-gradient(circle at 50% 75%, rgba(0,0,0,0.25) 5px, transparent 0),
-    radial-gradient(circle at 75% 25%, rgba(0,0,0,0.25) 5px, transparent 0),
-    radial-gradient(circle at 0% 75%, rgba(0,0,0,0.25) 5px, transparent 0),
-    radial-gradient(circle at 100% 75%, rgba(0,0,0,0.25) 5px, transparent 0);
-  // The size difference here makes it into regular hexagons
-  background-size: 36px 32px;
+    radial-gradient(circle at 25% 25%, rgba(0,0,0,0.25) 2px, transparent 0),
+    radial-gradient(circle at 50% 75%, rgba(0,0,0,0.25) 2px, transparent 0),
+    radial-gradient(circle at 75% 25%, rgba(0,0,0,0.25) 2px, transparent 0),
+    radial-gradient(circle at 0% 75%, rgba(0,0,0,0.25) 2px, transparent 0),
+    radial-gradient(circle at 100% 75%, rgba(0,0,0,0.25) 2px, transparent 0);
+  // Uneven to make a perfect regular hexagon pattern. This does not skew the circles.
+  background-size: 24px calc(24px*sqrt(3)/2);
 }
 
 // Add some borders to make things a little clearer ontop of the accents
