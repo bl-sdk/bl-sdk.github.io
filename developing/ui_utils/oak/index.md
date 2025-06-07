@@ -1,6 +1,8 @@
 ---
 title: BL3/WL
 parent: ui_utils reference
+redirect_from:
+  - /developing/ui_utils/oak.html
 ---
 
 ### Table of Contents

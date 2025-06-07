@@ -1,6 +1,8 @@
 ---
 title: BL2/TPS/AoDK
 parent: ui_utils reference
+redirect_from:
+  - /developing/ui_utils/willow.html
 ---
 
 ### Table of Contents
