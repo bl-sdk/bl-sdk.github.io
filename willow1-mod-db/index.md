@@ -4,10 +4,12 @@ nav_order: 1
 
 # Installation Instructions
 
+![Enhanced is not supported](/assets/images/willow1-installation/no-enhanced.png)
+{: style="margin-bottom:-1.5em;"}
+
 ## Video Guide
 
-TODO
-{% youtube https://youtu.be/cCkNCjx3xDM %}
+{% youtube https://youtu.be/K2wgkl08w-0 %}
 
 ## Text Guide
 1. Install the latest
@@ -20,7 +22,7 @@ TODO
 
 2. Download the latest release from github.
 
-   ![TODO Github download page](/assets/images/willow1-installation/download.png)
+   ![Github download page](/assets/images/willow1-installation/download.png)
 
    Make sure not to download one of the the source code links.
 
