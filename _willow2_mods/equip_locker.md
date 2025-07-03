@@ -1,22 +1,8 @@
 ---
-author: apple1417
-coop_support: Unknown
-dependencies: []
-download: https://github.com/apple1417/willow2-sdk-mods/raw/master/.legacy/EquipLocker.zip
-legacy: true
-license:
-  name: GNU GPLv3
-  url: https://choosealicense.com/licenses/gpl-3.0
+pyproject_url: https://raw.githubusercontent.com/apple1417/willow2-sdk-mods/master/equip_locker/pyproject.toml
 redirect_from:
 - /mods/EquipLocker/
-supported_games:
-- BL2
-- TPS
-- AoDK
-title: Equip Locker
-urls:
-  Source Code: https://github.com/apple1417/willow2-sdk-mods/
-version: '1.4'
+- /willow2-mod-db/mods/equiplocker/
 ---
 Adds various options that prevent you from equipping certain types of items/weapons.
 
