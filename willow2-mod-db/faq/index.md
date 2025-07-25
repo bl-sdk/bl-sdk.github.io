@@ -55,10 +55,15 @@ Try install the latest
 If you're running under Proton, you can do this by installing `vcrun2022` using
 [protontricks](https://github.com/Matoking/protontricks).
 
+## After launching I get a pop up that just says `[...]\binaries\win32\plugins\pyunrealsdk.dll`
+You installed the latest version of the sdk, but then overwrote it with an older one. Reinstall the
+latest version of the sdk.
+
 ## I installed the SDK but I still don't see the mod menu.
 Firstly, double check you installed it in the right place. Make sure you've got the right game
 install folder, and make sure you didn't accidentally extract it inside one of the game's folders.
-You should have a folder `<game>/sdk_mods`, filled with a bunch of files from the download.
+You should have a folder `<game>/sdk_mods`, filled with a bunch of files from the download. If you
+get the popup like in the last question, you'll also need to re-install.
 
 If you've double checked everything and it still doesn't show up, try install the latest
 [Microsoft Visual C++ Redistributable](https://aka.ms/vs/17/release/vc_redist.x86.exe) as above.
