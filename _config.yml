@@ -65,8 +65,8 @@ exclude:
   - willow2-mod-db
 
 nav_external_links:
-  # - title: BL1 Mods
-  #   url: willow1-mod-db/
+  - title: BL1 Mods
+    url: willow1-mod-db/
   - title: BL2/TPS/AoDK Mods
     url: willow2-mod-db/
   - title: BL3/WL Mods

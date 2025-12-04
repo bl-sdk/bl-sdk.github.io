@@ -21,3 +21,12 @@ BL2MODDED[hwAAAABZMgCA5v//A6HVxmIIxPD/HwGDIQYIDBMY/v///0/D8A==|AHj5icHRieNCzOrj6
 ### Why does the game freeze when I open the menu?
 The very first time you open the edit menu, the mod has to load some assets. If they're not already
 loaded, this will lead to a short freeze as it fetches them from another map.
+
+### Can you make editing items have a cost?
+Pick what you think an appropriate cost is and throw it away.
+
+### Can you add an option to use any part on any item?
+No. There are 1800 vanilla weapon parts in BL2 - how are you going to find the specific one you
+want? This works with modded parts too, which makes the problem even worse - and means no predefined
+list of categories is ever going to be complete. Then on top of all that, the menus themselves start
+breaking when an inventory gets too many items, even your base inventory, not just this modded one.
