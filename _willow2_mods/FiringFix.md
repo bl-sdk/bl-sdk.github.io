@@ -1,3 +1,3 @@
 ---
-pyproject_url: https://github.com/ZetaDaemon/willow2-sdk-mods/raw/refs/heads/main/firing_fix/pyproject.toml
+pyproject_url: https://raw.githubusercontent.com/ZetaDaemon/willow2-sdk-mods/refs/heads/main/firing_fix/pyproject.toml
 ---
