@@ -1,3 +1,3 @@
 ---
-pyproject_url: https://github.com/Siggless/oak-sdk-mods/raw/refs/heads/main/DialogTweaks/pyproject.toml
+pyproject_url: https://raw.githubusercontent.com/Siggless/oak-sdk-mods/refs/heads/main/DialogTweaks/pyproject.toml
 ---
