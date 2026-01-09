@@ -1,9 +1,9 @@
 ---
 pyproject_url: https://raw.githubusercontent.com/mantorofficial/Bl2-ModCabinet/main/pyproject.toml
----
+
 author: Ty-gone
 
-coop\_support: Unknown
+coop\_support: Client side
 
 dependencies:
 
@@ -26,6 +26,8 @@ urls:
   Source Code: https://github.com/mantorofficial/Bl2-ModCabinet
 
 version: "1.0.0"
+
+---
 
 
 \*\*Mod Cabinet\*\* adds an in-game “cabinet” style menu for Borderlands 2 SDK mods.
