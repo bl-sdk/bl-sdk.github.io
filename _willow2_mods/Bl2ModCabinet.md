@@ -1,32 +1,6 @@
 ---
 pyproject_url: https://raw.githubusercontent.com/mantorofficial/Bl2-ModCabinet/main/pyproject.toml
 
-author: Ty-gone
-
-coop\_support: Client side
-
-dependencies:
-
-legacy: false
-
-license:
-
-  name: MIT
-
-  url: https://choosealicense.com/licenses/mit/
-
-supported\_games:
-
-  - BL2
-
-title: Mod Cabinet
-
-urls:
-
-  Source Code: https://github.com/mantorofficial/Bl2-ModCabinet
-
-version: "1.0.0"
-
 ---
 
 
