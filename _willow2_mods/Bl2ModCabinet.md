@@ -1,3 +1,3 @@
 ---
-pyproject\_url: https://raw.githubusercontent.com/mantorofficial/Bl2-ModCabinet/refs/heads/main/pyproject.toml
+pyproject_url: https://raw.githubusercontent.com/mantorofficial/Bl2-ModCabinet/main/pyproject.toml
 ---
