@@ -2,11 +2,11 @@
 author: Milo
 coop_support: Unknown
 dependencies: []
-download: https://github.com/ncalvin1/Milo-BL2-SDK-Mods/raw/refs/heads/main/PlayerRandomizer/PlayerRandomizer_v0.2.zip
-legacy: true
+download: https://github.com/ncalvin1/Milo-BL2-SDK-Mods/raw/refs/heads/main/PlayerRandomizer/PlayerRandomizer.sdkmod
 license:
   name: GNU GPLv3
   url: https://choosealicense.com/licenses/gpl-3.0
+pyproject_url: https://github.com/ncalvin1/Milo-BL2-SDK-Mods/raw/refs/heads/main/PlayerRandomizer/PlayerRandomizer/pyproject.toml
 redirect_from:
 - /mods/PlayerRandomizer/
 supported_games:
@@ -16,7 +16,7 @@ supported_games:
 title: Player Randomizer
 urls:
   Source Code: https://github.com/ncalvin1/Milo-BL2-SDK-Mods
-version: '0.2'
+version: '2.0'
 ---
 Fills a player's trees with random skills, and
 updates class mods to boost skills from the new set.
@@ -37,18 +37,21 @@ broken.
   - **Action Skill** determines which character's action
 skill to assign to yours; note that graphics may be
 wrong for some character/skill combinations, but the
-effects should still work correctly.
+effects should still work correctly.  Exception:  Krieg's
+Buzzaxe Rampage does not work for other characters.
   - **Skill Density** selects how much to fill in the skill
 tree - for reference, BL2 character trees are about 60%
 full, while TPS trees average 65% full.
-  - **Randomizing Tier Points** changes how many skill
+  - **Randomize Tier Points** changes how many skill
 points it takes to unlock the next skill tier.
   - **Randomize COMs** enables modifying the player's
 classmods to contain skills from the new random tree.
+  - **Cheats** lets one specify particular skills that
+should definitely appear in the character's skill tree.
+  - **Reroll** chooses a new set of skills for the
+character.
 
 Once you've made your choices, load your character and
-start the session as usual.  The next time you launch
-the game, the Mods menu will show a new enabled entry,
-'Effect Randomizer (#)', where the number is the
-newly-generated effect seed.  Remember that seed - if
-the game crashes, you'll need to re-enable that entry.
+start the session as usual.  Changes to settings in the
+in-game menu will have no effect until after a return to
+the main menu.
