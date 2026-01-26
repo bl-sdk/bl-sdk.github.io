@@ -1,23 +1,7 @@
 ---
-author: Milo
-coop_support: Unknown
-dependencies:
-- Change Util>=0.1
-download: https://github.com/ncalvin1/Milo-BL2-SDK-Mods/raw/refs/heads/main/EffectRandomizer/EffectRandomizer_v0.1.zip
-legacy: true
-license:
-  name: GNU GPLv3
-  url: https://choosealicense.com/licenses/gpl-3.0
+pyproject_url: https://raw.githubusercontent.com/ncalvin1/Milo-BL2-SDK-Mods/refs/heads/main/EffectRandomizer/EffectRandomizer/pyproject.toml
 redirect_from:
 - /mods/EffectRandomizer/
-supported_games:
-- BL2
-- TPS
-- AoDK
-title: Effect Randomizer
-urls:
-  Source Code: https://github.com/ncalvin1/Milo-BL2-SDK-Mods
-version: '0.1'
 ---
 Changes subtle aspects of most game items, so they no
 longer behave completely as expected.
@@ -39,13 +23,13 @@ want an artifact that improves corrosion damage and
 movement speed?  It might be out there...
 *Note: relics are not supported on TPS.  Oz kits have
 enough quirks already.*
+
 # Usage:
+
 From the main menu, under Mods, enable 'Effect
-Randomizer (New Seed)'.  Bring up Options-&gt;Mods-&gt;Effect
-Randomizer to enable the effects you want to change,
-then load your character and start the session as usual.
-The next time you launch the game, the Mods menu will
-show a new enabled entry, 'Effect Randomizer (#)',
-where the number is the newly-generated effect seed.
-Remember that seed - if the game crashes, you'll need
-to re-enable that entry.
+Randomizer' and escape back to the main menu.  Bring
+up Options->Mods->Effect Randomizer to enable the
+effects you want to change, then load your character
+and start the session as usual.  Changes to settings
+in the in-game menu will have no effect until after
+a return to the main menu.
