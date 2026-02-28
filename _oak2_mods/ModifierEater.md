@@ -5,6 +5,7 @@ Pick your own enemy modifiers.
 
 Active: Enemies will spawn with the modifier. 
 
+
 Inactive: Enemies won't spawn with the modifier.
 
 
