@@ -29,6 +29,8 @@ layout: default
         {%- assign ALLOWED_GAMES = "BL2,TPS,AODK" | split: "," -%}
     {%- when "oak_mods" -%}
         {%- assign ALLOWED_GAMES = "BL3,WL" | split: "," -%}
+    {%- when "oak2_mods" -%}
+        {%- assign ALLOWED_GAMES = "BL4" | split: "," -%}
     {%- else -%}
         {%- assign ALLOWED_GAMES = "" | split: "," | push: page.collection -%}
     {%- endcase -%}

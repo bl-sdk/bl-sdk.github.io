@@ -8,7 +8,7 @@ import xml.etree.ElementTree as ET
 from pathlib import Path
 from typing import Literal
 
-ALL_CONFIGS: tuple[str, ...] = ("dev", "oak", "willow1", "willow2")
+ALL_CONFIGS: tuple[str, ...] = ("dev", "oak", "oak2", "willow1", "willow2")
 
 BASE_CONFIG = "dev"
 EXTRA_CONFIGS: tuple[str, ...] = tuple(x for x in ALL_CONFIGS if x != BASE_CONFIG)
@@ -127,7 +127,7 @@ def merge_search_data() -> None:
             "'/assets/js/search-data.json'",
             (
                 "`/assets/js/search-data-${"
-                'window.location.pathname.match(/^\\/(willow1|willow2|oak)-mod-db/)?.[1] ?? "dev"'
+                'window.location.pathname.match(/^\\/(willow1|willow2|oak|oak2)-mod-db/)?.[1] ?? "dev"'
                 "}.json`"
             ),
         ),

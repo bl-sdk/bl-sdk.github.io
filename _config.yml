@@ -10,17 +10,22 @@ color_scheme: dev
 defaults:
   - scope:
       path: ""
+      type: oak_mods
+    values:
+      layout: mod
+  - scope:
+      path: ""
+      type: oak2_mods
+    values:
+      layout: mod
+  - scope:
+      path: ""
       type: willow1_mods
     values:
       layout: mod
   - scope:
       path: ""
       type: willow2_mods
-    values:
-      layout: mod
-  - scope:
-      path: ""
-      type: oak_mods
     values:
       layout: mod
   - scope:
@@ -61,6 +66,7 @@ exclude:
   - Readme.md
 
   - oak-mod-db
+  - oak2-mod-db
   - willow1-mod-db
   - willow2-mod-db
 
@@ -71,6 +77,8 @@ nav_external_links:
     url: willow2-mod-db/
   - title: BL3/WL Mods
     url: oak-mod-db/
+  - title: BL4 Mods
+    url: oak2-mod-db/
   - title: Modding Support Discord
     url: https://discord.gg/bXeqV8Ef9R
   - title: SDK Developer Discord

@@ -1,25 +1,25 @@
-title: BL2/TPS SDK Mod Database
+title: BL4 SDK Mod Database
 description: >-
-  SDK mods for Borderlands 2, The Pre-Sequel, and the Attack on Dragon Keep standalone.
+  SDK mods for Borderlands 4.
 
-color_scheme: willow2
+color_scheme: oak2
 
 collections:
-  willow2_mods:
+  oak2_mods:
     sort-by: title
-    permalink: /willow2-mod-db/mods/:name/
+    permalink: /oak2-mod-db/mods/:name/
     output: true
 
 just_the_docs:
   collections:
-    willow2_mods:
+    oak2_mods:
       name: Mods
 
 nav_external_links:
   - title: Modding Support Discord
     url: https://discord.gg/bXeqV8Ef9R
   - title: Latest Release
-    url: https://github.com/bl-sdk/willow2-mod-manager/releases/latest
+    url: https://github.com/bl-sdk/oak2-mod-manager/releases/latest
 
 exclude:
   - Gemfile
@@ -34,5 +34,5 @@ exclude:
 
   - developing
   - oak-mod-db
-  - oak2-mod-db
   - willow1-mod-db
+  - willow2-mod-db
