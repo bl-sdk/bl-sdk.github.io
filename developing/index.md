@@ -24,7 +24,6 @@ Work in progress
    console_log_level = "DWRN"
 
    [pyunrealsdk]
-   debugpy = true
    # pyexec_root = "C:\\path\\to\\new\\mod\\folder"
 
    [mod_manager]
@@ -39,11 +38,6 @@ Work in progress
      log messages to console, which are relevant for developers, but which we don't want normal
      users to worry over.
 
-   - `pyunrealsdk.debugpy`
-
-     This enables [debugpy](https://github.com/microsoft/debugpy) support, which will let you
-     properly attach a debugger.
-
    - `pyunrealsdk.pyexec_root`
 
      Changes the root directory used when running `pyexec` commands. You may want to redirect this
@@ -54,33 +48,24 @@ Work in progress
      This is a list of extra mod folders, which lets you keep your development folder separate from
      other mods.
 
-3. Download the latest version of debugpy, and extract to one of your mods folders such that it's
-   importable. The mod manager initialization script will automatically import it and start a
-   listener.
-
-4. Extract the default `.sdkmod`s, so you can see all the raw python source files (and so your IDE
+3. Extract the default `.sdkmod`s, so you can see all the raw python source files (and so your IDE
    can parse them).
-   
+
    Mods are generally released as a single `.sdkmod` file, since this helps prevent a lot of
    mistakes casual users might make while installing, but this is unsuitable for development.
-   
+
    `.sdkmod` files are all just renamed zips, open them in any archive program and extract the inner
    folders back into the mods folder - go from `sdk_mods/my_mod.sdkmod/my_mod/*` to just
    `sdk_mods/my_mod/*`.
-   
+
    Note that if you have both an extracted folder and a `.sdkmod` with the same name, the folder
    takes priority.
 
-5. Point your IDE at the other mods folders, so it can follow imports. This should be the base
+4. Point your IDE at the other mods folders, so it can follow imports. This should be the base
    `sdk_mods` folder, and the `sdk_mods/.stubs` folder for the native modules.
 
    - In vscode, add to the `python.analysis.extraPaths` option.
-
-6. Configure your debugger for remote debugging, attaching to `localhost:5678`.
-
-   - In vscode, use the `Python: Remote Attach` template.
-
-   After doing this, launch the game and make sure you can attach.
+   - For pyright, add to the `tool.pyright.extraPaths` array.
 
 After finishing setting up, try take a quick read through the base sdk mod files and the stubs. They
 are all filled with all sorts of type hints and docstrings, which should help explain a lot about
@@ -113,6 +98,91 @@ EOF
 set in `pyunrealsdk.pyexec_root` previously. Note that this is *not* running a python script in the
 traditional sense, it's instead more similar to something like `eval(open(file).read())`. The
 interpreter is not restarted, and there's no way to accept arguments into `sys.argv`.
+
+## Better Debugging Tools
+
+{: .note }
+The following features aren't yet fully available across all games.
+
+The mod manager has integrations with a few third party tools, which give a better debugging
+experience than just using console and print statements.
+
+The recommended way to get started is to
+[create a virtual enviroment](https://docs.python.org/3/library/venv.html), ideally using the exact
+same Python version, and architecture (32 vs 64-bit) as the SDK. Then add the path to it's
+`site-packages` folder to your `unrealsdk.user.toml`:
+
+```toml
+[mod_manager]
+extra_sys_path = [
+   "C:\\path\\to\\.venv\\Lib\\site-packages",
+]
+```
+
+This may not work if using Proton on Linux, if the specific tool relies on Windows libraries.
+Everything should still work if you manually download Windows packages, as long as you put them
+somewhere importable from inside the game's Python instance.
+
+### debugpy
+[debugpy](https://github.com/microsoft/debugpy) is a generic python debugger - it's what gives you
+breakpoints. It implements the standard Debug Adaptor Protocol, so should work with most IDEs.
+
+1. Install it inside your venv using `pip install debugpy`. As long as it's importable, the sdk will
+   automatically start a server on launch.
+
+2. Add the following to your `unrealsdk.user.toml`:
+
+   ```toml
+   [pyunrealsdk]
+   debugpy = true
+   ```
+
+   This enables debugpy compatibility in `pyunrealsdk` itself - without this breakpoints won't
+   always trigger.
+
+3. Configure your debugger for remote debugging, attaching to `localhost:5678`.
+
+   - In vscode, use the `Python: Remote Attach` template.
+
+4. Restart the game, add some breakpoints, and confirm you can hit them.
+
+   If you cannot hit breakpoints, try call the `breakpoint()` function. If this works, then you have
+   a source mapping issue.
+
+### IPython / Jupyter
+[IPython](https://ipython.org/) is a better interactive Python console, which spawned the Jupyter
+project. Even if you don't care about notebooks, the IPython console is a much more friendly
+replacement for `py`/`pyexec` commands. The mod manager can launch an IPython kernel, which you
+should be able to attach to from any Jupyter client.
+
+1. Install it inside your venv using `pip install ipykernel`. Note this also installs debugpy as a
+   dependency.
+
+   If you don't already have another prefered jupyter client, also run `pip install jupyter`.
+
+2. Restart the game. On launch, it should print something like the following to console:
+   ```
+   Started ipykernel server
+   To connect another client to this kernel, use:
+       --existing kernel-19212.json
+   ```
+
+3. Connect to the existing kernel in your preferred client.
+
+   For example, using the basic console client, run:
+   ```sh
+   jupyter console --existing kernel-19212.json
+   ```
+
+   You are able to connect multiple clients to the same game instance.
+
+When closing a client, make sure to use `exit(keep_kernel=True)` or `quit(keep_kernel=True)`.
+Forgetting this means it will also close the kernel, and prevent re-connecting until you restart the
+game.
+
+Stdout/stderr can behave oddly at times, since both `ipykernel` and `pyunrealsdk` try redirect it.
+In your mods, if you want to write to console, it's best practice to use the `unrealsdk.logging.*`
+functions, which write directly to console/the log file without going through stdout.
 
 ## Adding to the Mod DB
 The DB primarily sources info from your mod's `pyproject.toml`. With a well configured pyproject,
@@ -179,8 +249,7 @@ Description                 | The page contents | `project.description`<sup>7</s
 Redirects<sup>8</sup>       | `redirect_from`   | Not supported
 
 <sup>1</sup> Multiple authors are concatenated in the order given.    
-<sup>2</sup> An array of strings, with valid values of `BL2`, `TPS` and `AoDK` (case insensitive).
-             If not given, defaults to all games.    
+<sup>2</sup> An array of strings. If not given, defaults to all games for the category you're in.    
 <sup>3</sup> One of `Unknown`, `Incompatible`, `RequiresAllPlayers`, or `ClientSide`. Defaults to
              unknown.    
 <sup>4</sup> A table with keys `name` and `url`. Prefer linking to a summary site, rather than

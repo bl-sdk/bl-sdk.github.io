@@ -34,6 +34,12 @@ defaults:
       has_toc: false
 
 callouts:
+  new:
+    title: New
+    color: green
+  note:
+    title: Note
+    color: yellow
   warning:
     title: Warning
     color: red
