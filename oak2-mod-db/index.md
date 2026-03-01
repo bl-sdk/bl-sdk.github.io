@@ -2,9 +2,9 @@
 nav_order: 1
 ---
 
-WORK IN PROGRESS
-
 # Installation Instructions
+
+WORK IN PROGRESS
 
 ## Video Guide
 
