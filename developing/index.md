@@ -108,7 +108,7 @@ The mod manager has integrations with a few third party tools, which give a bett
 experience than just using console and print statements.
 
 The recommended way to get started is to
-[create a virtual enviroment](https://docs.python.org/3/library/venv.html), ideally using the exact
+[create a virtual environment](https://docs.python.org/3/library/venv.html), ideally using the exact
 same Python version, and architecture (32 vs 64-bit) as the SDK. Then add the path to it's
 `site-packages` folder to your `unrealsdk.user.toml`:
 
@@ -158,7 +158,7 @@ should be able to attach to from any Jupyter client.
 1. Install it inside your venv using `pip install ipykernel`. Note this also installs debugpy as a
    dependency.
 
-   If you don't already have another prefered jupyter client, also run `pip install jupyter`.
+   If you don't already have another preferred jupyter client, also run `pip install jupyter`.
 
 2. Restart the game. On launch, it should print something like the following to console:
    ```
