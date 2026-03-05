@@ -14,6 +14,7 @@ Commands:
   pausetime - stops time from passing
 
   unpause time - resume time passing
+  
 
   setweather - see setweatherhelp, usage is setweather region weathertype
 
