@@ -19,4 +19,4 @@ Commands:
 
   setweather - see setweatherhelp, usage is setweather region weathertype
 
-  setweatherhelp - shows the options for every weather
+  setweatherhelp - shows the options for every weathertype
