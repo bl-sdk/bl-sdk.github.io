@@ -8,6 +8,7 @@ Right now, setting the weather changes it everywhere.
 You can change it again when you enter a different region if you want or save quit to reset that regions weather.
 
 Commands:
+
   settime - Accepts values 0-1, also accepts 1.01 for a random time
 
   pausetime - stops time from passing
