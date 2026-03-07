@@ -15,8 +15,8 @@ Yes, the SDK works across all stores.
 
 ## Can I use this on Steam Deck/Linux/Mac?
 Yes, through a compatibility layer. The SDK only works on a Windows executable, but you can just run
-that version on Linux/Mac instead. Since there's no official Linux release for either game, and no
-official Mac release for WL, you're likely already doing this already.
+that version on Linux/Mac instead. Since there are no official Linux/Mac releases, you're likely
+already doing this anyway.
 
 **Steam Deck/Linux**
 
