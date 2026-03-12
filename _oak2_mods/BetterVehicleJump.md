@@ -11,6 +11,3 @@ pyproject_url: https://raw.githubusercontent.com/FreepDryer/freepdryer-bl4-sdk-m
 
 Any changes to the vehicle jump settings or toggling the mod **will require** you to respawn your vehicle! 
 
-
-#### Comparison in action 
-{% https://www.youtube.com/watch?v=oPVaFdExaWY %}
