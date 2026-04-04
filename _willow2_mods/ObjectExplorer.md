@@ -1,3 +1,3 @@
 ---
-pyproject_url: https://github.com/mantorofficial/ObjectExplorer/raw/refs/heads/main/pyproject.toml
+pyproject_url: https://raw.githubusercontent.com/mantorofficial/ObjectExplorer/main/pyproject.toml
 ---
