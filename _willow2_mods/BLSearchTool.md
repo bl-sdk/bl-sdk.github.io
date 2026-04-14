@@ -1,3 +1,3 @@
 ---
-pyproject_url: https://raw.githubusercontent.com/mantorofficial/BLSearchTool/main/pyproject.toml
+pyproject_url: https://github.com/mantorofficial/BLSearchTool/raw/refs/heads/main/pyproject.toml
 ---
