@@ -1,7 +1,9 @@
 ---
 pyproject_url: https://raw.githubusercontent.com/RedxYeti/Yeti-BL1-SDK-Mods/refs/heads/main/QoLSlop/pyproject.toml
 ---
-A range of QoL settings. All of them are optional and are off by default. Options include:
+A range of QoL settings. All of them are optional and are off by default. 
+
+Options include:
 
 Muzzle Flash Scale
 
