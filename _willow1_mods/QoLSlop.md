@@ -26,3 +26,5 @@ No Wasted Artifacts
 No Wasted Coms
 
 Smirk/Cauterize give you movement speed on par with Intuition
+
+Unlock Pre-Order Bonuses on New Characters
