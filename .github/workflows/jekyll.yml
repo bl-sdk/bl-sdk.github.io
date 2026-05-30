@@ -63,7 +63,7 @@ jobs:
 
       - name: Upload artifact
         if: github.ref == 'refs/heads/master' && github.repository == 'bl-sdk/bl-sdk.github.io'
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
         with:
           path: _merged_site/
 
@@ -135,4 +135,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
