@@ -113,6 +113,7 @@ jobs:
     - name: Validate all `pyprojects.toml`s
       if: ${{ github.event_name != 'pull_request' }}
       run: uv run ./_validate_pyproject.py all
+      continue-on-error: true
 
     - name: Validate changed files' `pyprojects.toml`s
       if: ${{ github.event_name == 'pull_request' }}

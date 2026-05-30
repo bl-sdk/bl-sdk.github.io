@@ -17,7 +17,6 @@ import zipfile
 from functools import cache
 from io import BytesIO
 from pathlib import Path
-from types import EllipsisType
 from typing import TYPE_CHECKING, Any, NewType, NoReturn
 from urllib.parse import unquote, urlparse
 
@@ -28,6 +27,8 @@ from validate_pyproject.errors import ValidationError
 from validate_pyproject.plugins import PluginWrapper
 
 if TYPE_CHECKING:
+    from types import EllipsisType
+
     from validate_pyproject.types import Schema
 
     Url = NewType("Url", str)
@@ -116,14 +117,15 @@ def pyproject_from_url(url: Url) -> dict[str, Any] | None:
     try:
         resp = requests.get(url, allow_redirects=False, timeout=1)
     except requests.Timeout:
-        log.error("Timeout trying to download pyproject at url %s", url)
+        log.error("Timeout trying to download pyproject_url: %s", url)
         return None
 
     if resp.headers.get("Access-Control-Allow-Origin") != "*":
-        log.error("CORS failure on url %s", url)
+        log.error("CORS failure on pyproject_url: %s", url)
         if BAD_GITHUB_URL.search(url):
             log.error(
-                "  github.com/.../raw/ urls do not work, use the raw.githubusercontent.com version",
+                "  github.com/.../raw/ links do not work in the pyproject_url in mod markdown"
+                " files, use the raw.githubusercontent.com version",
             )
         return None
 
@@ -132,17 +134,17 @@ def pyproject_from_url(url: Url) -> dict[str, Any] | None:
         try:
             resp = requests.get(url, allow_redirects=True, timeout=1)
         except requests.Timeout:
-            log.error("Timeout trying to download pyproject at url %s", url)
+            log.error("Timeout trying to download pyproject_url: %s", url)
             return None
 
     if resp.status_code != requests.codes.ok:
-        log.error("Got a %d % from url %s", resp.status_code, resp.reason, url)
+        log.error("Got a %d % from pyproject_url: %s", resp.status_code, resp.reason, url)
         return None
 
     try:
         return tomllib.loads(resp.text)
     except tomllib.TOMLDecodeError:
-        log.error("Invalid toml at url %s", url)
+        log.error("Invalid toml at pyproject_url:%s", url)
         return None
 
 
@@ -194,6 +196,10 @@ def validate_pyproject(pyproject: dict[str, Any], location: Path | Url) -> bool:
         validator(pyproject)
     except ValidationError as ex:
         log.error("  %s", ex.message)  # type: ignore
+        if "pep508-identifier" in ex.message:
+            log.error(
+                "  see: https://packaging.python.org/en/latest/specifications/name-normalization/#name-format",
+            )
         log.error("  This may not be the only issue!")
         return False
 
