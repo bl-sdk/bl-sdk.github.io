@@ -1,10 +1,6 @@
 ---
 pyproject_url: https://raw.githubusercontent.com/Ry0511/my_bl1_sdk_mods/refs/heads/master/src/py/rys_qol/pyproject.toml
-download: https://github.com/Ry0511/my_bl1_sdk_mods/raw/refs/heads/master/packaged/rys_qol-2.0.zip
 ---
-
-> **INFO** - This is not a `.sdkmod` and needs to be manually extracted into your mods directory; 
-> i.e., open the .zip file and extract the folder into your `sdk_mods` directory
 
 Adds a variety of quality-of-life improvements to the game and some optional cheat features.
 
