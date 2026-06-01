@@ -32,3 +32,5 @@ Unlock Pre-Order Bonuses on New Characters
 Main armory door opens after killing Knoxx if you've completed "It's Like Christmas" for completionists (Quest must be turned in). The door that opens is behind where Knoxx spawns
 
 T-Bone Junction Doors open by default; Two in the fast travel station area and Zed's
+
+Lowering the volume of health gain sound effect from transfusion grenades
