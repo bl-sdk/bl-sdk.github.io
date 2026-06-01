@@ -1,5 +1,5 @@
 ---
-pyproject_url: https://github.com/RedxYeti/BL3-SDK-Mods/raw/refs/heads/main/HUDTweaks/pyproject.toml
+pyproject_url: https://raw.githubusercontent.com/RedxYeti/BL3-SDK-Mods/refs/heads/main/HUDTweaks/pyproject.toml
 ---
 SDK mod that lets you scale your HUD (again). This used to be a vanilla option but gearbox removed it for some reason.
 
