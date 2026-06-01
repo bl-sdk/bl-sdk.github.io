@@ -1,0 +1,8 @@
+{
+    "name": "jekyll",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "onCreateCommand": "bundle install",
+    "forwardPorts": [4000, 35729]
+}
