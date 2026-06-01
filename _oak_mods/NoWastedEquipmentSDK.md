@@ -1,5 +1,5 @@
 ---
-pyproject_url: https://github.com/RedxYeti/BL3-SDK-Mods/raw/refs/heads/main/NoWastedEquipmentSDK/pyproject.toml
+pyproject_url: https://raw.githubusercontent.com/RedxYeti/BL3-SDK-Mods/refs/heads/main/NoWastedEquipmentSDK/pyproject.toml
 ---
 This mod makes it so that character-specific attributes will only ever spawn in a version which is useful to a player currently in the game. This applies to COMs, Customizations, and Anointments on gear.
 
