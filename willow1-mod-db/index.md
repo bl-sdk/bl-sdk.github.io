@@ -9,7 +9,7 @@ nav_order: 1
 
 ## Video Guide
 
-{% youtube https://youtu.be/K2wgkl08w-0 %}
+{% youtube https://youtu.be/jqE43fNbTGM %}
 
 ## Text Guide
 1. Install the latest
@@ -55,13 +55,13 @@ nav_order: 1
    ![The mods menu](/assets/images/willow1-installation/menu-inner.png)
 
 7. To install SDK mods, navigate back to the `sdk_mods` folder you extracted during step 4. SDK mods
-   come in two forms:
+   come in three forms:
    - `.sdkmod` files can be dropped directly into this folder.
 
      ![Installing a dot sdkmod](/assets/images/willow1-installation/dot-sdkmod.png)
 
-   - `.zip` files contain an inner folder you need to extract, in a similar manner to how you
-     extracted the sdk.
+   - `.zip` files which contain only a single folder need to be extracted into `sdk_mods`. Drag the
+     inner folder in a similar manner to how you extracted the SDK.
 
      ![Installing a dot zip](/assets/images/willow1-installation/dot-zip.png)
 
@@ -69,5 +69,12 @@ nav_order: 1
      work.
 
      ![Comparing normal vs nested mod folders](/assets/images/willow1-installation/nested.png)
+
+   - `.zip` files which have both an `sdk_mods` folder and some other folder (usually `WillowGame`)
+     need to be extracted back into the base game folder, in the exact same way as the SDK.
+
+     ![Installing a hybrid dot zip](/assets/images/willow1-installation/dot-zip-hybrid.png)
+
+     These are hybrid mods, they need all the files in the zip, not just the `.sdkmod`.
 
 8. After installing SDK mods, you need to restart the game for them to get loaded.
