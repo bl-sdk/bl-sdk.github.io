@@ -78,7 +78,7 @@ achievements easier/harder.
 
 ### Will the SDK give me a virus?
 The SDK itself will not - it does occasionally get caught in a scan. To be safe make sure you only
-ever download it from the offical github, linked in the sidebar.
+ever download it from the official github, linked in the sidebar.
 
 While we've never had an incident, it is theoretically possible for SDK mods to contain a virus. SDK
 mods are not sandboxed, they can run arbitrary code on your system, and we do not actively review

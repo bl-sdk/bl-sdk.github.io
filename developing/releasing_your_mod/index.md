@@ -352,7 +352,7 @@ Most importantly, Nexus Mods is not run by the community, we have absolutely no 
 they do. We have a number of additional greviences:
 - They require an account to download.
 - They've historically hosted stolen mods, and refused to take them down despite our reports.
-- They explictly let you to submit mods "on behalf of" someone else, and give you rewards for doing
+- They explicitly let you to submit mods "on behalf of" someone else, and give you rewards for doing
   so, which leads to the above stolen mods.
 - They claim Vortex support, but it's completely broken in every single game. But when this is
   pointed out they also say it's community made, and to take it up with them - despite none of the
