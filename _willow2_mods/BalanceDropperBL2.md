@@ -1,3 +1,3 @@
 ---
-pyproject_url: https://github.com/mantorofficial/BalanceDropperBL2/raw/refs/heads/main/pyproject.toml
+pyproject_url: https://raw.githubusercontent.com/mantorofficial/BalanceDropperBL2/main/pyproject.toml
 ---
