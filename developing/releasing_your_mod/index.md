@@ -2,6 +2,12 @@
 nav_order: 4
 ---
 # Releasing Your Mod
+{:.no_toc}
+
+### Table of Contents
+{:.no_toc}
+- toc
+{:toc}
 
 ## Packaging Your Mod
 While working on your mod, you'll just have a bunch of lose files in a folder. When it comes time to
@@ -76,18 +82,18 @@ This format is also validated during SDK's initialization, an incorrectly format
 not be imported.
 
 ### Mod Folder Zip
-Python is perfectly happy to import files from inside a zip, that's how `.sdkmod`s work. But
-occasionally there are reasons you need the user to properly extract your folder (more later). For
-these cases, the next acceptable format is actually the exact same as a `.sdkmod`, except you keep
-the extension as `.zip`. Our guides all say to extract zips.
-
-There are very few cases you actually need to use this format. The only known cases are:
+Python is perfectly happy to import files from inside a zip, that's how `.sdkmod`s work. But very
+occasionally there are reasons you need the user to properly extract your folder. The only known
+things that require this are:
 - You're shipping a native Python module (a `.pyd`) which you need to import.
 - (Willow 2) You're shipping a text mod alongside your mod, which you want to `exec <path>` in
   console.
 
-These are some common use cases which cause people to *think* they need this format, but which
-*do not*, and can work perfectly fine as a `.sdkmod`:
+For these cases, the next acceptable format is actually the exact same as a `.sdkmod`, except you
+keep the extension as `.zip`. Our guides all tell users to extract zips.
+
+As some extra advice, these are some common use cases which cause people to *think* they need this
+format, but which *do not*, and can work perfectly fine as a `.sdkmod`:
 - You have some assert file which you need to read from at runtime. Use `mods_base.open_in_mod_dir`,
   or in more advanced cases maybe `importlib.resources`.
 
@@ -96,7 +102,7 @@ These are some common use cases which cause people to *think* they need this for
   to create the folder if needed. Also set your `settings_file` to be in this folder in
   `build_mod(...)`.
 
-### Game Folder Zip
+### Hybrid Zip
 The last format is for hybrid mods, which need both an SDK mod and a upk/pak/some other file in the
 game folder. These should be a zip file, called `.zip`, containing all your files arranged relative
 to the base game folder. Users should be able to install these just by merging all files into their
@@ -338,3 +344,33 @@ dependencies = [
 ```
 Since requiring the SDK is somewhat implicit, it remains to be seen if the possible future package
 manager will need this.
+
+## Why not use Nexus?
+This question comes up from time to time.
+
+Most importantly, Nexus Mods is not run by the community, we have absolutely no influence into what
+they do. We have a number of additional greviences:
+- They require an account to download.
+- They've historically hosted stolen mods, and refused to take them down despite our reports.
+- They explictly let you to submit mods "on behalf of" someone else, and give you rewards for doing
+  so, which leads to the above stolen mods.
+- They claim Vortex support, but it's completely broken in every single game. But when this is
+  pointed out they also say it's community made, and to take it up with them - despite none of the
+  plugins having been made by anyone involved in the community.
+- The few times someone from Nexus has tried talking to us, it's all PR talk and they refuse to see
+  the problem in any of the above.
+
+And in general, all the behaviour we're seen from Nexus is incredibly profit seeking, which is at
+complete odds with how we want to work.
+
+In contrast, there's a number of advantages to posting on our Mod DB.
+- Full HTML customization (if you want to use it, not required).
+- Automatically updates whenever you push to your repo.
+- Makes sure your mods are properly formatted.
+- No comments from confused users.
+- Future plans for an automated mod installer will be based on it - if you're on the Mod DB, won't
+  need to update anything.
+
+Additionally, in the rare cases the SDK needs to make a breaking change, we use the DB to find what
+mods it would impact, and work out a migration - or flipping that the other way, if you're not on
+the Mod DB, we won't be aware and may break your mod without warning.

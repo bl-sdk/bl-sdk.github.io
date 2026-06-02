@@ -2,6 +2,12 @@
 nav_order: 2
 ---
 # Getting Started
+{:.no_toc}
+
+### Table of Contents
+{:.no_toc}
+- toc
+{:toc}
 
 ## Setting up your Workspace
 1. Create a new folder to develop your mods within. The mod manager supports loading from multiple
