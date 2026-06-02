@@ -61,7 +61,7 @@ Mods which add new items/characters generally require a starting new character. 
 character with these, or a modded one without them, could possibly cause issues. If you ever make
 this mistake, the `disconnect` console command will quit without saving.
 
-[Deathtrap Shield]({{ "_willow2_mods/DeathtrapShield.md" | relative_url }}) is known to cause an
+[Deathtrap Shield]({{ "willow2-mod-db/mods/deathtrapshield/" | relative_url }}) is known to cause an
 error when opening your save in Gibbed's Save Editor. To fix it, unmark your shield first.
 
 ### Will I get banned for using the SDK?
