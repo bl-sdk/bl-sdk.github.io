@@ -4,7 +4,6 @@ nav_order: 1
 
 # Installation Instructions
 
-![Enhanced is not supported](/assets/images/willow1-installation/no-enhanced.png)
 {: style="margin-bottom:-1.5em;"}
 
 ## Video Guide
@@ -12,11 +11,11 @@ nav_order: 1
 {% youtube https://youtu.be/jqE43fNbTGM %}
 
 ## Text Guide
-1. Install the latest
+1. [CLASSIC ONLY] Install the latest
    [Microsoft Visual C++ Redistributable](https://aka.ms/vs/17/release/vc_redist.x86.exe).
 
    ![VC Redist Installer](/assets/images/willow1-installation/vcredist.png)
-   
+
    If you're running under Proton, you can do this by installing `vcrun2022` using
    [protontricks](https://github.com/Matoking/protontricks).
 
@@ -28,7 +27,9 @@ nav_order: 1
 
 3. Locate your game files.
 
-   The default locations is `C:\Program Files (x86)\Steam\steamapps\common\Borderlands`.
+   The default locations are:    
+   Classic: `C:\Program Files (x86)\Steam\steamapps\common\Borderlands`    
+   Enhanced: `C:\Program Files (x86)\Steam\steamapps\common\BorderlandsGOTYEnhanced`    
 
    You can also find this via RMB -> Manage -> Browse Local Files.
 
@@ -41,9 +42,17 @@ nav_order: 1
 
    If you're asked to overwrite existing files, accept.
 
-5. \[PROTON ONLY\] When playing on Linux via Proton, you need to add the following launch arg:
+5. \[PROTON ONLY\] When playing on Linux via Proton, you need to add one of the following launch
+   args.
+
+   **Classic**:
    ```
    WINEDLLOVERRIDES="dsound=n,b" %command%
+   ```
+
+   **Enhanced**:
+   ```
+   WINEDLLOVERRIDES="dinput8=n,b" %command%
    ```
 
    [See the faq for more]({{ "/willow1-mod-db/faq/#can-i-use-this-on-steam-decklinuxmac" | relative_url }}).

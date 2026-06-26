@@ -62,7 +62,7 @@ async function load_from_pyproject(url, fields) {
 
     if (fields?.games) {
         const ALLOWED_GAMES = {
-            "willow1": {"BL1": "BL1"},
+            "willow1": {"BL1": "BL1", "BL1E": "BL1E"},
             "willow2": {"BL2": "BL2", "TPS": "TPS", "AODK": "AoDK"},
             "oak": {"BL3": "BL3", "WL": "WL"},
             "oak2": {"BL4": "BL4"},

@@ -17,10 +17,16 @@ already doing this anyway.
 
 **Steam Deck/Linux**
 
-In Steam, set the game's launch options to:
+In Steam, set the game's launch options to one of:
 
+**Classic**:
 ```
 WINEDLLOVERRIDES="dsound=n,b" %command%
+```
+
+**Enhanced**:
+```
+WINEDLLOVERRIDES="dinput8=n,b" %command%
 ```
 
 Once you get in game, open console by pressing tilde twice, and double check there's no proton
