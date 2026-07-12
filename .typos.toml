@@ -1,6 +1,7 @@
 [files]
 extend-exclude = [
     "_oak_mods/",
+    "_oak2_mods/",
     "_willow1_mods/",
     "_willow2_mods/",
 ]

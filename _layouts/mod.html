@@ -24,11 +24,13 @@ layout: default
     <dt>Supports</dt>
     {%- case page.collection -%}
     {%- when "willow1_mods" -%}
-        {%- assign ALLOWED_GAMES = "BL1" | split: "," -%}
+        {%- assign ALLOWED_GAMES = "BL1,BL1E" | split: "," -%}
     {%- when "willow2_mods" -%}
         {%- assign ALLOWED_GAMES = "BL2,TPS,AODK" | split: "," -%}
     {%- when "oak_mods" -%}
         {%- assign ALLOWED_GAMES = "BL3,WL" | split: "," -%}
+    {%- when "oak2_mods" -%}
+        {%- assign ALLOWED_GAMES = "BL4" | split: "," -%}
     {%- else -%}
         {%- assign ALLOWED_GAMES = "" | split: "," | push: page.collection -%}
     {%- endcase -%}

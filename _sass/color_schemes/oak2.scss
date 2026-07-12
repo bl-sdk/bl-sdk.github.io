@@ -1,0 +1,41 @@
+@import "./color_schemes/dark";
+
+$body-background-color: #002B3D;
+$sidebar-color: $body-background-color;
+$link-color: $green-000;
+$btn-primary-color: $green-200;
+
+// Twisting background
+body, .side-bar {
+    background-image:
+        linear-gradient(
+            67.5deg,
+            transparent 45%,
+            darken($body-background-color, 10%) 45%,
+            $body-background-color 50%,
+            darken($body-background-color, 10%) 55%,
+            transparent 55%
+        ),
+        linear-gradient(
+            -67.5deg,
+            transparent 45%,
+            darken($body-background-color, 10%) 45%,
+            $body-background-color 50%,
+            darken($body-background-color, 10%) 55%,
+            transparent 55%
+        );
+  background-size: 30px 30px;
+}
+
+// Add some borders to make things a little clearer ontop of the accents
+.search {
+    border-right: $border $border-color;
+}
+
+.nav-list .nav-list-link.active {
+    border-width: 1px;
+    border-style: solid;
+    border-image: linear-gradient(90deg, transparent 0%, $border-color 80%, transparent 100%) 1;
+    border-left: none;
+    border-right: none;
+}

@@ -34,4 +34,5 @@ exclude:
 
   - developing
   - oak-mod-db
+  - oak2-mod-db
   - willow2-mod-db

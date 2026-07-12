@@ -1,0 +1,38 @@
+title: BL4 SDK Mod Database
+description: >-
+  SDK mods for Borderlands 4.
+
+color_scheme: oak2
+
+collections:
+  oak2_mods:
+    sort-by: title
+    permalink: /oak2-mod-db/mods/:name/
+    output: true
+
+just_the_docs:
+  collections:
+    oak2_mods:
+      name: Mods
+
+nav_external_links:
+  - title: Modding Support Discord
+    url: https://discord.gg/bXeqV8Ef9R
+  - title: Latest Release
+    url: https://github.com/bl-sdk/oak2-mod-manager/releases/latest
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+  - Readme.md
+
+  - developing
+  - oak-mod-db
+  - willow1-mod-db
+  - willow2-mod-db

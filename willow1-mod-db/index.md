@@ -4,19 +4,18 @@ nav_order: 1
 
 # Installation Instructions
 
-![Enhanced is not supported](/assets/images/willow1-installation/no-enhanced.png)
 {: style="margin-bottom:-1.5em;"}
 
 ## Video Guide
 
-{% youtube https://youtu.be/K2wgkl08w-0 %}
+{% youtube https://youtu.be/jqE43fNbTGM %}
 
 ## Text Guide
-1. Install the latest
+1. [CLASSIC ONLY] Install the latest
    [Microsoft Visual C++ Redistributable](https://aka.ms/vs/17/release/vc_redist.x86.exe).
 
    ![VC Redist Installer](/assets/images/willow1-installation/vcredist.png)
-   
+
    If you're running under Proton, you can do this by installing `vcrun2022` using
    [protontricks](https://github.com/Matoking/protontricks).
 
@@ -28,7 +27,9 @@ nav_order: 1
 
 3. Locate your game files.
 
-   The default locations is `C:\Program Files (x86)\Steam\steamapps\common\Borderlands`.
+   The default locations are:    
+   Classic: `C:\Program Files (x86)\Steam\steamapps\common\Borderlands`    
+   Enhanced: `C:\Program Files (x86)\Steam\steamapps\common\BorderlandsGOTYEnhanced`    
 
    You can also find this via RMB -> Manage -> Browse Local Files.
 
@@ -41,9 +42,17 @@ nav_order: 1
 
    If you're asked to overwrite existing files, accept.
 
-5. \[PROTON ONLY\] When playing on Linux via Proton, you need to add the following launch arg:
+5. \[PROTON ONLY\] When playing on Linux via Proton, you need to add one of the following launch
+   args.
+
+   **Classic**:
    ```
    WINEDLLOVERRIDES="dsound=n,b" %command%
+   ```
+
+   **Enhanced**:
+   ```
+   WINEDLLOVERRIDES="dinput8=n,b" %command%
    ```
 
    [See the faq for more]({{ "/willow1-mod-db/faq/#can-i-use-this-on-steam-decklinuxmac" | relative_url }}).
@@ -55,13 +64,13 @@ nav_order: 1
    ![The mods menu](/assets/images/willow1-installation/menu-inner.png)
 
 7. To install SDK mods, navigate back to the `sdk_mods` folder you extracted during step 4. SDK mods
-   come in two forms:
+   come in three forms:
    - `.sdkmod` files can be dropped directly into this folder.
 
      ![Installing a dot sdkmod](/assets/images/willow1-installation/dot-sdkmod.png)
 
-   - `.zip` files contain an inner folder you need to extract, in a similar manner to how you
-     extracted the sdk.
+   - `.zip` files which contain only a single folder need to be extracted into `sdk_mods`. Drag the
+     inner folder in a similar manner to how you extracted the SDK.
 
      ![Installing a dot zip](/assets/images/willow1-installation/dot-zip.png)
 
@@ -69,5 +78,12 @@ nav_order: 1
      work.
 
      ![Comparing normal vs nested mod folders](/assets/images/willow1-installation/nested.png)
+
+   - `.zip` files which have both an `sdk_mods` folder and some other folder (usually `WillowGame`)
+     need to be extracted back into the base game folder, in the exact same way as the SDK.
+
+     ![Installing a hybrid dot zip](/assets/images/willow1-installation/dot-zip-hybrid.png)
+
+     These are hybrid mods, they need all the files in the zip, not just the `.sdkmod`.
 
 8. After installing SDK mods, you need to restart the game for them to get loaded.

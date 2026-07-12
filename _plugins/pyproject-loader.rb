@@ -19,7 +19,7 @@ Jekyll::Hooks.register :site, :post_read do |site|
         collection.docs.each{|mod|
             if !mod.data.key?("pyproject_url") then
                 if !mod.data.key?("legacy") then
-                    Jekyll.logger.error("#{mod.path}: no pyproject url")
+                    raise "#{mod.path}: no pyproject url"
                 end
                 next
             end
@@ -35,16 +35,20 @@ Jekyll::Hooks.register :site, :post_read do |site|
                     redirects -= 1
                 end while resp.is_a?(Net::HTTPRedirection) && redirects > 0
             rescue => e
-                Jekyll.logger.error("#{mod.path}: failed to download pyproject: #{e}")
-                next
+                Jekyll.logger.error("#{mod.path}: failed to download pyproject at #{url}")
+                raise
             end
 
             if !resp.is_a?(Net::HTTPSuccess) then
-                Jekyll.logger.error("#{mod.path}: failed to download pyproject: #{resp.code}")
-                next
+                raise "#{mod.path}: failed to download pyproject at #{url}: #{resp.code}"
             end
 
-            pyproject = PerfectTOML.parse(resp.body)
+            begin
+                pyproject = PerfectTOML.parse(resp.body)
+            rescue => e
+                Jekyll.logger.error("#{mod.path}: failed to parse pyproject at #{url}")
+                raise
+            end
             mod.data["pyproject"] = pyproject
 
             # Replace the title with that from the pyproject
