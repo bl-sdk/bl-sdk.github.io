@@ -29,3 +29,6 @@ The distance to each mark is written above it.
 - **Hide Full Pickups**: Ammo you cannot carry stops lighting up.
 - **Show Distance**: How far away each mark is, written above it.
 - **Units**: Metres or feet.
+
+For full information about this mod and to report bugs, please visit
+[eeriegoesd.com/gaming/mods](https://eeriegoesd.com/gaming/mods/).

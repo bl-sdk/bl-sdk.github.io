@@ -12,3 +12,6 @@ Anything within reach of the vehicle is collected as you drive past.
 - **Loot Weapons**: Weapons and items.
 - **Loot Money**: Money.
 - **Loot Ammo**: Ammo and health.
+
+For full information about this mod and to report bugs, please visit
+[eeriegoesd.com/gaming/mods](https://eeriegoesd.com/gaming/mods/).

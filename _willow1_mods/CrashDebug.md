@@ -13,3 +13,6 @@ ran last.
 - **Follow Other Mods**: whether the note names which mod is running. Turn it off to only
   record area changes.
 - **Lines Kept**: how many lines the note holds before it starts over.
+
+For full information about this mod and to report bugs, please visit
+[eeriegoesd.com/gaming/mods](https://eeriegoesd.com/gaming/mods/).

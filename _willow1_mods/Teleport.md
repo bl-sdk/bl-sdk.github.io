@@ -9,3 +9,6 @@ Takes you to any place you have already been to in this playthrough.
 - **Place**: where you want to go.
 - **Go There**: press it to travel.
 - **Refresh the List**: looks again at where you have been.
+
+For full information about this mod and to report bugs, please visit
+[eeriegoesd.com/gaming/mods](https://eeriegoesd.com/gaming/mods/).

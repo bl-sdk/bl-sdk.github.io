@@ -7,3 +7,6 @@ Shows what an item sells for on its card.
 ## Settings
 
 - **Sell value font size**: how big the line is on the card.
+
+For full information about this mod and to report bugs, please visit
+[eeriegoesd.com/gaming/mods](https://eeriegoesd.com/gaming/mods/).

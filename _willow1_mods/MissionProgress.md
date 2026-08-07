@@ -18,3 +18,6 @@ mission flow.
 - **Flag Skipped Missions**: The red list on or off.
 - **Achievement Warnings**: A red note when a known bug in the current mission can cost you an achievement.
 - **Upcoming missions shown**: How many missions to list ahead.
+
+For full information about this mod and to report bugs, please visit
+[eeriegoesd.com/gaming/mods](https://eeriegoesd.com/gaming/mods/).

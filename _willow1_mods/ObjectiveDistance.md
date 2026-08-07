@@ -19,3 +19,6 @@ waypoint points.
 - **Units**: Metres or feet.
 - **Position**: Under the compass or top of screen.
 - **Route Colour**: Green, blue, red, yellow or orange.
+
+For full information about this mod and to report bugs, please visit
+[eeriegoesd.com/gaming/mods](https://eeriegoesd.com/gaming/mods/).

@@ -7,3 +7,6 @@ Sets the backpack capacity limit.
 ## Settings
 
 - **Backpack slots**: the backpack capacity limit. The game's own number is 15.
+
+For full information about this mod and to report bugs, please visit
+[eeriegoesd.com/gaming/mods](https://eeriegoesd.com/gaming/mods/).

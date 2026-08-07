@@ -3,3 +3,6 @@ pyproject_url: https://raw.githubusercontent.com/EerieGoesD/borderlands-1-goty-m
 ---
 
 Nothing can take your health down.
+
+For full information about this mod and to report bugs, please visit
+[eeriegoesd.com/gaming/mods](https://eeriegoesd.com/gaming/mods/).

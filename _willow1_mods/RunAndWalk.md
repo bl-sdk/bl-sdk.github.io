@@ -12,3 +12,6 @@ Makes running and walking work off a hold key and a toggle key.
 
 - **Camera Effect**: the view widens while running. Turn it off to leave the camera alone.
 - **Show movement speed [DEBUG]**: prints your speed and whether auto run is on.
+
+For full information about this mod and to report bugs, please visit
+[eeriegoesd.com/gaming/mods](https://eeriegoesd.com/gaming/mods/).

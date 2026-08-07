@@ -15,3 +15,6 @@ are changing it from.
 - **Crouching**: the speed while crouched.
 - **Driving**: the top speed of any vehicle you are driving.
 - **Show movement speed [DEBUG]**: prints your speed and which of the five is in use.
+
+For full information about this mod and to report bugs, please visit
+[eeriegoesd.com/gaming/mods](https://eeriegoesd.com/gaming/mods/).

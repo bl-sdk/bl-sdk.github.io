@@ -19,3 +19,6 @@ itself, unrounded, so it can differ slightly from the card.
 - **Disregard Critical**: Ignores critical hits. Turn it off and the DPS is multiplied by the gun's own critical bonus, as if every shot were a critical.
 - **Disregard Elements**: Ignores burn, shock and corrosion. Turn it off and the extra damage an elemental gun throws is added, scaled by its x1 to x4 rating.
 - **Score font size**: How big the number is printed on the card.
+
+For full information about this mod and to report bugs, please visit
+[eeriegoesd.com/gaming/mods](https://eeriegoesd.com/gaming/mods/).
