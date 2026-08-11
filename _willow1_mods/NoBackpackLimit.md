@@ -6,4 +6,7 @@ Sets the backpack capacity limit.
 
 ## Settings
 
-- **Backpack slots**: the backpack capacity limit. The game's own number is 15.
+- **Backpack slots**: the backpack capacity limit, up to 1000.
+
+Turning the mod off puts the backpack back to the size that character had, upgrades
+included.
