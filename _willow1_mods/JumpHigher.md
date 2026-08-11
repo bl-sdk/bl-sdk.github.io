@@ -6,5 +6,5 @@ Lets you jump higher than the game allows.
 
 ## Settings
 
-- **Jump Height**: how hard you push off the ground. The game's own number is 630.
+- **Jump Height**: how far off the ground you go, up to 10000. The game's own jump is about 190.
 - **Show jump height [DEBUG]**: prints how high your last jump went.
