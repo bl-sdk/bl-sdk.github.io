@@ -9,4 +9,6 @@ offers, picked at random.
 
 ## Settings
 
-- **Show the paint picked [DEBUG]**: writes the name of the paint to the console.
+- **Pick at the terminal**: on, the colour is picked when you open the Catch-a-Ride,
+  so you can see it before you spawn and click another swatch to overrule it. Off,
+  the colour is picked when you press Spawn Vehicle.
