@@ -11,7 +11,8 @@ The distance to each mark is written above it.
 
 - Green: weapons and items
 - Yellow: money
-- Blue: ammo and health
+- Blue: ammo
+- Pink: health
 - Red: an unopened red chest
 - White: an unopened white chest
 
@@ -19,7 +20,8 @@ The distance to each mark is written above it.
 
 - **Show Weapon Loot**: Weapons and items on the compass.
 - **Show Money Loot**: Money on the compass.
-- **Show Ammo Loot**: Ammo and health on the compass.
+- **Show Ammo Loot**: Ammo on the compass.
+- **Show Health Loot**: Health on the compass.
 - **Show Red Chests**: Red chests nobody has opened yet.
 - **Show White Chests**: White chests nobody has opened yet.
 - **Display Only Better Weapons**: Hides weapons that are worse than the worst one of that
