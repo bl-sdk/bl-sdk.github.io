@@ -26,6 +26,6 @@ The distance to each mark is written above it.
   type you already carry, and stops you picking them up. Score is shots x damage x pellets,
   divided by (shots x fire interval plus reload), where shots is the magazine divided by
   the ammo each shot costs.
-- **Hide Full Pickups**: Ammo you cannot carry stops lighting up.
+- **Hide Full Pickups**: Ammo and health you cannot carry stops lighting up.
 - **Show Distance**: How far away each mark is, written above it.
 - **Units**: Metres or feet.
