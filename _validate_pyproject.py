@@ -17,7 +17,7 @@ import zipfile
 from functools import cache
 from io import BytesIO
 from pathlib import Path
-from typing import TYPE_CHECKING, Any, NewType, NoReturn
+from typing import TYPE_CHECKING, Any, NewType, NoReturn, TypedDict
 from urllib.parse import unquote, urlparse
 
 import requests
@@ -27,8 +27,6 @@ from validate_pyproject.errors import ValidationError
 from validate_pyproject.plugins import PluginWrapper
 
 if TYPE_CHECKING:
-    from types import EllipsisType
-
     from validate_pyproject.types import Schema
 
     Url = NewType("Url", str)
@@ -65,41 +63,54 @@ SCHEMA: Schema = {  # type: ignore
         },
         "download": {"type": "string", "format": "url"},
         "auto_enable": {"type": "boolean"},
+        "uses_native_modules": {"type": "boolean"},
     },
     "required": ["download"],
     "additionalProperties": False,
 }
 
 
-def parse_front_matter(path: Path) -> tuple[Url | EllipsisType | None, Url | None]:
+if TYPE_CHECKING:
+
+    class FrontMatterSettings(TypedDict, total=False):
+        pyproject_url: Url
+        download: Url
+        legacy: bool
+        uses_native_modules: bool
+
+
+def parse_front_matter(path: Path) -> FrontMatterSettings:
     """
     Parses jekyll front matter, extracting the pyproject url and possibly an explicit download url.
 
     Args:
         path: Path to the file to parse:
     Returns:
-        A tuple of the pyproject url and download url, both None if not found. The pyproject url may
-        also be Ellipsis, if this is a legacy mod which doesn't have one.
+        The parsed front matter settings.
     """
+    settings: FrontMatterSettings = {}
     try:
         with path.open() as file:
             data = next(yaml.safe_load_all(file))
             assert isinstance(data, dict)
             front_matter: dict[str, Any] = data  # type: ignore
-
-            url = front_matter.get("pyproject_url")
-            if url is None and front_matter.get("legacy", False):
-                # legacy mods are allowed to not have a url
-                return ..., None
-            assert isinstance(url, str)
-
-            download = front_matter.get("download")
-            if not isinstance(download, str):
-                download = None
-            return url, download  # type: ignore
     except Exception:  # noqa: BLE001
         log.warning("Couldn't find pyproject url for file: %s", path)
-        return None, None
+        return settings
+
+    for key, value_type in {
+        "pyproject_url": str,
+        "download": str,
+        "legacy": bool,
+        "uses_native_modules": bool,
+    }.items():
+        if key not in front_matter:
+            continue
+        if not isinstance(value := front_matter[key], value_type):
+            continue
+        settings[key] = value  # type: ignore
+
+    return settings
 
 
 BAD_GITHUB_URL = re.compile(r"github.com/.+?/.+?/raw/")
@@ -179,12 +190,18 @@ MOD_MANAGER_PYPROJECT = re.compile(
 MOD_MANAGER_DOWNLOAD = re.compile(r"^https://github\.com/bl-sdk/\w+-mod-manager/releases/latest$")
 
 
-def validate_pyproject(pyproject: dict[str, Any], location: Path | Url) -> bool:
+def validate_pyproject(
+    pyproject: dict[str, Any],
+    front_matter: FrontMatterSettings,
+    *,
+    location: Path | Url,
+) -> bool:
     """
     Validate a parsed pyproject is correctly formatted.
 
     Args:
         pyproject: The parsed pyproject to validate.
+        front_matter: Any custom front matter settings.
         location: Where the pyproject was obtained from.
     Returns:
         True if the pyproject is correctly formatted, false on any errors.
@@ -210,7 +227,11 @@ def validate_pyproject(pyproject: dict[str, Any], location: Path | Url) -> bool:
         log.error("  `tool` must contain `sdkmod` properties")
         return False
 
-    download_url: Url = pyproject["tool"]["sdkmod"]["download"]
+    download_url: Url = (
+        front_matter["download"]
+        if "download" in front_matter
+        else pyproject["tool"]["sdkmod"]["download"]
+    )
 
     # Try check if this is pointing to one of the mod manager pages
     # We want to validate it's pyproject, but the download will always be different, so skip it
@@ -220,15 +241,22 @@ def validate_pyproject(pyproject: dict[str, Any], location: Path | Url) -> bool:
     elif location.name.endswith("_mod_manager.md") and MOD_MANAGER_DOWNLOAD.match(download_url):
         return True
 
-    return validate_download_url(download_url)
+    uses_native_modules: bool = (
+        front_matter["uses_native_modules"]
+        if "uses_native_modules" in front_matter
+        else pyproject["tool"]["sdkmod"].get("uses_native_modules", False)
+    )
+
+    return validate_download_url(download_url, uses_native_modules)
 
 
-def validate_download_url(url: Url) -> bool:  # noqa: C901
+def validate_download_url(url: Url, expects_native_modules: bool) -> bool:  # noqa: C901
     """
-    Validate a mod's download url is correctly formatted.
+    Validate a mod's download is correctly formatted.
 
     Args:
         url: The url to download.
+        expects_native_modules: True if we expect this mod to contain native modules.
     Returns:
         True if the pyproject is correctly formatted, false on any errors.
     """
@@ -257,10 +285,23 @@ def validate_download_url(url: Url) -> bool:  # noqa: C901
         log.error("  `tool.sdkmod.download` points to an empty zip file")
         return False
 
+    contains_native_modules = any(zip_path.glob("**/*.pyd")) or any(zip_path.glob("**/*.dll"))
+    if contains_native_modules != expects_native_modules:
+        log.error(
+            "  The zip %s native modules, but the mod %s tagged with use_native_modules",
+            "contains" if contains_native_modules else "does not contain",
+            "isn't" if contains_native_modules else "is",
+        )
+        return False
+
     if zip_entry.name == filename.stem and next(zip_iter, None) is None:
+        # There's only one top level entry, which has the same name as the file
+        # i.e. passes the .sdkmod or .zip formats
         return True
+    # Either a hybrid mod, or invalid
 
     if is_sdkmod:
+        # .sdkmods cannot be hybrid mods
         log.error(
             "  .sdkmod files may only contain a single root folder, which must be named the same as"
             " the zip (excluding suffix).",
@@ -403,7 +444,7 @@ if __name__ == "__main__":
         sys.exit(0 if num_ok == total_files else 1)
 
     front_matter_files: list[Path] = []
-    urls: list[tuple[Url, Url | None]] = []
+    urls: list[tuple[Url, FrontMatterSettings]] = []
     match args.action:
         case "all" if all_mod_pages:
             front_matter_files = all_mod_pages
@@ -417,14 +458,19 @@ if __name__ == "__main__":
         case "front_matter":
             front_matter_files = args.files
         case "url":
-            urls = [(u, None) for u in args.urls]
+            urls = [(u, {}) for u in args.urls]
 
         case "file":
             total_files = len(args.files)  # type: ignore
             num_ok = 0
             for path in args.files:
                 pyproject = pyproject_from_file(path)
-                if pyproject is not None and validate_pyproject(pyproject, path):
+                front_matter = parse_front_matter(path)
+                if pyproject is not None and validate_pyproject(
+                    pyproject,
+                    front_matter,
+                    location=path,
+                ):
                     num_ok += 1
             print_summary_and_exit(total_files, num_ok)
         case _:
@@ -435,35 +481,22 @@ if __name__ == "__main__":
     num_ok = 0
 
     for path in front_matter_files:
-        url, download_url = parse_front_matter(path)
-        if url is None:
-            continue
-        if url is ...:
+        front_matter = parse_front_matter(path)
+        if front_matter.get("legacy", False):
             # This was a legacy mod, don't include it in the count
             log.info("Skipping legacy mod %s", path)
             total_files -= 1
             continue
-        urls.append((url, download_url))
+        if (url := front_matter.get("pyproject_url")) is None:
+            continue
+        urls.append((url, front_matter))
 
-    for url, download_url in urls:
+    for url, front_matter in urls:
         pyproject = pyproject_from_url(url)
         if pyproject is None:
             continue
 
-        # If we have a custom download url, try inject it over 'tool.sdkmod.download'
-        # If any field is the wrong type, leave it, so it fails validation
-        if (
-            download_url is not None
-            and isinstance((tool := pyproject.get("tool")), dict)
-            and isinstance((sdkmod := tool.get("sdkmod")), dict)  # type: ignore
-            and (
-                isinstance((existing_download := sdkmod.get("download")), str)  # type: ignore
-                or existing_download is None
-            )
-        ):
-            sdkmod["download"] = download_url
-
-        if validate_pyproject(pyproject, url):
+        if validate_pyproject(pyproject, front_matter, location=url):
             num_ok += 1
 
     print_summary_and_exit(total_files, num_ok)

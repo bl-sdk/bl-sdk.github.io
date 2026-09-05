@@ -220,6 +220,21 @@ async function load_from_pyproject(url, fields) {
         }
     }
 
+    if (fields?.uses_native_modules) {
+        const uses_native_modules = pyproject?.tool?.sdkmod?.uses_native_modules;
+        if (uses_native_modules) {
+            if (!document.querySelector("#native_modules")) {
+                const paragraph = document.createElement("p");
+                paragraph.classList.add("note");
+                paragraph.id = "native_modules";
+                paragraph.innerText = "This mod uses native modules, which makes it a little more fragile. You may need to update it after an SDK update.";
+                document.querySelector("#description").after(paragraph);
+            }
+        } else {
+            document.querySelector("#native_modules")?.remove();
+        }
+    }
+
     // Allow mod pages to have custom updaters, which we'll wait on before removing the notification
     if (document.extra_custom_updater_promises) {
         await Promise.all(document.extra_custom_updater_promises);

@@ -163,12 +163,20 @@ layout: default
 {%- endif -%}
 </div>
 
+{%- if page.uses_native_modules or page.pyproject.tool.sdkmod.uses_native_modules -%}
+<p id="native_modules" class="note">
+    This mod uses native modules, which makes it a little more fragile. You may need to update it
+    after an SDK update.
+</p>
+{%- endif -%}
 {%- if page.legacy -%}
 <p class="warning">
     This is a legacy mod, which will be run in compatibility mode. It may behave slightly odd, and
     it may stop working at some point in the future.
 </p>
-{%- else -%}
+{%- endif -%}
+
+{%- unless page.legacy -%}
 <script type="module">
     import { load_from_pyproject } from "{{ "/assets/js/pyproject-loader.js" | relative_url }}";
     load_from_pyproject("{{ page.pyproject_url }}", {
@@ -202,6 +210,9 @@ layout: default
 {%- unless using_description_override -%}
         description: true,
 {%- endunless -%}
+{%- unless page.uses_native_modules -%}
+        uses_native_modules: true,
+{%- endunless -%}
     });
 </script>
-{%- endif -%}
+{%- endunless -%}

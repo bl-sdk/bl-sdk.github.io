@@ -58,3 +58,4 @@ gem "html-proofer", :require => false
 gem "logger", :require => false
 gem "csv", :require => false
 gem "base64"
+gem "bigdecimal"
