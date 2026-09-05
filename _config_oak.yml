@@ -10,6 +10,12 @@ collections:
     permalink: /oak-mod-db/mods/:name/
     output: true
 
+game_selector:
+  collection: oak_mods
+  games:
+    - BL3
+    - WL
+
 just_the_docs:
   collections:
     oak_mods:

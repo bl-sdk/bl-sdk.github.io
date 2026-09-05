@@ -106,3 +106,20 @@ span.mod-update-notification {
         max-height: 0.8em;
     }
 }
+
+// Make the game selector have the same sort of padding as other nav items
+div.nav-game-selector {
+    padding: $sp-2 $nav-list-item-height-sm $sp-1 $gutter-spacing-sm;
+    @include fs-5;
+
+    @include mq(md) {
+        padding-right: $nav-list-item-height;
+        padding-left: $gutter-spacing;
+        @include fs-3;
+    }
+
+    >select {
+        // And make the actual box full width
+        width: 100%;
+    }
+}

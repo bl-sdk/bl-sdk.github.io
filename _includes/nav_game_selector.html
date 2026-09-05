@@ -1,0 +1,17 @@
+{%- comment -%}
+Creates the game selector combo box.
+{%- endcomment -%}
+{%- if site.game_selector.collection -%}
+  <div class="nav-game-selector">
+    <select onchange="                                                {{-''-}}
+        h=(t,v)=>document.querySelectorAll(t).forEach(x=>x.hidden=v); {{-''-}}
+        h('.game-any',1);                                             {{-''-}}
+        h(event.target.value,0);                                      {{-''-}}
+      ">
+      <option selected value=".game-any">All Games</option>
+      {%- for game in site.game_selector.games -%}
+        <option value=".game-{{ game | downcase }}">{{ game }}</option>
+      {%- endfor -%}
+    </select>
+  </div>
+{%- endif -%}

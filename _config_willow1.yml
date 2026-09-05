@@ -10,6 +10,12 @@ collections:
     permalink: /willow1-mod-db/mods/:name/
     output: true
 
+game_selector:
+  collection: willow1_mods
+  games:
+    - BL1
+    - BL1E
+
 just_the_docs:
   collections:
     willow1_mods:

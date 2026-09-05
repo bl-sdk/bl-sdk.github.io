@@ -22,32 +22,8 @@ layout: default
     <dd><code id="version" class="language-plaintext highlighter-rouge">{{ version | escape }}</code></dd>
 
     <dt>Supports</dt>
-    {%- case page.collection -%}
-    {%- when "willow1_mods" -%}
-        {%- assign ALLOWED_GAMES = "BL1,BL1E" | split: "," -%}
-    {%- when "willow2_mods" -%}
-        {%- assign ALLOWED_GAMES = "BL2,TPS,AODK" | split: "," -%}
-    {%- when "oak_mods" -%}
-        {%- assign ALLOWED_GAMES = "BL3,WL" | split: "," -%}
-    {%- when "oak2_mods" -%}
-        {%- assign ALLOWED_GAMES = "BL4" | split: "," -%}
-    {%- else -%}
-        {%- assign ALLOWED_GAMES = "" | split: "," | push: page.collection -%}
-    {%- endcase -%}
-
-    {%- assign unsanitized_games = page.supported_games
-                                    | default: page.pyproject.tool.sdkmod.supported_games
-                                    | default: ALLOWED_GAMES -%}
-    {%- assign games = "" | split: "" -%}
-    {%- for game in unsanitized_games -%}
-        {% assign upper_game = game | upcase %}
-        {%- if ALLOWED_GAMES contains upper_game -%}
-            {%- unless games contains upper_game -%}
-                {%- assign games = games | push: upper_game -%}
-            {%- endunless -%}
-        {%- endif -%}
-    {%- endfor -%}
-    <dd id="games">{{ games
+    {%- include filter_games.html page=page -%}
+    <dd id="games">{{ filtered_games
                         | array_to_sentence_string
                         | replace: "AODK", "AoDK"
                         | default: "Unknown" }}</dd>

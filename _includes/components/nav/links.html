@@ -1,20 +1,27 @@
 {%- comment -%}
-  Include as: {%- include components/nav/links.html pages=page_array ancestors=title_array all=bool -%}
-  Depends on: include.pages, include.ancestors, include.all.
-  Results in: HTML for the main navigation when all is nil or false;
-    includes links to pages excluded from the main navigation when all is true.
-  Includes: components/nav/sorted.html, components/nav/children.html, components/nav/links.html.
-  Overwrites:
-    node, nav_children, nav_ancestors.
+This is copied from the standard links.html, as of version 0.12.0.
+
+We change it for the game selector, for each mod, we add "game-xyz" classes to its list item.
 {%- endcomment -%}
 
 <ul class="nav-list">
   {%- for node in include.pages -%}
   {%- if include.all == true or node.nav_exclude != true -%}
 
+  {%- if site.game_selector.collection and node.collection == site.game_selector.collection -%}
+    {%- assign game_select_classes = "game-any" -%}
+    {%- include filter_games.html page=node -%}
+    {%- for game in filtered_games -%}
+      {%- assign game_class = " game-" | append: game | downcase -%}
+      {%- assign game_select_classes = game_select_classes | append: game_class -%}
+    {%- endfor -%}
+  {%- else -%}
+    {%- assign game_select_classes = "" -%}
+  {%- endif -%}
+
   {%- if include.ancestors contains node.title -%}
 
-    <li class="nav-list-item">
+    <li class="nav-list-item {{ game_select_classes }}">
       <a href="{{ node.url | relative_url }}" class="nav-list-link"> ∞ </a>
     </li>
     {%- capture nav_error_report -%}
@@ -29,7 +36,7 @@
 
     {%- include components/nav/children.html node=node ancestors=include.ancestors all=include.all -%}
 
-    <li class="nav-list-item">
+    <li class="nav-list-item {{ game_select_classes }}">
       {%- if nav_children.size >= 1 -%}
       <button class="nav-list-expander btn-reset" aria-label="{{ node.title }} submenu" aria-expanded="false">
         <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>

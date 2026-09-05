@@ -10,6 +10,13 @@ collections:
     permalink: /willow2-mod-db/mods/:name/
     output: true
 
+game_selector:
+  collection: willow2_mods
+  games:
+    - BL2
+    - TPS
+    - AoDK
+
 just_the_docs:
   collections:
     willow2_mods:
