@@ -126,7 +126,7 @@ def pyproject_from_url(url: Url) -> dict[str, Any] | None:
         The parsed contents, or None on error.
     """
     try:
-        resp = requests.get(url, allow_redirects=False, timeout=1)
+        resp = requests.get(url, allow_redirects=False, timeout=2)
     except requests.Timeout:
         log.error("Timeout trying to download pyproject_url: %s", url)
         return None
@@ -143,7 +143,7 @@ def pyproject_from_url(url: Url) -> dict[str, Any] | None:
     if 300 <= resp.status_code < 400:  # noqa: PLR2004
         # If it's a redirect which passed CORS, just try follow it fully?
         try:
-            resp = requests.get(url, allow_redirects=True, timeout=1)
+            resp = requests.get(url, allow_redirects=True, timeout=2)
         except requests.Timeout:
             log.error("Timeout trying to download pyproject_url: %s", url)
             return None
@@ -268,7 +268,7 @@ def validate_download_url(url: Url, expects_native_modules: bool) -> bool:  # no
         return False
 
     try:
-        resp = requests.get(url, timeout=2)
+        resp = requests.get(url, timeout=3)
     except requests.Timeout:
         log.error("Timeout trying to download mod at url %s", url)
         return False
