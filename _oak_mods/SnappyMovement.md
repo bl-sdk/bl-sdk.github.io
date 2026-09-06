@@ -39,7 +39,7 @@ To update the mod, replace the existing SnappyMovement.sdkmod with the newer fil
 ## Compatibility
 
 - Applies to the local player's runtime movement component.
-- Co-op support: Unknown — not formally validated for this release.
+- Co-op support: ClientSide.
 - Does not intentionally modify maximum movement speed, GroundFriction, jump settings, air control, or slide speed.
 
 ## Credits
