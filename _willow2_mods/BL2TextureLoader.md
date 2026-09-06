@@ -1,8 +1,12 @@
 ---
-title: BL2 Texture Loader
+name: Texture Loader
+version: 0.5
+description: Runtime-rendered Borderlands 2 visual themes and optional UE3 FPS profile.
 author: UnusalFactorioDante
-download: https://github.com/UnusalFactorioDante/Borderlands-2-Mods/releases/download/BL2Mods/BL2TextureLoader.sdkmod
-coop_support: ClientSide
-license: GPL3
+homepage: https://github.com/UnusalFactorioDante/Borderlands-2-Mods
+repository: https://github.com/UnusalFactorioDante/Borderlands-2-Mods
 ---
-A Borderlands 2 Texture Loader with a FPS Boost Engine and 2 Texture Packs, Christmas and Candy.
+
+# Texture Loader
+
+Runtime-rendered Borderlands 2 visual themes and optional UE3 FPS profile.
