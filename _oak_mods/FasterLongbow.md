@@ -2,7 +2,7 @@
 pyproject_url: https://raw.githubusercontent.com/Last1SiN/FasterLongbow/refs/heads/main/pyproject.toml
 ---
 
-Configurable Longbow grenade throw and pre-teleport timing for Borderlands 3. Speeds up equipped Longbow delivery without changing other grenade delivery types, exposes the tested timing values through the Mod Menu, and enforces a safe minimum for Longbow teleport timing.
+Configurable Longbow grenade throw and pre-teleport timing for Borderlands 3. Speeds up equipped Longbow delivery without changing other grenade delivery types, exposes the tested timing values through the Mod Menu, and enforces a safe minimum for Longbow teleport timing. Client-side co-op compatible.
 
 ## Requirements
 
