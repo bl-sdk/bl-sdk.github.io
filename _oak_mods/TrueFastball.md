@@ -6,9 +6,9 @@ TrueFastball is a Borderlands 2-style Fastball overhaul for Borderlands 3. It in
 
 ## Features
 
-- Applies only to equipped Fastball throws and the actual Fastball projectile delivery.
+- Updates the displayed Damage stat for all loaded Fastball inventory instances while the mod is enabled.
 - Default Fastball Damage Multiplier: 2.56.
-- Multiplies the already-computed runtime GrenadeDamage, preserving native level and Mayhem scaling.
+- Multiplies the actual Fastball projectile's already-computed runtime GrenadeDamage, preserving native level and Mayhem scaling.
 - Default Throw Animation RateScale: 2.0.
 - Restores temporary throw-animation changes when the owning grenade action ends.
 - Does not modify Fastball projectile speed, gravity, upward velocity, or trajectory.
