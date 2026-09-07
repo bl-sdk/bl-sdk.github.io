@@ -39,7 +39,6 @@ To update the mod, replace the existing `TrueFastball.sdkmod` with the newer fil
 
 - Fastball damage modification is gated to the actual Fastball projectile delivery.
 - Borderlands 3 Fastball projectile speed and trajectory are intentionally unchanged.
-- The damage behavior is general; the current throw-animation acceleration targets the tested **FL4K / Beastmaster** grenade animation assets.
 - Co-op support: **ClientSide**.
 
 ## Credits
