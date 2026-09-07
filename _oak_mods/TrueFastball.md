@@ -17,7 +17,7 @@ TrueFastball is a Borderlands 2-style Fastball overhaul for Borderlands 3. It in
 
 ## Compatibility
 
-- Fastball damage modification is gated to the actual Fastball projectile delivery.
+- The damage multiplier applies only to Fastball grenades.
 - Borderlands 3 Fastball projectile speed and trajectory are intentionally unchanged.
 
 ## Credits
