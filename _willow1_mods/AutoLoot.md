@@ -11,3 +11,4 @@ Picks loot up as you walk over it, no key press needed.
 - **Loot Ammo**: whether ammo is picked up.
 - **Loot Health**: whether health kits and vials are picked up.
 - **Reach in metres**: how close the loot has to be.
+- **Checks per second**: how often loot around you is looked for. Lower is better for performance.
