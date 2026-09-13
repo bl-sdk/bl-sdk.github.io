@@ -359,7 +359,8 @@ This question comes up from time to time.
 Most importantly, Nexus Mods is not run by the community, we have absolutely no influence into what
 they do. We have a number of additional greviences:
 - They require an account to download.
-- They've historically hosted stolen mods, and refused to take them down despite our reports.
+- They've do not respond to reports actively enough. We have had multiple cases of stolen mods
+  staying up for weeks or even months despite our reports. Latest Incident: Sept 2026.
 - They explicitly let you to submit mods "on behalf of" someone else, and give you rewards for doing
   so, which leads to the above stolen mods.
 - They claim Vortex support, but it's completely broken in every single game. But when this is

@@ -23,7 +23,7 @@ official Mac release for WL, you're likely already doing this already.
 In Steam, set the game's launch options to:
 
 ```
-WINEDLLOVERRIDES="dsound=n,b" %command%
+WINEDLLOVERRIDES="dsound=n,b" %command% -pf_tricks=vcrun2022
 ```
 
 Once you get in game, open console by pressing tilde twice, and double check there's no proton
@@ -97,6 +97,14 @@ Set it to the same thing it was already bound to.
 ### When I open one of the entries in the BL3 Mod Menu
 Update the sdk, this was fixed in version 1.3. The BL3 update on 2024-08-08 caused older versions of
 the BL3 Mod Menu to crash when creating a slider or keybind option.
+
+### Immediately on launch
+Try install the latest
+[Microsoft Visual C++ Redistributable](https://aka.ms/vs/17/release/vc_redist.x86.exe).
+
+If you're running under Proton, you can do this by installing `vcrun2022` using
+[protontricks](https://github.com/Matoking/protontricks) - which you can also do by adding
+`-pf_tricks=vcrun2022` to your launch args.
 
 ## How do I use this with the plugin loader for OpenHotfixLoader/BL3HM/other dll mods?
 For convenience, the SDK zip comes with a plugin loader pre-packaged, the sdk itself is a plugin

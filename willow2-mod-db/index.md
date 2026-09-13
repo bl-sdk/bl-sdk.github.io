@@ -16,13 +16,11 @@ redirect_from:
 {% youtube https://youtu.be/cCkNCjx3xDM %}
 
 ## Text Guide
+
 1. Install the latest
    [Microsoft Visual C++ Redistributable](https://aka.ms/vs/17/release/vc_redist.x86.exe).
 
    ![VC Redist Installer](/assets/images/willow2-installation/vcredist.png)
-   
-   If you're running under Proton, you can do this by installing `vcrun2022` using
-   [protontricks](https://github.com/Matoking/protontricks).
 
 2. Download the latest release from github.
 
@@ -46,9 +44,9 @@ redirect_from:
 
    If you're asked to overwrite existing files, accept.
 
-5. \[PROTON ONLY\] When playing on Linux via Proton, you need to add the following launch arg:
+5. \[PROTON ONLY\] When playing on Linux via Proton, you need to add the following launch args:
    ```
-   WINEDLLOVERRIDES="ddraw=n,b" %command%
+   WINEDLLOVERRIDES="ddraw=n,b" %command% -pf_tricks=vcrun2022
    ```
 
    [See the faq for more]({{ "/willow2-mod-db/faq/#can-i-use-this-on-steam-decklinuxmac" | relative_url }}).

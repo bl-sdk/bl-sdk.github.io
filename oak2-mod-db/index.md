@@ -10,13 +10,18 @@ nav_order: 1
 
 ## Text Guide
 
-1. Download the latest release from github.
+1. Install the latest
+   [Microsoft Visual C++ Redistributable](https://aka.ms/vs/17/release/vc_redist.x64.exe).
+
+   ![VC Redist Installer](/assets/images/oak2-installation/vcredist.png)
+
+2. Download the latest release from github.
 
    ![Github download page](/assets/images/oak2-installation/download.png)
 
    Make sure to download the right release for your game, and not either of the source code links.
 
-2. Locate your game files.
+3. Locate your game files.
 
    The default locations are:    
    Steam: `C:\Program Files (x86)\Steam\steamapps\common\Borderlands 4`    
@@ -26,27 +31,27 @@ nav_order: 1
    ![Steam browse local files option](/assets/images/oak2-installation/steam-local.png)
    {:style="max-width: 75%"}
 
-3. Open up the zip you downloaded, and extract it's contents directly into the game folder, such
+4. Open up the zip you downloaded, and extract it's contents directly into the game folder, such
    that they merge.
 
    ![Extracting the zip into the game folder](/assets/images/oak2-installation/extract-files.png)
 
    If you're asked to overwrite existing files, accept.
 
-4. \[PROTON ONLY\] When playing on Linux via Proton, you need to add the following launch arg:
+5. \[PROTON ONLY\] When playing on Linux via Proton, you need to add the following launch args:
    ```
-   WINEDLLOVERRIDES="dsound=n,b" %command%
+   WINEDLLOVERRIDES="dsound=n,b" %command% -pf_tricks=vcrun2022
    ```
 
    [See the faq for more]({{ "/oak2-mod-db/faq/#can-i-use-this-on-steam-decklinuxmac" | relative_url }}).
 
-5. The SDK should be installed now. To verify, hit tilde (`` `/~ ``) twice to open console, and you
+6. The SDK should be installed now. To verify, hit tilde (`` `/~ ``) twice to open console, and you
    should see a message saying the console mod menu has been loaded. Type `mods` and press enter to
    start configuring your mods.
 
    ![The console-based mods menu](/assets/images/oak2-installation/console-mod-menu.png)
 
-6. To install SDK mods, navigate back to the `sdk_mods` folder you extracted during step 3. SDK mods
+7. To install SDK mods, navigate back to the `sdk_mods` folder you extracted during step 3. SDK mods
    come in two forms:
    - `.sdkmod` files can be dropped directly into this folder.
 
@@ -63,4 +68,4 @@ nav_order: 1
      ![Comparing normal vs nested mod folders](/assets/images/oak2-installation/nested.png)
       {:style="max-width: 75%"}
 
-7. After installing SDK mods, you need to restart the game for them to get loaded.
+8. After installing SDK mods, you need to restart the game for them to get loaded.

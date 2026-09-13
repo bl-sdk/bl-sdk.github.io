@@ -23,7 +23,7 @@ already doing this anyway.
 In Steam, set the game's launch options to:
 
 ```
-WINEDLLOVERRIDES="dsound=n,b" %command%
+WINEDLLOVERRIDES="dsound=n,b" %command% -pf_tricks=vcrun2022
 ```
 
 Once you get in game, open console by pressing tilde twice, and double check there's no proton
@@ -89,3 +89,10 @@ following content, substituting the key as appropriate:
 [unrealsdk]
 console_key = "F1"
 ```
+## My game is crashing immediately on launch
+Try install the latest
+[Microsoft Visual C++ Redistributable](https://aka.ms/vs/17/release/vc_redist.x86.exe).
+
+If you're running under Proton, you can do this by installing `vcrun2022` using
+[protontricks](https://github.com/Matoking/protontricks) - which you can also do by adding
+`-pf_tricks=vcrun2022` to your launch args.
