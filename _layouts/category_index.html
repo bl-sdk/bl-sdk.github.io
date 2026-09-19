@@ -10,7 +10,8 @@ layout: default
 {%- endif -%}
 <ul>
 {%- for mod in page.mods -%}
-    <li>
+    {%- include mod_filter_classes.html page=mod -%}
+    <li class="{{ mod_filter_classes | join: " " }}">
         <b><a href="{{ mod.url | relative_url }}">{{ mod.title }}</a></b>
         {%- if mod.excerpt -%}
             <br>

@@ -8,20 +8,11 @@ We change it for the game selector, for each mod, we add "game-xyz" classes to i
   {%- for node in include.pages -%}
   {%- if include.all == true or node.nav_exclude != true -%}
 
-  {%- if site.game_selector.collection and node.collection == site.game_selector.collection -%}
-    {%- assign game_select_classes = "game-any" -%}
-    {%- include filter_games.html page=node -%}
-    {%- for game in filtered_games -%}
-      {%- assign game_class = " game-" | append: game | downcase -%}
-      {%- assign game_select_classes = game_select_classes | append: game_class -%}
-    {%- endfor -%}
-  {%- else -%}
-    {%- assign game_select_classes = "" -%}
-  {%- endif -%}
+  {%- include mod_filter_classes.html page=node -%}
 
   {%- if include.ancestors contains node.title -%}
 
-    <li class="nav-list-item {{ game_select_classes }}">
+    <li class="nav-list-item {{ mod_filter_classes | join: " " }}">
       <a href="{{ node.url | relative_url }}" class="nav-list-link"> ∞ </a>
     </li>
     {%- capture nav_error_report -%}
@@ -36,7 +27,7 @@ We change it for the game selector, for each mod, we add "game-xyz" classes to i
 
     {%- include components/nav/children.html node=node ancestors=include.ancestors all=include.all -%}
 
-    <li class="nav-list-item {{ game_select_classes }}">
+    <li class="nav-list-item {{ mod_filter_classes | join: " " }}">
       {%- if nav_children.size >= 1 -%}
       <button class="nav-list-expander btn-reset" aria-label="{{ node.title }} submenu" aria-expanded="false">
         <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>

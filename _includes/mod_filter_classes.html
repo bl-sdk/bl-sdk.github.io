@@ -1,0 +1,18 @@
+{%- comment -%}
+Gets the list of classes used to implement the mod filtering.
+
+Args:
+    page: The mod page to filter.
+Return:
+    Sets the 'mod_filter_classes' variable to an array of css classes.
+{%- endcomment -%}
+
+{%- assign mod_filter_classes = "" | split: "" -%}
+{%- if site.game_selector.collection and include.page.collection == site.game_selector.collection -%}
+  {%- assign mod_filter_classes = mod_filter_classes | push: "game-any" -%}
+  {%- include filter_games.html page=include.page -%}
+  {%- for game in filtered_games -%}
+    {%- assign game_class = "game-" | append: game | downcase -%}
+    {%- assign mod_filter_classes = mod_filter_classes | push: game_class -%}
+  {%- endfor -%}
+{%- endif -%}
