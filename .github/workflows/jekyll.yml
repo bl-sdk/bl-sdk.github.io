@@ -121,6 +121,33 @@ jobs:
         uv run ./_validate_pyproject.py git_changed
         $(git merge-base ${{ github.event.pull_request.base.sha }} ${{ github.event.pull_request.head.sha }})
 
+  validate_categories:
+    runs-on: ubuntu-latest
+    if: >
+      github.event_name == 'pull_request'
+      || (github.ref == 'refs/heads/master'
+          && github.repository == 'bl-sdk/bl-sdk.github.io')
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v6
+
+    - name: Install uv
+      uses: astral-sh/setup-uv@08807647e7069bb48b6ef5acd8ec9567f424441b # v8.1.0
+      with:
+        cache-dependency-glob: |
+          **/*requirements*.txt
+          **/*requirements*.in
+          **/*constraints*.txt
+          **/*constraints*.in
+          **/pyproject.toml
+          **/uv.lock
+          **/*.py.lock
+          _validate_categories.py
+
+    - name: Validate mod categories
+      run: uv run ./_validate_categories.py
+
   # Deployment job
   deploy:
     environment:
