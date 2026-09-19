@@ -5,9 +5,14 @@ Args:
     page: The mod page to filter.
 Return:
     Sets the 'mod_filter_classes' variable to an array of css classes.
+    Sets the 'mod_filter_hidden' variable to the string 'hidden' if the mod should be hidden by
+    default, or an empty string otherwise.
 {%- endcomment -%}
 
+
 {%- assign mod_filter_classes = "" | split: "" -%}
+{%- assign mod_filter_hidden = "" -%}
+
 {%- if site.game_selector.collection and include.page.collection == site.game_selector.collection -%}
   {%- assign mod_filter_classes = mod_filter_classes | push: "game-any" -%}
   {%- include filter_games.html page=include.page -%}
@@ -15,4 +20,13 @@ Return:
     {%- assign game_class = "game-" | append: game | downcase -%}
     {%- assign mod_filter_classes = mod_filter_classes | push: game_class -%}
   {%- endfor -%}
+{%- endif -%}
+
+{%- if site.data.reviews[node.collection] -%}
+  {%- unless site.data.reviews[node.collection][node.slug] -%}
+    {%- assign mod_filter_classes = mod_filter_classes | push: "unreviewed" -%}
+    {%- if site.unreviewed_mods.hide_by_default -%}
+      {%- assign mod_filter_hidden = "hidden" -%}
+    {%- endif -%}
+  {%- endunless -%}
 {%- endif -%}

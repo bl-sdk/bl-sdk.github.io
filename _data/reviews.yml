@@ -1,0 +1,24 @@
+# This file lists mods which have been manually reviewed
+# If you're a reviewer and you want to add one, simply add an entry under the relevant collection,
+# where the key is the mod's filename *without extension*, and the value is the date you reviewed
+# it, in YYYY-MM-DD format (don't worry about timezones).
+
+oak_mods:
+  # Empty for now
+
+oak2_mods:
+  BL4AutoReload: ~
+  WorldTravel: ~
+
+willow1_mods:
+  AutoLoot: 2026-09-26
+  AutoLootBL1E: ~
+  Autopickup: 2026-09-26
+  AutopickupBL1E: 2026-09-26
+  ContinuousFire: 2026-09-26
+  CrashDebug: ~
+
+willow2_mods:
+  bl2speed: 2026-09-26
+  WidescreenFogFix: ~
+

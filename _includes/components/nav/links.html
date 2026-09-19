@@ -1,7 +1,7 @@
 {%- comment -%}
 This is copied from the standard links.html, as of version 0.12.0.
 
-We change it for the game selector, for each mod, we add "game-xyz" classes to its list item.
+We change it for the mod filter, we add extra classes to each list item, and may hide it by default.
 {%- endcomment -%}
 
 <ul class="nav-list">
@@ -27,7 +27,7 @@ We change it for the game selector, for each mod, we add "game-xyz" classes to i
 
     {%- include components/nav/children.html node=node ancestors=include.ancestors all=include.all -%}
 
-    <li class="nav-list-item {{ mod_filter_classes | join: " " }}">
+    <li class="nav-list-item {{ mod_filter_classes | join: " " }}" {{ mod_filter_hidden }}>
       {%- if nav_children.size >= 1 -%}
       <button class="nav-list-expander btn-reset" aria-label="{{ node.title }} submenu" aria-expanded="false">
         <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>

@@ -87,6 +87,14 @@ layout: default
         {%- endif -%}
     </dd>
 
+    {%- assign review = site.data.reviews[page.collection][page.slug] -%}
+    {%- if review -%}
+    <dt>Last Review</dt>
+    <dd>
+        {{- review | date: "%Y-%m-%d" -}}
+    </dd>
+    {%- endif -%}
+
     {%- assign dependencies = page.dependencies | default: page.pyproject.project.dependencies -%}
     {%- if dependencies.size > 0 -%}
         <dt class="requirement">Requires</dt>

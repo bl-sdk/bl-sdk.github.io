@@ -2,16 +2,46 @@
 Creates the game selector combo box.
 {%- endcomment -%}
 {%- if site.game_selector.collection -%}
-  <div class="nav-game-selector">
-    <select onchange="                                                {{-''-}}
-        h=(t,v)=>document.querySelectorAll(t).forEach(x=>x.hidden=v); {{-''-}}
-        h('.game-any',1);                                             {{-''-}}
-        h(event.target.value,0);                                      {{-''-}}
-      ">
+  <div class="nav-mod-filter">
+    <select id="nav-game-select">
       <option selected value=".game-any">All Games</option>
       {%- for game in site.game_selector.games -%}
         <option value=".game-{{ game | downcase }}">{{ game }}</option>
       {%- endfor -%}
     </select>
+    <input id="nav-review-check"type="checkbox"
+      {%- if site.unreviewed_mods.hide_by_default -%}
+        {{- " " -}} checked
+      {%- endif -%}
+      {%- unless site.unreviewed_mods.checkbox -%}
+        {{- " " -}} hidden
+      {%- endunless -%}
+      />
+    {%- comment -%}(strip whitespace){%- endcomment -%}
+    <label for="nav-review-check"
+      {%- unless site.unreviewed_mods.checkbox -%}
+        {{- " " -}} hidden
+      {%- endunless -%}
+      >Only Show Reviewed</label>
+    <script>
+      function nav_mod_filter(){                                                            {{-""-}}
+        const i=x=>document.getElementById(x);                                              {{-""-}}
+        const h=(t,v)=>document.querySelectorAll(t).forEach(x=>x.hidden=v);                 {{-""-}}
+        const [g,r]=["nav-game-select","nav-review-check"];                                 {{-""-}}
+        const c=(n,v)=>cookieStore.set(n,v);                                                {{-""-}}
+        h('.game-any',1);                                                                   {{-""-}}
+        h(i(g).value+(i(r).checked?":not(.unreviewed)":""),0);                              {{-""-}}
+        c(g,i(g).value);                                                                    {{-""-}}
+        c(r,i(r).checked?1:"");                                                             {{-""-}}
+      };                                                                                    {{-""-}}
+      Promise.all(["nav-game-select","nav-review-check"].map(x=>cookieStore.get(x)))        {{-""-}}
+        .then(([s,c])=>{                                                                    {{-""-}}
+          const [g,r]=[s,c].map(x=>document.getElementById(x.name));                        {{-""-}}
+          g.value=s.value;                                                                  {{-""-}}
+          r.checked=c.value;                                                                {{-""-}}
+          [g,r].forEach(x=>x.addEventListener("change",nav_mod_filter));                    {{-""-}}
+          nav_mod_filter();                                                                 {{-""-}}
+        });                                                                                 {{-""-}}
+    </script>
   </div>
 {%- endif -%}
