@@ -1,3 +1,3 @@
 ---
-pyproject_url: https://github.com/Blmodded114/Bl2-SDK-Mods/raw/refs/heads/main/LootMidgetWorld/pyproject.toml
+pyproject_url: https://raw.githubusercontent.com/Blmodded114/Bl2-SDK-Mods/refs/heads/main/LootMidgetWorld/pyproject.toml
 ---
