@@ -30,6 +30,16 @@ defaults:
       layout: mod
   - scope:
       path: ""
+      type: category_index
+    values:
+      layout: category_index
+  - scope:
+      path: ""
+      type: category_list
+    values:
+      layout: category_list
+  - scope:
+      path: ""
     values:
       has_toc: false
 

@@ -10,6 +10,10 @@ collections:
     permalink: /willow2-mod-db/mods/:name/
     output: true
 
+category_index:
+  enabled: true
+  url: /willow2-mod-db/categories/
+
 game_selector:
   collection: willow2_mods
   games:

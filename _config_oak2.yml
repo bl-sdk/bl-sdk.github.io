@@ -10,6 +10,10 @@ collections:
     permalink: /oak2-mod-db/mods/:name/
     output: true
 
+category_index:
+  enabled: true
+  url: /oak2-mod-db/categories/
+
 just_the_docs:
   collections:
     oak2_mods:

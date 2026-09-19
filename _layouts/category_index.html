@@ -1,0 +1,21 @@
+---
+layout: default
+---
+{%- assign category = site.data.categories[page.mod_category] -%}
+<h1>{{ page.title }}</h1>
+{%- if category.description -%}
+    {{- category.description -}}
+    <br>
+    <br>
+{%- endif -%}
+<ul>
+{%- for mod in page.mods -%}
+    <li>
+        <b><a href="{{ mod.url | relative_url }}">{{ mod.title }}</a></b>
+        {%- if mod.excerpt -%}
+            <br>
+            {{- mod.excerpt -}}
+        {%- endif -%}
+    </li>
+{%- endfor -%}
+</ul>
