@@ -13,7 +13,7 @@ div.video-16-9 {
 
 dl.mod-desc {
     // Make the description list header shorter
-    grid-template-columns: 5em 1fr;
+    grid-template-columns: 6em 1fr;
 
     // Make coop support expand into a description on hover
     dd.coop {
@@ -107,19 +107,51 @@ span.mod-update-notification {
     }
 }
 
-// Make the game selector have the same sort of padding as other nav items
-div.nav-game-selector {
+div.nav-mod-filter {
+    // Make the filter have the same sort of padding as other nav items
     padding: $sp-2 $nav-list-item-height-sm $sp-1 $gutter-spacing-sm;
-    @include fs-5;
-
     @include mq(md) {
         padding-right: $nav-list-item-height;
         padding-left: $gutter-spacing;
-        @include fs-3;
     }
 
     >select {
-        // And make the actual box full width
+        // Make the game selector box full width
         width: 100%;
+
+        // And mess with its font size
+        @include fs-5;
+        @include mq(md) {
+            @include fs-3;
+        }
+    }
+
+    // Add some padding to the trusted checkbox. This is not quite the same as other items.
+    >input[type=checkbox] {
+        min-height: 0;
+        margin-top: $sp-2;
+
+        &+label {
+            padding-left: $sp-2;
+
+            // Also mess with its font size, but a little differently
+            @include fs-4;
+            @include mq(md) {
+                @include fs-3;
+            }
+        }
+    }
+
+}
+
+// Grey out untrusted mods a little
+.nav-list .nav-list-item.untrusted .nav-list-link {
+    & {
+        color: darken($link-color, 15%);
+    }
+    &:hover, &.active {
+        // Normal hover is 5% darker already
+        color: darken($link-color, 20%);
     }
 }
+

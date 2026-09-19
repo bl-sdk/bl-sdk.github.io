@@ -75,6 +75,14 @@ layout: default
         {%- endif -%}
     </dd>
 
+    {%- assign trusted = site.data.trusted[page.collection][page.slug] -%}
+    {%- if trusted -%}
+    <dt>Last Review</dt>
+    <dd>
+        {{- trusted | date: "%Y-%m-%d" -}}
+    </dd>
+    {%- endif -%}
+
     {%- assign dependencies = page.dependencies | default: page.pyproject.project.dependencies -%}
     {%- if dependencies.size > 0 -%}
         <dt class="requirement">Requires</dt>
