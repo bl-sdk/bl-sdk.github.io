@@ -2,16 +2,23 @@
 Creates the game selector combo box.
 {%- endcomment -%}
 {%- if site.game_selector.collection -%}
-  <div class="nav-game-selector">
-    <select onchange="                                                {{-''-}}
-        h=(t,v)=>document.querySelectorAll(t).forEach(x=>x.hidden=v); {{-''-}}
-        h('.game-any',1);                                             {{-''-}}
-        h(event.target.value,0);                                      {{-''-}}
-      ">
+  <div class="nav-mod-filter">
+    <select id="nav-game-select" onchange="nav_mod_filter()">
       <option selected value=".game-any">All Games</option>
       {%- for game in site.game_selector.games -%}
         <option value=".game-{{ game | downcase }}">{{ game }}</option>
       {%- endfor -%}
     </select>
+    <input id="nav-trusted-check"type="checkbox" checked onchange="nav_mod_filter()"/>
+    {%- comment -%}(strip whitespace){%- endcomment -%}
+    <label for="nav-trusted-check">Only Show Trusted</label>
+    <script>
+      function nav_mod_filter(){                                                            {{-""-}}
+        const i=x=>document.getElementById(x);                                              {{-""-}}
+        const h=(t,v)=>document.querySelectorAll(t).forEach(x=>x.hidden=v);                 {{-""-}}
+        h('.game-any',1);                                                                   {{-""-}}
+        h(i`nav-game-select`.value+(i`nav-trusted-check`.checked?":not(.untrusted)":""),0); {{-""-}}
+      }                                                                                     {{-""-}}
+    </script>
   </div>
 {%- endif -%}

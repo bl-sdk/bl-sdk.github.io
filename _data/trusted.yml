@@ -1,0 +1,17 @@
+# This file lists the trusted mods, which have been manually reviewed
+# If you're a reviewer and you want to add one, simply add an entry under the relevant collection,
+# where the key is the mod's filename *without extension*, and the value is the date you reviewed
+# it, in YYYY-MM-DD format (don't worry about timezones).
+
+oak_mods:
+  # Empty for now
+
+oak2_mods:
+  # Empty for now
+
+willow1_mods:
+  # Empty for now
+
+willow2_mods:
+  # Empty for now
+
