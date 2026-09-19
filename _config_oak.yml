@@ -10,6 +10,10 @@ collections:
     permalink: /oak-mod-db/mods/:name/
     output: true
 
+category_index:
+  enabled: true
+  url: /oak-mod-db/categories/
+
 game_selector:
   collection: oak_mods
   games:
