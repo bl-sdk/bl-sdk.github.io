@@ -256,7 +256,8 @@ Misc URLs<sup>6</sup>       | `urls`                | `project.urls`
 Download Link               | `download`            | `tool.sdkmod.download`
 Description                 | The page contents     | `project.description`<sup>7</sup>
 Native Modules Warning      | `uses_native_modules` | `tool.sdkmod.uses_native_modules`
-Redirects<sup>8</sup>       | `redirect_from`       | Not supported
+Categories<sup>8            | `mod_categories`      | Not supported
+Redirects<sup>9</sup>       | `redirect_from`       | Not supported
 
 <sup>1</sup> Multiple authors are concatenated in the order given.    
 <sup>2</sup> An array of strings. If not given, defaults to all games for the category you're in.    
@@ -267,7 +268,9 @@ Redirects<sup>8</sup>       | `redirect_from`       | Not supported
 <sup>5</sup> Used as the name, with no url.    
 <sup>6</sup> A dict where keys are the names and values are the urls.    
 <sup>7</sup> HTML tags are stripped, rather than just being escaped.    
-<sup>8</sup> An array of relative urls to redirect to this page - i.e. if you moved your mod, it's
+<sup>8</sup> A string with space-separated categories. See the 
+             [full list here](https://github.com/bl-sdk/bl-sdk.github.io/tree/master/_data/categories.yml).    
+<sup>9</sup> An array of relative urls to redirect to this page - i.e. if you moved your mod, it's
              old urls. See also
              [`jekyll-redirect-from`](https://github.com/jekyll/jekyll-redirect-from#usage).    
 {: .fs-2 }
