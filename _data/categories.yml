@@ -4,11 +4,96 @@
 # Each value can then have a custom 'title', to fix spaces and/or capitalization, and a custom
 # 'description', which is used in the category list.
 
-lorem:
-  title: Lorem Ipsum
+# General Categories
+
+cheat:
+  title: Cheat
+  description: Mods that help you cheat.
+
+dev:
+  title: Developer Tools
+  description: Tools which are primarily useful for other mod developers.
+
+dialog:
+  title: Dialog/Sound
+
+enemy:
+  title: Enemy
+
+gameplay:
+  title: Gameplay
+
+gear:
+  title: Gear
+
+movement:
+  title: Movement
+
+lib:
+  title: Library
+
+loot:
+  title: Loot
+
+overhaul:
+  title: Overhaul
   description: >
-   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-   labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-   nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-   velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-   proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    Major overhauls, which affect most of the game one way or another. Generally recommended to be
+    played on a new save, and generally not compatible with other overhauls.
+
+save-edit:
+  title: Save Editing
+
+skills:
+  title: Skills
+
+ui:
+  title: UI
+
+vehicle:
+  title: Vehicle
+
+# Categories only in Oak DB
+amara:
+  title: Amara
+  description: Mods specifically affecting Amara.
+
+fl4k:
+  title: FL4K
+  description: Mods specifically affecting FL4K.
+
+moze:
+  title: Moze
+  description: Mods specifically affecting Moze.
+
+zane:
+  title: Zane
+  description: Mods specifically affecting Zane.
+
+blightcaller:
+  title: Blightcaller
+  description: Mods specifically affecting Blightcallers.
+
+brrzerker:
+  title: Brr-Zerker
+  description: Mods specifically affecting Brr-Zerkers.
+
+clawbringer:
+  title: Clawbringer
+  description: Mods specifically affecting Clawbringers.
+
+graveborn:
+  title: Graveborn
+  description: Mods specifically affecting Graveborns.
+
+spellshot:
+  title: Spellshot
+  description: Mods specifically affecting Spellshots.
+
+spore-warden:
+  title: Spore Warden
+  description: Mods specifically affecting Spore Wardens.
+
+stabbomancer:
+  title: Stabbomancer
+  description: Mods specifically affecting Stabbomancers.

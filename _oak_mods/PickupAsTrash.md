@@ -1,5 +1,6 @@
 ---
 pyproject_url: https://raw.githubusercontent.com/Siggless/oak-sdk-mods/refs/heads/main/PickupAsTrash/pyproject.toml
+mod_categories: loot
 ---
 
 Adds a secondary interaction to pickups, to pickup and mark as trash, and adds a "Sell All Trash" secondary interaction to weapon vendors in BL3.

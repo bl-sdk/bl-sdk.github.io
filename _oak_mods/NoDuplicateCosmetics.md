@@ -1,5 +1,6 @@
 ---
 pyproject_url: https://raw.githubusercontent.com/Last1SiN/NoDuplicateCosmetics/refs/heads/main/NoDuplicateCosmetics/pyproject.toml
+mod_categories: loot
 ---
 
 NoDuplicateCosmetics prevents already-owned cosmetics in Borderlands 3 from being selected again while preserving the game's native, source-local loot behavior. It filters supported owned cosmetics before native loot selection, keeps mixed gear + cosmetic pools on the stock resolver path, and lets exhausted cosmetic-only branches produce no cosmetic instead of replacing them with unrelated loot.
