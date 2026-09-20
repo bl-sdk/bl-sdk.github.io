@@ -39,7 +39,7 @@ def get_all_categories() -> Collection[str]:
         return data.keys()
 
 
-VALID_CATEGORY_NAME_RE = re.compile("^[a-z-]+$")
+VALID_CATEGORY_NAME_RE = re.compile("^[a-z0-9-]+$")
 
 
 def validate_category_name(categories: Collection[str]) -> int:

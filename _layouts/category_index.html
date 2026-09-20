@@ -9,7 +9,9 @@ layout: default
     <br>
 {%- endif -%}
 <ul>
-{%- for mod in page.mods -%}
+{%- comment -%} Important: *not* using sort natural, to match the sidebar {%- endcomment -%}
+{%- assign sorted_mods = page.mods | sort: "title" -%}
+{%- for mod in sorted_mods -%}
     {%- include mod_filter_classes.html page=mod -%}
     <li class="{{ mod_filter_classes | join: " " }}">
         <b><a href="{{ mod.url | relative_url }}">{{ mod.title }}</a></b>

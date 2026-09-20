@@ -8,7 +8,7 @@ layout: default
 {%- endunless -%}
 <h1 id="title">{{ page.title }}</h1>
 {%- if site.category_index.enabled -%}
-    {%- assign categories = page.mod_categories | split: " " -%}
+    {%- assign categories = page.mod_categories | split: " " | sort_natural -%}
     {%- for raw_category in categories -%}
         <a href="{{- site.category_index.url | append: raw_category | relative-url -}}">
             {%- assign category = site.data.categories[raw_category] -%}
