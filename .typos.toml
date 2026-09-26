@@ -5,3 +5,7 @@ extend-exclude = [
     "_willow1_mods/",
     "_willow2_mods/",
 ]
+
+[default.extend-words]
+# this is just a normal word it doesn't recognise?
+moreso = "moreso"

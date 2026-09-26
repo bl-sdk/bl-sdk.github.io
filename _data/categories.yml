@@ -48,7 +48,7 @@ lib:
   title: Library
   description: >
     Libraries provide functionality for other mods. You generally only need to install these if
-    another mod lists them as a requirement, they don't do much by themseleves.
+    another mod lists them as a requirement, they don't do much by themselves.
 
 loot:
   title: Loot
@@ -82,7 +82,7 @@ ui:
 utility:
   title: Utility
   description: >
-    Useful small utlities. Generally, though not always, client side.
+    Useful small utilities. Generally, though not always, client side.
 
 vehicle:
   title: Vehicle
