@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import re
 import sys
+from difflib import get_close_matches
 from pathlib import Path
 from typing import TYPE_CHECKING, Any
 
@@ -23,7 +24,45 @@ CATEGORIES_FILE = Path(__file__).parent / "_data" / "categories.yml"
 
 PER_TREE_CATEGORIES: dict[str, tuple[str, ...]] = {
     # Map from the category key to the mod folders it's allowed in
-    "lorem": ("_oak2_mods",),
+    # BL1
+    "brick": ("_willow1_mods",),
+    "lilith": ("_willow1_mods",),
+    "mordecai": ("_willow1_mods",),
+    "roland": ("_willow1_mods",),
+    # BL2
+    "axton": ("_willow2_mods",),
+    "gaige": ("_willow2_mods",),
+    "krieg": ("_willow2_mods",),
+    "maya": ("_willow2_mods",),
+    "salvador": ("_willow2_mods",),
+    "zer0": ("_willow2_mods",),
+    # TPS
+    "athena": ("_willow2_mods",),
+    "aurelia": ("_willow2_mods",),
+    "claptrap": ("_willow2_mods",),
+    "jack": ("_willow2_mods",),
+    "nisha": ("_willow2_mods",),
+    "wilhelm": ("_willow2_mods",),
+    # BL3
+    "amara": ("_oak_mods",),
+    "fl4k": ("_oak_mods",),
+    "moze": ("_oak_mods",),
+    "zane": ("_oak_mods",),
+    # WL
+    "blightcaller": ("_oak_mods",),
+    "brrzerker": ("_oak_mods",),
+    "clawbringer": ("_oak_mods",),
+    "graveborn": ("_oak_mods",),
+    "spellshot": ("_oak_mods",),
+    "spore-warden": ("_oak_mods",),
+    "stabbomancer": ("_oak_mods",),
+    # BL4
+    "amon": ("_oak2_mods",),
+    "c4sh": ("_oak2_mods",),
+    "harlowe": ("_oak2_mods",),
+    "loveless": ("_oak2_mods",),
+    "rafa": ("_oak2_mods",),
+    "vex": ("_oak2_mods",),
 }
 
 
@@ -80,6 +119,12 @@ def parse_front_matter(path: Path) -> tuple[Collection[str], int]:
         return (), 1
 
     if "mod_categories" not in front_matter:
+        for key in ("mod_Categories", "mod_category", "category", "categories", "tag", "tags"):
+            if key in front_matter:
+                sys.stderr.write(
+                    f"wrong key for categories, use 'mod_categories', not '{key}', from {path}\n",
+                )
+                return (), 1
         return (), 0
 
     mod_categories = front_matter["mod_categories"]
@@ -112,7 +157,13 @@ def validate_mod_file(
 
     for category in mod_categories:
         if category not in all_categories:
-            sys.stderr.write(f"invalid category '{category}', from {path}\n")
+            suggestion = get_close_matches(category, all_categories, n=1)
+            if suggestion:
+                sys.stderr.write(
+                    f"invalid category '{category}', did you mean '{suggestion[0]}'? from {path}\n",
+                )
+            else:
+                sys.stderr.write(f"invalid category '{category}', from {path}\n")
             errors += 1
             continue
         if (
