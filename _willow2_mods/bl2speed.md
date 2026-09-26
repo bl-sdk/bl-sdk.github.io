@@ -1,5 +1,6 @@
 ---
 pyproject_url: https://raw.githubusercontent.com/NKAYE0/BL2speed/main/bl2speed/pyproject.toml
+mod_categories: movement
 ---
 
 Makes sprinting faster, leaving normal walking speed untouched.

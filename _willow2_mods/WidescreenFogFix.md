@@ -1,8 +1,7 @@
 ---
 pyproject_url: https://raw.githubusercontent.com/lumi-fiona/bl2-widescreen-fog-fix/main/widescreen_fog_fix/pyproject.toml
+mod_categories: ui
 ---
-
-# Widescreen Fog Fix
 
 Keeps the fog, haze and atmosphere at any field of view on ultrawide and super ultrawide screens.
 
