@@ -13,6 +13,7 @@ urls:
   Issues: https://github.com/Sampletext282/bl2-mods/issues
   Source Code: https://github.com/Sampletext282/bl2-mods
 version: '0.9'
+mod_categories: gaige
 ---
 Let's you keep your Anarchy stacks.
 By default you will keep 50% of your stacks, this can be changed in the mods options.

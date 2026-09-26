@@ -1,5 +1,6 @@
 ---
 pyproject_url: https://raw.githubusercontent.com/EerieGoesD/borderlands-1-goty-mods/refs/heads/main/Teleport/pyproject.toml
+mod_categories: cheat
 ---
 
 Takes you to any place you have already been to in this playthrough.

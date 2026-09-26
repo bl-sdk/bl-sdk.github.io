@@ -13,6 +13,7 @@ urls:
   Issues: https://github.com/plu5/p-borderlands/issues
   Source Code: https://github.com/plu5/p-borderlands/blob/main/SprintAdjuster
 version: 1.1.0 2021-05-17
+mod_categories: movement
 ---
 - Change speed when sprinting, while preserving normal speed when not sprinting.
 - Optionally set Air Control to allow better control in the air with the movement keys, to have a better chance of stopping yourself from flinging off a cliff for instance.

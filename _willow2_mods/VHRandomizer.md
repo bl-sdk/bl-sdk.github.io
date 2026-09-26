@@ -1,8 +1,7 @@
 ---
 pyproject_url: https://raw.githubusercontent.com/RedxYeti/bl2-willow2-sdkmods/refs/heads/main/VHRandomizer/pyproject.toml
+mod_categories: rando
 ---
-Requires coroutines https://bl-sdk.github.io/willow2-mod-db/mods/coroutines/
-
 
 Randomly pick a vault hunter with timed auto swap options or a hotkey.
 

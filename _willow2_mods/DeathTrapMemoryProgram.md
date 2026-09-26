@@ -16,6 +16,7 @@ title: Death Trap Memory Program
 urls:
   Source Code: https://github.com/aa3615058/Lengyu-BL2-sdk-Mods
 version: '1.4'
+mod_categories: gaige
 ---
 Memory program for Death Trap. You can press the keybind(default: 6) to save the data of your equipped shield. Death Trap will always copy the shield you saved if it is in your backpack.
 The Memory is persistent.

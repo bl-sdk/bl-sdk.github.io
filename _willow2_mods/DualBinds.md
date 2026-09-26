@@ -15,5 +15,6 @@ title: Dual Binds
 urls:
   Source Code: https://github.com/RedxYeti/Yeti-BL2-SDK-Mods
 version: '1.0'
+mod_categories: utility
 ---
 This mod will allow you to have keys do multiple things. I highly suggest you read the readme and check out the example ini on github.

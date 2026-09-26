@@ -16,5 +16,6 @@ urls:
   Issues: https://github.com/PyrexBLJ/blsdk-mods/issues
   Source Code: https://github.com/PyrexBLJ/blsdk-mods
 version: 1.0.3
+mod_categories: zer0
 ---
 Joltz idea for a deception modifier in his AON run

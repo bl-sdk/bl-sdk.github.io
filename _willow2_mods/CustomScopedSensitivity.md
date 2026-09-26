@@ -14,5 +14,6 @@ urls:
   Issues: https://github.com/Decept1x/Borderlands-Custom-Scoped-Sensitivity/issues
   Source Code: https://github.com/Decept1x/Borderlands-Custom-Scoped-Sensitivity/tree/main
 version: '1.0'
+mod_categories: utility
 ---
 Adds custom ADS sensitivity multiplier sliders for each sniper sight.

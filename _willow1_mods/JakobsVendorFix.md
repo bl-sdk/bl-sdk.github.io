@@ -1,5 +1,6 @@
 ---
 pyproject_url: https://raw.githubusercontent.com/Ugyuu/ugy-SDK-Mods/refs/heads/main/BL1/Jakobs%20Vendor%20Fix%20SDK/pyproject.toml
+mod_categories: loot
 ---
 
 Fixes the Jakobs vendor in the Zombie Island of Dr. Ned DLC!

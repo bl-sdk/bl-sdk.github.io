@@ -1,5 +1,6 @@
 ---
 pyproject_url: https://raw.githubusercontent.com/EerieGoesD/borderlands-1-goty-mods/refs/heads/main/ObjectiveDistance/pyproject.toml
+mod_categories: ui
 ---
 
 Shows how far your objective is, plus a line on the ground showing the way.

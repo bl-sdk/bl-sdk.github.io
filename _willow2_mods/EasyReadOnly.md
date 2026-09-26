@@ -13,5 +13,6 @@ supported_games:
 title: Easy Read Only
 urls: {}
 version: '1.0'
+mod_categories: utility
 ---
 Toggle Read Only on a button press

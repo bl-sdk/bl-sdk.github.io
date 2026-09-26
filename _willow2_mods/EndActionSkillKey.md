@@ -15,5 +15,6 @@ title: End Action Skill Key
 urls:
   Source Code: https://github.com/RedxYeti/Yeti-BL2-SDK-Mods
 version: '1.0'
+mod_categories: krieg salvador utility
 ---
 Adds a hotkey to force end your action skill. Most useful on Krieg and Sal.

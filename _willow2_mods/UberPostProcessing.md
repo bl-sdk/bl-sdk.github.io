@@ -18,6 +18,7 @@ urls:
   Issues: https://github.com/juso40/bl2sdk_Mods/issues
   Source Code: https://github.com/juso40/bl2sdk_Mods/
 version: '1.2'
+mod_categories: ui
 ---
 Exposes many post processing effects to the user. It allows you to easily change the color of any scene.
 Furthermore you can change settings related to Depth of Field, Bloom, Motion Blur and many other effects.

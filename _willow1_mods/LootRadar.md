@@ -1,5 +1,6 @@
 ---
 pyproject_url: https://raw.githubusercontent.com/EerieGoesD/borderlands-1-goty-mods/refs/heads/main/LootRadar/pyproject.toml
+mod_categories: loot
 ---
 
 Marks loot and unopened chests on your compass, with the distance to each one.

@@ -1,5 +1,6 @@
 ---
 pyproject_url: https://raw.githubusercontent.com/EerieGoesD/borderlands-1-goty-mods/refs/heads/main/VehicleJump/pyproject.toml
+mod_categories: vehicle
 ---
 
 Lets you jump while driving.

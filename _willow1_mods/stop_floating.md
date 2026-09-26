@@ -1,3 +1,4 @@
 ---
 pyproject_url: https://raw.githubusercontent.com/Ry0511/my_bl1_sdk_mods/refs/heads/master/src/py/stop_floating/pyproject.toml
+mod_categories: movement
 ---

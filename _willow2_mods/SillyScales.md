@@ -15,6 +15,7 @@ title: Silly Scales
 urls:
   Source Code: https://github.com/RedxYeti/Yeti-BL2-SDK-Mods
 version: '1.0'
+mod_categories: enemy rando
 ---
 Randomizes Players, Enemies and Vehicles scale when they spawn.
  Players are randomized after dying as well. 

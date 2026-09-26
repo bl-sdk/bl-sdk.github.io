@@ -17,6 +17,7 @@ title: Python Part Notifier
 urls:
   Source Code: https://github.com/apple1417/willow2-sdk-mods/
 version: '1.9'
+mod_categories: ui utility
 ---
 Shows the parts making up all of your items and weapons on their cards. Yes this even includes Grenades, COMs, and Relics/Oz Kits. Has full mod support, so if a mod adds extra parts to a weapon or changes a part's mesh it will properly update. Unique part support is limited, they may just show the same as the base part with the same mesh.
 

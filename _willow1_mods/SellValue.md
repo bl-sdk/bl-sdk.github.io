@@ -1,5 +1,6 @@
 ---
 pyproject_url: https://raw.githubusercontent.com/EerieGoesD/borderlands-1-goty-mods/refs/heads/main/SellValue/pyproject.toml
+mod_categories: ui
 ---
 
 Shows what an item sells for on its card.

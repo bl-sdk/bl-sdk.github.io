@@ -13,6 +13,7 @@ urls:
   Issues: https://github.com/mopioid/Borderlands-Reign-Of-Giants/issues
   Source Code: https://github.com/mopioid/Borderlands-Reign-Of-Giants/tree/main
 version: '1.2'
+mod_categories: gameplay enemy
 ---
 It's a concept we all know and love: Rare enemy variants, like Loot Midgets and Tubbies. Reign Of Giants extends this to every enemy in the game.
 

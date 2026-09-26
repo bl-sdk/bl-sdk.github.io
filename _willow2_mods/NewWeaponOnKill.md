@@ -15,6 +15,7 @@ title: New Weapon On Kill
 urls:
   Source Code: https://github.com/RedxYeti/Yeti-BL2-SDK-Mods
 version: '1.0'
+mod_categories: rando
 ---
 After getting in game you'll want to enable the mod and choose your options. Also you can set up a hotkey to change weapons. 
 

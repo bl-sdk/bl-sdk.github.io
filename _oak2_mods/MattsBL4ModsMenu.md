@@ -1,8 +1,7 @@
 ---
 pyproject_url: https://raw.githubusercontent.com/mattmab/MattsBL4ModsMenu/refs/heads/main/pyproject.toml
+mod_categories: ui
 ---
-
-# Matt's BL4 Mods Menu (Unofficial)
 
 **Matt's BL4 Mods Menu is an unofficial community-made mod.** It is not part of, endorsed by, or maintained by the PythonSDK/bl-sdk project, the official SDK mod database maintainers, Gearbox, or 2K. It is a third-party Borderlands 4 convenience UI made by Mattmab for players who already use PythonSDK mods.
 

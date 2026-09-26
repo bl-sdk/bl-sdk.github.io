@@ -1,5 +1,6 @@
 ---
 pyproject_url: https://raw.githubusercontent.com/Squ1ggs/Bl4SDKmods/refs/heads/main/resources_and_cooldowns/pyproject.toml
+mod_categories: ui
 ---
 
 Resource and recovery sliders: repair kit charges/cooldown, overshield, Second Wind, lifesteal, ammo regen.

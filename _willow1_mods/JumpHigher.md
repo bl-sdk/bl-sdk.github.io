@@ -1,5 +1,6 @@
 ---
 pyproject_url: https://raw.githubusercontent.com/EerieGoesD/borderlands-1-goty-mods/refs/heads/main/JumpHigher/pyproject.toml
+mod_categories: movement
 ---
 
 Lets you jump higher than the game allows.

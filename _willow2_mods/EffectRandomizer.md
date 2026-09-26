@@ -2,6 +2,7 @@
 pyproject_url: https://raw.githubusercontent.com/ncalvin1/Milo-BL2-SDK-Mods/refs/heads/main/EffectRandomizer/EffectRandomizer/pyproject.toml
 redirect_from:
 - /mods/EffectRandomizer/
+mod_categories: rando
 ---
 Changes subtle aspects of most game items, so they no
 longer behave completely as expected.

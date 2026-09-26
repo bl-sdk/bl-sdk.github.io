@@ -1,5 +1,6 @@
 ---
 pyproject_url: https://raw.githubusercontent.com/EerieGoesD/borderlands-1-goty-mods/refs/heads/main/CrashDebug/pyproject.toml
+mod_categories: dev utility
 ---
 
 Keeps a running note of what every mod is doing, so after a crash you can see which one

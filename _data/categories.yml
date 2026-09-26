@@ -4,11 +4,223 @@
 # Each value can then have a custom 'title', to fix spaces and/or capitalization, and a custom
 # 'description', which is used in the category list.
 
-lorem:
-  title: Lorem Ipsum
+# General Categories
+
+cheat:
+  title: Cheat
   description: >
-   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-   labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-   nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-   velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-   proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    Mods that help you cheat.
+
+dev:
+  title: Developer Tools
+  description: >
+    Tools which are primarily useful for other mod developers.
+
+dialog:
+  title: Dialog / Audio
+  description: >
+    Dialog skippers, or other dialog tweaks, and more generally mods letting you mess with what
+    audio plays.
+
+enemy:
+  title: Enemy
+  description: >
+    Changes to how enemies spawn and/or behave.
+
+gameplay:
+  title: Gameplay
+  description: >
+    Mods which significantly change how you play the game. Generally more focused than an overhaul,
+    and are generally able to be switched on and off mid playthough.
+
+gear:
+  title: Gear
+  description: >
+    New gear, or tweaks to existing gear.
+
+movement:
+  title: Movement
+  description: >
+    New forms of movement, or mods that otherwise affect how you existing forms of movement behave.
+    Does not include teleporting.
+
+lib:
+  title: Library
+  description: >
+    Libraries provide functionality for other mods. You generally only need to install these if
+    another mod lists them as a requirement, they don't do much by themseleves.
+
+loot:
+  title: Loot
+  description: >
+    Mods which affect the looting experience. New sources of loot, changes to what loot drops, and
+    other tools which help dealing with loot.
+
+overhaul:
+  title: Overhaul
+  description: >
+    Major overhauls, which affect most of the game one way or another. Generally recommended to be
+    played on a new save, and generally not compatible with other overhauls.
+
+rando:
+  title: Randomizer
+  description: >
+    Randomizes things, moreso than usual.
+
+save-edit:
+  title: Save Editing
+  description: >
+    In game tools which perform similar functions to a save editor - perhaps allowing you to edit
+    parts, mess with your skills, or spawn in brand new items.
+
+ui:
+  title: UI / Visuals
+  description: >
+    Tweaks to the user interface, brand new UI elements, or mods that otherwise.mess with game's
+    visuals.
+
+utility:
+  title: Utility
+  description: >
+    Useful small utlities. Generally, though not always, client side.
+
+vehicle:
+  title: Vehicle
+  description: >
+    Mods messing with vehicles, new ways of spawning them or tweaks to how they behave.
+
+# Categories only in Oak DB
+amara:
+  title: Amara
+  description: Mods specifically affecting Amara.
+
+fl4k:
+  title: FL4K
+  description: Mods specifically affecting FL4K.
+
+moze:
+  title: Moze
+  description: Mods specifically affecting Moze.
+
+zane:
+  title: Zane
+  description: Mods specifically affecting Zane.
+
+blightcaller:
+  title: Blightcaller
+  description: Mods specifically affecting Blightcallers.
+
+brrzerker:
+  title: Brr-Zerker
+  description: Mods specifically affecting Brr-Zerkers.
+
+clawbringer:
+  title: Clawbringer
+  description: Mods specifically affecting Clawbringers.
+
+graveborn:
+  title: Graveborn
+  description: Mods specifically affecting Graveborns.
+
+spellshot:
+  title: Spellshot
+  description: Mods specifically affecting Spellshots.
+
+spore-warden:
+  title: Spore Warden
+  description: Mods specifically affecting Spore Wardens.
+
+stabbomancer:
+  title: Stabbomancer
+  description: Mods specifically affecting Stabbomancers.
+
+# Categories only in Oak2 DB
+amon:
+  title: Amon
+  description: Mods specifically affecting Amon.
+
+c4sh:
+  title: C4SH
+  description: Mods specifically affecting C4SH.
+
+harlowe:
+  title: Harlowe
+  description: Mods specifically affecting Harlowe.
+
+loveless:
+  title: Loveless
+  description: Mods specifically affecting Loveless.
+
+rafa:
+  title: Rafa
+  description: Mods specifically affecting Rafa.
+
+vex:
+  title: Vex
+  description: Mods specifically affecting Vex.
+
+# Categories only in Willow1 DB
+brick:
+  title: Brick
+  description: Mods specifically affecting Brick.
+
+lilith:
+  title: Lilith
+  description: Mods specifically affecting Lilith.
+
+mordecai:
+  title: Mordecai
+  description: Mods specifically affecting Mordecai.
+
+roland:
+  title: Roland
+  description: Mods specifically affecting Roland.
+
+# Categories only in Willow2 DB
+axton:
+  title: Axton
+  description: Mods specifically affecting Axton.
+
+gaige:
+  title: Gaige
+  description: Mods specifically affecting Gaige.
+
+krieg:
+  title: Krieg
+  description: Mods specifically affecting Krieg.
+
+maya:
+  title: Maya
+  description: Mods specifically affecting Maya.
+
+salvador:
+  title: Salvador
+  description: Mods specifically affecting Salvador.
+
+zer0:
+  title: Zer0
+  description: Mods specifically affecting Zer0.
+
+athena:
+  title: Athena
+  description: Mods specifically affecting Athena.
+
+aurelia:
+  title: Aurelia
+  description: Mods specifically affecting Aurelia.
+
+claptrap:
+  title: Claptrap
+  description: Mods specifically affecting Claptrap.
+
+jack:
+  title: Jack
+  description: Mods specifically affecting Jack.
+
+nisha:
+  title: Nisha
+  description: Mods specifically affecting Nisha.
+
+wilhelm:
+  title: Nisha
+  description: Mods specifically affecting Wilhelm.

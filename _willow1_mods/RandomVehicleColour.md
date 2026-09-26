@@ -1,5 +1,6 @@
 ---
 pyproject_url: https://raw.githubusercontent.com/EerieGoesD/borderlands-1-goty-mods/refs/heads/main/RandomVehicleColour/pyproject.toml
+mod_categories: rando vehicle
 ---
 
 Gives every vehicle you spawn a random paint job.

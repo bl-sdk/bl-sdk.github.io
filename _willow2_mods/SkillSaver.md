@@ -17,6 +17,7 @@ title: Skill Saver
 urls:
   Source Code: https://github.com/FromDarkHell/bl-sdk-mods
 version: '1.0'
+mod_categories: utility
 ---
 This mod gives you the ability to save your current skill build, then restore right back to it later.
 When in game, hit your `Manage Skill Layouts` bind (Default: F3)

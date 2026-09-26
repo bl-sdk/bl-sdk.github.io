@@ -1,5 +1,6 @@
 ---
 pyproject_url: https://raw.githubusercontent.com/Squ1ggs/Bl4SDKmods/refs/heads/main/bl4_player_movement/pyproject.toml
+mod_categories: movement
 ---
 
 On-foot movement tuning: sprint/walk speed, jump, gravity, glide, friction, and vault costs.

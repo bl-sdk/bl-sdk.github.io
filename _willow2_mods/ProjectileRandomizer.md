@@ -1,11 +1,13 @@
 ---
 pyproject_url: https://raw.githubusercontent.com/RedxYeti/bl2-willow2-sdkmods/refs/heads/main/ProjectileRandomizer/pyproject.toml
+mod_categories: rando
 ---
+This mod will randomize projectiles all over your game.
+
 ****WARNING: THIS MOD CAN HAVE LOTS OF FLASHING LIGHTS AND OFTEN IS VERY LOUD****
                 ****RECOMMNDED YOU HAVE YOUR VOLUME LOW****
 
-
-This mod will randomize projectiles all over your game. There's 2 types of things it randomizes. One is Firing Modes and the other is Projectiles.
+There's 2 types of things it randomizes. One is Firing Modes and the other is Projectiles.
 
 Firing modes are mostly used on weapons. Guns and vehicles use them.
 

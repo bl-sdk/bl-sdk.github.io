@@ -1,5 +1,6 @@
 ---
 pyproject_url: https://raw.githubusercontent.com/Squ1ggs/Bl4SDKmods/refs/heads/main/mob_spawner/pyproject.toml
+mod_categories: cheat enemy
 ---
 
 Mob and IO spawn catalog with aggro modes, mix spawns, and favorites for Borderlands 4.

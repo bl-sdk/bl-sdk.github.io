@@ -14,6 +14,7 @@ urls:
   Issues: https://github.com/Decept1x/Borderlands-Cleaning-Up-Pandora/issues
   Source Code: https://github.com/Decept1x/Borderlands-Cleaning-Up-Pandora/tree/main
 version: '1.1'
+mod_categories: loot
 ---
 Adds the ability to sell items that are on the floor or in your backpack by pressing the 'Secondary Use' key.
 

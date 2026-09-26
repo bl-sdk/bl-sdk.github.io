@@ -14,5 +14,6 @@ urls:
   Issues: https://gitlab.com/Ceiyne/borderlands-mods/-/issues
   Source Code: https://gitlab.com/Ceiyne/borderlands-mods/-/tree/main/Keyboard%20Change
 version: 0.1.1
+mod_categories: utility
 ---
 BL2 and TPS do not handle certain keys (such as Esc and Tab) properly when some keyboard layouts are in use (for example, the Japanese IME).  This mod changes the keyboard to English (United States) at start-up so you don't have to remember to change it yourself every time.

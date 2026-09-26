@@ -1,5 +1,6 @@
 ---
 pyproject_url: https://raw.githubusercontent.com/Breadn11/BL1E_Mods/refs/heads/main/DiscordRichPresence/source/pyproject.toml
+mod_categories: utility
 ---
 
 Shows your current class, level, and map on your Discord profile while playing.

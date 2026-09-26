@@ -1,5 +1,6 @@
 ---
 pyproject_url: https://raw.githubusercontent.com/RedxYeti/bl2-willow2-sdkmods/refs/heads/main/WeaponProf/pyproject.toml
+mod_categories: gameplay
 ---
 This mod ports weapon proficiencies from Borderlands 1 without any changes. 
 

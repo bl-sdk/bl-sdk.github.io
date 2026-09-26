@@ -16,5 +16,6 @@ title: Loot Collision
 urls:
   Source Code: https://github.com/RedxYeti/Yeti-BL2-SDK-Mods
 version: '1.0'
+mod_categories: loot
 ---
 Disables loot collision with dead bodies and other loot. No more loot going to outer space (or further).

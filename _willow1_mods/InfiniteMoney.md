@@ -1,5 +1,6 @@
 ---
 pyproject_url: https://raw.githubusercontent.com/EerieGoesD/borderlands-1-goty-mods/refs/heads/main/InfiniteMoney/pyproject.toml
+mod_categories: cheat
 ---
 
 Sets how much money you carry.

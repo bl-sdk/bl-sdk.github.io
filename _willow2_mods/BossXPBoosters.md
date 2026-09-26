@@ -1,5 +1,6 @@
 ---
 pyproject_url: https://raw.githubusercontent.com/PyrexBLJ/BL2-SDK-Mods/refs/heads/main/BossXPBooster/pyproject.toml
+mod_categories: enemy
 ---
 Adds a new xp booster item some mostly mini bosses can drop, with configurable drop rates and xp multiplier.
 

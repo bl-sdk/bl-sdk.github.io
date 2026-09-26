@@ -1,5 +1,6 @@
 ---
 pyproject_url: https://raw.githubusercontent.com/RedxYeti/yeti-bl4-sdk/refs/heads/main/GrappleAnywhere/pyproject.toml
+mod_categories: movement
 ---
 Lets you grapple anywhere, comes with 2 types of grapple and an option to disable vanilla grapple points.
 

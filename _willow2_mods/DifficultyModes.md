@@ -17,5 +17,6 @@ title: Difficulty Modes
 urls:
   Source Code: https://github.com/ZetaDaemon/bl-sdk-mods/
 version: '1.0'
+mod_categories: gameplay
 ---
 Replaces BAR with a difficulty mode that can be changed in the options.

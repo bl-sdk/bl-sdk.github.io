@@ -1,5 +1,6 @@
 ---
 pyproject_url:  https://raw.githubusercontent.com/RedxYeti/BL3-SDK-Mods/refs/heads/main/ColdDeadHands/pyproject.toml
+mod_categories: gameplay loot
 ---
 
 Similar to the Borderlands 2 version of this mod, enemies will now use legit weapons and will drop the weapon they're using.

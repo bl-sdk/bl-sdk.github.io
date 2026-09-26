@@ -16,6 +16,7 @@ title: Borderlands Rewind
 urls:
   Source Code: https://github.com/Justin99x/bl-sdk-mods/tree/main/BorderlandsRewind
 version: '1.0'
+mod_categories: gameplay
 ---
 Provides options to enable: 
 - Weapon merging

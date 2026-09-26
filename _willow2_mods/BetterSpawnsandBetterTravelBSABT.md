@@ -17,6 +17,7 @@ urls:
   Issues: https://github.com/juso40/bl2sdk_Mods/issues
   Source Code: https://github.com/juso40/bl2sdk_Mods/
 version: 1.2.0
+mod_categories: gameplay utility
 ---
 Ports back some qol features of BL3:
 - open the fast travel from anywhere

@@ -18,5 +18,6 @@ urls:
   Issues: https://github.com/juso40/bl2sdk_Mods/issues
   Source Code: https://github.com/juso40/bl2sdk_Mods/
 version: '1.1'
+mod_categories: loot
 ---
 Shows a message with the item you just picked up.

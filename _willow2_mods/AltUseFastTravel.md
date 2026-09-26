@@ -1,5 +1,6 @@
 ---
 pyproject_url: https://raw.githubusercontent.com/RedxYeti/bl2-willow2-sdkmods/refs/heads/main/AltUseFastTravel/pyproject.toml
+mod_categories: utility
 ---
 
  This mod enables alt use for fast travel stations that will travel you to either your current objective, the station you last traveled from, or a specific station.

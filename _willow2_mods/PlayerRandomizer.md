@@ -2,8 +2,8 @@
 pyproject_url: https://raw.githubusercontent.com/ncalvin1/Milo-BL2-SDK-Mods/refs/heads/main/PlayerRandomizer/PlayerRandomizer/pyproject.toml
 redirect_from:
 - /mods/PlayerRandomizer/
+mod_categories: rando
 ---
-# Character Randomizer
 An overengineered redesign and expansion of Abahbob's elegant Cross-Class Skill
 Randomizer, this mod scrambles a player character's skills and class mods.
 

@@ -1,5 +1,6 @@
 ---
 pyproject_url: https://raw.githubusercontent.com/RedxYeti/Yeti-BL1-SDK-Mods/refs/heads/main/DLCFastTravelSDK/pyproject.toml
+mod_categories: utility
 ---
 Adds fast travels to all of the story DLCs. Works coop!
 

@@ -1,6 +1,7 @@
 ---
 pyproject_url: https://raw.githubusercontent.com/TitanNav/bl4-2player-splitscreen/main/mod/bl4ss/pyproject.toml
 title: 2-Player Split-Screen Unlocked
+mod_categories: utility
 ---
 
 ![2-Player Split-Screen Unlocked]({{ "/assets/mods/oak2/bl4ss/banner.png" | relative_url }})

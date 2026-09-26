@@ -17,6 +17,7 @@ title: UserFeedback
 urls:
   Source Code: https://github.com/apple1417/willow2-sdk-mods/
 version: '1.6'
+mod_categories: lib
 ---
 Adds several functions/classes to let you show various types of feedback to and get input from your users.
 

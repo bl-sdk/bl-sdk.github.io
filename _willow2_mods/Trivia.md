@@ -18,5 +18,6 @@ urls:
   Issues: https://github.com/PyrexBLJ/blsdk-mods/issues
   Source Code: https://github.com/PyrexBLJ/blsdk-mods
 version: 1.0.2
+mod_categories: gameplay
 ---
 Trivia minigame for BL2, With easy and hard difficulties. Requires MapLoader and UserFeedback

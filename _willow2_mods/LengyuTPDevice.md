@@ -17,6 +17,7 @@ title: Lengyu TP Device
 urls:
   Source Code: https://github.com/aa3615058/Lengyu-BL2-sdk-Mods
 version: '1.3'
+mod_categories: cheat
 ---
 Allows you to teleport yourself anywhere you marked. 
 1.Press NUMPad0 to mark the location. 

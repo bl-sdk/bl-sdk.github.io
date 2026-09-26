@@ -1,5 +1,6 @@
 ---
 pyproject_url: https://raw.githubusercontent.com/Siggless/bl-sdk-mods/refs/heads/main/LessDOTScreams/pyproject.toml
+mod_categories: dialog
 ---
 Options to disable DOT (status effect) screams, or only to play when shield is broken.
 

@@ -16,6 +16,7 @@ urls:
   Issues: https://github.com/juso40/bl2sdk_Mods/issues
   Source Code: https://github.com/juso40/bl2sdk_Mods/
 version: '1.0'
+mod_categories: dev lib ui
 ---
 Allows the exec and set command for MaterialInstanceConstant Objects.
 This allows the editing of Skins in TPS.

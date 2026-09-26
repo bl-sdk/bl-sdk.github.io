@@ -1,5 +1,6 @@
 ---
 pyproject_url: https://raw.githubusercontent.com/EerieGoesD/borderlands-1-goty-mods/refs/heads/main/RunAndWalk/pyproject.toml
+mod_categories: movement
 ---
 
 Makes running and walking work off a hold key and a toggle key.

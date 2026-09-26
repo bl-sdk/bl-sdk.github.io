@@ -17,6 +17,7 @@ urls:
   Issues: https://github.com/juso40/bl2sdk_Mods/issues
   Source Code: https://github.com/juso40/bl2sdk_Mods/
 version: '1.1'
+mod_categories: ui
 ---
 Disables your Crosshair.
 If you have the ``coroutines`` and ``canvaslib`` libraries installed, you may enable a static square crosshair in the center of the screen.

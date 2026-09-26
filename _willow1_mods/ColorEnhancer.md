@@ -1,5 +1,6 @@
 ---
 pyproject_url: https://raw.githubusercontent.com/BioHazardAlBatros/BioHazard-BL1-SDK-Mods/refs/heads/master/Color%20Enhancer/Source/sdk_mods/ColorEnhancer/pyproject.toml
+mod_categories: ui
 ---
 
 Removes desaturation effect from the game.

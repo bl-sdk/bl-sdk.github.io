@@ -1,5 +1,6 @@
 ---
 pyproject_url: https://raw.githubusercontent.com/EerieGoesD/borderlands-1-goty-mods/refs/heads/main/VehicleLoot/pyproject.toml
+mod_categories: vehicle
 ---
 
 Picks loot up while you are driving.

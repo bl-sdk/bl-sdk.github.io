@@ -1,5 +1,6 @@
 ---
 pyproject_url: https://raw.githubusercontent.com/EerieGoesD/borderlands-1-goty-mods/refs/heads/main/ResetChests/pyproject.toml
+mod_categories: loot
 ---
 
 Shuts every red and white chest you have opened in this area.

@@ -17,6 +17,7 @@ urls:
   Issues: https://github.com/juso40/bl2sdk_Mods/issues
   Source Code: https://github.com/juso40/bl2sdk_Mods/
 version: '1.0'
+mod_categories: enemy gameplay
 ---
 Adds many randomly generated bounties to the game.
 Each bounty will reward you with XP, Money and a random item upon completion.

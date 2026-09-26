@@ -15,5 +15,6 @@ title: Time of Day Changer
 urls:
   Source Code: https://github.com/slserpent/bl-sdk-mods/tree/main/DayNight
 version: 1.0.1
+mod_categories: ui
 ---
 Allows changing the current in-game time of day either to day, night, or forward in a fixed increment using hotkeys.

@@ -1,5 +1,6 @@
 ---
 pyproject_url: https://raw.githubusercontent.com/juso40/bl1sdk-mods/refs/heads/main/extended_options/pyproject.toml
+mod_categories: utility
 ---
 Adds various new options and keybinds.
 

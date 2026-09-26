@@ -17,6 +17,7 @@ title: Item Level Uncapper
 urls:
   Source Code: https://github.com/apple1417/willow2-sdk-mods/
 version: '1.3'
+mod_categories: loot
 ---
 This mod is useless by itself, it should be used alongside the hexedit to increase the player level cap.
 

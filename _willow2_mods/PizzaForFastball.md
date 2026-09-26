@@ -17,5 +17,6 @@ urls:
   Issues: https://github.com/juso40/bl2sdk_Mods/issues
   Source Code: https://github.com/juso40/bl2sdk_Mods/
 version: '1.0'
+mod_categories: ui
 ---
 Replaces the Fastballs mesh with the one of a Pizza.

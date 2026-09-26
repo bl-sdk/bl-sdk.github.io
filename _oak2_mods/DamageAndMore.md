@@ -1,5 +1,6 @@
 ---
 pyproject_url: https://raw.githubusercontent.com/Squ1ggs/Bl4SDKmods/refs/heads/main/damage_and_more/pyproject.toml
+mod_categories: gameplay
 ---
 
 Combat tuning for Borderlands 4: damage dealt/taken, elemental output, repair kits, shields, Second Wind, melee, and related sliders.

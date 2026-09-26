@@ -1,5 +1,6 @@
 ---
 pyproject_url: https://raw.githubusercontent.com/Justin99x/willow2-sdk-mods/refs/heads/main/save_file_organizer/pyproject.toml
+mod_categories: utility
 ---
 
 Users can name their BL2/TPS files anything they want that ends in the .sav extension. In addition,

@@ -1,5 +1,6 @@
 ---
 pyproject_url: https://raw.githubusercontent.com/EerieGoesD/borderlands-1-goty-mods/refs/heads/main/InfiniteAmmo/pyproject.toml
+mod_categories: cheat
 ---
 
 Firing never uses up your ammo.

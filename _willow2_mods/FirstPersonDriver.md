@@ -16,6 +16,7 @@ urls:
   Issues: https://github.com/juso40/bl2sdk_Mods/issues
   Source Code: https://github.com/juso40/bl2sdk_Mods/
 version: '2.0'
+mod_categories: vehicle
 ---
 Drive the Vehicles from first person perspective.
 Adds a keybind to toggle between 1st and 3rd person.

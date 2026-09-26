@@ -2,8 +2,8 @@
 pyproject_url: https://raw.githubusercontent.com/apple1417/willow2-sdk-mods/master/command_extensions/pyproject.toml
 redirect_from:
 - /mods/CommandExtensions/
+mod_categories: dev lib
 ---
-# Command Extensions
 Adds a few new console commands, and provides functionality for other mods to do the same. All these
 commands are fully compatible with blcmm files, you can just put them in your mod and have users
 merge it with other files and enable/disable various categories and it all just keeps working fine.

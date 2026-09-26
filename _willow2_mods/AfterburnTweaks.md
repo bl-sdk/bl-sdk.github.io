@@ -15,6 +15,7 @@ title: Afterburn Tweaks
 urls:
   Source Code: https://github.com/RedxYeti/Yeti-BL2-SDK-Mods
 version: '1.0'
+mod_categories: vehicle
 ---
 Using this mod you can change: 
 Minimum start speed for afterburner 

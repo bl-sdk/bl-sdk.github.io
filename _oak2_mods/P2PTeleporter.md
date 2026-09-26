@@ -1,5 +1,6 @@
 ---
 pyproject_url: https://raw.githubusercontent.com/Squ1ggs/Bl4SDKmods/refs/heads/main/p2p_teleporter/pyproject.toml
+mod_categories: cheat
 ---
 
 Co-op party roster and player teleports for Borderlands 4.

@@ -1,5 +1,6 @@
 ---
 pyproject_url: https://raw.githubusercontent.com/RedxYeti/yeti-bl4-sdk/refs/heads/main/ModifierEater/pyproject.toml
+mod_categories: enemy
 ---
 Pick your own enemy modifiers. 
 

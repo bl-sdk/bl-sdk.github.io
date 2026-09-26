@@ -16,6 +16,7 @@ title: Lengyu Copy Device
 urls:
   Source Code: https://github.com/aa3615058/Lengyu-BL2-sdk-Mods
 version: '1.0'
+mod_categories: loot gameplay
 ---
 Allows you to spend money to copy the selected equipment.
 Press the keybind 'UseSecondary' on the Equipment page or Backpack page to throw and copy the selected equipment. It costs the selling price of the equipment.

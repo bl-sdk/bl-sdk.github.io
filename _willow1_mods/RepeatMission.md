@@ -1,5 +1,6 @@
 ---
 pyproject_url: https://raw.githubusercontent.com/EerieGoesD/borderlands-1-goty-mods/refs/heads/main/RepeatMission/pyproject.toml
+mod_categories: gameplay
 ---
 
 Lets you repeat any mission you have already completed, or set it ready to turn in.

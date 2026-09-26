@@ -15,6 +15,7 @@ title: Ultimate Scavenger Mod
 urls:
   Source Code: https://github.com/RedxYeti/Yeti-BL2-SDK-Mods
 version: '1.5'
+mod_categories: gameplay
 ---
 This mod automaically equips items when they spawn as long as your character can equip them, showing a message when it's equipped. 
 Excluded examples are items higher level than your character or classmods not for your character. 

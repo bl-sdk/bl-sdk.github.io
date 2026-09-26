@@ -18,5 +18,6 @@ title: Farm Counter
 urls:
   Source Code: https://github.com/ZetaDaemon/bl-sdk-mods/
 version: '1.1'
+mod_categories: loot utility
 ---
 Adds a customiseable farm counter to keep track of your runs.

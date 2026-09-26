@@ -13,5 +13,6 @@ supported_games:
 title: Backpack Manager
 urls: {}
 version: '1.1'
+mod_categories: loot gameplay
 ---
 Customize the size of your character's backpack on the fly!

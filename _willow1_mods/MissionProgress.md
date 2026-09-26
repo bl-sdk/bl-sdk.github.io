@@ -1,5 +1,6 @@
 ---
 pyproject_url: https://raw.githubusercontent.com/EerieGoesD/borderlands-1-goty-mods/refs/heads/main/MissionProgress/pyproject.toml
+mod_categories: utility
 ---
 
 Shows your mission progress and total game completion, following the Borderlands

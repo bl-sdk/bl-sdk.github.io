@@ -1,5 +1,6 @@
 ---
 pyproject_url: https://raw.githubusercontent.com/EerieGoesD/borderlands-1-goty-mods/refs/heads/main/NoBackpackLimit/pyproject.toml
+mod_categories: loot
 ---
 
 Sets the backpack capacity limit.

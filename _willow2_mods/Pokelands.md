@@ -16,8 +16,13 @@ urls:
   Issues: https://github.com/juso40/bl2sdk_Mods/issues
   Source Code: https://github.com/juso40/bl2sdk_Mods/
 version: '1.0'
+mod_categories: gear
 ---
-# Setup
+Allows you to spawn any enemy that you kill using your very own Pokeball.
+
+{% youtube https://www.youtube.com/watch?v=r1H_Z9LRDUU&amp;t %}
+
+## Setup
 
 1. Download: [Pawn Grenade](https://www.nexusmods.com/borderlands2/mods/234)  
 2. Add the ``Pokelands.blcm`` to the ``PawnGrenade.blcm`` using BLCMM and let it overwrite anything it wants.  
@@ -28,4 +33,3 @@ version: '1.0'
 5. Thats it.
 
 
-{% youtube https://www.youtube.com/watch?v=r1H_Z9LRDUU&amp;t %}

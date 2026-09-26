@@ -1,5 +1,6 @@
 ---
 pyproject_url: https://raw.githubusercontent.com/EerieGoesD/borderlands-1-goty-mods/refs/heads/main/HideFullPickups/pyproject.toml
+mod_categories: loot ui
 ---
 
 Stops ammo you cannot carry from lighting up on the ground.

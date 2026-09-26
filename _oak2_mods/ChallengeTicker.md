@@ -1,5 +1,6 @@
 ---
 pyproject_url: https://raw.githubusercontent.com/Squ1ggs/Bl4SDKmods/refs/heads/main/challenge_ticker/pyproject.toml
+mod_categories: cheat
 ---
 
 UVHM 1-7 and bulk challenge completion for Borderlands 4.

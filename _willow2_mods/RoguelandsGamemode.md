@@ -1,5 +1,6 @@
 ---
 pyproject_url: https://raw.githubusercontent.com/PyrexBLJ/BL2-SDK-Mods/refs/heads/main/RoguelandsGamemode/pyproject.toml
+mod_categories: overhaul
 ---
 Custom roguelike gamemode for bl2, requiring the maploader mod.
 

@@ -1,5 +1,6 @@
 ---
 pyproject_url: https://raw.githubusercontent.com/EerieGoesD/borderlands-1-goty-mods/refs/heads/main/AutoLoot/pyproject.toml
+mod_categories: loot
 ---
 
 Picks loot up as you walk over it, no key press needed.

@@ -12,9 +12,12 @@ title: Visual Triggers
 urls:
   Source Code: https://github.com/GameChanger97/Bl2-Mods
 version: '1.0'
+mod_categories: dev
 ---
 Provides keybinds for outlining waypoints and triggers with skeleton debug cylinders.
+
 ![Visual Triggers](https://github.com/GameChanger97/Bl2-Mods/blob/main/Borderlands%202%20(32-bit,%20DX9)%209_15_2021%204_17_58%20PM%20(2).png?raw=true) 
+
 By default '8' will toggle waypoints and '9' will toggle triggers. 
 Once enabled, you can change the keybinds for showing triggers and waypoints in the keybinds menu. 
  

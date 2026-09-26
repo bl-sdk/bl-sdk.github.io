@@ -1,5 +1,6 @@
 ---
 pyproject_url: https://raw.githubusercontent.com/EerieGoesD/borderlands-1-goty-mods/refs/heads/main/ResetEnemies/pyproject.toml
+mod_categories: enemy
 ---
 
 Brings the enemies in the area back without reloading your save.

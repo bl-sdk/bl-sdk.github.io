@@ -19,5 +19,6 @@ urls:
   Issues: https://github.com/juso40/bl2sdk_Mods/issues
   Source Code: https://github.com/juso40/bl2sdk_Mods/
 version: '1.1'
+mod_categories: lib
 ---
 A library for easy writing to the screen with different fonts and alignments.

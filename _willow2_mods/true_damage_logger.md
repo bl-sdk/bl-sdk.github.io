@@ -3,4 +3,5 @@ pyproject_url: https://raw.githubusercontent.com/apple1417/willow2-sdk-mods/mast
 redirect_from:
 - /mods/TrueDamageLogger/
 - /willow2-mod-db/mods/truedamagelogger/
+mod_categories: dev utility
 ---

@@ -1,5 +1,6 @@
 ---
 pyproject_url: https://raw.githubusercontent.com/BioHazardAlBatros/BioHazard-BL1-SDK-Mods/refs/heads/master/Custom%20Rarities/Source/sdk_mods/CustomRarities/pyproject.toml
+mod_categories: loot ui
 ---
 
 Introduces an option to modify rarities (add new ones, change their colors, time to live and etc.) in-game.

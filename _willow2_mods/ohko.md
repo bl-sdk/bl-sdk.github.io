@@ -3,4 +3,5 @@ pyproject_url: https://raw.githubusercontent.com/apple1417/willow2-sdk-mods/mast
 redirect_from:
 - /mods/OneHitKO/
 - /willow2-mod-db/mods/onehitko/
+mod_categories: gameplay
 ---

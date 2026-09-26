@@ -17,9 +17,9 @@ urls:
   Issues: https://github.com/juso40/bl2sdk_Mods/issues
   Source Code: https://github.com/juso40/bl2sdk_Mods/
 version: 1.2.0
+mod_categories: dev lib
 ---
-# Constructor V.1.2.0
-[PythonSDK](https://github.com/bl-sdk/PythonSDK) Mod/Ressource that allows the easy creation and use of new non replacing Objects.
+[PythonSDK](https://github.com/bl-sdk/PythonSDK) Mod/Resource that allows the easy creation and use of new non replacing Objects.
 
 ## Installation
 1. Download and install [PythonSDK](https://github.com/bl-sdk/PythonSDK)  

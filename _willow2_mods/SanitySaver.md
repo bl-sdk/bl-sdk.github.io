@@ -17,6 +17,7 @@ title: Sanity Saver
 urls:
   Source Code: https://github.com/apple1417/willow2-sdk-mods/
 version: '2.2'
+mod_categories: lib loot
 ---
 Disables sanity check, and also saves items which don't serialize, which would have parts deleted even with it off.
 

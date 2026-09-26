@@ -17,5 +17,6 @@ title: Console Font Size
 urls:
   Source Code: https://github.com/ZetaDaemon/bl-sdk-mods/
 version: '1.0'
+mod_categories: dev
 ---
 Gives a slider in the mod settings to adjust the console font size.

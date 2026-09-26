@@ -13,5 +13,6 @@ supported_games:
 title: Map Reloader
 urls: {}
 version: '1.1'
+mod_categories: gameplay utility
 ---
 Quickly farm items and save quit at a button press!

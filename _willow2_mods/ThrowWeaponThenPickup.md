@@ -16,6 +16,7 @@ title: Throw Weapon Then Pickup
 urls:
   Source Code: https://github.com/aa3615058/Lengyu-BL2-sdk-Mods
 version: '1.0'
+mod_categories: utility
 ---
 Adds a keybind option to the game that allows you to throw your current weapon and then pick up it immediately. 
 The benefit of doing this is: 

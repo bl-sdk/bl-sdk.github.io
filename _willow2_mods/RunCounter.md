@@ -17,6 +17,7 @@ urls:
   Issues: https://github.com/PyrexBLJ/blsdk-mods/issues
   Source Code: https://github.com/PyrexBLJ/blsdk-mods
 version: 1.0.8
+mod_categories: loot ui
 ---
 A Mod that tracks save quits and item drops of at least legendary rarity. Chat command control with .rc prefix allows you to create new tracked farms, load previously made farms and control what data is shown where at any given time. If you are looking for something to make obs overlays check out ZetaDæmon's Farm Counter 
 

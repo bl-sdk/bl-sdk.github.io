@@ -1,5 +1,6 @@
 ---
 pyproject_url: https://raw.githubusercontent.com/Squ1ggs/Bl4SDKmods/refs/heads/main/world_travel/pyproject.toml
+mod_categories: ui
 ---
 
 Location bookmarks (quick slots + named saves) and a travel station/map browser for Borderlands 4.

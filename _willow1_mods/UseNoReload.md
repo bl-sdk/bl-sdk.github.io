@@ -1,5 +1,6 @@
 ---
 pyproject_url: https://raw.githubusercontent.com/EerieGoesD/borderlands-1-goty-mods/refs/heads/main/UseNoReload/pyproject.toml
+mod_categories: utility
 ---
 
 Stops the "E" (Use) key from reloading your gun.

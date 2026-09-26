@@ -16,7 +16,10 @@ urls:
   Issues: https://www.nexusmods.com/borderlands2/mods/257?tab=bugs
   Source Code: https://www.nexusmods.com/borderlands2/mods/257?tab=files
 version: 1.1.8
+mod_categories: overhaul
 ---
+Experience Borderlands 2 in a new light, with rebalanced damage types, new rarities, completely NEW gear, accentuated Vault Hunters, and more! A reimagining of Borderlands 2's key features, as envisioned by me \[ Exotek: HEYOO \].
+
 Features:
 - Kill it with fire! But only if it's fleshy. Rebalanced elemental damage that punishes you for using conflicting types, and applies new debuffs depending on the type you use - regardless of weakness.
 - Be what you set out to be. Vault Hunters are now better at what they're good at, and worse at what they're not. Zer0 for example is more agile, but less resilient, while Salvador has the opposite effects.

@@ -1,5 +1,6 @@
 ---
 pyproject_url: https://raw.githubusercontent.com/tunnelweb/coop-save-quit/refs/heads/main/CoopSaveQuit/pyproject.toml
+mod_categories: utility
 ---
 
 press f5 to reload the map. chests, vendors and enemies reset the same as a save quit would, but

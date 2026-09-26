@@ -1,5 +1,6 @@
 ---
 pyproject_url: https://raw.githubusercontent.com/apple1417/willow2-sdk-mods/master/vendor_edit/pyproject.toml
+mod_categories: save-edit
 ---
 
 Lets you edit all your gear while in game. Get started by looking at it in your inventory.

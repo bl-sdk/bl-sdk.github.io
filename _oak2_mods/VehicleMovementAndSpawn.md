@@ -1,5 +1,6 @@
 ---
 pyproject_url: https://raw.githubusercontent.com/Squ1ggs/Bl4SDKmods/refs/heads/main/vehicle_movement/pyproject.toml
+mod_categories: vehicle
 ---
 
 Vehicle handling for Borderlands 4: speed, boost, jump, durability, vault costs, plus a catalog to spawn personal vehicles.

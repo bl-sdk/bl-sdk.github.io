@@ -16,7 +16,10 @@ urls:
   Issues: https://www.nexusmods.com/borderlandspresequel/mods/44?tab=bugs
   Source Code: https://www.nexusmods.com/borderlandspresequel/mods/44?tab=files
 version: 1.0.3
+mod_categories: overhaul
 ---
+Experience Borderlands The Pre-Sequel in a new light, with rebalanced damage types, new rarity, completely NEW gear, A LOT of new mini bosses, accentuated Vault Hunters, and more!
+
 Features:
 - Kill it with fire! But only if it's fleshy. Rebalanced elemental damage that punishes you for using conflicting types, and applies new debuffs depending on the type you use - regardless of weakness.
 - Be what you set out to be. Vault Hunters are now better at what they're good at, and worse at what they're not. Zer0 for example is more agile, but less resilient, while Salvador has the opposite effects.

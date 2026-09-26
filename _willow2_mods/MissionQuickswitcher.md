@@ -17,5 +17,6 @@ urls:
   Issues: https://github.com/juso40/bl2sdk_Mods/issues
   Source Code: https://github.com/juso40/bl2sdk_Mods/
 version: '1.0'
+mod_categories: utility
 ---
 Adds two keybinds to the game that allow you to quickly switch between missions without having to open the mission menu.
