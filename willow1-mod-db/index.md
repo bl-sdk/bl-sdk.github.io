@@ -14,8 +14,8 @@ nav_order: 1
 
 1. Install the latest Microsoft Visual C++ Redistributable.
 
-   Classic: https://aka.ms/vs/17/release/vc_redist.x86.exe    
-   Enhanced: https://aka.ms/vs/17/release/vc_redist.x64.exe    
+   Classic: [vc_redist.x86.exe](https://aka.ms/vs/17/release/vc_redist.x86.exe)    
+   Enhanced: [vc_redist.x64.exe](https://aka.ms/vs/17/release/vc_redist.x64.exe)    
 
    ![VC Redist Installer](/assets/images/willow1-installation/vcredist.png)
 
