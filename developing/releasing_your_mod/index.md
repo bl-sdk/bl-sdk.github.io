@@ -256,7 +256,7 @@ Misc URLs<sup>6</sup>       | `urls`                | `project.urls`
 Download Link               | `download`            | `tool.sdkmod.download`
 Description                 | The page contents     | `project.description`<sup>7</sup>
 Native Modules Warning      | `uses_native_modules` | `tool.sdkmod.uses_native_modules`
-Categories<sup>8            | `mod_categories`      | Not supported
+Categories<sup>8</sup>      | `mod_categories`      | Not supported
 Redirects<sup>9</sup>       | `redirect_from`       | Not supported
 
 <sup>1</sup> Multiple authors are concatenated in the order given.    
