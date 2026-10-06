@@ -76,7 +76,7 @@ save-edit:
 ui:
   title: UI / Visuals
   description: >
-    Tweaks to the user interface, brand new UI elements, or mods that otherwise.mess with game's
+    Tweaks to the user interface, brand new UI elements, or mods that otherwise mess with game's
     visuals.
 
 utility:
