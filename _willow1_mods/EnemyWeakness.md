@@ -1,6 +1,6 @@
 ---
 pyproject_url: https://raw.githubusercontent.com/EerieGoesD/borderlands-1-goty-mods/refs/heads/main/EnemyWeakness/pyproject.toml
-mod_categories: utility
+mod_categories: ui utility
 ---
 
 Shows the best weapon type and element for the enemy under your crosshair.
