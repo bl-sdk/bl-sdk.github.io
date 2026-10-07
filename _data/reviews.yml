@@ -17,8 +17,11 @@ willow1_mods:
   AutopickupBL1E: 2026-09-26
   ContinuousFire: 2026-09-26
   CrashDebug: ~
+  ClearLoot: 2026-10-07
+  EnemyWeakness: 2026-10-07
 
 willow2_mods:
   bl2speed: 2026-09-26
+  texloader: 2026-10-07
   WidescreenFogFix: ~
 
