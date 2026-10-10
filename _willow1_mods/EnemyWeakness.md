@@ -1,5 +1,5 @@
 ---
-pyproject_url: https://raw.githubusercontent.com/EerieGoesD/borderlands-1-goty-mods/refs/heads/main/EnemyWeakness/pyproject.toml
+pyproject_url: https://raw.githubusercontent.com/EerieGoesD/borderlands-1-goty-mods/refs/heads/main/EnemyWeaknessIndicator/pyproject.toml
 mod_categories: ui utility
 ---
 
