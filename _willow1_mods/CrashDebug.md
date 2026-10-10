@@ -14,3 +14,5 @@ ran last.
 - **Follow Other Mods**: whether the note names which mod is running. Turn it off to only
   record area changes.
 - **Lines Kept**: how many lines the note holds before it starts over.
+- **Show What Each Mod Costs**: puts a list on screen of how long each mod takes every frame. Needs Follow Other Mods on.
+- **Position**: where that list sits on screen.

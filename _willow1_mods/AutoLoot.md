@@ -7,6 +7,7 @@ Picks loot up as you walk over it, no key press needed.
 
 ## Settings
 
+- **Loot Gear You Cannot Use**: Weapons and items your character cannot use yet, such as class mods for another character.
 - **Loot Weapons**: whether weapons and items are picked up.
 - **Loot Money**: whether money is picked up.
 - **Loot Ammo**: whether ammo is picked up.
