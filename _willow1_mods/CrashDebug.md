@@ -1,5 +1,5 @@
 ---
-pyproject_url: https://raw.githubusercontent.com/EerieGoesD/borderlands-1-goty-mods/refs/heads/main/CrashDebug/pyproject.toml
+pyproject_url: https://raw.githubusercontent.com/EerieGoesD/borderlands-1-goty-mods/refs/heads/main/ModDebugging/pyproject.toml
 mod_categories: dev utility
 ---
 
