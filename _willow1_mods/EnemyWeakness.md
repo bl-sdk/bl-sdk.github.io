@@ -7,6 +7,7 @@ Shows the best weapon type, element and weak spot for the enemy under your cross
 
 One line below the enemy's name, such as Shotgun / Fire / head. The gun type and element each turn green when the gun in your hand matches, red when it does not.
 
+- The gun type comes from the game's own data: whether the enemy flies, how big it is, whether it fights up close or with a gun, and how much its weak spot pays.
 - The element is None when no element beats a plain gun.
 - The weak spot is the body part the game marks as critical, with how many times the damage a hit there does, such as pods x300.
 - An enemy carrying a pack you can shoot off its back, such as a Badass Chemical Trooper, says so.
