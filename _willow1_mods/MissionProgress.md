@@ -25,3 +25,4 @@ mission flow.
   still locked behind another one is left out until that one is done. Missions on the same
   level keep the mission flow order.
 - **Text Size**: How big the panel's text is, from 50% to 150% of the normal size.
+- **Show Mission Location**: A smaller white line under each mission with where it is and who gives it.
