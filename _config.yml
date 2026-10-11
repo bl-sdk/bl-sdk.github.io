@@ -106,3 +106,4 @@ unreviewed_mods:
   hide_by_default: false
   fade: false
   checkbox: false
+  no_search: false

@@ -46,17 +46,13 @@ We change it to insert the game selector at the top of the relevant collection.
                 </button>
                 {%- endif -%}
                 <div class="nav-category">{{ collection_value.name }}</div>
-                {%- if site.game_selector.collection and collection_key == site.game_selector.collection -%}
-                  {%- include_cached nav_game_selector.html -%}
-                {%- endif -%}
+                {%- include_cached nav_game_selector.html -%}
                 {% include components/nav/pages.html pages=collection all=include.all %}
               </li>
             </ul>
           {% else %}
             <div class="nav-category">{{ collection_value.name }}</div>
-            {%- if site.game_selector.collection and collection_key == site.game_selector.collection -%}
-              {%- include_cached nav_game_selector.html -%}
-            {%- endif -%}
+            {%- include_cached nav_game_selector.html -%}
             {% include components/nav/pages.html pages=collection all=include.all %}
           {% endif %}
         {% else %}

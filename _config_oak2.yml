@@ -40,3 +40,9 @@ exclude:
   - oak-mod-db
   - willow1-mod-db
   - willow2-mod-db
+
+unreviewed_mods:
+  hide_by_default: true
+  fade: true
+  checkbox: true
+  no_search: true

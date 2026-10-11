@@ -20,6 +20,12 @@ permalink: /assets/js/search-data.json
     {%- if page.title and page.search_exclude != true -%}
       {%- assign page_content = page.content -%}
       {%- if page.collection contains "_mods" -%}
+        {%- if site.data.reviews[page.collection] and site.unreviewed_mods.no_search -%}
+          {%- unless site.data.reviews[page.collection][page.slug] -%}
+            {%- continue -%}
+          {%- endunless -%}
+        {%- endif -%}
+
         {%- assign page_content = page_content | strip -%}
         {%- if page_content == "" -%}
           {%- assign page_content = page.pyproject.project.description | markdownify -%}
