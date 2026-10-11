@@ -15,6 +15,7 @@ mission flow.
 
 ## Settings
 
+- **Position**: Where the panel sits: top right, top left or top centre.
 - **Enable DLC Missions**: 216 missions instead of 126.
 - **Flag Skipped Missions**: The red list on or off.
 - **Achievement Warnings**: A red note at the end of a mission's row when a known bug in that mission can cost you an achievement.
