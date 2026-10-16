@@ -19,6 +19,7 @@ urls:
   Issues: https://github.com/LaryIsland/bl-sdk-mods/issues
   Source Code: https://github.com/LaryIsland/bl-sdk-mods/tree/main/SpareParts
 version: '1.6'
+mod_categories: gameplay save-edit
 ---
 Allows you to salvage parts from items and attach them to other items.
 Just select an item from your backpack, hover over another item and press the 'salvage' hotkey. Default is [C]

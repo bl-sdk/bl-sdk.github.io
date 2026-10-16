@@ -15,6 +15,7 @@ title: Simple Chinese Fix
 urls:
   Source Code: https://github.com/aa3615058/Lengyu-BL2-sdk-Mods
 version: '1.0'
+mod_categories: ui
 ---
 Fix several inexplicably invalid Simple Chinese Language localization words.
 Lyuda = 鲁达

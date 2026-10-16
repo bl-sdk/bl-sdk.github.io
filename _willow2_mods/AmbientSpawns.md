@@ -17,6 +17,7 @@ urls:
   Issues: https://github.com/Siggless/bl-sdk-mods/issues
   Source Code: https://github.com/Siggless/bl-sdk-mods/tree/main/AmbientSpawns
 version: 1.1.0
+mod_categories: enemy gameplay
 ---
 Periodically spawns random groups of enemies.
 The idea is to make the game more unpredictable.

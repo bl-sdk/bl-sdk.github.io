@@ -17,5 +17,6 @@ title: BankManager
 urls:
   Source Code: https://github.com/PureEvil139/Bl2-Mods
 version: '1.0'
+mod_categories: utility
 ---
 Customize the size of your character’s backpack on the fly!

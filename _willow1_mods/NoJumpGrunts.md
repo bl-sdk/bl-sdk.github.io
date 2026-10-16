@@ -1,0 +1,10 @@
+---
+pyproject_url: https://raw.githubusercontent.com/Breadn11/BL1E_Mods/refs/heads/main/NoJumpGrunts/source/pyproject.toml
+mod_categories: dialog
+---
+
+Mutes the grunt sounds that your character makes when jumping and landing.
+
+Contains options to mute jumping or landing grunts individually rather than both.
+
+Supports all languages.

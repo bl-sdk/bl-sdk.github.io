@@ -17,6 +17,7 @@ title: Storage Manager
 urls:
   Source Code: https://github.com/ncalvin1/Milo-BL2-SDK-Mods
 version: '1.0'
+mod_categories: loot
 ---
 Adds options to set your bank and backpack size, as well
 as remove checks on backpack size.

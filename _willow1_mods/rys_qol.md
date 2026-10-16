@@ -1,5 +1,6 @@
 ---
 pyproject_url: https://raw.githubusercontent.com/Ry0511/my_bl1_sdk_mods/refs/heads/master/src/py/rys_qol/pyproject.toml
+mod_categories: cheat utility
 ---
 
 Adds a variety of quality-of-life improvements to the game and some optional cheat features.

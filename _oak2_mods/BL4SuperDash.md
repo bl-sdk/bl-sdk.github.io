@@ -1,0 +1,12 @@
+---
+pyproject_url: https://raw.githubusercontent.com/Last1SiN/BL4-SuperDash/refs/heads/main/pyproject.toml
+mod_categories: movement
+---
+
+Multi-directional Super Dash for Borderlands 4 with one rebindable key or controller button. Follows your current movement direction, including keyboard diagonals and continuous analog stick angles on gamepad, with forward fallback from a standstill. Includes an optional separate Dash bind for grounded dashing in the current movement direction, including forward and diagonal dashing while running or sprinting. Preserves sprint after Super Dash landing and after Dash when started from sprint. Uses native Dash/Jump calls without external macro software.
+
+## Credits
+
+- **Development:** Sol / GPT-5.6 Sol
+- **Design, testing & QA:** Last1SiN
+- **BL4 PythonSDK / Oak2 Mod Manager:** created by [apple1417](https://github.com/apple1417), with contributions from the [BL-SDK](https://github.com/bl-sdk) project and contributors.

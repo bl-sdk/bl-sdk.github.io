@@ -17,6 +17,7 @@ urls:
   Issues: https://github.com/DAmNRelentless/bl2-deathtrapshield/issues
   Source Code: https://github.com/DAmNRelentless/bl2-deathtrapshield
 version: 1.1.1
+mod_categories: gaige
 ---
 Gives Deathtrap its own configurable shield from the inventory of Gaige.
 

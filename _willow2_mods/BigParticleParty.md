@@ -17,6 +17,7 @@ urls:
   Issues: https://github.com/juso40/bl2sdk_Mods/issues
   Source Code: https://github.com/juso40/bl2sdk_Mods/
 version: '1.0'
+mod_categories: ui
 ---
 Have you ever felt like the games particles is lacking a bit of oomph?
 Big PP allows you to increase the amount of various particles.

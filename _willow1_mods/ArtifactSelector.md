@@ -1,3 +1,4 @@
 ---
 pyproject_url: https://raw.githubusercontent.com/maddogfist/Maddogfist-BL1-SDK-Mods/refs/heads/main/ArtifactSelector/pyproject.toml
+mod_categories: utility
 ---

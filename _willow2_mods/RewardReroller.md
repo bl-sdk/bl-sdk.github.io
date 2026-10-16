@@ -19,6 +19,7 @@ title: Reward Reroller
 urls:
   Source Code: https://github.com/ZetaDaemon/bl-sdk-mods/
 version: '1.1'
+mod_categories: loot
 ---
 Lets you reroll mission rewards at the cost of eridium. In multiplayer all players will be promted with the mission reward screen to reroll their own items.
 

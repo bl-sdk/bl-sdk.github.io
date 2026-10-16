@@ -19,6 +19,7 @@ title: Better Damage Feedback
 urls:
   Source Code: https://github.com/ZetaDaemon/bl-sdk-mods/
 version: '1.0'
+mod_categories: ui
 ---
 Allows for the customisation of damage particles changing the colour, colour on crit, toggle CRITICAL effect, increased size on crit or turn damage numbers off entirely. Additionally allows for hit sounds and critical hit sounds.
 

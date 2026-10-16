@@ -1,6 +1,7 @@
 ---
 pyproject_url: https://raw.githubusercontent.com/apple1417/willow2-sdk-mods/master/spawn_multiplier/pyproject.toml
 author: yeti and apple1417
+mod_categories: gameplay enemy
 ---
 Adds an option to let you easily multiply the amount of spawns you're getting, updating live.
 

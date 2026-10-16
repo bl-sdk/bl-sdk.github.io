@@ -15,6 +15,7 @@ title: Revive Time Modifier
 urls:
   Source Code: https://github.com/RedxYeti/Yeti-BL2-SDK-Mods
 version: '1.0'
+mod_categories: gameplay
 ---
 Using the scroller in the options, choose your time in seconds for how long it takes to revive teammates.
 The options range from 0 to 10 seconds in 0.5 second increments.

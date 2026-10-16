@@ -14,5 +14,6 @@ urls:
   Issues: https://gitlab.com/Ceiyne/borderlands-mods/-/issues
   Source Code: https://gitlab.com/Ceiyne/borderlands-mods/-/tree/main/Sprint%20Set-and-Forget
 version: 1.0.0
+mod_categories: movement
 ---
 This mod remembers your movement mode (sprinting or walking): if you were sprinting the last time you moved, you will automatically start sprinting the next time you move. Pressing the Sprint key will switch back and forth between sprinting and walking at any time. There is a setting in Mod Options that controls whether you start out sprinting or walking when the game begins.

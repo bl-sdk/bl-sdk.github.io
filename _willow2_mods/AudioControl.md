@@ -16,6 +16,7 @@ urls:
   Issues: https://github.com/PyrexBLJ/blsdk-mods/issues
   Source Code: https://github.com/PyrexBLJ/blsdk-mods
 version: 1.0.1
+mod_categories: dialog
 ---
 Stop certain sounds from playing, more sounds can be added in the future 
 

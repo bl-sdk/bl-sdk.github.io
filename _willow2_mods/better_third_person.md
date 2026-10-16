@@ -1,3 +1,4 @@
 ---
 pyproject_url: https://raw.githubusercontent.com/ZetaDaemon/willow2-sdk-mods/refs/heads/main/better_third_person/pyproject.toml
+mod_categories: ui
 ---

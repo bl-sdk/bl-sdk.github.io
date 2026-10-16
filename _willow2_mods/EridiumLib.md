@@ -17,6 +17,7 @@ urls:
   Issues: https://github.com/DAmNRelentless/bl2-eridiumlib/issues
   Source Code: https://github.com/DAmNRelentless/bl2-eridiumlib
 version: 0.4.2
+mod_categories: lib
 ---
 Holds utility functions for some mods.
 

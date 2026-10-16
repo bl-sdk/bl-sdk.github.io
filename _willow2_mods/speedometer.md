@@ -21,6 +21,7 @@ urls:
   Issues: https://github.com/juso40/bl2sdk_Mods/issues
   Source Code: https://github.com/juso40/bl2sdk_Mods/
 version: '1.1'
+mod_categories: movement ui
 ---
 Gotta go fast!
 Shows your current speed in km/h or mph.

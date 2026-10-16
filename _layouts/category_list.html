@@ -1,0 +1,14 @@
+---
+layout: default
+---
+<h1>{{- page.title -}}</h1>
+{%- assign sorted_categories = page.all_categories | sort_natural -%}
+{%- for raw_category in sorted_categories -%}
+    <h2><a href="{{- site.category_index.url | append: raw_category | relative-url -}}">
+        {%- assign category = site.data.categories[raw_category] -%}
+        {{- category.title | default: raw_category -}}
+    </a></h2>
+    <p>
+        {{- category.description | markdownify -}}
+    </p>
+{%- endfor -%}

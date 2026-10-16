@@ -1,7 +1,7 @@
 ---
 pyproject_url: https://raw.githubusercontent.com/juso40/blimgui/refs/heads/master/blimgui/pyproject.toml
+mod_categories: lib
 ---
-# blimgui
 A library that allows modders to easily create and manage a separate window to develope GUI mods.  
 
 ## Installation

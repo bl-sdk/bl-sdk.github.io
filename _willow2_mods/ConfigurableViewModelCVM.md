@@ -17,6 +17,7 @@ urls:
   Issues: https://github.com/juso40/bl2sdk_Mods/issues
   Source Code: https://github.com/juso40/bl2sdk_Mods/
 version: '2.1'
+mod_categories: ui
 ---
 A mod that allows you to change the viewmodel of any WeaponType.
 To change your viewmodel go ingame,

@@ -7,6 +7,18 @@ layout: default
 </span>
 {%- endunless -%}
 <h1 id="title">{{ page.title }}</h1>
+{%- if site.category_index.enabled -%}
+    {%- assign categories = page.mod_categories | split: " " | sort_natural -%}
+    {%- for raw_category in categories -%}
+        <a href="{{- site.category_index.url | append: raw_category | relative-url -}}">
+            {%- assign category = site.data.categories[raw_category] -%}
+            {{- category.title | default: raw_category -}}
+        </a>
+        {%- unless forloop.last -%}
+            {{- ", " -}}
+        {%- endunless -%}
+    {%- endfor -%}
+{%- endif -%}
 <dl class="mod-desc">
     <dt>By</dt>
     {%- assign pyproject_authors = page.pyproject.project.authors
@@ -22,32 +34,8 @@ layout: default
     <dd><code id="version" class="language-plaintext highlighter-rouge">{{ version | escape }}</code></dd>
 
     <dt>Supports</dt>
-    {%- case page.collection -%}
-    {%- when "willow1_mods" -%}
-        {%- assign ALLOWED_GAMES = "BL1,BL1E" | split: "," -%}
-    {%- when "willow2_mods" -%}
-        {%- assign ALLOWED_GAMES = "BL2,TPS,AODK" | split: "," -%}
-    {%- when "oak_mods" -%}
-        {%- assign ALLOWED_GAMES = "BL3,WL" | split: "," -%}
-    {%- when "oak2_mods" -%}
-        {%- assign ALLOWED_GAMES = "BL4" | split: "," -%}
-    {%- else -%}
-        {%- assign ALLOWED_GAMES = "" | split: "," | push: page.collection -%}
-    {%- endcase -%}
-
-    {%- assign unsanitized_games = page.supported_games
-                                    | default: page.pyproject.tool.sdkmod.supported_games
-                                    | default: ALLOWED_GAMES -%}
-    {%- assign games = "" | split: "" -%}
-    {%- for game in unsanitized_games -%}
-        {% assign upper_game = game | upcase %}
-        {%- if ALLOWED_GAMES contains upper_game -%}
-            {%- unless games contains upper_game -%}
-                {%- assign games = games | push: upper_game -%}
-            {%- endunless -%}
-        {%- endif -%}
-    {%- endfor -%}
-    <dd id="games">{{ games
+    {%- include filter_games.html page=page -%}
+    <dd id="games">{{ filtered_games
                         | array_to_sentence_string
                         | replace: "AODK", "AoDK"
                         | default: "Unknown" }}</dd>
@@ -98,6 +86,14 @@ layout: default
             </a>
         {%- endif -%}
     </dd>
+
+    {%- assign review = site.data.reviews[page.collection][page.slug] -%}
+    {%- if review -%}
+    <dt>Last Review</dt>
+    <dd>
+        {{- review | date: "%Y-%m-%d" -}}
+    </dd>
+    {%- endif -%}
 
     {%- assign dependencies = page.dependencies | default: page.pyproject.project.dependencies -%}
     {%- if dependencies.size > 0 -%}
@@ -163,12 +159,20 @@ layout: default
 {%- endif -%}
 </div>
 
+{%- if page.uses_native_modules or page.pyproject.tool.sdkmod.uses_native_modules -%}
+<p id="native_modules" class="note">
+    This mod uses native modules, which makes it a little more fragile. You may need to update it
+    after an SDK update.
+</p>
+{%- endif -%}
 {%- if page.legacy -%}
 <p class="warning">
     This is a legacy mod, which will be run in compatibility mode. It may behave slightly odd, and
     it may stop working at some point in the future.
 </p>
-{%- else -%}
+{%- endif -%}
+
+{%- unless page.legacy -%}
 <script type="module">
     import { load_from_pyproject } from "{{ "/assets/js/pyproject-loader.js" | relative_url }}";
     load_from_pyproject("{{ page.pyproject_url }}", {
@@ -202,6 +206,9 @@ layout: default
 {%- unless using_description_override -%}
         description: true,
 {%- endunless -%}
+{%- unless page.uses_native_modules -%}
+        uses_native_modules: true,
+{%- endunless -%}
     });
 </script>
-{%- endif -%}
+{%- endunless -%}

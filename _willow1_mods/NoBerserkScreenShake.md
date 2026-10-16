@@ -1,3 +1,4 @@
 ---
 pyproject_url: https://raw.githubusercontent.com/RedxYeti/Yeti-BL1-SDK-Mods/refs/heads/main/NoBerserkScreenShake/pyproject.toml
+mod_categories: brick ui
 ---

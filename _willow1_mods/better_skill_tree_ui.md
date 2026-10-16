@@ -1,5 +1,6 @@
 ---
 pyproject_url: https://raw.githubusercontent.com/Ry0511/my_bl1_sdk_mods/refs/heads/master/src/py/skill_tree_tweaks/pyproject.toml
+mod_categories: ui
 ---
 
 Improves the skill tree UI by highlighting skills affected by class mods and clearly displaying

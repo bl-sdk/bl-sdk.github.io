@@ -10,6 +10,10 @@ collections:
     permalink: /oak2-mod-db/mods/:name/
     output: true
 
+category_index:
+  enabled: true
+  url: /oak2-mod-db/categories/
+
 just_the_docs:
   collections:
     oak2_mods:
@@ -36,3 +40,9 @@ exclude:
   - oak-mod-db
   - willow1-mod-db
   - willow2-mod-db
+
+unreviewed_mods:
+  hide_by_default: true
+  fade: true
+  checkbox: true
+  no_search: true

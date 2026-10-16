@@ -3,4 +3,5 @@ pyproject_url: https://raw.githubusercontent.com/apple1417/willow2-sdk-mods/mast
 redirect_from:
 - /mods/MarioMode/
 - /willow2-mod-db/mods/mariomode/
+mod_categories: gameplay
 ---

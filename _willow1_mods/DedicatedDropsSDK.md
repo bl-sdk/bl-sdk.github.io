@@ -1,5 +1,6 @@
 ---
 pyproject_url: https://raw.githubusercontent.com/RedxYeti/Yeti-BL1-SDK-Mods/refs/heads/main/DedicatedDropsSDK/pyproject.toml
+mod_categories: loot
 ---
 This mod adds dedicated legendaries and pearlescents, as well as loyalty Class Mods and other unique item drops to bosses across the vanilla game and DLCs.
 

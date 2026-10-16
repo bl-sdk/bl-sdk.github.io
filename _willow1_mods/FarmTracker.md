@@ -1,5 +1,6 @@
 ---
 pyproject_url: https://raw.githubusercontent.com/PyrexBLJ/BL1-SDK-Mods/refs/heads/main/FarmTracker/pyproject.toml
+mod_categories: utility
 ---
 Item, kill and interactive object use tracker for use in mainly OBS. Nothing is shown on screen in game.
 

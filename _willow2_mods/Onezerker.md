@@ -15,6 +15,7 @@ title: Onezerker
 urls:
   Source Code: https://github.com/apple1417/willow2-sdk-mods/
 version: '1.8'
+mod_categories: salvador
 ---
 Ever felt gunzerking with two different guns was too complicated? No? Well too bad. Makes you gunzerk with two copies of the same gun instead of two different ones.
 

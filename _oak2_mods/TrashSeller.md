@@ -1,5 +1,6 @@
 ---
 pyproject_url: https://raw.githubusercontent.com/FreepDryer/freepdryer-bl4-sdk-mods/refs/heads/main/trashSeller/pyproject.toml
+mod_categories: loot utility
 ---
 #### Sell that Trash!
 In the mod youll have the option to

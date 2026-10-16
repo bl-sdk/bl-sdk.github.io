@@ -3,6 +3,7 @@ pyproject_url: https://raw.githubusercontent.com/apple1417/willow2-sdk-mods/mast
 redirect_from:
 - /mods/ApplesBorderlandsCheats/
 - /willow2-mod-db/mods/applesborderlandscheats/
+mod_categories: cheat
 ---
 
 Adds keybinds performing various cheaty things.

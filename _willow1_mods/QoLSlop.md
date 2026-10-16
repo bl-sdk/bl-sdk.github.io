@@ -1,5 +1,6 @@
 ---
 pyproject_url: https://raw.githubusercontent.com/RedxYeti/Yeti-BL1-SDK-Mods/refs/heads/main/QoLSlop/pyproject.toml
+mod_categories: loot utility
 ---
 A range of QoL settings. All of them are optional and are off by default. 
 

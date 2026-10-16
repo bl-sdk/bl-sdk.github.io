@@ -12,5 +12,6 @@ supported_games:
 title: ComboCounter
 urls: {}
 version: '1.0'
+mod_categories: gameplay
 ---
 Kills are now counted towards a killstreak on screen, awarding more XP the higher your kill count goes ! XP multiplication currently capped after 15 kills to prevent ridiculous XP gains

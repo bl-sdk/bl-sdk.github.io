@@ -1,5 +1,6 @@
 ---
 pyproject_url: https://raw.githubusercontent.com/Justin99x/willow2-sdk-mods/refs/heads/main/speedrun_practice/pyproject.toml
+mod_categories: gameplay overhaul
 ---
 
 Borderlands 2 mod with various utilities to help in practicing speedruns. All speedruns are currently supported on

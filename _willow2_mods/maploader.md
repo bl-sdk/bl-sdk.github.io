@@ -1,7 +1,9 @@
 ---
 pyproject_url: https://raw.githubusercontent.com/juso40/bl2sdk-mods/refs/heads/main/maploader/pyproject.toml
+mod_categories: lib
 ---
 Allows the use of custom map files created by the MapEditor.
+
  To add/remove a custom map simply place/remove the .json map file into/from the  directory.
 Each map file has its own Options/Mods entry that you can either enable or disable.
 Because loading in and creating hundreds of new objects takes time, this mod will increase your Loading screen times.

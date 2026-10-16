@@ -86,6 +86,13 @@ Python is perfectly happy to import files from inside a zip, that's how `.sdkmod
 occasionally there are reasons you need the user to properly extract your folder. The only known
 things that require this are:
 - You're shipping a native Python module (a `.pyd`) which you need to import.
+
+  {: .warning .fs-3 }
+  Note that by default, Python *does not keep* ABI stability between minor versions. If you ship
+  native modules, you will have to update them whenever the SDK updates Python versions. You can
+  avoid this if you're able to ship modules compiled using the limited ABI. \\
+  See also: [https://docs.python.org/3/c-api/stable.html](https://docs.python.org/3/c-api/stable.html)
+
 - (Willow 2) You're shipping a text mod alongside your mod, which you want to `exec <path>` in
   console.
 
@@ -236,19 +243,21 @@ other info above it. You can overwrite these by setting front matter variables. 
 familiar with Jekyll, the "front matter" is a block of YAML configuration inbetween triple dashes at
 the top - you used it previously to set the `pyproject_url`.
 
-Field                       | Front matter      | `pyproject.toml`
-----------------------------|-------------------|-------------
-Title                       | `title`           | `tool.sdkmod.name`, `project.name`
-Author(s)                   | `author`          | `project.authors[n].name`<sup>1</sup>
-Latest Version              | `version`         | `tool.sdkmod.version`, `project.version`
-Supported Games<sup>2</sup> | `supported_games` | `tool.sdkmod.supported_games`
-Coop Support                | `coop_support`    | `tool.sdkmod.coop_support`
-License<sup>4</sup>         | `license`         | `tool.sdkmod.license`, `project.license.text`<sup>5</sup>
-Requirements                | `dependencies`    | `project.dependencies`
-Misc URLs<sup>6</sup>       | `urls`            | `project.urls`
-Download Link               | `download`        | `tool.sdkmod.download`
-Description                 | The page contents | `project.description`<sup>7</sup>
-Redirects<sup>8</sup>       | `redirect_from`   | Not supported
+Field                       | Front matter          | `pyproject.toml`
+----------------------------|-----------------------|-------------
+Title                       | `title`               | `tool.sdkmod.name`, `project.name`
+Author(s)                   | `author`              | `project.authors[n].name`<sup>1</sup>
+Latest Version              | `version`             | `tool.sdkmod.version`, `project.version`
+Supported Games<sup>2</sup> | `supported_games`     | `tool.sdkmod.supported_games`
+Coop Support                | `coop_support`        | `tool.sdkmod.coop_support`
+License<sup>4</sup>         | `license`             | `tool.sdkmod.license`, `project.license.text`<sup>5</sup>
+Requirements                | `dependencies`        | `project.dependencies`
+Misc URLs<sup>6</sup>       | `urls`                | `project.urls`
+Download Link               | `download`            | `tool.sdkmod.download`
+Description                 | The page contents     | `project.description`<sup>7</sup>
+Native Modules Warning      | `uses_native_modules` | `tool.sdkmod.uses_native_modules`
+Categories<sup>8</sup>      | `mod_categories`      | Not supported
+Redirects<sup>9</sup>       | `redirect_from`       | Not supported
 
 <sup>1</sup> Multiple authors are concatenated in the order given.    
 <sup>2</sup> An array of strings. If not given, defaults to all games for the category you're in.    
@@ -259,7 +268,9 @@ Redirects<sup>8</sup>       | `redirect_from`   | Not supported
 <sup>5</sup> Used as the name, with no url.    
 <sup>6</sup> A dict where keys are the names and values are the urls.    
 <sup>7</sup> HTML tags are stripped, rather than just being escaped.    
-<sup>8</sup> An array of relative urls to redirect to this page - i.e. if you moved your mod, it's
+<sup>8</sup> A string with space-separated categories. See the 
+             [full list here](https://github.com/bl-sdk/bl-sdk.github.io/tree/master/_data/categories.yml).    
+<sup>9</sup> An array of relative urls to redirect to this page - i.e. if you moved your mod, it's
              old urls. See also
              [`jekyll-redirect-from`](https://github.com/jekyll/jekyll-redirect-from#usage).    
 {: .fs-2 }
@@ -351,7 +362,8 @@ This question comes up from time to time.
 Most importantly, Nexus Mods is not run by the community, we have absolutely no influence into what
 they do. We have a number of additional greviences:
 - They require an account to download.
-- They've historically hosted stolen mods, and refused to take them down despite our reports.
+- They've do not respond to reports actively enough. We have had multiple cases of stolen mods
+  staying up for weeks or even months despite our reports. Latest Incident: Sept 2026.
 - They explicitly let you to submit mods "on behalf of" someone else, and give you rewards for doing
   so, which leads to the above stolen mods.
 - They claim Vortex support, but it's completely broken in every single game. But when this is

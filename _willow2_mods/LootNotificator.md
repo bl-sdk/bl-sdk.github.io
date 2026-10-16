@@ -16,6 +16,7 @@ urls:
   Issues: https://github.com/juso40/bl2sdk_Mods/issues
   Source Code: https://github.com/juso40/bl2sdk_Mods/
 version: '2.1'
+mod_categories: loot dialog
 ---
 Plays special Particles and sounds depending on the loot rarity.
 Supports Reborn and Exodus (non SDK version).

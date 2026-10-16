@@ -1,5 +1,6 @@
 ---
 pyproject_url: https://raw.githubusercontent.com/FreepDryer/freepdryer-bl4-sdk-mods/refs/heads/main/better_vehicle_jump/pyproject.toml
+mod_categories: vehicle
 ---
 #### Customize your vehicle jump height, gravity and force
 

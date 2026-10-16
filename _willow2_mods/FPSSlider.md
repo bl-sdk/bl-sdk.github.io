@@ -17,5 +17,6 @@ urls:
   Issues: https://github.com/juso40/bl2sdk_Mods/issues
   Source Code: https://github.com/juso40/bl2sdk_Mods/
 version: '1.0'
+mod_categories: utility
 ---
 Adds custom sliders to the game that allows you to easily change the games target min and max FPS values.

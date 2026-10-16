@@ -13,6 +13,7 @@ urls:
   Issues: https://github.com/plu5/p-borderlands/issues
   Source Code: https://github.com/plu5/p-borderlands/blob/main/ExpAdjuster
 version: 1.0.0 2021-04-05
+mod_categories: gameplay
 ---
 Adds sliders to adjust XP amounts:
 - baserates for each mode,

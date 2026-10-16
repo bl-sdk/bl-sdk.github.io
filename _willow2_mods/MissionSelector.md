@@ -18,6 +18,7 @@ urls:
   Issues: https://github.com/DAmNRelentless/bl2-missionselector/issues
   Source Code: https://github.com/DAmNRelentless/bl2-missionselector
 version: 1.3.2
+mod_categories: utility
 ---
 Lets you switch through missions with configurable hotkeys like in Borderlands 3.
 

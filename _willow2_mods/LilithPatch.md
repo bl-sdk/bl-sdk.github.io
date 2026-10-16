@@ -16,6 +16,7 @@ title: Lilith Patch
 urls:
   Source Code: https://github.com/ncalvin1/Milo-BL2-SDK-Mods
 version: '0.1'
+mod_categories: gameplay
 ---
 Modifies the action skill of 55tumbl's excellent Lilith
 mod to work more like BL1 Lilith's Phasewalk.  You no

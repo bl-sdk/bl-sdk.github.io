@@ -18,6 +18,7 @@ urls:
   Issues: https://github.com/Rossays/BL-SDK-Mods/issues
   Source Code: https://github.com/Rossays/BL-SDK-Mods
 version: '2.1'
+mod_categories: gameplay
 ---
 Scales all zones in Normal Mode and True Vault Hunter Mode to your level, and removes the level cap for TVHM scaling in BL2 and TPS.
 In BL2 and TPS, Normal Mode level cap is 35, TVHM minimum level is 30.

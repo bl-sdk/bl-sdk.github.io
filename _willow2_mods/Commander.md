@@ -3,4 +3,5 @@ pyproject_url: https://raw.githubusercontent.com/mopioid/Borderlands-Commander/r
 redirect_from:
 - /mods/BorderlandsCommander/
 - /willow2-mod-db/mods/borderlandscommander/
+mod_categories: cheat
 ---

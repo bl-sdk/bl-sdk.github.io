@@ -18,6 +18,7 @@ urls:
   Issues: https://github.com/DAmNRelentless/bl2-skilltoggles/issues
   Source Code: https://github.com/DAmNRelentless/bl2-skilltoggles
 version: 1.3.2
+mod_categories: utility
 ---
 Lets you deactivate Action Skills by holding a configurable hotkey.
 

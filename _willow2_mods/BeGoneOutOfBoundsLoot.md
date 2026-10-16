@@ -17,6 +17,7 @@ urls:
   Issues: https://github.com/juso40/bl2sdk_Mods/issues
   Source Code: https://github.com/juso40/bl2sdk_Mods/
 version: '2.0'
+mod_categories: loot
 ---
 Gone are the times of missing loot because it fell out of the reachable area.
 This mod adds a configurable keybind, that will allow you to teleport

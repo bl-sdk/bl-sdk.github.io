@@ -12,6 +12,7 @@ title: Skin Randomizer
 urls:
   Source Code: https://github.com/Cae-l/bl-sdk-mods
 version: '1.2'
+mod_categories: rando
 ---
 Features: 
 -Press a button to select a random customization combination 

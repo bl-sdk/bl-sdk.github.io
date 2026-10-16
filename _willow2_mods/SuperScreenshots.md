@@ -17,5 +17,6 @@ urls:
   Issues: https://github.com/PyrexBLJ/blsdk-mods/issues
   Source Code: https://github.com/PyrexBLJ/blsdk-mods
 version: 1.0.0
+mod_categories: ui utility
 ---
 High resolution screenshots independent of game resolution, 1440p - 16k

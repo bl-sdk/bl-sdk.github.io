@@ -1,0 +1,17 @@
+---
+pyproject_url: https://raw.githubusercontent.com/EerieGoesD/borderlands-1-goty-mods/refs/heads/main/AutoLoot/pyproject.toml
+mod_categories: loot
+---
+
+Picks loot up as you walk over it, no key press needed.
+
+## Settings
+
+- **Loot Everything in the Area**: Takes every item lying in the area into your backpack, however far away, except what you are full up on.
+- **Loot Gear You Cannot Use**: Weapons and items your character cannot use yet, such as class mods for another character.
+- **Loot Weapons**: whether weapons and items are picked up.
+- **Loot Money**: whether money is picked up.
+- **Loot Ammo**: whether ammo is picked up.
+- **Loot Health**: whether health kits and vials are picked up.
+- **Reach in metres**: how close the loot has to be.
+- **Checks per second**: how often loot around you is looked for. Lower is better for performance.

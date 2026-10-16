@@ -30,6 +30,16 @@ defaults:
       layout: mod
   - scope:
       path: ""
+      type: category_index
+    values:
+      layout: category_index
+  - scope:
+      path: ""
+      type: category_list
+    values:
+      layout: category_list
+  - scope:
+      path: ""
     values:
       has_toc: false
 
@@ -89,3 +99,11 @@ nav_external_links:
     url: https://discord.gg/bXeqV8Ef9R
   - title: SDK Developer Discord
     url: https://discord.gg/VJXtHvh
+
+# Temporary config - we plan to switch these on by default later, and will remove the settings then
+# These are just here so we can easily try them out in the meantime
+unreviewed_mods:
+  hide_by_default: false
+  fade: false
+  checkbox: false
+  no_search: false

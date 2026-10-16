@@ -16,5 +16,6 @@ title: Weapon Debug
 urls:
   Source Code: https://github.com/slserpent/bl-sdk-mods/tree/main/WeaponDebug/
 version: 1.0.1
+mod_categories: dev
 ---
 Adds on-screen real-time weapon statistics and/or part attributes displays.

@@ -18,6 +18,7 @@ title: Unspec Skills
 urls:
   Source Code: https://github.com/ZetaDaemon/bl-sdk-mods/
 version: '1.1'
+mod_categories: utility
 ---
 Allows you to right click on skills to remove points from them. Removing points does get restricted by having points further up in the tree meaning you cannot go unlock a later skill and then just remove points from early skills.
 

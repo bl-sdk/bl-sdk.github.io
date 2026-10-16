@@ -16,5 +16,6 @@ title: Weapon Quick Switcher
 urls:
   Source Code: https://github.com/aa3615058/Lengyu-BL2-sdk-Mods
 version: '1.1'
+mod_categories: utility
 ---
 Adds a keybind option to the game that allows you to switch to the last used weapon quickly. By default the key is binded to Q.

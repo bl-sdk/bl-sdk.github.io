@@ -17,6 +17,7 @@ title: Collision Visualizer
 urls:
   Source Code: https://github.com/NoneGiven/bl-sdk-mods
 version: 0.1.0
+mod_categories: dev
 ---
 Visualizes invisible blocking/killing collision volumes and allows hiding meshes with no collision.
 

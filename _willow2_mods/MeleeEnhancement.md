@@ -17,6 +17,7 @@ urls:
   Issues: https://github.com/LaryIsland/bl-sdk-mods/issues
   Source Code: https://github.com/LaryIsland/bl-sdk-mods/tree/main/MeleeEnhancement
 version: '1.0'
+mod_categories: gameplay krieg zer0
 ---
 A few tweaks to Zer0 and Krieg to enhance their melee gameplay
 

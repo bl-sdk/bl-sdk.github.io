@@ -15,6 +15,7 @@ title: Custom Skins
 urls:
   Source Code: https://github.com/FromDarkHell/bl-sdk-mods
 version: '1.0'
+mod_categories: dev ui
 ---
 A simple mod allowing you to have custom character skins, all selectable!
 - Hit R in the mod menu to reload your skins

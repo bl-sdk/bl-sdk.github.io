@@ -17,5 +17,6 @@ urls:
   Issues: https://github.com/PyrexBLJ/blsdk-mods/issues
   Source Code: https://github.com/PyrexBLJ/blsdk-mods
 version: 1.0.3
+mod_categories: utility
 ---
 Automatically modifies ADS speed

@@ -1,7 +1,7 @@
 ---
 pyproject_url: https://raw.githubusercontent.com/jlangowells/bl4_ordonite_helper/refs/heads/main/pyproject.toml
+mod_categories: utility
 ---
-# Autordonite
 
 Annoyed at having to grapple and throw ordonite canisters during the ordonite processor events?
 Want to use an action skill or heavy weapon that prevents grappling?

@@ -1,5 +1,6 @@
 ---
 pyproject_url: https://raw.githubusercontent.com/renard162/borderlands_sdk_mods/refs/heads/master/AnarchyDeathCap/pyproject.toml
+mod_categories: gaige
 ---
 Limits Anarchy stack loss on death for the Mechromancer, allowing players to maintain Anarchy-focused builds without interfering with normal gameplay flow.
 

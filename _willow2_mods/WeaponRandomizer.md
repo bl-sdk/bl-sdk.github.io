@@ -18,6 +18,7 @@ urls:
   Issues: https://github.com/juso40/bl2sdk_Mods/issues
   Source Code: https://github.com/juso40/bl2sdk_Mods/
 version: '1.0'
+mod_categories: rando
 ---
 Auto randomizes the weapon in the first slot every X seconds, or on pressing a configurable keybind.
 

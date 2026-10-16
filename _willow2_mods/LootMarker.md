@@ -17,6 +17,7 @@ urls:
   Issues: https://github.com/juso40/bl2sdk_Mods/issues
   Source Code: https://github.com/juso40/bl2sdk_Mods/
 version: '1.4'
+mod_categories: loot ui
 ---
 Places a marker on the map and minimap for every legendary or better.
 Currently supports Exodus and UPC/Vanilla for both, TPS and BL2.

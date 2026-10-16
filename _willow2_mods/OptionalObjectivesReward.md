@@ -1,5 +1,6 @@
 ---
 pyproject_url: https://raw.githubusercontent.com/sergioalmela/Sergio-Borderlands-SDK-Mods/main/OptionalObjectivesReward/pyproject.toml
+mod_categories: gameplay
 ---
 
 Automatically rewards **ALL** optional objectives in Borderlands 2 and The Pre-Sequel with configurable rewards that scale by playthrough difficulty.

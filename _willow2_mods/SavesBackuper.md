@@ -14,6 +14,7 @@ urls:
   Issues: https://github.com/plu5/p-borderlands/issues
   Source Code: https://github.com/plu5/p-borderlands/blob/main/SavesBackuper
 version: 1.0.0 2021-04-21
+mod_categories: utility
 ---
 Back up the contents of your saves folder each time you launch the game.
 - You can set the number of backups that will be kept, to keep them below a certain threshold.

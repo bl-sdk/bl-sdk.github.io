@@ -17,6 +17,7 @@ urls:
   Issues: https://github.com/juso40/bl2sdk_Mods/issues
   Source Code: https://github.com/juso40/bl2sdk_Mods/
 version: '1.0'
+mod_categories: gameplay utility
 ---
 Adds a list of different emotes.
 Check ``Modded Keybinds`` to configure the mod.

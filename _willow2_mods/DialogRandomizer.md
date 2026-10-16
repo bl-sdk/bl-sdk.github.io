@@ -17,6 +17,7 @@ urls:
   Issues: https://github.com/juso40/bl2sdk_Mods/issues
   Source Code: https://github.com/juso40/bl2sdk_Mods/
 version: '2.1'
+mod_categories: dialog rando
 ---
 If it talks, it gets randomized.
 DLC dialogs are only loaded while in the DLC, therefore they can only be played/randomized inside the DLC.

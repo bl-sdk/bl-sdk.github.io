@@ -17,5 +17,6 @@ urls:
   Issues: https://github.com/PyrexBLJ/blsdk-mods/issues
   Source Code: https://github.com/PyrexBLJ/blsdk-mods
 version: 1.0.2
+mod_categories: utility
 ---
 Use the bank and stash from anywhere with a hotkey. Can cause some visual texture issues

@@ -16,6 +16,7 @@ title: Quiet Console
 urls:
   Source Code: https://github.com/RedxYeti/Yeti-BL2-SDK-Mods
 version: '1.1'
+mod_categories: dev utility
 ---
 Disables most things printed to console by Gearbox, leaving a nice clean console for logging.
 

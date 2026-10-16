@@ -1,5 +1,6 @@
 ---
 pyproject_url: https://raw.githubusercontent.com/RedxYeti/bl2-willow2-sdkmods/refs/heads/main/BetterUIControls/pyproject.toml
+mod_categories: ui utility
 ---
 This mod will let you use your movement keys (in my case WASD) to control a bunch of menus. It also enables your Use key (in my case E) to select items in menus. The mod will automatically adjust to your keys.
 

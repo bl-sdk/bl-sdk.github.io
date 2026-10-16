@@ -17,6 +17,7 @@ urls:
   Issues: https://github.com/juso40/bl2sdk_Mods/issues
   Source Code: https://github.com/juso40/bl2sdk_Mods/
 version: '2.0'
+mod_categories: loot
 ---
 Increase the times enemies drop loot from their pool.
 You can easily change the amount of rolls from the pool from the ingame menues.

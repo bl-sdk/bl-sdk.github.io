@@ -27,7 +27,7 @@ In Steam, force a specific proton version under the game's *Properties* 🡒 *Co
 on the *General* tab, set the launch options to:
 
 ```
-WINEDLLOVERRIDES="ddraw=n,b" %command%
+WINEDLLOVERRIDES="ddraw=n,b" %command% -pf_tricks=vcrun2022
 ```
 
 Once you get in game, open console by pressing tilde twice, and double check there's no proton
@@ -89,7 +89,8 @@ Try install the latest
 [Microsoft Visual C++ Redistributable](https://aka.ms/vs/17/release/vc_redist.x86.exe).
 
 If you're running under Proton, you can do this by installing `vcrun2022` using
-[protontricks](https://github.com/Matoking/protontricks).
+[protontricks](https://github.com/Matoking/protontricks) - which you can also do by adding
+`-pf_tricks=vcrun2022` to your launch args.
 
 ## After launching I get a pop up that just says `[...]\binaries\win32\plugins\pyunrealsdk.dll`
 You installed the latest version of the sdk, but then overwrote it with an older one. Reinstall the

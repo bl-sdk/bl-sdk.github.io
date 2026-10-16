@@ -15,6 +15,7 @@ title: Action Skill Countdown Timer
 urls:
   Source Code: https://github.com/RedxYeti/Yeti-BL2-SDK-Mods
 version: '1.0'
+mod_categories: ui
 ---
 When your action skill ends, a timer will start on your hud. 
 The timer is fairly customizable, you can change its color, position, size and font. 

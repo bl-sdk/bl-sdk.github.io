@@ -17,5 +17,6 @@ urls:
   Issues: https://github.com/LaryIsland/bl-sdk-mods/issues
   Source Code: https://github.com/LaryIsland/bl-sdk-mods/tree/main/ShieldRechargeTimer
 version: '1.0'
+mod_categories: ui
 ---
 Displays a configurable timer on your HUD that counts the seconds before your shield starts to recharge

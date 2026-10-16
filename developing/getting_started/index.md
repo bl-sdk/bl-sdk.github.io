@@ -98,9 +98,6 @@ interpreter is not restarted, and there's no way to accept arguments into `sys.a
 
 ## Better Debugging Tools
 
-{: .note }
-The following features aren't yet fully available across all games.
-
 The mod manager has integrations with a few third party tools, which give a better debugging
 experience than just using console and print statements.
 

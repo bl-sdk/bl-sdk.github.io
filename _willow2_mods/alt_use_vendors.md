@@ -3,6 +3,7 @@ pyproject_url: https://raw.githubusercontent.com/apple1417/willow2-sdk-mods/mast
 redirect_from:
 - /mods/AltUseVendors/
 - /willow2-mod-db/mods/altusevendors/
+mod_categories: utility
 ---
 
 Adds alt use binds to vendors to let you quickly refill health and ammo and sell trash, like in

@@ -16,6 +16,7 @@ title: Shop Reseter
 urls:
   Source Code: https://github.com/aa3615058/Lengyu-BL2-sdk-Mods
 version: '1.1'
+mod_categories: loot
 ---
 Adds a keybind option to the game that allows you to reset any shop you last used immediately. By default the key is binded to F9. 
 It works in mutiplayer games.

@@ -1,0 +1,35 @@
+{%- comment -%}
+Filters and sanitizes the list of games a mod supports.
+
+Args:
+    page: The mod page to filter.
+Return:
+    Sets the 'filtered_games' variable to an array of sanitized game names.
+{%- endcomment -%}
+
+{%- case include.page.collection -%}
+{%- when "willow1_mods" -%}
+    {%- assign ALLOWED_GAMES = "BL1,BL1E" | split: "," -%}
+{%- when "willow2_mods" -%}
+    {%- assign ALLOWED_GAMES = "BL2,TPS,AODK" | split: "," -%}
+{%- when "oak_mods" -%}
+    {%- assign ALLOWED_GAMES = "BL3,WL" | split: "," -%}
+{%- when "oak2_mods" -%}
+    {%- assign ALLOWED_GAMES = "BL4" | split: "," -%}
+{%- else -%}
+    {%- assign ALLOWED_GAMES = "" | split: "," | push: include.page.collection -%}
+{%- endcase -%}
+
+{%- assign unsanitized_games = include.page.supported_games
+                                | default: include.page.pyproject.tool.sdkmod.supported_games
+                                | default: ALLOWED_GAMES -%}
+{%- assign filtered_games = "" | split: "" -%}
+{%- for game in unsanitized_games -%}
+    {%- assign upper_game = game | upcase -%}
+    {%- if ALLOWED_GAMES contains upper_game -%}
+        {%- assign game = upper_game | replace: "AODK", "AoDK" -%}
+        {%- unless filtered_games contains game -%}
+            {%- assign filtered_games = filtered_games | push: game -%}
+        {%- endunless -%}
+    {%- endif -%}
+{%- endfor -%}

@@ -1,8 +1,9 @@
 ---
 pyproject_url: https://raw.githubusercontent.com/apple1417/oak-sdk-mods/master/hunt/pyproject.toml
+mod_categories: loot
 ---
 
-The official Borderlands 3 Hunt Tracker.
+The Borderlands 3 Hunt Tracker.
 
 Automatically keeps track of which unique items you've collected.
 

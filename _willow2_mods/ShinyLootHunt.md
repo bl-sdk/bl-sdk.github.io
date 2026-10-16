@@ -1,5 +1,6 @@
 ---
 pyproject_url: https://raw.githubusercontent.com/PyrexBLJ/BL2-SDK-Mods/refs/heads/main/ShinyLootHunt/pyproject.toml
+mod_categories: loot
 ---
 Adds shiny vairants of guns, grenades and shields to the game all with some fancy lookin skins from Exotek.
 

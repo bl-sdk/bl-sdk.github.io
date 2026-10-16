@@ -11,5 +11,6 @@ supported_games:
 title: Cross Class Skill Randomizer
 urls: {}
 version: '1.2'
+mod_categories: rando
 ---
 Randomize all the skills!

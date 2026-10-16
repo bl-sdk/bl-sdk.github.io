@@ -1,5 +1,6 @@
 ---
 pyproject_url: https://raw.githubusercontent.com/RedxYeti/yeti-bl4-sdk/refs/heads/main/TimeAndWeatherControls/pyproject.toml
+mod_categories: utility
 ---
 Adds multiple commands for controlling the time and weather. 
 

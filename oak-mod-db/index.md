@@ -10,13 +10,18 @@ nav_order: 1
 
 ## Text Guide
 
-1. Download the latest release from github.
+1. Install the latest
+   [Microsoft Visual C++ Redistributable](https://aka.ms/vs/17/release/vc_redist.x64.exe).
+
+   ![VC Redist Installer](/assets/images/oak-installation/vcredist.png)
+
+2. Download the latest release from github.
 
    ![Github download page](/assets/images/oak-installation/00-download.png)
 
    Make sure to download the right release for your game, and not either of the source code links.
 
-2. Locate your game files.
+3. Locate your game files.
 
    The default locations are:    
    Steam: `C:\Program Files (x86)\Steam\steamapps\common\<game>`    
@@ -27,21 +32,21 @@ nav_order: 1
 
    The Gamepass version is not currently supported.
 
-3. Open up the zip you downloaded, and extract it's contents directly into the game folder, such
+4. Open up the zip you downloaded, and extract it's contents directly into the game folder, such
    that they merge.
 
    ![Extracting the zip into the game folder](/assets/images/oak-installation/02-extract-files.png)
 
    If you're asked to overwrite existing files, accept.
 
-4. \[PROTON ONLY\] When playing on Linux via Proton, you need to add the following launch arg:
+5. \[PROTON ONLY\] When playing on Linux via Proton, you need to add the following launch args:
    ```
-   WINEDLLOVERRIDES="dsound=n,b" %command%
+   WINEDLLOVERRIDES="dsound=n,b" %command% -pf_tricks=vcrun2022
    ```
 
    [See the faq for more]({{ "/oak-mod-db/faq/#can-i-use-this-on-steam-decklinuxmac" | relative_url }}).
 
-5. The SDK should be installed now. To verify:
+6. The SDK should be installed now. To verify:
    - In BL3, you should see a new `MODS` option on the main menu. You can click this to start
      configuring your mods.
 
@@ -52,7 +57,7 @@ nav_order: 1
 
      ![The console-based WL mods menu](/assets/images/oak-installation/04-wl-menu.png)
 
-6. To install SDK mods, navigate back to the `sdk_mods` folder you extracted during step 3. SDK mods
+7. To install SDK mods, navigate back to the `sdk_mods` folder you extracted during step 3. SDK mods
    come in two forms:
    - `.sdkmod` files can be dropped directly into this folder.
 
@@ -68,4 +73,4 @@ nav_order: 1
 
      ![Comparing normal vs nested mod folders](/assets/images/oak-installation/07-nested.png)
 
-7. After installing SDK mods, you need to restart the game for them to get loaded.
+8. After installing SDK mods, you need to restart the game for them to get loaded.

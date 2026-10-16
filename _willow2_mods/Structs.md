@@ -17,5 +17,6 @@ title: Structs
 urls:
   Source Code: https://github.com/apple1417/willow2-sdk-mods/
 version: '1.1'
+mod_categories: lib
 ---
 Imports all Unrealscript structs into Python as named tuples.

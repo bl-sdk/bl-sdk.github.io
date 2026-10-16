@@ -13,5 +13,6 @@ urls:
   Issues: https://github.com/mopioid/Borderlands-Live-Feed/issues
   Source Code: https://github.com/mopioid/Borderlands-Live-Feed/tree/main
 version: '1.2'
+mod_categories: dev lib
 ---
 Provides access to continuously up-to-date information about the current game, for chatbots and other applications.

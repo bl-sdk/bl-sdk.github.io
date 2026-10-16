@@ -1,0 +1,68 @@
+# This file lists mods which have been manually reviewed
+# If you're a reviewer and you want to add one, simply add an entry under the relevant collection,
+# where the key is the mod's filename *without extension*, and the value is the date you reviewed
+# it, in YYYY-MM-DD format (don't worry about timezones).
+
+oak_mods:
+  blimgui: 2026-10-11
+  obj_dump: 2026-10-11
+
+oak2_mods:
+  2PlayerSplitScreenUnlocked: ~
+  Autordonite: ~
+  BL4AutoReload: ~
+  BL4SuperDash: ~
+  BetterVehicleJump: 2026-10-11
+  Bl4PlayerMovement: ~
+  BonkUtilities: 2026-10-11
+  BorderlandsMobSpawner: ~
+  ChallengeTicker: ~
+  CrystalsAreBad: 2026-10-11
+  DamageAndMore: ~
+  DialogSkipper: 2026-10-11
+  EncoreTweaks: 2026-10-11
+  FallingMenus: 2026-10-11
+  GrappleAnywhere: 2026-10-11
+  GroundLootHelpers: 2026-10-11
+  MattsBL4ModsMenu: ~
+  ModifierEater: 2026-10-11
+  NoMoreBarrels: 2026-10-11
+  P2PTeleporter: ~
+  PlayerScaledEnemies: 2026-10-11
+  RarityRemover: 2026-10-11
+  ResourcesAndCooldowns: ~
+  SeparateMeleeGrappleKeys: 2026-10-11
+  TPSStyleSlams: 2026-10-11
+  TimeAndWeatherControls: 2026-10-11
+  TrashSeller: 2026-10-11
+  VehicleMovementAndSpawn: ~
+  WorldTravel: ~
+  WorldTravel: ~
+  blimgui: 2026-10-11
+  command_history: 2026-10-11
+  dump_ping: 2026-10-11
+  modthatclosesthegamewhenitopens: 2026-10-11
+  obj_dump: 2026-10-11
+
+willow1_mods:
+  AudioOutputSelector: ~
+  AutoLoot: 2026-09-26
+  AutoLootBL1E: ~
+  Autopickup: 2026-09-26
+  AutopickupBL1E: 2026-09-26
+  ClearLoot: 2026-10-07
+  ContinuousFire: 2026-09-26
+  CrashDebug: ~
+  EnemyWeakness: 2026-10-07
+  FullMoneyIndicator: 2026-10-11
+  NoWeaponFlash: ~
+  OneShotOneKill: 2026-10-11
+  OpenAllChests: 2026-10-11
+  blimgui: 2026-10-11
+
+willow2_mods:
+  EnemyItemScaling: ~
+  WidescreenFogFix: ~
+  bl2speed: 2026-09-26
+  blimgui: 2026-10-11
+  texloader: 2026-10-07

@@ -1,5 +1,6 @@
 ---
 pyproject_url: https://raw.githubusercontent.com/RedxYeti/bl2-willow2-sdkmods/refs/heads/main/find_actors/pyproject.toml
+mod_categories: dev
 ---
  
 Small library for finding actors near the player or other objects.

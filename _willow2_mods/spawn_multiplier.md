@@ -3,6 +3,7 @@ pyproject_url: https://raw.githubusercontent.com/apple1417/willow2-sdk-mods/mast
 redirect_from:
 - /mods/SpawnMultiplier/
 - /willow2-mod-db/mods/spawnmultiplier/
+mod_categories: gameplay enemy
 ---
 Adds an option to let you easily multiply the amount of spawns you're getting, updating live.
 

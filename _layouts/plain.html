@@ -2,12 +2,14 @@
 layout: table_wrappers
 ---
 {%- comment -%}
-This is based on the default layout, only change being removing these includes:
+This is copied from default.html, as of version 0.12.0.
+
+The changes we make are to remove the following includes:
   components/sidebar.html
   components/header.html
-  components/search_.html
+  components/search_*.html
 
-Isn't a great way to remove them from the existing layout, hence the copy paste.
+This gets us a nice clean plain page.
 {%- endcomment -%}
 
 <!DOCTYPE html>
@@ -16,7 +18,6 @@ Isn't a great way to remove them from the existing layout, hence the copy paste.
 {% include head.html %}
 <body>
   <a class="skip-to-main" href="#main-content">Skip to main content</a>
-  {% include icons/icons.html %}
   <div class="main" id="top">
     <div class="main-content-wrap">
       {% include components/breadcrumbs.html %}
@@ -28,7 +29,7 @@ Isn't a great way to remove them from the existing layout, hence the copy paste.
             {{ content }}
           {% endif %}
 
-          {% if page.has_children == true and page.has_toc != false %}
+          {% if page.has_toc != false %}
             {% include components/children_nav.html %}
           {% endif %}
         </main>

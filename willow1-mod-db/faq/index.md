@@ -21,12 +21,12 @@ In Steam, set the game's launch options to one of:
 
 **Classic**:
 ```
-WINEDLLOVERRIDES="dsound=n,b" %command%
+WINEDLLOVERRIDES="dsound=n,b" %command% -pf_tricks=vcrun2022
 ```
 
 **Enhanced**:
 ```
-WINEDLLOVERRIDES="dinput8=n,b" %command%
+WINEDLLOVERRIDES="dinput8=n,b" %command% -pf_tricks=vcrun2022
 ```
 
 Once you get in game, open console by pressing tilde twice, and double check there's no proton
@@ -85,7 +85,8 @@ Try install the latest
 [Microsoft Visual C++ Redistributable](https://aka.ms/vs/17/release/vc_redist.x86.exe).
 
 If you're running under Proton, you can do this by installing `vcrun2022` using
-[protontricks](https://github.com/Matoking/protontricks).
+[protontricks](https://github.com/Matoking/protontricks) - which you can also do by adding
+`-pf_tricks=vcrun2022` to your launch args.
 
 ## Tilde isn't opening the console / I want to use a different console key
 Tilde isn't quite a standardised key, so on some keyboard layouts a different character sends the

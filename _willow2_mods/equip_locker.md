@@ -3,6 +3,7 @@ pyproject_url: https://raw.githubusercontent.com/apple1417/willow2-sdk-mods/mast
 redirect_from:
 - /mods/EquipLocker/
 - /willow2-mod-db/mods/equiplocker/
+mod_categories: gear utility
 ---
 Adds various options that prevent you from equipping certain types of items/weapons.
 
