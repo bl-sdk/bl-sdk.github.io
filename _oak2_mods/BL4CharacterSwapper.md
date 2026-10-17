@@ -1,35 +1,14 @@
 ---
 pyproject_url: https://raw.githubusercontent.com/Squ1ggs/Bl4SDKmods/refs/heads/main/bl4_character_swapper/pyproject.toml
-mod_categories: gameplay ui
+mod_categories: ui
 ---
 
-# BL4 Character Swapper
+Swap your character's appearance to native Borderlands 4 NPCs, enemies, bosses and other characters. Search the catalog, preview a model, apply it and restore your original body.
 
-Swap your character's appearance to native BL4 hunters, NPCs, enemies and bosses.
-Search the catalog, preview a character, apply it and restore your original body.
-This is a standalone SDK mod: Squ1ggs Boosting Tools is not required.
+**BLImGui is strongly recommended.** Press **F10** for the searchable picker and preview/apply/restore controls. Use the [official BLImGui download](https://github.com/juso40/blimgui/raw/ff5be35f41d69f28056befdd1bfb8caddae5892b/blimgui.zip) and follow the [installation instructions](https://bl-sdk.github.io/oak2-mod-db/mods/blimgui/). Without BLImGui, type `asw_help` in the SDK console.
 
-**BLImGui is strongly recommended.** Press **F10** for the searchable picker,
-character groups, target selection and preview/apply/restore controls. The
-swapper supports both official BLImGui windows and compatible customised tab
-menus. Without BLImGui, use the SDK console and type `asw_help`.
+Install `bl4_character_swapper.sdkmod` directly in `sdk_mods`, enable the mod and restart the game. Squ1ggs Boosting Tools is not required. Character swapping is also included in its Appearance tab, so desktop users do not need this separate package.
 
-- [Recommended official BLImGui 1.1 download](https://github.com/juso40/blimgui/raw/ff5be35f41d69f28056befdd1bfb8caddae5892b/blimgui.zip)
-- [Official BL4 BLImGui installation instructions]({{ "/oak2-mod-db/mods/blimgui/" | relative_url }})
-- [Author's repository](https://github.com/Squ1ggs/Bl4SDKmods)
+There are a lot of characters and bosses, so not all have been fully tested. Further testing and regular updates are planned. Characters retain their own animations, which may stay in idle while you move. Host authority is required for previews and selected-player changes; multiplayer visibility, respawn and map travel need further testing. See the [release notes](https://github.com/Squ1ggs/Bl4SDKmods/releases/tag/bl4-character-swapper-v0.1.3) for known issues.
 
-Extract BLImGui into `sdk_mods/blimgui`, preserving its supplied `dist64`
-dependencies. Do not create a second nested `blimgui` folder. A separate system
-Python or `pip` installation is not required.
-
-Place `bl4_character_swapper.sdkmod` directly in `sdk_mods`, then enable
-**BL4 Character Swapper**. Do not enable both an archive and a loose copy.
-
-**Already using Squ1ggs Boosting Tools?** Character swapping is included in its
-**Appearance** tab. Desktop users do not need this standalone package or BLImGui.
-
-Host authority is required for previews and selected-player changes. Characters
-must be available in the installed game content. Vehicle swaps and foreign-game
-characters are excluded. Catalog inclusion is not a tested-model claim. Live
-preview/apply/restore, respawn/travel behavior and multiplayer visibility are
-not verified for every catalog entry.
+Created by RDPSqu1ggs. GPL-3.0-or-later. Game assets are not bundled.
