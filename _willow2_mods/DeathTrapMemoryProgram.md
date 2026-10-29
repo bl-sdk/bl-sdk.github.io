@@ -1,24 +1,14 @@
 ---
-author: Lengyu
-coop_support: Unknown
-dependencies:
-- UserFeedback>=1.6
-download: https://raw.githubusercontent.com/aa3615058/Lengyu-BL2-sdk-Mods/main/DeathTrapMemory/DeathTrapMemory.zip
-legacy: true
-license:
-  name: MIT
-  url: https://choosealicense.com/licenses/mit
+title: Death Trap Memory Program
+pyproject_url: https://raw.githubusercontent.com/aa3615058/Lengyu-BL2-sdk-Mods/main/death_trap_memory/pyproject.toml
 redirect_from:
 - /mods/DeathTrapMemoryProgram/
-supported_games:
-- BL2
-title: Death Trap Memory Program
-urls:
-  Source Code: https://github.com/aa3615058/Lengyu-BL2-sdk-Mods
-version: '1.4'
 mod_categories: gaige
 ---
-Memory program for Death Trap. You can press the keybind(default: 6) to save the data of your equipped shield. Death Trap will always copy the shield you saved if it is in your backpack.
-The Memory is persistent.
-To erase the memory, you could remove your shield and press the keybind again.
-It works in multiplayer game when both the server player and the client player have enabled this mod.
+Death Trap gets a memory expansion program.
+
+Press `6` (default) to copy the data of your currently equipped shield into Death Trap's memory. With an empty shield slot the memory is cleared. The next time you summon Death Trap, if that shield is in your backpack, Death Trap copies it; otherwise it behaves like the vanilla game.
+
+The memory is permanent and stored per save game.
+
+In multiplayer, the vanilla behaviour is used unless both the host and the client have this mod.

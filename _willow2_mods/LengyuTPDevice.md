@@ -1,29 +1,16 @@
 ---
-author: Lengyu
-coop_support: Unknown
-dependencies:
-- UserFeedback>=1.6
-download: https://raw.githubusercontent.com/aa3615058/Lengyu-BL2-sdk-Mods/main/LengyuTPDevice/LengyuTPDevice.zip
-legacy: true
-license:
-  name: MIT
-  url: https://choosealicense.com/licenses/mit
+title: Lengyu TP Device
+pyproject_url: https://raw.githubusercontent.com/aa3615058/Lengyu-BL2-sdk-Mods/main/lengyu_tp_device/pyproject.toml
 redirect_from:
 - /mods/LengyuTPDevice/
-supported_games:
-- BL2
-- TPS
-title: Lengyu TP Device
-urls:
-  Source Code: https://github.com/aa3615058/Lengyu-BL2-sdk-Mods
-version: '1.3'
 mod_categories: cheat
 ---
-Allows you to teleport yourself anywhere you marked. 
-1.Press NUMPad0 to mark the location. 
-2.Press NUMPadDot to teleport.
-3.Press NUMPad1-3 to switch within 3 slots.
-4.Press NUMPad4-6 to teleport other player to you.
-5.Open the option to print teleport console command when you mark location.
-It works in mutiplayer games.
-It doesn't work in the map Digistruct Peak.
+Save locations and teleport back to them.
+
+- Numpad `0`: mark the current location.
+- Numpad `.`: teleport to the marked location.
+- Numpad `1` / `2` / `3`: select one of three saved slots.
+- Numpad `4` / `5` / `6`: teleport yourself next to another player.
+- Optional: print the equivalent teleport console command while marking.
+
+Works in multiplayer. Cannot be used on the Digistruct Peak map.

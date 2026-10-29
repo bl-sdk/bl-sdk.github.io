@@ -1,28 +1,16 @@
 ---
-author: Lengyu
-coop_support: Unknown
-dependencies: []
-download: https://raw.githubusercontent.com/aa3615058/Lengyu-BL2-sdk-Mods/main/LootCollector/LootCollector.zip
-legacy: true
-license:
-  name: MIT
-  url: https://choosealicense.com/licenses/mit
+title: Loot Collector
+pyproject_url: https://raw.githubusercontent.com/aa3615058/Lengyu-BL2-sdk-Mods/main/loot_collector/pyproject.toml
 redirect_from:
 - /mods/LootCollector/
-supported_games:
-- BL2
-- TPS
-title: Loot Collector
-urls:
-  Source Code: https://github.com/aa3615058/Lengyu-BL2-sdk-Mods
-version: '1.4'
 mod_categories: loot
 ---
-Help you collect loot conveniently. 
-1.Press / to teleport all loot to you. These loot will form a circle around you and be sorted by rarity level. 
-2.Press - (on keypad) to delete all white and green loot. 
-3.Press Delete to delete all loot. (CAUTION)
-Mission Items and ECHO will be excluded.
-It works in mutiplayer games.
+Collect loot without walking over every drop.
 
-<img height='360' src='https://raw.githubusercontent.com/aa3615058/Lengyu-BL2-sdk-Mods/main/LootCollector/LootCollector.jpg' width='640'>
+- Press `/` (default) to teleport every piece of loot on the map to you. The loot forms a circle around you and is sorted by rarity.
+- Press numpad `-` to delete all white and green loot.
+- Press `Delete` to delete ALL loot on the map (use with caution).
+- Mission items, unpickable items and ECHOs are always excluded.
+
+Works in multiplayer: non-host players can use the collect function; deleting loot is host-side.
+All keybinds are configurable in the mod options.
