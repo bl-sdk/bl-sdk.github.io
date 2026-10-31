@@ -1,23 +1,14 @@
 ---
-author: Lengyu
-coop_support: Unknown
-dependencies: []
-download: https://raw.githubusercontent.com/aa3615058/Lengyu-BL2-sdk-Mods/main/LengyuCopyDevice/LengyuCopyDevice.zip
-legacy: true
-license:
-  name: MIT
-  url: https://choosealicense.com/licenses/mit
+title: Lengyu Copy Device
+pyproject_url: https://raw.githubusercontent.com/aa3615058/Lengyu-BL2-sdk-Mods/main/lengyu_copy_device/pyproject.toml
 redirect_from:
 - /mods/LengyuCopyDevice/
-supported_games:
-- BL2
-- TPS
-title: Lengyu Copy Device
-urls:
-  Source Code: https://github.com/aa3615058/Lengyu-BL2-sdk-Mods
-version: '1.0'
 mod_categories: loot gameplay
 ---
-Allows you to spend money to copy the selected equipment.
-Press the keybind 'UseSecondary' on the Equipment page or Backpack page to throw and copy the selected equipment. It costs the selling price of the equipment.
-It works in multiplayer game when both the server player and the client player have enabled this mod.
+Copy equipment for money.
+
+- On the Equipment or Backpack page, press the "Secondary Use" key to drop and copy the selected item.
+- The copy costs money equal to the item's selling price.
+- Gamepad: press LT to copy.
+
+Works in multiplayer, but both the host and the client must install and enable this mod.
