@@ -1,27 +1,20 @@
 ---
-author: LaryIsland
-coop_support: Unknown
-dependencies:
-- Structs>=1.1
-download: https://github.com/LaryIsland/bl-sdk-mods/raw/main/MeleeEnhancement/MeleeEnhancement.zip
-legacy: true
-license:
-  name: MIT
-  url: https://choosealicense.com/licenses/mit
+pyproject_url: https://raw.githubusercontent.com/LaryIsland/bl-sdk-mods/main/MeleeEnhancement/pyproject.toml
 redirect_from:
 - /mods/MeleeEnhancement/
-supported_games:
-- BL2
-title: Melee Enhancement
-urls:
-  Issues: https://github.com/LaryIsland/bl-sdk-mods/issues
-  Source Code: https://github.com/LaryIsland/bl-sdk-mods/tree/main/MeleeEnhancement
-version: '1.0'
 mod_categories: gameplay krieg zer0
 ---
-A few tweaks to Zer0 and Krieg to enhance their melee gameplay
+A few tweaks to Zer0 and Krieg to enhance their melee gameplay.
 
-Zer0
-Fearless increases shield recharge delay, and Kunai no longer inflict self damage
-Krieg
-Silence the Voices self-hit chance scales down, and Buzz Axe Bombadier causes slag explosions
+Feel free to contact me with any problems or suggestions via [Discord](https://discord.gg/bXeqV8Ef9R) @LaryIsland.
+
+## Zer0
+- **Fearless:** increases shield recharge delay.
+- **Kunai:** no longer harms Zer0.
+
+## Krieg
+- **Silence the Voices:** self-hit chance scales down with each point in the skill.
+- **Buzz Axe Bombadier:** sets off an additional slag explosion, never slags Krieg.
+
+## Co-op
+Every player needs the mod installed.
